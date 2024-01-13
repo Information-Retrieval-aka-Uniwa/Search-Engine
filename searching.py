@@ -122,5 +122,38 @@ else:
     # Κλήση της συνάρτησης store_json για την αποθήκευση των μεταδεδομένων σε JSON 
     json_data = store_json(papers)
 
+
+""""""""""""""""""""""""""""""""""""""""""""" 
+ 
+    Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
+ 
+"""""""""""""""""""""""""""""""""""""""""""""
+def process_text(text):
+    # Normalization
+    normalized_text = [x.lower() for x in text]
+
+    # Tokenization
+    normalized_tokens = word_tokenize(normalized_text)
+
+    # Stemming
+    porter_stemmer = PorterStemmer()
+    stemmed_tokens = [porter_stemmer.stem(token) for token in normalized_tokens]
     
+    # Lemmatization
+    wnl_lemmatize = nltk.WordNetLemmatizer()
+    lemmatized_tokens = [wnl_lemmatize.lemmatize(token) for token in stemmed_tokens]
+    
+    # Stop words removal
+    stop_words = set(stopwords.words('english'))
+    stop_words_removal_tokens = [word for word in lemmatized_tokens if word.lower() not in stop_words]
+        
+    # Join the tokens back into a string
+    processed_text = ' '.join(stop_words_removal_tokens)
+    
+    return processed_text
+
+proccesed_data = []
+for data in json_data:
+    proccesed_data.append(process_text(data))
+print(proccesed_data)
 
