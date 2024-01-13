@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 
+
 """"""""""""""""""""""""""""""""""""""""""""" 
  
     Βήμα 1. Σταχυολογητής (Web Crawler)
@@ -15,7 +16,7 @@ from nltk.stem import PorterStemmer
 def web_scrape(soup, elements, papers, max_limit):
     # Προσπέλαση κάθε στοιχείου (element) και συλλογή της επιθυμητής πληροφορίας
     for index, element in enumerate(elements):
-        # Έλεγχος για το αν έχει ξεπεραστεί ο μέγιστος αριθμός των paper, των οποίων θέλουμε να συλλέξουμε τα μεταδεδομένα
+        # Έλεγχος για το αν έχει ξεπεραστεί ο μέγιστος αριθμός των paper, των οποίων θέλω να συλλέξω τα μεταδεδομένα
         if len(papers) < max_limit:
             titles = [title.text.strip() + '\n' for title in element.find_all('div', class_='list-title mathjax')]                              # Τίτλος
             authors = [author.text.strip('Authors: ').replace('\n', ' ') + '\n' for author in element.find_all('div', class_='list-authors')]   # Συγγραφέας
@@ -23,7 +24,7 @@ def web_scrape(soup, elements, papers, max_limit):
             subjects = [subject.text.strip() + '\n' for subject in element.find_all('div', class_='list-subjects')]                             # Μαθήματα
             date = soup.find('h3').text.strip()                                                                                                 # Ημερομηνία δημοσίευσης
 
-            # Δημιουργία ενός λεξικού και αποθήκευση της πληροφορίας που συλλέγουμε για κάθε paper
+            # Δημιουργία ενός λεξικού και αποθήκευση της πληροφορίας που συλλέγω για κάθε paper
             data = {
                 'titles': titles,
                 'authors': authors,
@@ -55,13 +56,14 @@ def store_json(papers):
     
     return json_data
 
-
-# Εισαγωγή του URL της σελίδας του μαθήματος που ενδιαφερόμαστε για τα paper
+#------------------ Βήμα 1α. Επιλογή ιστοτόπου-στόχου (arXiv) ------------------
+# Εισαγωγή του URL της σελίδας του μαθήματος που ενδιαφέρομαι για τα paper
 subject_url = input("Δώσε το url της σελίδας του μαθήματος : ")
 
 # Φόρτωση της web σελίδας μέσω HTTP-GET
 subject_page = requests.get(subject_url)
 
+#------------------ Βήμα 1β. Υλοποίηση web crawler με BeautifulSoup ------------------
 # Web crawling την πληροφορία της σελίδας μέσω μίας ένθετης δομής HTML
 subject_soup = BeautifulSoup(subject_page.text, 'html.parser')
 
@@ -86,7 +88,7 @@ for list_url in list_urls:
 # Αρχικοποίηση μίας λίστας για την αποθήκευση των μεταδεδομένων των paper
 papers = []
 
-# Μέγιστος αριθμός των paper, των οποίων θέλουμε να συλλέξουμε τα μεταδεδομένα
+# Μέγιστος αριθμός των paper, των οποίων θέλω να συλλέξω τα μεταδεδομένα
 max_limit = 100
 
 # Έλεγχος για το αν υπάρχει όντως URL που περιέχει όλα τα paper, διαφορετικά κρατάμε το URL του μαθήματος
@@ -105,7 +107,8 @@ if "pastweek?show=" in all_papers_url:
 
     # Κλήση της συνάρτησης web_scrape για την συλλογή των μεταδεδομένων των paper
     papers = web_scrape(all_papers_soup, all_papers_elements, papers, max_limit)
-    
+
+#------------------ Βήμα 1γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------  
     # Κλήση της συνάρτησης store_json για την αποθήκευση των μεταδεδομένων σε JSON 
     json_data = store_json(papers)
 else:
@@ -114,32 +117,10 @@ else:
     
     # Κλήση της συνάρτησης web_scrape για την συλλογή των μεταδεδομένων των paper
     papers = web_scrape(subject_soup, subject_elements, papers, max_limit)
-    
+
+#------------------ Βήμα 1γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------    
     # Κλήση της συνάρτησης store_json για την αποθήκευση των μεταδεδομένων σε JSON 
     json_data = store_json(papers)
-    
-    
-""""""""""""""""""""""""""""""""""""""""""""" 
- 
-    Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
- 
-"""""""""""""""""""""""""""""""""""""""""""""
 
-# Define a function for text processing
-porter_stemmer = PorterStemmer()
+    
 
-def process_text(text):
-    # Tokenization
-    tokens = word_tokenize(text)
-    
-    # Remove stop words
-    stop_words = set(stopwords.words('english'))
-    tokens = [word for word in tokens if word.lower() not in stop_words]
-    
-    # Stemming
-    stemmed_tokens = [porter_stemmer.stem(token) for token in tokens]
-    
-    # Join the tokens back into a string
-    processed_text = ' '.join(stemmed_tokens)
-    
-    return processed_text
