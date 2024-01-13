@@ -1,62 +1,15 @@
-import string
 import requests
-import nltk
 from bs4 import BeautifulSoup
-import json
 
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from nltk.stem import PorterStemmer
-
+from web_crawler import web_scrape
+from web_crawler import store_json
+from text_processing import process_text
 
 """"""""""""""""""""""""""""""""""""""""""""" 
  
     Βήμα 1. Σταχυολογητής (Web Crawler)
  
 """""""""""""""""""""""""""""""""""""""""""""
-def web_scrape(soup, elements, papers, max_limit):
-    # Προσπέλαση κάθε στοιχείου (element) και συλλογή της επιθυμητής πληροφορίας
-    for index, element in enumerate(elements):
-        # Έλεγχος για το αν έχει ξεπεραστεί ο μέγιστος αριθμός των paper, των οποίων θέλω να συλλέξω τα μεταδεδομένα
-        if len(papers) < max_limit:
-            titles = [title.text.strip() + '\n' for title in element.find_all('div', class_='list-title mathjax')]                              # Τίτλος
-            authors = [author.text.strip('Authors: ').replace('\n', ' ') + '\n' for author in element.find_all('div', class_='list-authors')]   # Συγγραφέας
-            comments = [comment.text.strip() + '\n' for comment in element.find_all('div', class_='list-comments mathjax')]                     # Σχόλια
-            subjects = [subject.text.strip() + '\n' for subject in element.find_all('div', class_='list-subjects')]                             # Μαθήματα
-            date = soup.find('h3').text.strip()                                                                                                 # Ημερομηνία δημοσίευσης
-
-            # Δημιουργία ενός λεξικού και αποθήκευση της πληροφορίας που συλλέγω για κάθε paper
-            data = {
-                'titles': titles,
-                'authors': authors,
-                'subjects': subjects,
-                'comments': comments,
-                'date published': date
-                }
-        
-            # Αποθήκευση του λεξικού στην λίστα papers
-            papers.append(data)
-        else:
-            break
-    
-    return papers
-
-def store_json(papers):
-    # Εκτύπωση των μεταδεδομένων κάθε paper ξεχωριστά
-    for index, paper in enumerate(papers):
-        print(f'\n--- Paper {index + 1} ---')
-        for key, value in paper.items():
-            if key == 'date published':
-                print(f'{key}: {value}')  # Εκτύπωση της ημερομηνίας δημοσίευσης σε μία γραμμή
-            else:
-                for item in value:
-                    print(item)
-         # Εκτύπωση των μεταδεδομένων σε δομημένη μορφή JSON
-        json_data = json.dumps(paper, indent=4)
-        print(f'JSON Data:\n{json_data}')
-    
-    return json_data
-
 #------------------ Βήμα 1α. Επιλογή ιστοτόπου-στόχου (arXiv) ------------------
 # Εισαγωγή του URL της σελίδας του μαθήματος που ενδιαφέρομαι για τα paper
 subject_url = input("Δώσε το url της σελίδας του μαθήματος : ")
@@ -102,7 +55,7 @@ if "pastweek?show=" in all_papers_url:
 
     # Web crawling την πληροφορία της σελίδας μέσω μίας ένθετης δομής HTML
     all_papers_soup = BeautifulSoup(all_papers_page.text, 'html.parser')    
-
+    
     # Αναζήτηση στο HTML του URL που περιέχει όλα τα paper, όλων των 'div' στοιχείων που έχουν την κλάση 'meta' 
     all_papers_elements = all_papers_soup.find_all('div', class_='meta')
 
@@ -129,33 +82,6 @@ else:
     Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
  
 """""""""""""""""""""""""""""""""""""""""""""
-def process_text(text):
-    # Tokenization
-    tokens = word_tokenize(text)
-
-    # Normalization
-    normalized_tokens = [x.lower() for x in tokens]
-
-    # Stemming
-    porter_stemmer = PorterStemmer()
-    stemmed_tokens = [porter_stemmer.stem(token) for token in normalized_tokens]
-    
-    # Lemmatization
-    wnl_lemmatize = nltk.WordNetLemmatizer()
-    lemmatized_tokens = [wnl_lemmatize.lemmatize(token) for token in stemmed_tokens]
-    
-    # Stop words removal
-    stop_words = nltk.corpus.stopwords.words('english')
-    string_punctuation = list(string.punctuation)
-    stop_words = stop_words + string_punctuation
-    stop_words_removal_tokens = [word for word in lemmatized_tokens if word.lower() not in stop_words]
-        
-    # Join the tokens back into a string
-    processed_text = ' '.join(stop_words_removal_tokens)
-    
-    return processed_text
-
-
 sample_text = "This is a sample text for processing. It includes various words and different verb tenses."
 
 processed_text = process_text(sample_text)
