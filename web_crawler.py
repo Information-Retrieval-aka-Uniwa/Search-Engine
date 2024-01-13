@@ -9,7 +9,8 @@ def web_scrape(soup, elements, papers, max_limit):
             authors = [author.text.strip('Authors: ').replace('\n', ' ') + '\n' for author in element.find_all('div', class_='list-authors')]   # Συγγραφέας
             comments = [comment.text.strip() + '\n' for comment in element.find_all('div', class_='list-comments mathjax')]                     # Σχόλια
             subjects = [subject.text.strip() + '\n' for subject in element.find_all('div', class_='list-subjects')]                             # Μαθήματα
-            date = soup.find('h3').text.strip()                                                                                                 # Ημερομηνία δημοσίευσης
+            summaries = [summary.text.strip() + '\n' for summary in element.find_all('p', class_='mathjax')]
+            dates = soup.find('h3').text.strip()                                                                                                 # Ημερομηνία δημοσίευσης
 
             # Δημιουργία ενός λεξικού και αποθήκευση της πληροφορίας που συλλέγω για κάθε paper
             data = {
@@ -17,7 +18,8 @@ def web_scrape(soup, elements, papers, max_limit):
                 'authors': authors,
                 'subjects': subjects,
                 'comments': comments,
-                'date published': date
+                'summaries': summaries,
+                'date published': dates
                 }
         
             # Αποθήκευση του λεξικού στην λίστα papers
