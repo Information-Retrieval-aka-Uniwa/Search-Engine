@@ -10,6 +10,33 @@ from text_processing import process_text
     Βήμα 1. Σταχυολογητής (Web Crawler)
  
 """""""""""""""""""""""""""""""""""""""""""""
+
+url = 'https://arxiv.org/'
+
+page = requests.get(url)
+
+soup = BeautifulSoup(page.text, 'html.parser')
+
+list_urls = []
+
+for link in soup.find_all('a'):
+    href = link.get('href')
+    if href and href.startswith('/archive/'):
+        archive_page = requests.get('https://arxiv.org' + href)
+        archive_soup = BeautifulSoup(archive_page.text, 'html.parser')
+        for link2 in archive_soup.find_all('a'):
+            href = link2.get('href')
+            if href and href.startswith('/list/'):
+                list_urls.append(href)
+
+papers = []
+for len(papers) < 100:
+    
+
+
+
+
+"""
 #------------------ Βήμα 1α. Επιλογή ιστοτόπου-στόχου (arXiv) ------------------
 # Εισαγωγή του URL της σελίδας του μαθήματος που ενδιαφέρομαι για τα paper
 subject_url = input("Δώσε το url της σελίδας του μαθήματος : ")
@@ -75,14 +102,14 @@ else:
 #------------------ Βήμα 1γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------    
     # Κλήση της συνάρτησης store_json για την αποθήκευση των μεταδεδομένων σε JSON 
     json_data = store_json(papers)
-
+"""
 
 """"""""""""""""""""""""""""""""""""""""""""" 
  
     Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
  
 """""""""""""""""""""""""""""""""""""""""""""
-sample_text = "This is a sample text for processing. It includes various words and different verb tenses."
+"""sample_text = "This is a sample text /@for processing. It includes various words and different verb tenses."
 
 processed_text = process_text(sample_text)
 
@@ -91,10 +118,8 @@ print(sample_text)
 
 print("\nProcessed Text:")
 print(processed_text)
-
 """
-proccesed_data = []
-for data in json_data:
-    proccesed_data.append(process_text(data))
-print(proccesed_data)"""
+
+#print(process_text(json_data))
+
 
