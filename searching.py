@@ -1,3 +1,4 @@
+import string
 import requests
 import nltk
 from bs4 import BeautifulSoup
@@ -129,11 +130,11 @@ else:
  
 """""""""""""""""""""""""""""""""""""""""""""
 def process_text(text):
-    # Normalization
-    normalized_text = [x.lower() for x in text]
-
     # Tokenization
-    normalized_tokens = word_tokenize(normalized_text)
+    tokens = word_tokenize(text)
+
+    # Normalization
+    normalized_tokens = [x.lower() for x in tokens]
 
     # Stemming
     porter_stemmer = PorterStemmer()
@@ -144,7 +145,9 @@ def process_text(text):
     lemmatized_tokens = [wnl_lemmatize.lemmatize(token) for token in stemmed_tokens]
     
     # Stop words removal
-    stop_words = set(stopwords.words('english'))
+    stop_words = nltk.corpus.stopwords.words('english')
+    string_punctuation = list(string.punctuation)
+    stop_words = stop_words + string_punctuation
     stop_words_removal_tokens = [word for word in lemmatized_tokens if word.lower() not in stop_words]
         
     # Join the tokens back into a string
@@ -152,8 +155,20 @@ def process_text(text):
     
     return processed_text
 
+
+sample_text = "This is a sample text for processing. It includes various words and different verb tenses."
+
+processed_text = process_text(sample_text)
+
+print("Original Text:")
+print(sample_text)
+
+print("\nProcessed Text:")
+print(processed_text)
+
+"""
 proccesed_data = []
 for data in json_data:
     proccesed_data.append(process_text(data))
-print(proccesed_data)
+print(proccesed_data)"""
 
