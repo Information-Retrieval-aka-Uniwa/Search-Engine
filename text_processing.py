@@ -18,7 +18,6 @@ def process_text(text):
 
     # Stop words removal
     stop_words = nltk.corpus.stopwords.words('english')
-    stop_words = nltk.corpus.stopwords.words('english')
     string_punctuation = list(string.punctuation)
     stop_words = stop_words + string_punctuation
     stop_words_removal_tokens = [word for word in stemmed_tokens if word.lower() not in stop_words]

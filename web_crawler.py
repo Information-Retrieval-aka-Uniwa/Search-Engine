@@ -10,8 +10,8 @@ def web_scrape(soup, max_limit):
     for link in soup.find_all('a'):
         href = link.get('href')
         if href and href.startswith('/abs/'):
-            abs_url = 'https://arxiv.org/' + href
-            abs_page = requests.get(abs_url)
+            abs_url = 'https://arxiv.org/' + href # αλλαξε το λινκ για να σου επιστρεψει 400 bad request
+            abs_page = requests.get(abs_url) # try-except block να ελεγχεις αν επιστρεφει 200
             abs_soup = BeautifulSoup(abs_page.text, 'html.parser')
             element = abs_soup.find('div', id='abs')
             if element:
