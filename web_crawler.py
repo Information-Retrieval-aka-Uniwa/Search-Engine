@@ -24,7 +24,7 @@ def web_scrape(soup, max_limit):
                         comment = hasComment.text.strip()
                     else:
                         comment = ' '
-                    summary = element.find('blockquote', class_='abstract mathjax').text.strip().removeprefix("Abstract:") 
+                    abstract = element.find('blockquote', class_='abstract mathjax').text.strip().removeprefix("Abstract:") 
                     date = element.find('div', class_='dateline').text.strip().removeprefix("[Submitted on ").removesuffix("]") 
 
                     data = {
@@ -32,7 +32,7 @@ def web_scrape(soup, max_limit):
                         'author': author,
                         'subject': subject,
                         'comment': comment,
-                        'summary': summary,
+                        'abstract': abstract,
                         'date': date
                     }
 
