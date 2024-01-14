@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from web_crawler import web_scrape
 from web_crawler import store_json
 from text_processing import process_text
+from inverted_index import create_inverted_index
 
 """"""""""""""""""""""""""""""""""""""""""""" 
  
@@ -85,12 +86,26 @@ try:
 
     processed_abstracts = []
 
+    
     for data in papers:
         abstract = data.get('abstract')
         processed_abstracts.append(process_text(abstract))
-
+    
+    '''
+    print(processed_abstracts)
     json_processed_data = store_json(processed_abstracts)
+    '''
 
+    """"""""""""""""""""""""""""""""""""""""""""" 
+    
+        Βήμα 3. Ευρετήριο (Indexing)
+    
+    """""""""""""""""""""""""""""""""""""""""""""
+    
+    
+    inverted_dict = create_inverted_index(processed_abstracts)
+    print(inverted_dict)
+    
 
 except Exception:
     print("To URL που έχεις δώσει δεν είναι έγκυρο για κάποιο μάθημα του ιστοτόπου arXiv.")
