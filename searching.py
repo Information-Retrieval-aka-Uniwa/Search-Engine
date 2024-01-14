@@ -12,7 +12,8 @@ from text_processing import process_text
 """""""""""""""""""""""""""""""""""""""""""""
 #------------------ Βήμα 1α. Επιλογή ιστοτόπου-στόχου (arXiv) ------------------
 # Εισαγωγή του URL της σελίδας του μαθήματος που ενδιαφέρομαι για τα paper
-subject_url = input("Δώσε το url της σελίδας του μαθήματος : ")
+# subject_url = input("Δώσε το url της σελίδας του μαθήματος : ") 
+subject_url = 'https://arxiv.org/list/astro-ph/recent'
 
 # Φόρτωση της web σελίδας μέσω HTTP-GET
 subject_page = requests.get(subject_url)
@@ -77,19 +78,12 @@ else:
  
 """""""""""""""""""""""""""""""""""""""""""""
 
-proccesed_data = []
-for data in json_data:
-    proccesed_data.append(process_text(data))
-print(proccesed_data)
+processed_abstracts = []
 
-"""
-sample_text = "This is a sample text for processing. It includes various words and different verb tenses."
+for data in papers:
+    abstract = data.get('abstract')
+    processed_abstracts.append(process_text(abstract))
 
-processed_text = process_text(sample_text)
+json_processed_data = store_json(processed_abstracts)
 
-print("Original Text:")
-print(sample_text)
 
-print("\nProcessed Text:")
-print(processed_text)
-"""
