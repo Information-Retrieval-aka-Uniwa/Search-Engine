@@ -1,43 +1,51 @@
 import json
+import requests
 
-def web_scrape(soup, elements, papers, max_limit):
-    # Προσπέλαση κάθε στοιχείου (element) και συλλογή της επιθυμητής πληροφορίας
-    for index, element in enumerate(elements):
-        # Έλεγχος για το αν έχει ξεπεραστεί ο μέγιστος αριθμός των paper, των οποίων θέλω να συλλέξω τα μεταδεδομένα
-        if len(papers) < max_limit:
-            titles = [title.text.strip() + '\n' for title in element.find_all('div', class_='list-title mathjax')]                              # Τίτλος
-            authors = [author.text.strip('Authors: ').replace('\n', ' ') + '\n' for author in element.find_all('div', class_='list-authors')]   # Συγγραφέας
-            comments = [comment.text.strip() + '\n' for comment in element.find_all('div', class_='list-comments mathjax')]                     # Σχόλια
-            subjects = [subject.text.strip() + '\n' for subject in element.find_all('div', class_='list-subjects')]                             # Μαθήματα
-            date = soup.find('h3').text.strip()                                                                                                 # Ημερομηνία δημοσίευσης
+from bs4 import BeautifulSoup
 
-            # Δημιουργία ενός λεξικού και αποθήκευση της πληροφορίας που συλλέγω για κάθε paper
-            data = {
-                'titles': titles,
-                'authors': authors,
-                'subjects': subjects,
-                'comments': comments,
-                'date published': date
-                }
+def web_scrape(soup, max_limit):
+    # Αναζήτηση στο HTML του URL του μαθήματος, όλων των 'div' στοιχείων που έχουν την κλάση 'meta'
+    # elements = soup.find_all('div', class_='meta')
+    papers = []
+    for link in soup.find_all('a'):
+        href = link.get('href')
+        if href and href.startswith('/abs/'):
+            abs_url = 'https://arxiv.org/' + href
+            abs_page = requests.get(abs_url)
+            abs_soup = BeautifulSoup(abs_page.text, 'html.parser')
+            element = abs_soup.find('div', id='abs')
+            if element:
+                if len(papers) < max_limit:
+                    title = element.find('h1', class_='title mathjax').text.strip().removeprefix("Title:")
+                    author = element.find('div', class_='authors').text.strip().removeprefix("Authors:") 
+                    subject = element.find('td', class_='tablecell subjects').text.strip()
+                    hasComment = element.find('td', class_='tablecell comments mathjax')
+                    if hasComment is not None:
+                        comment = hasComment.text.strip()
+                    else:
+                        comment = ' '
+                    summary = element.find('blockquote', class_='abstract mathjax').text.strip().removeprefix("Abstract:") 
+                    date = element.find('div', class_='dateline').text.strip().removeprefix("[Submitted on ").removesuffix("]") 
+                    
+                    data = {
+                        'title': title,
+                        'author': author,
+                        'subject': subject,
+                        'comment': comment,
+                        'summary': summary,
+                        'date': date
+                    }
+
+                    # Αποθήκευση του λεξικού στην λίστα papers
+                    papers.append(data)
+                else:
+                    break
         
-            # Αποθήκευση του λεξικού στην λίστα papers
-            papers.append(data)
-        else:
-            break
-    
     return papers
 
 def store_json(papers):
-    # Εκτύπωση των μεταδεδομένων κάθε paper ξεχωριστά
-    for index, paper in enumerate(papers):
-        print(f'\n--- Paper {index + 1} ---')
-        for key, value in paper.items():
-            if key == 'date published':
-                print(f'{key}: {value}')  # Εκτύπωση της ημερομηνίας δημοσίευσης σε μία γραμμή
-            else:
-                for item in value:
-                    print(item)
-         # Εκτύπωση των μεταδεδομένων σε δομημένη μορφή JSON
+
+    for paper in papers:
         json_data = json.dumps(paper, indent=4)
         print(f'JSON Data:\n{json_data}')
     
