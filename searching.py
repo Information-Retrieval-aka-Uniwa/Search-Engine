@@ -77,7 +77,6 @@ else:
     Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
  
 """""""""""""""""""""""""""""""""""""""""""""
-
 processed_abstracts = []
 
 for data in papers:
@@ -86,4 +85,10 @@ for data in papers:
 
 json_processed_data = store_json(processed_abstracts)
 
+
+""""""""""""""""""""""""""""""""""""""""""""" 
+ 
+    Βήμα 3. Ευρετήριο (Indexing)
+ 
+"""""""""""""""""""""""""""""""""""""""""""""
 
