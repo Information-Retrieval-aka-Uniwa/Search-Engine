@@ -49,5 +49,5 @@ def store_json(papers):
     for paper in papers:
         json_data = json.dumps(paper, indent=4)
         print(f'JSON Data:\n{json_data}')
-    
+            
     return json_data

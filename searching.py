@@ -76,6 +76,13 @@ else:
     Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
  
 """""""""""""""""""""""""""""""""""""""""""""
+
+proccesed_data = []
+for data in json_data:
+    proccesed_data.append(process_text(data))
+print(proccesed_data)
+
+"""
 sample_text = "This is a sample text for processing. It includes various words and different verb tenses."
 
 processed_text = process_text(sample_text)
@@ -85,9 +92,4 @@ print(sample_text)
 
 print("\nProcessed Text:")
 print(processed_text)
-
 """
-proccesed_data = []
-for data in json_data:
-    proccesed_data.append(process_text(data))
-print(proccesed_data)"""
