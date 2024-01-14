@@ -86,12 +86,15 @@ try:
 
     processed_abstracts = []
 
+    
     for data in papers:
         abstract = data.get('abstract')
         processed_abstracts.append(process_text(abstract))
-
+    
+    '''
+    print(processed_abstracts)
     json_processed_data = store_json(processed_abstracts)
-
+    '''
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
@@ -99,10 +102,10 @@ try:
     
     """""""""""""""""""""""""""""""""""""""""""""
     
-    text = ['otisaresei kane', 'kala gamhsia', ' ok wraia loipon']
-    dicked = create_inverted_index(text)
-    print(dicked)
-
     
+    inverted_dict = create_inverted_index(processed_abstracts)
+    print(inverted_dict)
+    
+
 except Exception:
     print("To URL που έχεις δώσει δεν είναι έγκυρο για κάποιο μάθημα του ιστοτόπου arXiv.")
