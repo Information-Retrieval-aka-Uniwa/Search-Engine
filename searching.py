@@ -43,7 +43,7 @@ for list_url in list_urls:
 papers = []
 
 # Μέγιστος αριθμός των paper, των οποίων θέλω να συλλέξω τα μεταδεδομένα
-max_limit = 100
+max_limit = 2
 
 # Έλεγχος για το αν υπάρχει όντως URL που περιέχει όλα τα paper, διαφορετικά κρατάμε το URL του μαθήματος
 if "pastweek?show=" in all_papers_url:
@@ -56,21 +56,15 @@ if "pastweek?show=" in all_papers_url:
     # Web crawling την πληροφορία της σελίδας μέσω μίας ένθετης δομής HTML
     all_papers_soup = BeautifulSoup(all_papers_page.text, 'html.parser')    
     
-    # Αναζήτηση στο HTML του URL που περιέχει όλα τα paper, όλων των 'div' στοιχείων που έχουν την κλάση 'meta' 
-    all_papers_elements = all_papers_soup.find_all('div', class_='meta')
-
     # Κλήση της συνάρτησης web_scrape για την συλλογή των μεταδεδομένων των paper
-    papers = web_scrape(all_papers_soup, all_papers_elements, papers, max_limit)
+    papers = web_scrape(all_papers_soup, max_limit)
 
 #------------------ Βήμα 1γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------  
     # Κλήση της συνάρτησης store_json για την αποθήκευση των μεταδεδομένων σε JSON 
     json_data = store_json(papers)
 else:
-    # Αναζήτηση στο HTML του URL του μαθήματος, όλων των 'div' στοιχείων που έχουν την κλάση 'meta' 
-    subject_elements = subject_soup.find_all('div', class_='meta')
-    
     # Κλήση της συνάρτησης web_scrape για την συλλογή των μεταδεδομένων των paper
-    papers = web_scrape(subject_soup, subject_elements, papers, max_limit)
+    papers = web_scrape(subject_soup, max_limit)
 
 #------------------ Βήμα 1γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------    
     # Κλήση της συνάρτησης store_json για την αποθήκευση των μεταδεδομένων σε JSON 
@@ -97,4 +91,3 @@ proccesed_data = []
 for data in json_data:
     proccesed_data.append(process_text(data))
 print(proccesed_data)"""
-
