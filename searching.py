@@ -12,7 +12,7 @@ from text_processing import process_text
 """""""""""""""""""""""""""""""""""""""""""""
 #------------------ Βήμα 1α. Επιλογή ιστοτόπου-στόχου (arXiv) ------------------
 # Εισαγωγή του URL της σελίδας του μαθήματος που ενδιαφέρομαι για τα paper
-# subject_url = input("Δώσε το url της σελίδας του μαθήματος : ") 
+#subject_url = input("Δώσε το url της σελίδας του μαθήματος : ") 
 subject_url = 'https://arxiv.org/list/astro-ph/recent'
 
 # Φόρτωση της web σελίδας μέσω HTTP-GET
