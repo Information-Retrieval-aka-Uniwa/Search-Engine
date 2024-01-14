@@ -11,7 +11,7 @@ def process_text(text):
 
     # Normalization
     normalized_tokens = [x.lower() for x in tokens]
-
+#TSELENTI EISAI THEA
     # Stemming
     porter_stemmer = PorterStemmer()
     stemmed_tokens = [porter_stemmer.stem(token) for token in normalized_tokens]
