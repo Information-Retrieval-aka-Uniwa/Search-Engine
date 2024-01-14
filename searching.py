@@ -87,17 +87,3 @@ for data in papers:
 json_processed_data = store_json(processed_abstracts)
 
 
-
-
-
-"""
-sample_text = "This is a sample text for processing. It includes various words and different verb tenses."
-
-processed_text = process_text(sample_text)
-
-print("Original Text:")
-print(sample_text)
-
-print("\nProcessed Text:")
-print(processed_text)
-"""
