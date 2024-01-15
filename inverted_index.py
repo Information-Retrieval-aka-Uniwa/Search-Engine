@@ -1,12 +1,23 @@
+"""
+Βήμα 3. Ευρετήριο (Indexing)
 
+Είσοδος    -->  Μία λίστα με τις περιλήψεις (abstracts) των εργασιών που συλλέξαμε στο 'Βήμα 1. Σταχυολογητής (Web Crawler)' και κάναμε προεπεξεργασία κειμένου στο 'Βήμα 2. Προεπεξεργασία κειμένου'
+Λειτουργία -->  Αντιστοιχίζει κάθε λέξη/όρο με τον αριθμό ή αριθμούς (abs_id) των περιλήψεων (abstract) των εργασιών, στην οποία εμφανίζεται
+Έξοδος     -->  Ανεστραμμένη δομή δεδομένων ευρετηρίου (inverted_index)
+    
+"""
+#   create_inverted_index(Είσοδος)
+def create_inverted_index(abstracts):
+#   Λειτουργία       
+    
+    inverted_index = {}                             # Αρχικοποίηση της ανεστραμμένης δομής δεδομένων ευρετηρίου (δομή λεξικού)
+    for abs_id, abstract in enumerate(abstracts):   # Προσπέλαση της λίστας με τις περιλήψεις (abstract) των εργασιών (doc_id --> Θέση της περίληψης στην λίστα, document --> Περίληψη)
+        for word in abstract.split():               # Χωρισμός της περίληψης document σε λεκτικές μονάδες και προσπέλαση αυτών. Η προεπεξεργασία κειμένου έχει γίνει οπότε αρκεί η str.split() αντί της nltk.word_tokenize() για τον χωρισμό
+            if word not in inverted_index:          # O όρος κλειδί (word) δεν υπάρχει στο ευρετήριο 
+                inverted_index[word] = set()        # Το ευρετήριο είναι ένα λεξικό οπότε ορίζουμε το κλειδί word με κενό περιεχόμενο
+            inverted_index[word].add(abs_id)        # Προσθήκη του αριθμού της περίληψης (abs_id) στο περιεχόμενο με κλειδί τον όρο word. Η λέξη word εμφανίζεται στη περίληψη της εργασίας με abs_id
 
-def create_inverted_index(documents):      # Αντιστοιχίζει κάθε λέξη με τον αριθμό του εγγράφου στο οποίο εμφανίζεται
-    inverted_index = {}                    # Αρχικοποίηση του αντιστρόφου ευρετηρίου
-    for doc_id, document in enumerate(documents):
-        for word in document.split():
-            if word not in inverted_index:   # Αν το κλειδί/λέξη δεν υπάρχει στο ευρετήριο τότε βάζει την λέξη στο ευρετήριο
-                inverted_index[word] = set() # Αρχικοποίηση του συνόλου με τη λέξη κλειδί word
-            inverted_index[word].add(doc_id) # Προσθήκη του αριθμού του εγγράφου στο ευρετήριο με λέξη κλειδί word
-    return inverted_index
+#   return Έξοδος
+    return inverted_index                           
 
 
