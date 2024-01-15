@@ -65,13 +65,15 @@ def store_json(papers)
 Έξοδος[1]  --> [json_data]  Τα δεδομένα κάθε εργασιάς ως μία δομημένη μορφή JSON
     
 """
+
+
 #   store_json(Είσοδος[1])
 def store_json(papers):
 #   Λειτουργία
     
     for paper in papers:                         # Προσπέλαση της λίστας με τα λεξικά που έχουν τα δεδομένα κάθε εργασίας
         json_data = json.dumps(paper, indent=4)  # Αποθήκευση των δεδομένων των εργασιών σε μορφή JSON με 4 χαρακτήρες κενό να προηγούνται στην αποθήκευση κάθε δεδομένου
-        print(f'JSON Data:\n{json_data}')        # Εκτύπωση των δεδομένων σε μορφή JSON
+        '''print(f'JSON Data:\n{json_data}')'''        # Εκτύπωση των δεδομένων σε μορφή JSON
 
 #   return Έξοδος[1]   
     return json_data

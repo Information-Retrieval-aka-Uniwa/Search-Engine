@@ -5,6 +5,7 @@ from web_crawler import web_scrape
 from web_crawler import store_json
 from text_processing import process_text
 from inverted_index import create_inverted_index
+from search_engine import search
 
 try:
     """"""""""""""""""""""""""""""""""""""""""""" 
@@ -109,6 +110,30 @@ try:
     print(inverted_dict)
     #inverted_list.append(inverted_dict)
     #json_inverted_index = store_json(inverted_dict) 
+
+
+    """"""""""""""""""""""""""""""""""""""""""""" 
     
-except Exception:
-    print("To URL δεν είναι έγκυρο για κάποιο μάθημα του ιστοτόπου arXiv!!!")
+        Βήμα 4. Search Engine (Μηχανή αναζήτησης)
+    
+    """""""""""""""""""""""""""""""""""""""""""""
+    
+    returned_docs = []
+
+    search_query = input("Δώσε το ερώτημα αναζήτησης : ") # Εισαγωγή του ερωτήματος αναζήτησης από τον χρήστη
+    returned_docs = search(search_query, inverted_dict, processed_abstracts) # Κλήση της συνάρτησης search για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
+
+    print("Οι εργασίες που περιέχουν το ερώτημα αναζήτησης είναι : \n")
+    for doc in returned_docs:
+        paper = papers[doc]  # Get the abstract using the document number
+        print("Title:", paper.get("title"))
+        print("Authors:", paper.get("authors"))
+        print("Subjects:", paper.get("subjects"))
+        print("Comments:", paper.get("comments"))
+        print("Abstract:", paper.get("abstract"))
+        print("Date:", paper.get("date"), "\n\n")
+        # Print other paper information as needed
+
+
+except Exception as e:
+    print("Σφάλμα: ", str(e))

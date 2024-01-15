@@ -1,5 +1,6 @@
 import nltk
 import string
+import re
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -34,8 +35,9 @@ def process_text(text):
     string_punctuation = list(string.punctuation)                                                   # Όλα τα σημεία στίξης σε μία λίστα
     stop_words = stop_words + string_punctuation                                                    # Μία λίστα με όλες τις απαγορευμένες αγγλικές λέξεις και των σημείων στίξης
     stop_words_removal_tokens = [word for word in stemmed_tokens if word.lower() not in stop_words] # Λίστα με όλες τις λέξεις που δεν ανήκουν στην λίστα με όλες τις απαγορευμένες αγγλικές λέξεις και των σημείων στίξης
-         
+
     processed_text = ' '.join(stop_words_removal_tokens)                                            # Συνένωση των λέξεων της λίστας stop_words_removal_tokens ως ένα string για την τελική μορφή του προεπεξεργασμένου κείμενου
+    processed_text = re.sub(r'[^a-zA-Z0-9\s]', '', processed_text)                 # Αφαίρεση ειδικών χαρακτήρων από το κείμενο
 
 #   return Έξοδος[1]    
     return processed_text
