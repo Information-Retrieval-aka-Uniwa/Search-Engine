@@ -5,6 +5,14 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 
+"""
+Βήμα 2. Προεπεξεργασία κειμένου (Text Processing)
+
+Είσοδος    -->  
+Λειτουργία -->  
+Έξοδος     -->  
+    
+"""
 def process_text(text):
     # Tokenization
     tokens = word_tokenize(text)
