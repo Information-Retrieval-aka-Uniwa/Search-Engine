@@ -20,7 +20,7 @@ def web_scrape(soup, max_limit):
     
     papers = []                                                                                             # Αρχικοποίηση της λίστας με τα δεδομένα κάθε εργασίας
     for link in soup.find_all('a'):                                                                         # Αναζήτηση όλων των ετικέτων <a> από το έγγραφο HTML της σελίδας 
-        href = link.get('href')                                                                             # Εκχώρηση του περιεχομένου των ετικέτων <a> που ξεκινάνε με 'href' 
+        href = link.get('href')                                                                             # Εκχώρηση του περιεχομένου των ετικέτων <a> που ξεκινάνε με 'href' σε μία μεταβλητή
         if href and href.startswith('/abs/'):                                                               # Το περιεχόμενο υπάρχει και ξεκινάει με την συμβολοσειρά '/abs/' (περιεχόμενο με ετικέτα href='/abs/XXXX.XXXXX' που αντιστοιχεί σε εργασία με τα δεδομένα της)
             abs_url = 'https://arxiv.org/' + href                                                           # Συγχώνευση του περιεχομένου '/abs/XXXX.XXXXX' με το 'https://arxiv.org/' για τον σχηματισμό του URL της σελίδας με τα δεδομένα της εργασίας
             abs_page = requests.get(abs_url)                                                                # Φόρτωση της web σελίδας https://arxiv.org/abs/XXXX.XXXXX μέσω HTTP-GET
@@ -67,7 +67,7 @@ def store_json(papers)
 """
 #   store_json(Είσοδος[1])
 def store_json(papers):
-    # Λειτουργία
+#   Λειτουργία
     
     for paper in papers:                         # Προσπέλαση της λίστας με τα λεξικά που έχουν τα δεδομένα κάθε εργασίας
         json_data = json.dumps(paper, indent=4)  # Αποθήκευση των δεδομένων των εργασιών σε μορφή JSON με 4 χαρακτήρες κενό να προηγούνται στην αποθήκευση κάθε δεδομένου
