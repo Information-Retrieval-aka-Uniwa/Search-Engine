@@ -4,8 +4,6 @@ import requests
 from bs4 import BeautifulSoup
 
 def web_scrape(soup, max_limit):
-    # Αναζήτηση στο HTML του URL του μαθήματος, όλων των 'div' στοιχείων που έχουν την κλάση 'meta'
-    # elements = soup.find_all('div', class_='meta')
     papers = []
     for link in soup.find_all('a'):
         href = link.get('href')
