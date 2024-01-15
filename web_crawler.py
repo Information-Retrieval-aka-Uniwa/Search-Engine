@@ -39,6 +39,10 @@ def web_scrape(soup, max_limit):
                         comments = ' '                                                                      # Κενή συμβολοσειρά για την δήλωση απουσίας σχολίων στην εργασία
                     abstract = element.find('blockquote', class_='abstract mathjax').text.strip().removeprefix("Abstract:")      # Συλλογή της περίληψης της εργασίας
                     date = element.find('div', class_='dateline').text.strip().removeprefix("[Submitted on ").removesuffix("]")  # Συλλογή της ημερομηνίας δημοσίευσης
+                    for pdf_link in abs_soup.find_all('a'):                                                                      # Αναζήτηση του συνδέσμου για την λήψη του PDF της εργασίας
+                        pdf_href = pdf_link.get('href')                                                                          # Εκχώρηση του περιεχομένου των ετικέτων <a> που ξεκινάνε με 'href' σε μία μεταβλητή
+                        if pdf_href and pdf_href.startswith('/pdf/'):                                                            # Έλεγχος αν υπάρχει το pdf_href και αν ξεκινά με τη συμβολοσειρά '/pdf/'
+                            pdf_url = 'https://arxiv.org/' + pdf_href                                                            # Σχηματισμός του URL για τη λήψη του PDF της εργασίας
                     # Αποθήκευση των δεδομένων της εργασίας σε μία δομή λεξικού
                     data = {
                         'title': title,
@@ -46,7 +50,8 @@ def web_scrape(soup, max_limit):
                         'subjects': subjects,
                         'comments': comments,
                         'abstract': abstract,
-                        'date': date
+                        'date': date,
+                        'pdf_url': pdf_url
                     }
                     papers.append(data) # Αποθήκευση του λεξικού με τα δεδομένα της εργασίας σε μία λίστα
                 else:                   # Οι εργασίες που θα συλλέγξουμε τα δεδομένα (Web Scraping) ξεπερνάνε το μέγιστο πλήθος των εργασιών που ορίσαμε στην Είσοδο[2]
