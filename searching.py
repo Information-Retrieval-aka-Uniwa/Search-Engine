@@ -107,8 +107,6 @@ try:
     #------------------ Βήμα 3.β. Αποθήκευση του ευρετηρίου σε μία δομή δεδομένων ------------------
     # Κλήση της συνάρτησης store_json για την αποθήκευση ανεστραμμένης δομής δεδομένων ευρετηρίου σε JSON
     print(inverted_dict)
-    #inverted_list.append(inverted_dict)
-    #json_inverted_index = store_json(inverted_dict) 
     
 except Exception:
     print("To URL δεν είναι έγκυρο για κάποιο μάθημα του ιστοτόπου arXiv!!!")
