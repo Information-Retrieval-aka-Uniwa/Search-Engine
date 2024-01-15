@@ -1,5 +1,6 @@
 import nltk
 import string
+import re
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -36,6 +37,7 @@ def process_text(text):
     stop_words_removal_tokens = [word for word in stemmed_tokens if word.lower() not in stop_words] # Λίστα με όλες τις λέξεις που δεν ανήκουν στην λίστα με όλες τις απαγορευμένες αγγλικές λέξεις και των σημείων στίξης
          
     processed_text = ' '.join(stop_words_removal_tokens)                                            # Συνένωση των λέξεων της λίστας stop_words_removal_tokens ως ένα string για την τελική μορφή του προεπεξεργασμένου κείμενου
+    processed_text = re.sub(r'[^a-zA-Z0-9\s]', '', processed_text)
 
 #   return Έξοδος[1]    
     return processed_text
