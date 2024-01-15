@@ -17,6 +17,7 @@ def web_scrape(soup, max_limit)
 #   web_scrape(Είσοδος[1], Είσοδος[2])
 def web_scrape(soup, max_limit):
 #   Λειτουργία
+    
     papers = []                                                                                             # Αρχικοποίηση της λίστας με τα δεδομένα κάθε εργασίας
     for link in soup.find_all('a'):                                                                         # Αναζήτηση όλων των ετικέτων <a> από το έγγραφο HTML της σελίδας 
         href = link.get('href')                                                                             # Εκχώρηση του περιεχομένου των ετικέτων <a> που ξεκινάνε με 'href' 
@@ -50,6 +51,7 @@ def web_scrape(soup, max_limit):
                     papers.append(data) # Αποθήκευση του λεξικού με τα δεδομένα της εργασίας σε μία λίστα
                 else:                   # Οι εργασίες που θα συλλέγξουμε τα δεδομένα (Web Scraping) ξεπερνάνε το μέγιστο πλήθος των εργασιών που ορίσαμε στην Είσοδο[2]
                     break               # Σταματάμε την συλλογή δεδομένων
+
 #   return Έξοδος[1]
     return papers
 
@@ -66,8 +68,10 @@ def store_json(papers)
 #   store_json(Είσοδος[1])
 def store_json(papers):
     # Λειτουργία
+    
     for paper in papers:                         # Προσπέλαση της λίστας με τα λεξικά που έχουν τα δεδομένα κάθε εργασίας
         json_data = json.dumps(paper, indent=4)  # Αποθήκευση των δεδομένων των εργασιών σε μορφή JSON με 4 χαρακτήρες κενό να προηγούνται στην αποθήκευση κάθε δεδομένου
         print(f'JSON Data:\n{json_data}')        # Εκτύπωση των δεδομένων σε μορφή JSON
+
 #   return Έξοδος[1]   
     return json_data

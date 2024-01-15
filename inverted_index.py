@@ -9,12 +9,14 @@
 #   create_inverted_index(Είσοδος)
 def create_inverted_index(abstracts):
 #   Λειτουργία       
+    
     inverted_index = {}                             # Αρχικοποίηση της ανεστραμμένης δομής δεδομένων ευρετηρίου (δομή λεξικού)
     for abs_id, abstract in enumerate(abstracts):   # Προσπέλαση της λίστας με τις περιλήψεις (abstract) των εργασιών (doc_id --> Θέση της περίληψης στην λίστα, document --> Περίληψη)
         for word in abstract.split():               # Χωρισμός της περίληψης document σε λεκτικές μονάδες και προσπέλαση αυτών. Η προεπεξεργασία κειμένου έχει γίνει οπότε αρκεί η str.split() αντί της nltk.word_tokenize() για τον χωρισμό
             if word not in inverted_index:          # O όρος κλειδί (word) δεν υπάρχει στο ευρετήριο 
                 inverted_index[word] = set()        # Το ευρετήριο είναι ένα λεξικό οπότε ορίζουμε το κλειδί word με κενό περιεχόμενο
             inverted_index[word].add(abs_id)        # Προσθήκη του αριθμού της περίληψης (abs_id) στο περιεχόμενο με κλειδί τον όρο word. Η λέξη word εμφανίζεται στη περίληψη της εργασίας με abs_id
+
 #   return Έξοδος
     return inverted_index                           
 
