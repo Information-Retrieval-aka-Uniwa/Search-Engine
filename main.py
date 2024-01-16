@@ -5,6 +5,7 @@ from web_crawler import web_scrape
 from web_crawler import store_json
 from text_processing import process_text
 from inverted_index import create_inverted_index
+from search_engine import search
 
 try:
     """"""""""""""""""""""""""""""""""""""""""""" 
