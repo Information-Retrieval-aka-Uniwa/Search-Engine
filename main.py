@@ -120,6 +120,31 @@ try:
     print('\n')
 
 
+    
+    """"""""""""""""""""""""""""""""""""""""""""" 
+    
+        Βήμα 4. Search Engine (Μηχανή αναζήτησης)
+    
+    """""""""""""""""""""""""""""""""""""""""""""
+    
+    returned_docs = []
+
+    search_query = input("Δώσε το ερώτημα αναζήτησης : ") # Εισαγωγή του ερωτήματος αναζήτησης από τον χρήστη
+    returned_docs = search(search_query, inverted_dict, processed_abstracts) # Κλήση της συνάρτησης search για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
+
+    print("Οι εργασίες που περιέχουν το ερώτημα αναζήτησης είναι : \n")
+    for doc in returned_docs:
+        paper = papers[doc]  # Get the abstract using the document number
+        print("Title:", paper.get("title"))
+        print("Authors:", paper.get("authors"))
+        print("Subjects:", paper.get("subjects"))
+        print("Comments:", paper.get("comments"))
+        print("Abstract:", paper.get("abstract"))
+        print("Date:", paper.get("date"))
+        print("PDF URL:", paper.get("pdf_url"), "\n\n")
+        # Print other paper information as needed
+
+
 except Exception as ex: 
     print("_____________________Εξαίρεση_____________________")
     print(str(ex))
