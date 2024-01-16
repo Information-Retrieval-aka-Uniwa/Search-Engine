@@ -8,15 +8,13 @@ from bs4 import BeautifulSoup
 
 def web_scrape(soup, max_limit)
 
-Είσοδος[1] --> [soup]      Το έγγραφο HTML της σελίδας που έχει τις σελίδες με URL https://arxiv.org/abs/XXXX.XXXXX που αντιστοιχεί σε εργασία με τα δεδομένα της (τίτλος, συγγραφείς, μαθήματα, σχόλια, περίληψη, ημερομηνία δημοσίευσης)
-Είσοδος[2] --> [max_limit] Το μέγιστο πλήθος των εργασιών που θέλουμε να συλλέξουμε τα δεδομένα τους από την εκάστοτε σελίδα με URL https://arxiv.org/abs/XXXX.XXXXX
+Είσοδος[1] --> [soup]      Το έγγραφο HTML της σελίδας που έχει τις σελίδες με URL https://arxiv.org/abs/XXXX.XXXXX που αντιστοιχεί σε εργασία με τα δεδομένα της (τίτλος, συγγραφείς, μαθήματα, σχόλια, περίληψη, ημερομηνία δημοσίευσης, url λήψης του pdf της εργασίας)
+Είσοδος[2] --> [max_limit] Το μέγιστο πλήθος των εργασιών όπου θέλουμε να συλλέξουμε τα δεδομένα τους από την εκάστοτε σελίδα με URL https://arxiv.org/abs/XXXX.XXXXX
 Λειτουργία -->             Ανάλυση των εγγράφων HTML με URL https://arxiv.org/abs/XXXX.XXXXX για την συλλογή δεδομένων (Web Scraping) εργασιών 
 Έξοδος[1]  --> [papers]    Λίστα με τα δεδομένα κάθε εργασίας δομημένα σε μία δομή λεξικού (data) με κλειδία τα ονόματα των δεδομένων και αντίστοιχα περιεχόμενα τα δεδομένα    
     
 """
-#   web_scrape(Είσοδος[1], Είσοδος[2])
 def web_scrape(soup, max_limit):
-#   Λειτουργία
     
     papers = []                                                                                             # Αρχικοποίηση της λίστας με τα δεδομένα κάθε εργασίας
     for link in soup.find_all('a'):                                                                         # Αναζήτηση όλων των ετικέτων <a> από το έγγραφο HTML της σελίδας 
@@ -39,10 +37,10 @@ def web_scrape(soup, max_limit):
                         comments = ' '                                                                      # Κενή συμβολοσειρά για την δήλωση απουσίας σχολίων στην εργασία
                     abstract = element.find('blockquote', class_='abstract mathjax').text.strip().removeprefix("Abstract:")      # Συλλογή της περίληψης της εργασίας
                     date = element.find('div', class_='dateline').text.strip().removeprefix("[Submitted on ").removesuffix("]")  # Συλλογή της ημερομηνίας δημοσίευσης
-                    for pdf_link in abs_soup.find_all('a'):                                                                      # Αναζήτηση του συνδέσμου για την λήψη του PDF της εργασίας
-                        pdf_href = pdf_link.get('href')                                                                          # Εκχώρηση του περιεχομένου των ετικέτων <a> που ξεκινάνε με 'href' σε μία μεταβλητή
-                        if pdf_href and pdf_href.startswith('/pdf/'):                                                            # Έλεγχος αν υπάρχει το pdf_href και αν ξεκινά με τη συμβολοσειρά '/pdf/'
-                            pdf_url = 'https://arxiv.org/' + pdf_href                                                            # Σχηματισμός του URL για τη λήψη του PDF της εργασίας
+                    for pdf_link in abs_soup.find_all('a'):                      # Αναζήτηση του συνδέσμου για την λήψη του PDF της εργασίας
+                        pdf_href = pdf_link.get('href')                          # Εκχώρηση του περιεχομένου των ετικέτων <a> που ξεκινάνε με 'href' σε μία μεταβλητή
+                        if pdf_href and pdf_href.startswith('/pdf/'):            # Έλεγχος αν υπάρχει το pdf_href και αν ξεκινά με τη συμβολοσειρά '/pdf/'
+                            pdf_url = 'https://arxiv.org/' + pdf_href            # Σχηματισμός του URL για τη λήψη του PDF της εργασίας
                     # Αποθήκευση των δεδομένων της εργασίας σε μία δομή λεξικού
                     data = {
                         'title': title,
@@ -57,8 +55,8 @@ def web_scrape(soup, max_limit):
                 else:                   # Οι εργασίες που θα συλλέγξουμε τα δεδομένα (Web Scraping) ξεπερνάνε το μέγιστο πλήθος των εργασιών που ορίσαμε στην Είσοδο[2]
                     break               # Σταματάμε την συλλογή δεδομένων
 
-#   return Έξοδος[1]
-    return papers
+
+    return papers # Επιστροφή της λίστας με τα δεδομένα κάθε εργασίας
 
 """
 Βήμα 1. Σταχυολογητής (Web Crawler)
@@ -70,14 +68,11 @@ def store_json(papers)
 Έξοδος[1]  --> [json_data]  Τα δεδομένα κάθε εργασιάς ως μία δομημένη μορφή JSON
     
 """
-#   store_json(Είσοδος[1])
 def store_json(papers):
-#   Λειτουργία
     
     for index, paper in enumerate(papers):       # Προσπέλαση της λίστας με τα λεξικά που έχουν τα δεδομένα κάθε εργασίας
         print(f'---- Paper #{index + 1} ----')   # Εκτύπωση του αριθμού της εργασίας
         json_data = json.dumps(paper, indent=4)  # Αποθήκευση των δεδομένων των εργασιών σε μορφή JSON με 4 χαρακτήρες κενό να προηγούνται στην αποθήκευση κάθε δεδομένου
         print(f'JSON Data:\n{json_data}')        # Εκτύπωση των δεδομένων σε μορφή JSON
-
-#   return Έξοδος[1]   
+  
     return json_data
