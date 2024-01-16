@@ -1,11 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-from web_crawler import web_scrape
-from web_crawler import store_json
+from web_crawler import web_scrape, store_json 
 from text_processing import process_text
 from inverted_index import create_inverted_index
-from search_engine import search
+from search_engine import init_gui, search_papers
+
 
 try:
     """"""""""""""""""""""""""""""""""""""""""""" 
@@ -121,29 +121,15 @@ try:
     print('\n')
 
 
-    
     """"""""""""""""""""""""""""""""""""""""""""" 
     
-        Βήμα 4. Search Engine (Μηχανή αναζήτησης)
+        Βήμα 4. Μηχανή αναζήτησης (Search engine)
     
     """""""""""""""""""""""""""""""""""""""""""""
+    #------------------ Βήμα 4.α. Ανάπτυξη διεπαφής χρήστη για αναζήτηση εργασιών ------------------
+    init_gui(papers, inverted_dict) # Κλήση της συνάρτησης init_gui για την ανάπτυξη διεπαφής χρήστη για αναζήτηση εργασιών
     
-    returned_docs = []
-
-    search_query = input("Δώσε το ερώτημα αναζήτησης : ") # Εισαγωγή του ερωτήματος αναζήτησης από τον χρήστη
-    returned_docs = search(search_query, inverted_dict, processed_abstracts) # Κλήση της συνάρτησης search για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
-
-    print("Οι εργασίες που περιέχουν το ερώτημα αναζήτησης είναι : \n")
-    for doc in returned_docs:
-        paper = papers[doc]  # Get the abstract using the document number
-        print("Title:", paper.get("title"))
-        print("Authors:", paper.get("authors"))
-        print("Subjects:", paper.get("subjects"))
-        print("Comments:", paper.get("comments"))
-        print("Abstract:", paper.get("abstract"))
-        print("Date:", paper.get("date"))
-        print("PDF URL:", paper.get("pdf_url"), "\n\n")
-        # Print other paper information as needed
+    
 
 
 except Exception as ex: 
