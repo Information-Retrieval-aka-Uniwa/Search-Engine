@@ -21,20 +21,22 @@ def init_gui(papers, inverted_index):
     search_entry = tkinter.Entry(window, width=50) # Ορισμός του πλάτους του πεδίου εισαγωγής κειμένου
     search_entry.pack(pady=10)                     # Ορισμός του πεδίου εισαγωγής κειμένου στο παράθυρο
 
+    # ----- Πεδίο επιλογής αλγορίθμου ανάκτησης -----
+    options = ["Boolean Retrieval", "Vector Space Model", "Okapi BM25"]         # Ορισμός των επιλογών του πεδίου επιλογής αλγορίθμου ανάκτησης    
+    combobox = ttk.Combobox(window, values=options, state="readonly", width=30) # Ορισμός του πλάτους του πεδίου επιλογής αλγορίθμου ανάκτησης, των επιλογών του πεδίου επιλογής αλγορίθμου ανάκτησης, της κατάστασης του πεδίου επιλογής αλγορίθμου ανάκτησης (readonly) και της δημιουργίας του πεδίου επιλογής αλγορίθμου ανάκτησης
+    combobox.set("ΚΑΝΕΝΑΣ αλγόριθμος ανάκτησης")                                # Ορισμός της προεπιλεγμένης επιλογής του πεδίου επιλογής αλγορίθμου ανάκτησης
+    combobox.pack()                                                             # Ορισμός του πεδίου επιλογής αλγορίθμου ανάκτησης στο παράθυρο
+
     # ----- Ερώτημα αναζήτησης (query) -----
-    def get_query():                                       # Inline συνάρτηση που επιστρέφει το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
-        search_query = search_entry.get()                  # Το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
-        print_papers(search_query, papers, inverted_index) # Κλήση της print_papers για την εκτύπωση των δεδομένων των εργασιών που περιέχουν το ερώτημα αναζήτησης
+    def get_query():                                        # Inline συνάρτηση που επιστρέφει το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
+        search_query = search_entry.get()                   # Το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
+        retrieval_algorithm = combobox.get()                 # Επιλεγμένος αλγόριθμος ανάκτησης
+        print("Selected Algorithm:", retrieval_algorithm)    # Εκτύπωση του επιλεγμένου αλγορίθμου ανάκτησης
+        print_papers(search_query, retrieval_algorithm, papers, inverted_index)  # Κλήση της print_papers για την εκτύπωση των δεδομένων των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
     # ----- Κουμπί αναζήτησης -----
     search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query) # Ορισμός του κουμπιού αναζήτησης και κλήση της inline συνάρτησης get_query, όταν πατηθεί το κουμπί
     search_button.pack()                                                        # Ορισμός του κουμπιού αναζήτησης στο παράθυρο
-
-    # ----- Πεδίο επιλογής αλγορίθμου ανάκτησης -----
-    options = ["Boolean Retrieval", "Vector Space Model", "Okapi BM25"]         # Ορισμός των επιλογών του πεδίου επιλογής αλγορίθμου ανάκτησης    
-    combobox = ttk.Combobox(window, values=options, state="readonly", width=30) # Ορισμός του πλάτους του πεδίου επιλογής αλγορίθμου ανάκτησης, των επιλογών του πεδίου επιλογής αλγορίθμου ανάκτησης, της κατάστασης του πεδίου επιλογής αλγορίθμου ανάκτησης (readonly) και της δημιουργίας του πεδίου επιλογής αλγορίθμου ανάκτησης
-    combobox.set("Επιλογή αλγόριθμου ανάκτησης")                                # Ορισμός της προεπιλεγμένης επιλογής του πεδίου επιλογής αλγορίθμου ανάκτησης
-    combobox.pack()                                                             # Ορισμός του πεδίου επιλογής αλγορίθμου ανάκτησης στο παράθυρο
 
     # ----- Εκτέλεση του παραθύρου -----
     window.mainloop() 
@@ -51,11 +53,11 @@ def print_papers(search_query, papers, inverted_dict)
 Λειτουργία -->                   Εκτύπωση των ακαδημαϊκών εργασιών που περιέχουν το ερώτημα αναζήτησης 
     
 """
-def print_papers(search_query, papers, inverted_index):
+def print_papers(search_query, retrieval_algorithm, papers, inverted_index):
 
     returned_docs = [] # Αρχικοποίηση της λίστας με τα αποτελέσματα της αναζήτησης
 
-    returned_docs = search_papers(search_query, inverted_index) # Κλήση της συνάρτησης search_papers για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
+    returned_docs = search_papers(search_query, retrieval_algorithm, inverted_index) # Κλήση της συνάρτησης search_papers για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
     print("Οι εργασίες που περιέχουν το ερώτημα αναζήτησης είναι: \n")
     for doc in returned_docs:                                # Προσπέλαση της λίστας με τα αποτελέσματα της αναζήτησης
@@ -80,8 +82,18 @@ def search_papers(query, inverted_index)
 Έξοδος     --> [matching_papers]  Λίστα με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
     
 """
-def search_papers(query, inverted_index):
-    
+def search_papers(query, retrieval_algorithm, inverted_index):
+    """
+    switch (retrieval_algorithm) 
+    {
+        case "Boolean Retrieval":
+            matching_papers = boolean_retrieval(query, inverted_index) # Κλήση της boolean_retrieval για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
+        case "Vector Space Model":
+            matching_papers = vector_space_model(query, inverted_index) # Κλήση της boolean_retrieval για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
+        case "Okapi BM25":
+            matching_papers = okapi_bm25(query, inverted_index) # Κλήση της boolean_retrieval για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
+    }
+    """
     terms = query.lower().split()                # Μετατροπή του ερωτήματος αναζήτησης σε πεζά και διαχωρισμός του σε λεκτικές μονάδες
     matching_papers = []                         # Αρχικοποίηση της λίστας με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
