@@ -1,4 +1,4 @@
-def search_papers_bool(query, inverted_index):
+def search_papers_boolean(query, inverted_index):
     
     terms = query.lower().split()  # Μετατροπή του ερωτήματος αναζήτησης σε πεζά γράμματα και διαχωρισμός του σε λεκτικές μονάδες
     matching_papers = []           # Αρχικοποίηση της λίστας με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης              
@@ -44,3 +44,19 @@ def search_papers_bool(query, inverted_index):
     matching_papers = set(matching_papers) 
     
     return matching_papers
+
+
+def search_papers_default(query, inverted_index):
+
+    terms = query.lower().split()                # Μετατροπή του ερωτήματος αναζήτησης σε πεζά και διαχωρισμός του σε λεκτικές μονάδες
+    matching_papers = []                         # Αρχικοποίηση της λίστας με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
+
+    for term in terms:                           # Προσπέλαση των λεκτικών μονάδων του ερωτήματος αναζήτησης
+        if term in inverted_index:               # Ο όρος κλειδί (term) υπάρχει στο ευρετήριο
+            documents = inverted_index[term]     # Ανάκτηση των αριθμών των εργασιών που περιέχουν τον όρο κλειδί (term)
+            for document in documents:           # Προσπέλαση των αριθμών των εργασιών που περιέχουν τον όρο κλειδί (term)
+                matching_papers.append(document) # Προσθήκη του αριθμού της εργασίας στη λίστα με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
+
+    matching_papers = list(set(matching_papers)) # Αφαίρεση των διπλότυπων αριθμών εργασιών που περιέχουν το ερώτημα αναζήτησης
+    
+    return matching_papers                       # Επιστροφή της λίστας με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης

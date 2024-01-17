@@ -1,7 +1,7 @@
 import tkinter 
 from tkinter import ttk
 
-from retrieval_algo import search_papers_bool
+from retrieval_algos import search_papers_boolean, search_papers_default
 
 """
 Βήμα 4. Μηχανή αναζήτησης (Search engine)
