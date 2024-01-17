@@ -25,11 +25,12 @@ def search_papers_boolean(query, inverted_index):
             next_term = terms[i + 1]
             if previous_term in inverted_index or next_term in inverted_index:
                 documents_with_previous_term = inverted_index[previous_term]
+                
                 for document in documents_with_previous_term:
                     if document in documents_with_next_term:
                         matching_papers.append(document)
                 documents_with_next_term = inverted_index[next_term]
-                
+
                 for document in documents_with_next_term:
                     if document in documents_with_previous_term:
                         matching_papers.append(document)
@@ -57,6 +58,6 @@ def search_papers_default(query, inverted_index):
             for document in documents:           # Προσπέλαση των αριθμών των εργασιών που περιέχουν τον όρο κλειδί (term)
                 matching_papers.append(document) # Προσθήκη του αριθμού της εργασίας στη λίστα με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
-    matching_papers = list(set(matching_papers)) # Αφαίρεση των διπλότυπων αριθμών εργασιών που περιέχουν το ερώτημα αναζήτησης
+    matching_papers = set(matching_papers) # Αφαίρεση των διπλότυπων αριθμών εργασιών που περιέχουν το ερώτημα αναζήτησης
     
     return matching_papers                       # Επιστροφή της λίστας με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
