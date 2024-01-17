@@ -1,6 +1,8 @@
 import tkinter 
 from tkinter import ttk
 
+from retrieval_algo import search_papers_bool
+
 """
 Βήμα 4. Μηχανή αναζήτησης (Search engine)
 
@@ -24,7 +26,7 @@ def init_gui(papers, inverted_index):
     # ----- Ερώτημα αναζήτησης (query) -----
     def get_query():                                       # Inline συνάρτηση που επιστρέφει το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
         search_query = search_entry.get()                  # Το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
-        print_papers(search_query, papers, inverted_index) # Κλήση της print_papers για την εκτύπωση των δεδομένων των εργασιών που περιέχουν το ερώτημα αναζήτησης
+        print_papers(combobox, search_query, papers, inverted_index) # Κλήση της print_papers για την εκτύπωση των δεδομένων των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
     # ----- Κουμπί αναζήτησης -----
     search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query) # Ορισμός του κουμπιού αναζήτησης και κλήση της inline συνάρτησης get_query, όταν πατηθεί το κουμπί
@@ -37,7 +39,7 @@ def init_gui(papers, inverted_index):
     combobox.pack()                                                             # Ορισμός του πεδίου επιλογής αλγορίθμου ανάκτησης στο παράθυρο
 
     # ----- Εκτέλεση του παραθύρου -----
-    window.mainloop() 
+    window.mainloop()
 
 
 """
@@ -51,11 +53,14 @@ def print_papers(search_query, papers, inverted_dict)
 Λειτουργία -->                   Εκτύπωση των ακαδημαϊκών εργασιών που περιέχουν το ερώτημα αναζήτησης 
     
 """
-def print_papers(search_query, papers, inverted_index):
+def print_papers(algo,search_query, papers, inverted_index):
 
     returned_docs = [] # Αρχικοποίηση της λίστας με τα αποτελέσματα της αναζήτησης
 
-    returned_docs = search_papers(search_query, inverted_index) # Κλήση της συνάρτησης search_papers για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
+    if algo == "Boolean Retrieval":
+        returned_docs = search_papers_bool(search_query, inverted_index)
+    else:    
+        returned_docs = search_papers(search_query, inverted_index) # Κλήση της συνάρτησης search_papers για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
     print("Οι εργασίες που περιέχουν το ερώτημα αναζήτησης είναι: \n")
     for doc in returned_docs:                                # Προσπέλαση της λίστας με τα αποτελέσματα της αναζήτησης
@@ -91,7 +96,7 @@ def search_papers(query, inverted_index):
             for document in documents:           # Προσπέλαση των αριθμών των εργασιών που περιέχουν τον όρο κλειδί (term)
                 matching_papers.append(document) # Προσθήκη του αριθμού της εργασίας στη λίστα με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
-    matching_papers = list(set(matching_papers)) # Αφαίρεση των διπλότυπων αριθμών εργασιών που περιέχουν το ερώτημα αναζήτησης
+    matching_papers = set(matching_papers)       # Αφαίρεση των διπλότυπων αριθμών εργασιών που περιέχουν το ερώτημα αναζήτησης
     
     return matching_papers                       # Επιστροφή της λίστας με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
