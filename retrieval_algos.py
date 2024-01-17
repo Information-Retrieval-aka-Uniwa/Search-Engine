@@ -30,8 +30,8 @@ def search_papers_boolean(query, inverted_index):
         elif term == "not" and i < len(terms) - 1:
             next_term = terms[i + 1]
             if next_term not in inverted_index:
-                documents = inverted_index[next_term]    
-                for document in documents:           
+                documents_without_next_term = inverted_index[next_term]    
+                for document in documents_with_previous_term:           
                     matching_papers.append(document) 
 
     
