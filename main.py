@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from web_crawler import web_scrape, store_json 
 from text_processing import process_text
 from inverted_index import create_inverted_index
-from search_engine import init_gui, search_papers
+from search_engine import init_gui, print_papers
 
 
 try:
