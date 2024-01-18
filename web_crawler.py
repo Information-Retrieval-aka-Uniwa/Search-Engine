@@ -44,7 +44,7 @@ def web_scrape(soup, max_limit):
                     # Αποθήκευση των δεδομένων της εργασίας σε μία δομή λεξικού
                     data = {
                         'title': title,
-                        'authosr': authors,
+                        'authors': authors,
                         'subjects': subjects,
                         'comments': comments,
                         'abstract': abstract,
