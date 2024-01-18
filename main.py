@@ -49,7 +49,7 @@ try:
     papers = []
 
     # Μέγιστος αριθμός των εργασιών, των οποίων θέλουμε να συλλέξουμε τα δεδομένα
-    max_limit = 2
+    max_limit = 10
 
     # Υπάρχει περιεχόμενο που περιέχει την λίστα με όλες τις εργασίες ενός μαθήματος
     if "pastweek?show=" in all_papers_url:
@@ -100,7 +100,7 @@ try:
     # Εκτύπωση των προεπεξεργασμένων περιλήψεων (abstracts) των εργασιών
     print("_____________________Βήμα 2. Προεπεξεργασία κειμένου (Text processing)_____________________")
     for index, abstract in enumerate(processed_abstracts):
-        print(f'---- Paper #{index + 1} ----')
+        print(f'---- Paper #{index} ----')
         print(abstract)    
     print('\n')
 

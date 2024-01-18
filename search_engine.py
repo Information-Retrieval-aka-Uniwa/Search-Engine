@@ -60,7 +60,7 @@ def print_papers(search_query, retrieval_algorithm, papers, inverted_index):
     returned_docs = [] # Αρχικοποίηση της λίστας με τα αποτελέσματα της αναζήτησης
 
     if retrieval_algorithm == "Boolean Retrieval":
-        returned_docs = search_papers_boolean(search_query, inverted_index)
+        returned_docs = search_papers_boolean(search_query, inverted_index, len(papers))
     else:    
         returned_docs = search_papers_default(search_query, inverted_index) # Κλήση της συνάρτησης search_papers για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
