@@ -1,6 +1,8 @@
 import tkinter 
 from tkinter import ttk
 
+from retrieval_algos import search_papers_boolean, search_papers_default
+
 """
 Βήμα 4. Μηχανή αναζήτησης (Search engine)
 
@@ -57,7 +59,10 @@ def print_papers(search_query, retrieval_algorithm, papers, inverted_index):
 
     returned_docs = [] # Αρχικοποίηση της λίστας με τα αποτελέσματα της αναζήτησης
 
-    returned_docs = search_papers(search_query, retrieval_algorithm, inverted_index) # Κλήση της συνάρτησης search_papers για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
+    if retrieval_algorithm == "Boolean Retrieval":
+        returned_docs = search_papers_boolean(search_query, inverted_index, len(papers))
+    else:    
+        returned_docs = search_papers_default(search_query, inverted_index) # Κλήση της συνάρτησης search_papers για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
 
     print("Οι εργασίες που περιέχουν το ερώτημα αναζήτησης είναι: \n")
     for doc in returned_docs:                                # Προσπέλαση της λίστας με τα αποτελέσματα της αναζήτησης
@@ -69,44 +74,6 @@ def print_papers(search_query, retrieval_algorithm, papers, inverted_index):
         print("Abstract:", paper.get("abstract"))            # Εκτύπωση της περίληψης της εργασίας
         print("Date:", paper.get("date"))                    # Εκτύπωση της ημερομηνίας δημοσίευσης της εργασίας
         print("PDF URL:", paper.get("pdf_url"), "\n\n")      # Εκτύπωση του συνδέσμου για τη λήψη του PDF της εργασίας
-
-
-"""
-Βήμα 4. Μηχανή αναζήτησης (Search engine)
-
-def search_papers(query, inverted_index)
-
-Είσοδος[1] --> [query]            Ερώτημα αναζήτησης που εισήγαγε ο χρήστης στην διεπαφή χρήστη
-Είσοδος[2] --> [inverted_index]   Ανεστραμμένη δομή δεδομένων ευρετηρίου αποθηκευμένη σε μία δομή λεξικού 
-Λειτουργία -->                    Αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
-Έξοδος     --> [matching_papers]  Λίστα με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
-    
-"""
-def search_papers(query, retrieval_algorithm, inverted_index):
-    """
-    switch (retrieval_algorithm) 
-    {
-        case "Boolean Retrieval":
-            matching_papers = boolean_retrieval(query, inverted_index) # Κλήση της boolean_retrieval για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
-        case "Vector Space Model":
-            matching_papers = vector_space_model(query, inverted_index) # Κλήση της boolean_retrieval για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
-        case "Okapi BM25":
-            matching_papers = okapi_bm25(query, inverted_index) # Κλήση της boolean_retrieval για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
-    }
-    """
-    terms = query.lower().split()                # Μετατροπή του ερωτήματος αναζήτησης σε πεζά και διαχωρισμός του σε λεκτικές μονάδες
-    matching_papers = []                         # Αρχικοποίηση της λίστας με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
-
-    for term in terms:                           # Προσπέλαση των λεκτικών μονάδων του ερωτήματος αναζήτησης
-        if term in inverted_index:               # Ο όρος κλειδί (term) υπάρχει στο ευρετήριο
-            documents = inverted_index[term]     # Ανάκτηση των αριθμών των εργασιών που περιέχουν τον όρο κλειδί (term)
-            for document in documents:           # Προσπέλαση των αριθμών των εργασιών που περιέχουν τον όρο κλειδί (term)
-                matching_papers.append(document) # Προσθήκη του αριθμού της εργασίας στη λίστα με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
-
-    matching_papers = list(set(matching_papers)) # Αφαίρεση των διπλότυπων αριθμών εργασιών που περιέχουν το ερώτημα αναζήτησης
-    
-    return matching_papers                       # Επιστροφή της λίστας με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης
-
 
 
 

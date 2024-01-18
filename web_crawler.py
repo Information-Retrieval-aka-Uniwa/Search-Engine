@@ -44,7 +44,7 @@ def web_scrape(soup, max_limit):
                     # Αποθήκευση των δεδομένων της εργασίας σε μία δομή λεξικού
                     data = {
                         'title': title,
-                        'authosr': authors,
+                        'authors': authors,
                         'subjects': subjects,
                         'comments': comments,
                         'abstract': abstract,
@@ -71,7 +71,7 @@ def store_json(papers)
 def store_json(papers):
     
     for index, paper in enumerate(papers):       # Προσπέλαση της λίστας με τα λεξικά που έχουν τα δεδομένα κάθε εργασίας
-        print(f'---- Paper #{index + 1} ----')   # Εκτύπωση του αριθμού της εργασίας
+        print(f'---- Paper #{index} ----')       # Εκτύπωση του αριθμού της εργασίας
         json_data = json.dumps(paper, indent=4)  # Αποθήκευση των δεδομένων των εργασιών σε μορφή JSON με 4 χαρακτήρες κενό να προηγούνται στην αποθήκευση κάθε δεδομένου
         print(f'JSON Data:\n{json_data}')        # Εκτύπωση των δεδομένων σε μορφή JSON
   
