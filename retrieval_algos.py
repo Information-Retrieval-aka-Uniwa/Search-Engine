@@ -84,10 +84,10 @@ def search_papers_vector_space(query, papers, preprocessed_papers):
     results.sort(key=lambda x: x[1], reverse=True)
 
     # Print the ranked documents
-    #for doc, similarity in results:
-    #    print(f"Similarity: {similarity:.4f}\n{doc}\n")
+    for doc, similarity in results:
+        print(f"Similarity: {similarity:.4f}\n{doc}\n")
     
-    return results
+    return set()
 
 
 
