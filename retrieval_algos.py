@@ -59,9 +59,8 @@ def search_papers_vector_space(query, papers, preprocessed_papers):
 
     # Step 1: Tokenize and preprocess the text
     tokenized_query = nltk.word_tokenize(preprocess_text(query)) 
-    #doc_id = [doc['id'] for doc in papers]
+    doc_id = [doc['id'] for doc in papers]
     #title = [doc['title'] for doc in papers]
-    abstracts = [doc['abstract'] for doc in papers]
     preprocessed_abstracts = [doc['abstract'] for doc in preprocessed_papers]
     tokenized_abstracts = [nltk.word_tokenize(doc) for doc in preprocessed_abstracts]
 
@@ -81,28 +80,15 @@ def search_papers_vector_space(query, papers, preprocessed_papers):
     cosine_similarities = cosine_similarity(query_vector, tfidf_matrix)
 
     # Step 4: Rank documents by similarity
-    results = [(abstracts[i], cosine_similarities[0][i]) for i in range(len(abstracts))]
+    results = [(doc_id[i], cosine_similarities[0][i]) for i in range(len(doc_id))]
     results.sort(key=lambda x: x[1], reverse=True)
 
     # Print the ranked documents
-    for doc, similarity in results:
-        print(f"Similarity: {similarity:.2f}\n{doc}\n")
-
-
-
+    #for doc, similarity in results:
+    #    print(f"Similarity: {similarity:.4f}\n{doc}\n")
     
-    """ 
-    terms = sorted(set(query + paper_abstract for paper_abstract in papers.get('abstract')))
-    init_vector = OrderedDict((term, 0) for term in terms)
+    return results
 
-    doc_vectors = []
-    for doc, doc_tokens in enumerate([query, paper_abstract for paper_abstract in papers.get('abstract')]):
-        vector = copy.copy(init_vector)
-        bag_of_words = Counter(doc_tokens)
-        for term, freq in bag_of_words.items():
-            vector[term] = freq / len(terms)
-        doc_vectors.append(vector)
-    return doc_vectors"""
 
 
 

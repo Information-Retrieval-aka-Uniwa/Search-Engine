@@ -69,10 +69,8 @@ try:
         papers = web_scrape(all_papers_soup, max_limit)
 
     #------------------ Βήμα 1.γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------  
-        # Κλήση της συνάρτησης store_json για την αποθήκευση των μεταδεδομένων σε JSON
-        print("_____________________Βήμα 1. Σταχυολογητής (Web Crawler)_____________________") 
+        # Κλήση της συνάρτησης store_json για την αποθήκευση των μεταδεδομένων σε JSON 
         json_data = store_json(papers, 'papers.json')
-        print('\n')
     # Δεν υπάρχει περιεχόμενο που περιέχει την λίστα με όλες τις εργασίες ενός μαθήματος
     else:
         # Κλήση της συνάρτησης web_scrape για την συλλογή των δεδομένων των εργασιών με URL https://arxiv.org/list/όνομα_μαθήματος/new
@@ -80,9 +78,7 @@ try:
 
     #------------------ Βήμα 1.γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------    
         # Κλήση της συνάρτησης store_json για την αποθήκευση των δεδομένων σε JSON
-        print("_____________________Βήμα 1. Σταχυολογητής (Web Crawler)_____________________")
         json_data = store_json(papers, 'papers.json')
-        print('\n')
 
 
     """"""""""""""""""""""""""""""""""""""""""""" 
@@ -120,9 +116,10 @@ try:
         data = json.load(file)
 
     inverted_index = create_inverted_index(data)
-    for key, value in inverted_index.items():
-        print(key, '-->', value)
-    print('\n')
+    with open('inverted_index.txt', 'w') as file2:
+        for key, value in inverted_index.items():
+            file2.write(f"{key} --> {value}\n")
+            
 
 
     """"""""""""""""""""""""""""""""""""""""""""" 
