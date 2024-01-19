@@ -79,5 +79,5 @@ def store_json(papers, json_name):
     with open(json_name, 'w') as file:
         file.write(json_data)
 
-    return 'papers.json'
+    return json_name
 

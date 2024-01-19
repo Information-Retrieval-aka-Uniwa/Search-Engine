@@ -2,10 +2,10 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-from SearchEngineStore.web_crawler import web_scrape, store_json 
-from SearchEngineStore.text_preprocessing import preprocess_text, preprocess_abstract
-from SearchEngineStore.inverted_index import create_inverted_index
-from SearchEngineStore.search_engine import init_gui, print_papers
+from web_crawler import web_scrape, store_json 
+from text_preprocessing import preprocess_text, preprocess_abstract
+from inverted_index import create_inverted_index
+from search_engine import init_gui, print_papers
 
 
 try:
@@ -91,7 +91,7 @@ try:
    
     """""""""""""""""""""""""""""""""""""""""""""
     #------------------ Βήμα 2.α. Επιλογή εργασιών προεπεξεργασίας κειμένου ------------------
-    with open('papers.json', 'r') as file:
+    with open('SearchEngineData/papers.json', 'r') as file:
         data = json.load(file)
 
     preprocessed_papers = []
@@ -108,7 +108,7 @@ try:
             'pdf_url': paper.get('pdf_url')
         }
         preprocessed_papers.append(data)
-
+    
     preprocessed_json_data = store_json(preprocessed_papers, 'SearchEngineData/preprocessed_papers.json')
 
 
@@ -137,7 +137,7 @@ try:
         Βήμα 3. Ευρετήριο (Indexing)
     
     """""""""""""""""""""""""""""""""""""""""""""
-    with open('preprocessed_papers.json', 'r') as file:
+    with open('SearchEngineData/preprocessed_papers.json', 'r') as file:
         data = json.load(file)
 
     inverted_index = create_inverted_index(data)

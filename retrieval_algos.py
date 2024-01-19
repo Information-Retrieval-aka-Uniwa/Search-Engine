@@ -2,7 +2,7 @@ from collections import Counter, OrderedDict
 import copy
 import math
 
-from SearchEngineStore.text_preprocessing import preprocess_text
+from text_preprocessing import preprocess_text
 
 def search_papers_boolean(query, inverted_index, num_of_papers):
     terms = query.lower().split()  # Μετατροπή του ερωτήματος αναζήτησης σε πεζά γράμματα και διαχωρισμός του σε λεκτικές μονάδες
