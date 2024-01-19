@@ -78,6 +78,7 @@ class SearchEngine:
             print('Okapi') # returned_docs = search_papers_okapi_bm25(search_query, self.json_data, self.preprocessed_json_data)
 
         print("Οι εργασίες που περιέχουν το ερώτημα αναζήτησης είναι: \n")
+        """
         for doc in returned_docs:
             paper = self.data[doc]
 
@@ -89,6 +90,7 @@ class SearchEngine:
             print("Abstract : ", paper.get("abstract"))
             print("Date     : ", paper.get("date"))
             print("PDF URL  : ", paper.get("pdf_url"), "\n\n")
+        """
 
 
 

@@ -1,8 +1,11 @@
 from collections import Counter, OrderedDict
 import copy
 import math
+import nltk
 
 from text_preprocessing import preprocess_text
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 def search_papers_boolean(query, inverted_index, num_of_papers):
     terms = query.lower().split()  # Μετατροπή του ερωτήματος αναζήτησης σε πεζά γράμματα και διαχωρισμός του σε λεκτικές μονάδες
@@ -52,8 +55,38 @@ def search_papers_boolean(query, inverted_index, num_of_papers):
     return overall_matching_papers # Αφαίρεση των διπλότυπων αριθμών εργασιών που περιέχουν το ερώτημα αναζήτησης
 
 
-def search_papers_vector_space(query, papers):
-    processed_query = preprocess_text(query)
+def search_papers_vector_space(query, papers, preprocessed_papers):
+
+    # Step 1: Tokenize and preprocess the text
+    tokenized_query = nltk.word_tokenize(preprocess_text(query)) 
+    #doc_id = [doc['id'] for doc in papers]
+    #title = [doc['title'] for doc in papers]
+    abstracts = [doc['abstract'] for doc in papers]
+    preprocessed_abstracts = [doc['abstract'] for doc in preprocessed_papers]
+    tokenized_abstracts = [nltk.word_tokenize(doc) for doc in preprocessed_abstracts]
+
+    # Step 2: Calculate TF-IDF
+    # Convert tokenized documents to text
+    preprocessed_abstracts = [' '.join(doc) for doc in tokenized_abstracts]
+    preprocessed_query = ' '.join(tokenized_query)
+
+    # Create a TF-IDF vectorizer
+    tfidf_vectorizer = TfidfVectorizer()
+    tfidf_matrix = tfidf_vectorizer.fit_transform(preprocessed_abstracts)
+
+    # Transform the query into a TF-IDF vector
+    query_vector = tfidf_vectorizer.transform([preprocessed_query])
+
+    # Step 3: Calculate cosine similarity
+    cosine_similarities = cosine_similarity(query_vector, tfidf_matrix)
+
+    # Step 4: Rank documents by similarity
+    results = [(abstracts[i], cosine_similarities[0][i]) for i in range(len(abstracts))]
+    results.sort(key=lambda x: x[1], reverse=True)
+
+    # Print the ranked documents
+    for doc, similarity in results:
+        print(f"Similarity: {similarity:.2f}\n{doc}\n")
 
 
 
