@@ -1,681 +1,681 @@
-measur --> {0, 9, 5, 6}
-photoelectron --> {0}
-track --> {0, 3}
-ga --> {0}
-pixel --> {0}
-detector --> {0}
-imag --> {0, 4, 5, 7}
-xray --> {0, 2, 3}
-polarimetri --> {0}
-explor --> {0, 9}
-satellit --> {0}
-provid --> {0, 7}
-estim --> {0, 9, 5, 6}
-photon --> {0}
-detect --> {0, 9, 2, 3}
-locat --> {0, 9}
-electr --> {0}
-vector --> {0}
-posit --> {0, 9}
-angl --> {0}
-evpa --> {0}
-howev --> {0, 9, 4}
-imperfect --> {0}
-reconstruct --> {0, 4}
-event --> {0, 4}
-blur --> {0}
-evpaposit --> {0}
-correl --> {0, 8}
-result --> {0, 1, 4, 6, 7, 8}
-artifici --> {0}
-polar --> {0}
-halo --> {0}
-around --> {0, 7}
-bright --> {0}
-sourc --> {0, 3, 4, 5}
-introduc --> {0, 4}
-new --> {0, 3, 4, 5, 6}
-model --> {0, 5, 7, 8, 9}
-describ --> {0}
-leakag --> {0}
-use --> {0, 1, 4, 5, 6, 7, 8}
-recov --> {0, 4}
-onorbit --> {0}
-telescop --> {0, 4, 5}
-pointspread --> {0}
-function --> {0, 9}
-faint --> {0}
-point --> {0}
-spread --> {0}
-accur --> {0, 1, 9}
-previou --> {0}
-approxim --> {0}
-groundcalibr --> {0}
-product --> {0}
-delta --> {0}
-chi2approx --> {0}
-3time --> {0}
+0007 --> {5}
+0023 --> {5}
+0031 --> {7}
+0070 --> {7}
+008035m --> {6}
+02 --> {7}
+05gyr --> {6}
+07 --> {5}
+1 --> {5, 6}
 10 --> {0, 7}
-4 --> {0}
-time --> {0, 3, 4, 6, 9}
+103 --> {5}
 104 --> {0}
-respect --> {0}
 106 --> {0}
-count --> {0}
-also --> {0, 1, 2, 4, 6, 9}
-defin --> {0, 2, 4}
-algorithm --> {0, 4}
-correct --> {0}
-substanti --> {0, 1}
-exist --> {0}
-prescript --> {0}
-1time --> {0}
-3 --> {0}
-depend --> {0, 6}
-method --> {0, 4, 7}
-suppli --> {0}
-missionstandard --> {0}
-moment --> {0}
-well --> {0}
-neural --> {0}
-net --> {0}
-final --> {0, 9, 4}
-present --> {0, 4, 5}
-isol --> {0, 6}
-contribut --> {0, 4}
-observ --> {0, 2, 4, 6, 8, 9}
-extend --> {0, 4}
-show --> {0, 1, 2, 3, 4, 7, 9}
-psf --> {0}
-allow --> {0, 3, 7}
-extract --> {0, 5}
-subpsfscal --> {0}
-pattern --> {0}
-current --> {1, 5, 9}
-two --> {8, 1, 3, 9}
-differ --> {8, 1, 4, 6}
-hypothes --> {1}
-solv --> {1, 4}
-miss --> {1}
-mass --> {1, 5, 6, 7}
-problem --> {1, 4}
-dark --> {8, 1}
-matter --> {8, 1, 7}
-dm --> {1}
-modifi --> {1}
-newtonian --> {1}
-dynam --> {1, 4, 6}
-mond --> {1}
-work --> {1}
-bayesian --> {1}
-infer --> {1}
-appli --> {1}
-spitzer --> {1}
-photometri --> {1}
-rotat --> {1, 6}
-curv --> {1, 3}
-sparc --> {1}
-galaxi --> {1, 5}
-see --> {1, 6}
-hypothesi --> {1}
-fare --> {1}
-better --> {1}
-repres --> {1}
-wide --> {1, 6}
-cusp --> {1}
-core --> {1}
-profil --> {1}
-navarrofrenkwhit --> {1}
-nfw --> {1}
-burkert --> {1}
-parameter --> {1}
-radialacceler --> {1}
-relat --> {1, 6}
-rar --> {1}
-prefer --> {1}
-high --> {1, 2, 5, 9}
-bay --> {1}
-factor --> {1, 2, 5}
-fraction --> {1, 2}
-interestingli --> {1}
-enough --> {1}
-typic --> {1, 2, 3, 6, 7}
-lack --> {1}
-precis --> {1}
-data --> {1, 3, 4, 5, 9}
-studi --> {1, 5, 9}
-confirm --> {1, 9}
-choic --> {1}
-prior --> {1}
-signific --> {1, 4}
-impact --> {1, 7}
-credibl --> {1}
-interv --> {1}
-characterist --> {1, 2}
-acceler --> {1}
-overal --> {1}
-analysi --> {1, 5}
-come --> {1}
-favor --> {1}
-igr --> {2, 3}
-j170913624 --> {2, 3}
-black --> {2, 3, 4}
-hole --> {2, 3, 4}
-binari --> {2, 3, 6}
-bhxb --> {2, 3}
-often --> {2}
-refer --> {2, 7}
-twin --> {2}
-gr --> {2, 3}
-1915105 --> {2, 3}
-known --> {2, 3, 5}
-exot --> {2, 3}
-heartbeatlik --> {2, 3}
-variabl --> {2, 3, 4, 6}
-highli --> {2, 3}
-structur --> {2, 4, 5, 7}
-repeat --> {2}
-report --> {2, 4}
-2022 --> {2, 3}
-outburst --> {2, 3, 7}
-unusu --> {2}
-coher --> {2}
-quasiperiod --> {2}
-oscil --> {2}
-qpo --> {2}
-broadband --> {2}
-low --> {9, 2}
-total --> {2, 7}
-rm --> {2, 5, 7}
-lesssim --> {2}
-6 --> {2, 7}
-spectrum --> {2}
-domin --> {2}
-accret --> {2, 7}
-disk --> {2, 7}
-spectral --> {2, 3}
-behavior --> {2, 3, 6}
-soft --> {2, 3}
-state --> {2, 3}
-ie --> {2}
-heartbeat --> {2}
-find --> {2, 3, 5, 6, 7, 9}
-strongest --> {2}
-socal --> {8, 2}
-class --> {2, 3, 7}
-v --> {2, 3}
-frequenc --> {2, 7}
-5 --> {2, 5}
-8 --> {2, 6}
-hz --> {2}
-qfactor --> {2}
-divid --> {2}
-width --> {2}
-gtrsim --> {2}
-50 --> {2}
-make --> {2}
-one --> {8, 2, 6, 7}
-lowfrequ --> {2}
-ever --> {2}
-seen --> {2, 3}
-extrem --> {2}
-q --> {2}
-distinct --> {2}
-convent --> {2, 3}
-classifi --> {2, 6}
-typeabc --> {2}
-instead --> {2}
-evid --> {2, 6}
-archiv --> {2}
-similarli --> {2}
-highcoher --> {2}
-rang --> {2}
-suggest --> {2, 6}
-strong --> {2, 5}
-may --> {2, 4, 6}
-uniqu --> {2}
-exhibit --> {2, 3, 4}
-standard --> {8, 3, 4}
-stochast --> {3, 6}
-noisi --> {3}
-light --> {3}
-went --> {3}
-first --> {3}
-nicernustar --> {3}
-era --> {3}
-exquisit --> {3}
-us --> {3, 7}
-simultan --> {3}
-correspond --> {3}
-featur --> {3, 6}
-unpreced --> {3}
-detail --> {8, 3}
-began --> {3}
-hard --> {3}
-intermedi --> {3}
-transit --> {3, 6}
-identifi --> {3, 4, 5, 6, 9}
-type --> {3, 7}
-x --> {3}
-fluxenergi --> {3}
-spectra --> {3, 6}
-broad --> {3}
-iron --> {3}
-emiss --> {3}
-line --> {3}
-due --> {8, 3, 6}
-relativist --> {3}
-reflect --> {3}
-absorpt --> {3}
-ioniz --> {3}
-whether --> {3}
-determin --> {3, 6}
-alon --> {3}
-rather --> {3}
-presenc --> {3}
-along --> {3}
-indic --> {9, 3}
-bridg --> {3}
-peculiar --> {3}
-normal --> {3}
-altern --> {3, 7}
-discuss --> {3}
-physic --> {3, 5}
-natur --> {3}
-absorb --> {3}
-materi --> {3}
-legaci --> {3}
-dataset --> {3, 4}
-interferometr --> {4}
-radio --> {4}
-astronomi --> {4}
-requir --> {9, 4}
-nonlinear --> {4}
-reli --> {4}
-assumpt --> {4}
-produc --> {4}
-nonuniqu --> {4}
-especi --> {4}
-true --> {4}
-long --> {4}
-baselin --> {4}
-interferometri --> {4}
-vlbi --> {4}
-sampl --> {4}
-fourier --> {4}
-space --> {4, 5}
-spars --> {4}
-basic --> {4}
-tenet --> {4}
-techniqu --> {4}
-assum --> {4}
-evolv --> {4}
-recent --> {9, 4}
-supermass --> {4}
-smbh --> {4}
-galact --> {4}
-center --> {4}
-sagittariu --> {4}
-sgra --> {4}
-horizon --> {4}
-collabor --> {4}
-ehtc --> {4}
-develop --> {4}
-sinc --> {4}
-minut --> {4}
-timescal --> {4}
-paper --> {4}
-nonconvex --> {4}
-optim --> {4}
-maximum --> {4}
-entropi --> {4}
-mem --> {4}
-intraobserv --> {4}
-everi --> {4}
-integr --> {8, 4}
-rigor --> {4}
-mathemat --> {4}
-formal --> {4}
-via --> {4}
-primaldu --> {4}
-approach --> {4}
-build --> {4}
-newton --> {4}
-strategi --> {4}
-give --> {9, 4}
-numer --> {4}
-complex --> {4}
-iter --> {4}
-improv --> {4}
-obtain --> {4}
-solut --> {4}
-novel --> {4}
-figur --> {4}
-merit --> {4}
-evalu --> {4}
-qualiti --> {4}
-test --> {4}
-call --> {4}
-ngmem --> {4}
-synthet --> {4, 7}
-increas --> {4}
-difficulti --> {4, 6}
-compar --> {8, 9, 4}
-anoth --> {4}
-wellestablish --> {4}
-within --> {4, 5}
-comparison --> {9, 4}
-moreov --> {4}
-evolut --> {4}
-scheme --> {4}
-play --> {4}
-crucial --> {4}
-role --> {8, 4}
-good --> {4}
-lens --> {5}
-cool --> {5}
-j12412219 --> {5}
-brightest --> {5}
-gravit --> {8, 5, 7}
-z --> {5}
-geq --> {5}
-base --> {8, 5}
-multiband --> {5}
-hubbl --> {5}
-hst --> {5}
-redshift --> {5}
-z5043 --> {5}
-place --> {5, 6}
-shortli --> {5}
-end --> {5}
-epoch --> {5, 6}
-reioniz --> {8, 5}
-ab --> {5}
-magnitud --> {5}
-zab2047 --> {5}
-mag --> {5}
-khullar --> {5}
-et --> {5}
-al --> {5}
-2021 --> {5}
-serv --> {5}
-touchston --> {5}
-futur --> {8, 5}
-research --> {5}
-spatial --> {5}
-resolut --> {5}
-reveal --> {5}
-intern --> {5}
-giant --> {5}
-arc --> {5}
+1079 --> {5}
+14 --> {5}
 15 --> {5}
+15rj --> {9}
+1915105 --> {2, 3}
+1time --> {0}
+20 --> {5}
+2021 --> {5}
+2022 --> {2, 3}
+22 --> {6}
+223437501 --> {7}
+24 --> {5}
+25 --> {6}
+3 --> {0}
+31 --> {5}
+33 --> {7}
+36 --> {6}
+37 --> {5}
+3time --> {0}
+4 --> {0}
+40 --> {5}
+44 --> {5}
+5 --> {2, 5}
+50 --> {2}
+577 --> {5}
+6 --> {2, 7}
+67 --> {6}
+70 --> {5}
+76 --> {5}
+8 --> {2, 6}
+92 --> {5}
+97pm03 --> {5}
+ab --> {5}
+abil --> {9}
+abrupt --> {6}
+absorb --> {3}
+absorpt --> {3}
+acceler --> {1}
+account --> {9}
+accret --> {2, 7}
+accur --> {0, 1, 9}
+accuraci --> {9}
+acquir --> {9}
+act --> {5}
+activ --> {6}
+addit --> {6}
+adjust --> {9}
+age --> {6}
+al --> {5}
+algorithm --> {0, 4}
+allow --> {0, 3, 7}
+alon --> {3}
+along --> {3}
+alpha --> {6}
+also --> {0, 1, 2, 4, 6, 9}
+altern --> {3, 7}
+analys --> {8}
+analysi --> {1, 5}
+angl --> {0}
+anisotropi --> {8}
+anoth --> {4}
+appli --> {1}
+approach --> {4}
+approxim --> {0}
+arc --> {5}
+archiv --> {2}
+around --> {0, 7}
+array --> {7}
+artifici --> {0}
+assembl --> {5}
+assum --> {4}
+assumpt --> {4}
+astronomi --> {4}
+asymmetri --> {9}
+auror --> {9}
+averag --> {5}
+axisymmetr --> {7}
+background --> {8}
+base --> {8, 5}
+baselin --> {4}
+basi --> {5}
+basic --> {4}
+bay --> {1}
+bayesian --> {1}
+began --> {3}
+behavior --> {2, 3, 6}
+best --> {9}
+better --> {1}
+bhxb --> {2, 3}
+billion --> {6}
+binari --> {2, 3, 6}
+birth --> {6}
+black --> {2, 3, 4}
+blur --> {0}
+bridg --> {3}
+bright --> {0}
+brightest --> {5}
+broad --> {3}
+broadband --> {2}
+build --> {4}
+burkert --> {1}
+call --> {4}
+candid --> {6}
+carlo --> {7}
+categori --> {6}
+caus --> {7}
+center --> {4}
+chain --> {7}
+character --> {9, 5, 7}
+characterist --> {1, 2}
+chi2approx --> {0}
+choic --> {1}
+circumstellar --> {7}
+class --> {2, 3, 7}
+classifi --> {2, 6}
+clumpbyclump --> {5}
+cluster --> {5}
+cmb --> {8}
+code --> {7}
+coher --> {2}
+cold --> {8}
+collabor --> {4}
+combin --> {9, 7}
+come --> {1}
+compar --> {8, 9, 4}
+comparison --> {9, 4}
+complex --> {4}
+complic --> {6}
+compon --> {6, 7}
+con2020 --> {9}
+conclud --> {7}
+condit --> {7}
+confirm --> {1, 9}
+connerney2020 --> {9}
+consequ --> {8}
+consid --> {6, 7}
+consist --> {8, 6, 7}
+constant --> {8}
 constraint --> {5}
 construct --> {5}
-robust --> {5, 6}
-len --> {5}
-cluster --> {5}
-magnif --> {5}
-enclos --> {5}
-einstein --> {5}
-radiu --> {5, 7}
-z1001 --> {5}
-577 --> {5}
-1079 --> {5}
-0023 --> {5}
-0007 --> {5}
-significantli --> {5}
-lower --> {5}
-averag --> {5}
-mu --> {5}
-76 --> {5}
-40 --> {5}
-20 --> {5}
-24 --> {5}
-14 --> {5}
-07 --> {5}
-greater --> {5}
-previous --> {5, 6}
-groundbas --> {5}
-fluxweight --> {5}
-92 --> {5}
-37 --> {5}
-31 --> {5}
-updat --> {5}
-stellar --> {5}
-star --> {5, 6}
-format --> {5}
-rate --> {5}
-sfr --> {5}
-revis --> {5}
-log --> {5}
-mstarm --> {5}
-odot --> {5, 6}
-97pm03 --> {5}
-103 --> {5}
-70 --> {5}
-44 --> {5}
-m --> {5, 7}
-yr --> {5}
-1 --> {5, 6}
-power --> {5}
-act --> {5}
-upon --> {5}
-resolv --> {5}
-enabl --> {5}
-properti --> {5}
-clumpbyclump --> {5}
-basi --> {5}
-support --> {5}
-upcom --> {5}
-multiwavelength --> {5}
-character --> {9, 5, 7}
-jwst --> {5}
-assembl --> {5}
-highredshift --> {5}
-fulli --> {6}
+contrast --> {9}
+contribut --> {0, 4}
 convect --> {6}
-dwarf --> {6}
-remain --> {6}
-rapidli --> {6}
-magnet --> {9, 6}
-activ --> {6}
-billion --> {6}
-year --> {6}
-follow --> {6}
-abrupt --> {6}
-massdepend --> {6}
-slow --> {6}
-quiescenc --> {6}
-understand --> {6}
-process --> {6, 7}
-complic --> {6}
-mdwarf --> {6}
-age --> {6}
-potenti --> {6}
-birth --> {6}
-environ --> {6, 7}
-metal --> {6}
-effect --> {8, 9, 6}
-consid --> {6, 7}
-67 --> {6}
-separ --> {6}
-008035m --> {6}
-system --> {8, 6, 7}
-gaia --> {6}
-h --> {6}
-alpha --> {6}
-compon --> {6, 7}
-pair --> {6}
-three --> {6}
-categori --> {6}
-inact --> {6}
-candid --> {6}
-gather --> {6}
-higherresolut --> {6}
-verifi --> {6}
-unresolv --> {6}
-third --> {6}
-yield --> {6}
-tripl --> {6}
-surpris --> {6}
-level --> {6}
-neglect --> {6}
-22 --> {6}
-36 --> {6}
-consist --> {8, 6, 7}
-spindown --> {6}
-primarili --> {6}
-mild --> {6}
-secondord --> {6}
-sigma --> {6}
-upper --> {6}
-limit --> {6}
-05gyr --> {6}
-25 --> {6}
-dispers --> {6}
-larg --> {6, 7}
-field --> {9, 6}
-given --> {6, 7}
-stem --> {6}
-addit --> {6}
-modest --> {6}
-intrins --> {6}
-popul --> {6}
-young --> {7}
-protostar --> {7}
-undergo --> {7}
-episod --> {7}
-insight --> {7}
-circumstellar --> {7}
-onto --> {7}
-ira --> {7}
-223437501 --> {7}
-four --> {7}
-fade --> {7}
-l1251 --> {7}
-vla --> {7}
-rariti --> {7}
-yso --> {7}
-elucid --> {7}
-phase --> {7}
-postoutburst --> {7}
-examin --> {7}
-ghz --> {7}
-33 --> {7}
-karl --> {7}
-g --> {7}
-janski --> {7}
-array --> {7}
-markov --> {7}
-chain --> {7}
-mont --> {7}
-carlo --> {7}
-mcmc --> {7}
-combin --> {9, 7}
-parametr --> {7}
-raytrac --> {7}
-code --> {7}
-gener --> {8, 7}
-axisymmetr --> {7}
-radial --> {7}
-distribut --> {8, 7}
-dust --> {7}
-fit --> {7}
-probabl --> {7}
-valu --> {7}
-object --> {7}
-0070 --> {7}
-0031 --> {7}
-02 --> {7}
-sun --> {7}
-investig --> {7}
-condit --> {7}
-could --> {8, 9, 7}
-caus --> {7}
-conclud --> {7}
-erupt --> {7}
-instabl --> {7}
-explan --> {7}
-trigger --> {7}
-mechan --> {7}
+convent --> {2, 3}
+cool --> {5}
+core --> {1}
+correct --> {0}
+correl --> {0, 8}
+correspond --> {3}
 cosmic --> {8}
-microwav --> {8}
-background --> {8}
-cmb --> {8}
-anisotropi --> {8}
-predict --> {8, 9}
 cosmolog --> {8}
-rel --> {8}
-cold --> {8}
-constant --> {8}
-wherea --> {8}
-second --> {8}
-vectortensor --> {8}
-theori --> {8}
-explain --> {8}
-solar --> {8}
-prove --> {8}
-late --> {8}
-sach --> {8}
-wolf --> {8}
-consequ --> {8}
+could --> {8, 9, 7}
+count --> {0}
+credibl --> {1}
 cross --> {8, 9}
-map --> {8, 9}
-temperatur --> {8}
-tracer --> {8}
-select --> {8}
-analys --> {8}
-insitu --> {9}
-moonmagnetospher --> {9}
-interact --> {9}
-jupit --> {9}
-moon --> {9}
-auror --> {9}
+crucial --> {4}
+current --> {1, 5, 9}
+curv --> {1, 3}
+cusp --> {1}
+dark --> {8, 1}
+data --> {1, 3, 4, 5, 9}
+dataset --> {3, 4}
+defin --> {0, 2, 4}
+delta --> {0}
+depend --> {0, 6}
+describ --> {0}
+detail --> {8, 3}
+detect --> {0, 9, 2, 3}
+detector --> {0}
+determin --> {3, 6}
+develop --> {4}
+differ --> {8, 1, 4, 6}
+difficulti --> {4, 6}
+discuss --> {3}
+disk --> {2, 7}
+dispers --> {6}
+distinct --> {2}
+distribut --> {8, 7}
+divid --> {2}
+dm --> {1}
+domin --> {2}
+drawn --> {9}
+due --> {8, 3, 6}
+dust --> {7}
+dwarf --> {6}
+dynam --> {1, 4, 6}
+effect --> {8, 9, 6}
+ehtc --> {4}
+einstein --> {5}
+electr --> {0}
+elucid --> {7}
+emiss --> {3}
+enabl --> {5}
+enclos --> {5}
+end --> {5}
+enough --> {1}
+entropi --> {4}
+environ --> {6, 7}
+episod --> {7}
+epoch --> {5, 6}
+era --> {3}
+erupt --> {7}
+especi --> {4}
+estim --> {0, 9, 5, 6}
+et --> {5}
+europa --> {9}
+evalu --> {4}
+event --> {0, 4}
+ever --> {2}
+everi --> {4}
+evid --> {2, 6}
+evolut --> {4}
+evolv --> {4}
+evpa --> {0}
+evpaposit --> {0}
+examin --> {7}
+exhibit --> {2, 3, 4}
+exist --> {0}
+exot --> {2, 3}
+explain --> {8}
+explan --> {7}
+explor --> {0, 9}
+exquisit --> {3}
+extend --> {0, 4}
+extract --> {0, 5}
+extrem --> {2}
+factor --> {1, 2, 5}
+fade --> {7}
+faint --> {0}
+fare --> {1}
+favor --> {1}
+featur --> {3, 6}
+field --> {9, 6}
+figur --> {4}
+final --> {0, 9, 4}
+find --> {2, 3, 5, 6, 7, 9}
+first --> {3}
+fit --> {7}
+flux --> {9}
+fluxenergi --> {3}
+fluxweight --> {5}
+follow --> {6}
 footpath --> {9}
+footprint --> {9}
+formal --> {4}
+format --> {5}
+found --> {9}
+four --> {7}
+fourier --> {4}
+fraction --> {1, 2}
+frequenc --> {2, 7}
+fulli --> {6}
+function --> {0, 9}
+futur --> {8, 5}
+g --> {7}
+ga --> {0}
+gaia --> {6}
+galact --> {4}
+galaxi --> {1, 5}
+galileo --> {9}
+ganymed --> {9}
+gather --> {6}
+gener --> {8, 7}
+geq --> {5}
+ghz --> {7}
+giant --> {5}
+give --> {9, 4}
+given --> {6, 7}
 global --> {9}
-magnetospher --> {9}
-abil --> {9}
-widelyus --> {9}
-sheet --> {9}
+good --> {4}
+gr --> {2, 3}
+gravit --> {8, 5, 7}
+greater --> {5}
+groundbas --> {5}
+groundcalibr --> {0}
+gtrsim --> {2}
+h --> {6}
+halo --> {0}
+hard --> {3}
+heartbeat --> {2}
+heartbeatlik --> {2, 3}
+hemispher --> {9}
+high --> {1, 2, 5, 9}
+highcoher --> {2}
+higherresolut --> {6}
+highli --> {2, 3}
+highredshift --> {5}
+hole --> {2, 3, 4}
+horizon --> {4}
+howev --> {0, 9, 4}
+hst --> {5}
+hubbl --> {5}
+hypothes --> {1}
+hypothesi --> {1}
+hz --> {2}
+identifi --> {3, 4, 5, 6, 9}
+ie --> {2}
+igr --> {2, 3}
+imag --> {0, 4, 5, 7}
+impact --> {1, 7}
+imperfect --> {0}
+improv --> {4}
+inact --> {6}
+increas --> {4}
+indic --> {9, 3}
+infer --> {1}
+inner --> {9}
+insight --> {7}
+insitu --> {9}
+instabl --> {7}
+instead --> {2}
+integr --> {8, 4}
+interact --> {9}
+interestingli --> {1}
+interferometr --> {4}
+interferometri --> {4}
+intermedi --> {3}
+intern --> {5}
+interv --> {1}
+intraobserv --> {4}
+intrins --> {6}
+introduc --> {0, 4}
+investig --> {7}
+io --> {9}
+ioniz --> {3}
+ira --> {7}
+iron --> {3}
+isol --> {0, 6}
+iter --> {4}
+j12412219 --> {5}
+j170913624 --> {2, 3}
+janski --> {7}
+jrm33 --> {9}
+jrm33con2020 --> {9}
+jrm33kk2005 --> {9}
+juno --> {9}
+jupit --> {9}
+jwst --> {5}
+karl --> {7}
+khullar --> {5}
 khurana2005 --> {9}
 kk2005 --> {9}
-connerney2020 --> {9}
-con2020 --> {9}
-acquir --> {9}
-medium --> {9}
+known --> {2, 3, 5}
+l1251 --> {7}
+lack --> {1}
+larg --> {6, 7}
+late --> {8}
 latitud --> {9}
-adjust --> {9}
-jrm33 --> {9}
-outer --> {9}
-middl --> {9}
-r --> {9}
-15rj --> {9}
-jrm33kk2005 --> {9}
-found --> {9}
-best --> {9}
-reproduc --> {9}
-galileo --> {9}
-juno --> {9}
-account --> {9}
+leakag --> {0}
+legaci --> {3}
+len --> {5}
+lens --> {5}
+lesssim --> {2}
+level --> {6}
+light --> {3}
+limit --> {6}
+line --> {3}
 local --> {9}
-jrm33con2020 --> {9}
-represent --> {9}
-inner --> {9}
-drawn --> {9}
-contrast --> {9}
-io --> {9}
-europa --> {9}
-ganymed --> {9}
-flux --> {9}
-tube --> {9}
-particl --> {9}
-uv --> {9}
-asymmetri --> {9}
-footprint --> {9}
-s --> {9}
-measurementsthi --> {9}
-margin --> {9}
-orbit --> {9}
-accuraci --> {9}
-hemispher --> {9}
+locat --> {0, 9}
+log --> {5}
+long --> {4}
 longitud --> {9}
+low --> {9, 2}
+lower --> {5}
+lowfrequ --> {2}
+m --> {5, 7}
+mag --> {5}
+magnet --> {9, 6}
+magnetospher --> {9}
+magnif --> {5}
+magnitud --> {5}
+make --> {2}
+map --> {8, 9}
+margin --> {9}
+markov --> {7}
+mass --> {1, 5, 6, 7}
+massdepend --> {6}
+materi --> {3}
+mathemat --> {4}
+matter --> {8, 1, 7}
+maximum --> {4}
+may --> {2, 4, 6}
+mcmc --> {7}
+mdwarf --> {6}
+measur --> {0, 9, 5, 6}
+measurementsthi --> {9}
+mechan --> {7}
+medium --> {9}
+mem --> {4}
+merit --> {4}
+metal --> {6}
+method --> {0, 4, 7}
+microwav --> {8}
+middl --> {9}
+mild --> {6}
+minut --> {4}
+miss --> {1}
+missionstandard --> {0}
+model --> {0, 5, 7, 8, 9}
+modest --> {6}
+modifi --> {1}
+moment --> {0}
+mond --> {1}
+mont --> {7}
+moon --> {9}
+moonmagnetospher --> {9}
+moreov --> {4}
+mstarm --> {5}
+mu --> {5}
+multiband --> {5}
+multiwavelength --> {5}
+natur --> {3}
+navarrofrenkwhit --> {1}
+neglect --> {6}
+net --> {0}
+neural --> {0}
+new --> {0, 3, 4, 5, 6}
+newton --> {4}
+newtonian --> {1}
+nfw --> {1}
+ngmem --> {4}
+nicernustar --> {3}
+noisi --> {3}
+nonconvex --> {4}
+nonlinear --> {4}
+nonuniqu --> {4}
+normal --> {3}
+novel --> {4}
+numer --> {4}
+object --> {7}
+observ --> {0, 2, 4, 6, 8, 9}
+obtain --> {4}
+odot --> {5, 6}
+often --> {2}
+one --> {8, 2, 6, 7}
+onorbit --> {0}
+onto --> {7}
+optim --> {4}
+orbit --> {9}
+oscil --> {2}
+outburst --> {2, 3, 7}
+outer --> {9}
+overal --> {1}
+pair --> {6}
+paper --> {4}
+parameter --> {1}
+parametr --> {7}
+particl --> {9}
+pattern --> {0}
+peculiar --> {3}
+phase --> {7}
+photoelectron --> {0}
+photometri --> {1}
+photon --> {0}
+physic --> {3, 5}
+pixel --> {0}
+place --> {5, 6}
+play --> {4}
+point --> {0}
+pointspread --> {0}
+polar --> {0}
+polarimetri --> {0}
+popul --> {6}
+posit --> {0, 9}
+postoutburst --> {7}
+potenti --> {6}
+power --> {5}
+precis --> {1}
+predict --> {8, 9}
+prefer --> {1}
+prescript --> {0}
+presenc --> {3}
+present --> {0, 4, 5}
+previou --> {0}
+previous --> {5, 6}
+primaldu --> {4}
+primarili --> {6}
+prior --> {1}
+probabl --> {7}
+problem --> {1, 4}
+process --> {6, 7}
+produc --> {4}
+product --> {0}
+profil --> {1}
+properti --> {5}
+protostar --> {7}
+prove --> {8}
+provid --> {0, 7}
+psf --> {0}
+q --> {2}
+qfactor --> {2}
+qpo --> {2}
+qualiti --> {4}
+quasiperiod --> {2}
+quiescenc --> {6}
+r --> {9}
+radial --> {7}
+radialacceler --> {1}
+radio --> {4}
+radiu --> {5, 7}
+rang --> {2}
+rapidli --> {6}
+rar --> {1}
+rariti --> {7}
+rate --> {5}
+rather --> {3}
+raytrac --> {7}
+recent --> {9, 4}
+reconstruct --> {0, 4}
+recov --> {0, 4}
+redshift --> {5}
+refer --> {2, 7}
+reflect --> {3}
+reioniz --> {8, 5}
+rel --> {8}
+relat --> {1, 6}
+relativist --> {3}
+reli --> {4}
+remain --> {6}
+repeat --> {2}
+report --> {2, 4}
+repres --> {1}
+represent --> {9}
+reproduc --> {9}
+requir --> {9, 4}
+research --> {5}
+resolut --> {5}
+resolv --> {5}
+respect --> {0}
+result --> {0, 1, 4, 6, 7, 8}
+reveal --> {5}
+revis --> {5}
+rigor --> {4}
+rm --> {2, 5, 7}
+robust --> {5, 6}
+role --> {8, 4}
+rotat --> {1, 6}
+s --> {9}
+sach --> {8}
+sagittariu --> {4}
+sampl --> {4}
+satellit --> {0}
+scheme --> {4}
+second --> {8}
+secondord --> {6}
+see --> {1, 6}
+seen --> {2, 3}
+select --> {8}
+separ --> {6}
+serv --> {5}
+sfr --> {5}
+sgra --> {4}
+sheet --> {9}
+shortli --> {5}
+show --> {0, 1, 2, 3, 4, 7, 9}
+sigma --> {6}
+signific --> {1, 4}
+significantli --> {5}
+similarli --> {2}
+simultan --> {3}
+sinc --> {4}
+slow --> {6}
+smbh --> {4}
+socal --> {8, 2}
+soft --> {2, 3}
+solar --> {8}
+solut --> {4}
+solv --> {1, 4}
+sourc --> {0, 3, 4, 5}
+space --> {4, 5}
+sparc --> {1}
+spars --> {4}
+spatial --> {5}
+spectra --> {3, 6}
+spectral --> {2, 3}
+spectrum --> {2}
+spindown --> {6}
+spitzer --> {1}
+spread --> {0}
+standard --> {8, 3, 4}
+star --> {5, 6}
+state --> {2, 3}
+stellar --> {5}
+stem --> {6}
+stochast --> {3, 6}
+strategi --> {4}
+strong --> {2, 5}
+strongest --> {2}
+structur --> {2, 4, 5, 7}
+studi --> {1, 5, 9}
+subpsfscal --> {0}
+substanti --> {0, 1}
+suggest --> {2, 6}
+sun --> {7}
+supermass --> {4}
+suppli --> {0}
+support --> {5}
+surpris --> {6}
+synthet --> {4, 7}
+system --> {8, 6, 7}
+techniqu --> {4}
+telescop --> {0, 4, 5}
+temperatur --> {8}
+tenet --> {4}
+test --> {4}
+theori --> {8}
+third --> {6}
+three --> {6}
+time --> {0, 3, 4, 6, 9}
+timescal --> {4}
+total --> {2, 7}
+touchston --> {5}
+tracer --> {8}
+track --> {0, 3}
+transit --> {3, 6}
+trigger --> {7}
+tripl --> {6}
+true --> {4}
+tube --> {9}
+twin --> {2}
+two --> {8, 1, 3, 9}
+type --> {3, 7}
+typeabc --> {2}
+typic --> {1, 2, 3, 6, 7}
+undergo --> {7}
+understand --> {6}
+uniqu --> {2}
+unpreced --> {3}
+unresolv --> {6}
+unusu --> {2}
+upcom --> {5}
+updat --> {5}
+upon --> {5}
+upper --> {6}
+us --> {3, 7}
+use --> {0, 1, 4, 5, 6, 7, 8}
+uv --> {9}
+v --> {2, 3}
+valu --> {7}
+variabl --> {2, 3, 4, 6}
+vector --> {0}
+vectortensor --> {8}
+verifi --> {6}
+via --> {4}
+vla --> {7}
+vlbi --> {4}
+well --> {0}
+wellestablish --> {4}
+went --> {3}
+wherea --> {8}
+whether --> {3}
+wide --> {1, 6}
+widelyus --> {9}
+width --> {2}
+within --> {4, 5}
+wolf --> {8}
+work --> {1}
+x --> {3}
+xray --> {0, 2, 3}
+year --> {6}
+yield --> {6}
+young --> {7}
+yr --> {5}
+yso --> {7}
+z --> {5}
+z1001 --> {5}
+z5043 --> {5}
+zab2047 --> {5}

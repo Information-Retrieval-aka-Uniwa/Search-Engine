@@ -29,7 +29,7 @@ def print_papers(search_query, papers, inverted_dict)
 """
 
 class SearchEngine:
-    def __init__(self, json_data, json_preprocessed_data, inverted_index):
+    def __init__(self, json_data, json_preprocessed_data, inverted_index):   # Constructor της κλάσης SearchEngine
         with open(json_data, 'r') as file:
             self.data = json.load(file)
         with open(json_preprocessed_data, 'r') as file:

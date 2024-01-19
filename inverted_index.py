@@ -8,16 +8,18 @@
 """
 def create_inverted_index(data):
     
-    inverted_index = {}
-    for paper in data:
-        abstract = paper.get('abstract')
-        terms = abstract.split()  # Split the abstract into individual terms
-        for term in terms:
-            if term not in inverted_index:
-                inverted_index[term] = set()
-            inverted_index[term].add(paper['id'])
+    inverted_index = {}                              # Αρχικοποίηση του ανεστραμμένου ευρετηρίου (inverted_index) σε κενό λεξικό
+    for paper in data:                               # Προσπέλαση των δεδομένων των εργασιών
+        abstract = paper.get('abstract')             # Ανάκτηση της περίληψης (abstract) της εργασίας
+        terms = abstract.split()                     # Διαχωρισμός του κειμένου σε λεκτικές μονάδες
+        for term in terms:                           # Προσπέλαση των λεκτικών μονάδων
+            if term not in inverted_index:           # Έλεγχος για το αν ο όρος κλειδί (term) υπάρχει στο ανεστραμμένο ευρετήριο (inverted_index)
+                inverted_index[term] = set()         # Αρχικοποίηση του συνόλου με τους αριθμούς των εργασιών που περιέχουν τον όρο κλειδί (term)
+            inverted_index[term].add(paper['id'])    # Προσθήκη του αριθμού της εργασίας στο σύνολο με τους αριθμούς των εργασιών που περιέχουν τον όρο κλειδί (term)
     
-    return inverted_index
+    inverted_index = dict(sorted(inverted_index.items()))  # Ταξινόμηση του ανεστραμμένου ευρετηρίου (inverted_index) βάσει των κλειδιών
+    
+    return inverted_index                     # Επιστροφή του ανεστραμμένου ευρετηρίου (inverted_index)
 
 
 
