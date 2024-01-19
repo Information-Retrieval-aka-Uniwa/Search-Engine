@@ -1,0 +1,102 @@
+[
+    {
+        "id": 0,
+        "title": "Polarization Leakage and the IXPE PSF",
+        "authors": "Jack T. Dinsmore, Roger W. Romani",
+        "subjects": "Instrumentation and Methods for Astrophysics (astro-ph.IM); High Energy Astrophysical Phenomena (astro-ph.HE)",
+        "comments": "Accepted to ApJ. 9+3 pages",
+        "abstract": "By measuring photoelectron tracks, the gas pixel detectors of the Imaging X-ray Polarimetry Explorer satellite provide estimates of the photon detection location and its electric vector position angle (EVPA). However, imperfections in reconstructing event positions blur the image and EVPA-position correlations result in artificial polarized halos around bright sources. We introduce a new model describing this \"polarization leakage\" and use it to recover the on-orbit telescope point-spread functions, useful for faint source detection and image reconstruction. These point spread functions are more accurate than previous approximations or ground-calibrated products ($\\Delta \\chi^2\\approx 3\\times 10^{4}$ and $4 \\times 10^4$ respectively for a bright $10^6$-count source). We also define an algorithm for polarization leakage correction substantially more accurate than existing prescriptions ($\\Delta \\chi^2\\approx 1\\times 10^{3}$). These corrections depend on the reconstruction method, and we supply prescriptions for the mission-standard \"Moments\" methods as well as for \"Neural Net\" event reconstruction. Finally, we present a method to isolate leakage contributions to polarization observations of extended sources and show that an accurate PSF allows the extraction of sub-PSF-scale polarization patterns.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10231.pdf"
+    },
+    {
+        "id": 1,
+        "title": "SPARC galaxies prefer Dark Matter over MOND",
+        "authors": "Mariia Khelashvili, Anton Rudakovskyi, Sabine Hossenfelder",
+        "subjects": "Cosmology and Nongalactic Astrophysics (astro-ph.CO); Astrophysics of Galaxies (astro-ph.GA)",
+        "comments": "10 pages, 7 figures",
+        "abstract": "We currently have two different hypotheses to solve the missing mass problem: dark matter (DM) and modified Newtonian dynamics (MOND). In this work, we use Bayesian inference applied to the Spitzer Photometry and Accurate Rotation Curves (SPARC) galaxies' rotation curves to see which hypothesis fares better. For this, we represent DM by two widely used cusped and cored profiles, Navarro-Frenk-White (NFW) and Burkert. We parameterize MOND by a widely used radial-acceleration relation (RAR). Our results show a preference for the cored DM profile with high Bayes factors in a substantial fraction of galaxies. Interestingly enough, MOND is typically preferred by those galaxies which lack precise rotation curve data. Our study also confirms that the choice of prior has a significant impact on the credible interval of the characteristic MOND acceleration. Overall, our analysis comes out in favor of dark matter.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10202.pdf"
+    },
+    {
+        "id": 2,
+        "title": "Highly-coherent quasi-periodic oscillations in the 'heartbeat' black hole X-ray binary IGR J17091-3624",
+        "authors": "Jingyi Wang, Erin Kara, Jeroen Homan, James F. Steiner, Diego Altamirano, Tomaso Belloni, Michiel van der Klis, Adam Ingram, Javier A. Garc\u00eda, Guglielmo Mastroserio, Riley Connors, Matteo Lucchini, Thomas Dauser, Joseph Neilsen, Collin Lewin, Ron A. Remillard",
+        "subjects": "High Energy Astrophysical Phenomena (astro-ph.HE)",
+        "comments": "11 pages, 10 figures, 2 tables, accepted to be published in ApJ",
+        "abstract": "IGR J17091-3624 is a black hole X-ray binary (BHXB), often referred to as the 'twin' of GRS 1915+105 because it is the only other known BHXB that can show exotic 'heartbeat'-like variability that is highly structured and repeated. Here we report on observations of IGR J17091-3624 from its 2022 outburst, where we detect an unusually coherent quasi-periodic oscillation (QPO) when the broadband variability is low (total fractional rms $\\lesssim$ 6%) and the spectrum is dominated by the accretion disk. Such spectral and variability behavior is characteristic of the soft state of typical BHXBs (i.e., those that do not show heartbeats), but we also find that this QPO is strongest when there is some exotic heartbeat-like variability (so-called Class V variability). This QPO is detected at frequencies between 5 and 8 Hz and has Q-factors (defined as the QPO frequency divided by the width) $\\gtrsim$ 50, making it one of the most highly coherent low-frequency QPO ever seen in a BHXB. The extremely high Q factor makes this QPO distinct from typical low-frequency QPOs that are conventionally classified into Type-A/B/C QPOs. Instead, we find evidence that archival observations of GRS 1915+105 also showed a similarly high-coherence QPO in the same frequency range, suggesting that this unusually coherent and strong QPO may be unique to BHXBs that can exhibit 'heartbeat'-like variability.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10195.pdf"
+    },
+    {
+        "id": 3,
+        "title": "The 2022 Outburst of IGR J17091-3624: Connecting the exotic GRS 1915+105 to standard black hole X-ray binaries",
+        "authors": "Jingyi Wang, Erin Kara, Javier A. Garc\u00eda, Diego Altamirano, Tomaso Belloni, James F. Steiner, Michiel van der Klis, Adam Ingram, Guglielmo Mastroserio, Riley Connors, Matteo Lucchini, Thomas Dauser, Joseph Neilsen, Collin Lewin, Ron A. Remillard, Jeroen Homan",
+        "subjects": "High Energy Astrophysical Phenomena (astro-ph.HE)",
+        "comments": "23 pages, 15 figures, 2 tables, accepted to be published in ApJ",
+        "abstract": "While the standard X-ray variability of black hole X-ray binaries (BHXBs) is stochastic and noisy, there are two known BHXBs that exhibit exotic `heartbeat'-like variability in their light curves: GRS 1915+105 and IGR J17091-3624. In 2022, IGR J17091-3624 went into outburst for the first time in the NICER/NuSTAR era. These exquisite data allow us to simultaneously track the exotic variability and the corresponding spectral features with unprecedented detail. We find that as in typical BHXBs, the outburst began in the hard state, then the intermediate state, but then transitioned to an exotic soft state where we identify two types of heartbeat-like variability (Class V and a new Class X). The flux-energy spectra show a broad iron emission line due to relativistic reflection when there is no exotic variability, and absorption features from highly ionized iron when the source exhibits exotic variability. Whether absorption lines from highly ionized iron are detected in IGR J17091-3624 is not determined by the spectral state alone, but rather is determined by the presence of exotic variability; in a soft spectral state, absorption lines are only detected along with exotic variability. Our finding indicates that IGR J17091-3624 can be seen as a bridge between the most peculiar BHXB GRS 1915+105 and `normal' BHXBs because it alternates between the conventional and exotic behavior of BHXBs. We discuss the physical nature of the absorbing material and exotic variability in light of this new legacy dataset.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10192.pdf"
+    },
+    {
+        "id": 4,
+        "title": "New-generation Maximum Entropy Method (ngMEM): a Lagrangian-based algorithm for dynamic reconstruction of interferometric data",
+        "authors": "A. Mus, I. Mart\u00ed-Vidal",
+        "subjects": "Instrumentation and Methods for Astrophysics (astro-ph.IM)",
+        "comments": " ",
+        "abstract": "Imaging interferometric data in radio astronomy requires the use of non-linear algorithms that rely on different assumptions on the source structure and may produce non-unique results. This is especially true for Very Long Baseline Interferometry (VLBI) observations, where the sampling of Fourier space is very sparse. A basic tenet in standard VLBI imaging techniques is to assume that the observed source structure does not evolve during the observation. However, the recent VLBI results of the supermassive black hole (SMBH) at our Galactic Center (Sagittarius A$^*$, SgrA*), recently reported by the Event Horizon Telescope Collaboration (EHTC), require the development of dynamic imaging algorithms, since it exhibits variability at minute timescales. In this paper, we introduce a new non-convex optimization problem that extends the standard Maximum Entropy Method (MEM), for reconstructing intra-observation dynamical images from interferometric data that evolves in every integration time. We present a rigorous mathematical formalism to solve the problem via the primal-dual approach. We build a Newton strategy and we give its numerical complexity. We also give a strategy to iteratively improve the obtained solution and finally, we define a novel figure of merit to evaluate the quality of the recovered solution. Then, we test the algorithm, called ngMEM, in different synthetic datasets, with increasing difficulty. Finally, we compare it with another well-established dynamical imaging method. Within this comparison we identified a significant improvement of the ngMEM reconstructions. Moreover, the evaluation of the integration time evolution scheme and the time contribution showed to play a crucial role for obtaining good dynamic reconstructions.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10177.pdf"
+    },
+    {
+        "id": 5,
+        "title": "COOL-LAMPS VI: Lens model and New Constraints on the Properties of COOL J1241+2219, a Bright z = 5 Lyman Break Galaxy and its z = 1 Cluster Lens",
+        "authors": "Maxwell Klein, Keren Sharon, Kate Napier, Michael D. Gladders, Gourav Khullar, Matthew Bayliss, H\u00e5kon Dahle, M. Riley Owens, Antony Stark, Sasha Brownsberger, Keunho J. Kim, Nicole Kuchta, Guillaume Mahler, Grace Smith, Ryan Walker, Katya Gozman, Michael N. Martinez, Owen S. Matthews Acu\u00f1a, Kaiya Merz, Jorge A. Sanchez, Daniel J. Kavin Stein, Ezra O. Sukay, Kiyan Tavangar",
+        "subjects": "Astrophysics of Galaxies (astro-ph.GA)",
+        "comments": "Submitted to ApJ",
+        "abstract": "We present a strong lensing analysis of COOL J1241+2219, the brightest known gravitationally lensed galaxy at $z \\geq 5$, based on new multi-band Hubble Space Telescope (HST) imaging data. The lensed galaxy has a redshift of z=5.043, placing it shortly after the end of the Epoch of Reionization, and an AB magnitude z_AB=20.47 mag (Khullar et al. 2021). As such, it serves as a touchstone for future research of that epoch. The high spatial resolution of HST reveals internal structure in the giant arc, from which we identify 15 constraints and construct a robust lens model. We use the lens model to extract cluster mass and lensing magnification. We find that the mass enclosed within the Einstein radius of the z=1.001 cluster lens is M(<5.77'')=$1.079^{+0.023}_{-0.007}$, significantly lower than other known strong lensing clusters at its redshift. The average magnification of the giant arc is $<\\mu_{arc}>=76^{+40}_{-20}$, a factor of $2.4^{+1.4}_{-0.7}$ greater than previously estimated from ground-based data; the flux-weighted average magnification is $<\\mu_{arc}>=92^{+37}_{-31}$ We update the current measurements of the stellar mass and star formation rate (SFR) of the source for the revised magnification, $\\log(M_\\star/M_{\\odot})=9.7\\pm0.3$ and ${\\rm SFR} = 10.3^{+7.0}_{-4.4}$ $ M_{\\odot} $yr$^{-1}$. The powerful lensing magnification acting upon COOL J1241+2219 resolves the source and enables future studies of the properties of its star formation on a clump-by-clump basis. The lensing analysis presented here will support upcoming multiwavelength characterization with HST and JWST data of the stellar mass assembly and physical properties of this high-redshift lensed galaxy.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10168.pdf"
+    },
+    {
+        "id": 6,
+        "title": "The Mass Dependence of H\u03b1 Emission and Stellar Spindown for Fully Convective M Dwarfs",
+        "authors": "Emily K. Pass, David Charbonneau, David W. Latham, Perry Berlind, Michael L. Calkins, Gilbert A. Esquerdo, Jessica Mink",
+        "subjects": "Solar and Stellar Astrophysics (astro-ph.SR); Earth and Planetary Astrophysics (astro-ph.EP)",
+        "comments": "Submitted to ApJ; 18 pages, 8 figures, 5 tables",
+        "abstract": "Fully convective M dwarfs typically remain rapidly rotating and magnetically active for billions of years, followed by an abrupt and mass-dependent transition to slow rotation and quiescence. A robust understanding of this process is complicated by difficulties in estimating M-dwarf ages and potential dependencies on other variables such as birth environment or metallicity. To isolate the effect of mass, we consider M dwarfs in wide binaries. We identify 67 widely separated, fully convective (0.08-0.35M$_\\odot$) M-dwarf binary systems using Gaia and measure the H$\\alpha$ feature for each component. We classify the pairs into three categories: systems where both components are active, systems where both are inactive, and candidate transition systems, where one component is active and the other inactive. We gather higher-resolution spectra of the candidate transition systems to verify that their behavior does not result from an unresolved third component, yielding one new triple with surprising activity levels. Neglecting this triple, we find 22 active, 36 inactive, and 8 transition pairs. Our results are consistent with the epoch of spindown for these binaries being primarily determined by mass, with mild second-order effects; we place a 1$\\sigma$ upper limit of 0.5Gyr or 25% on the dispersion in the mass-dependent spindown relation. Our findings suggest that the large dispersion in spindown epoch previously observed for field stars of a given mass may stem from differences in birth environment, in addition to modest intrinsic stochasticity. We also see evidence that the wide binary population is dispersed over time due to dynamical processing.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10167.pdf"
+    },
+    {
+        "id": 7,
+        "title": "An Outbursting Protostar: The environment of L1251 VLA 6",
+        "authors": "Ava Nederlander, Adele Plunkett, Antonio Hales, \u00c1gnes K\u00f3sp\u00e1l, Jacob A. White, Makoto A. Johnstone, M\u00e1ria Kun, P\u00e9ter \u00c1brah\u00e1m, Anna G. Hughes",
+        "subjects": "Solar and Stellar Astrophysics (astro-ph.SR)",
+        "comments": "16 pages, 9 figures, 5 tables, Accepted in ApJ",
+        "abstract": "Young protostars that undergo episodic accretion can provide insight into the impact on their circumstellar environments while matter is accreted from the disk onto the protostar. IRAS 22343+7501 is a four component protostar system with one of those being a fading outbursting protostar referred to as L1251 VLA 6. Given the rarity of YSOs undergoing this type of accretion, L1251 VLA 6 can elucidate the fading phase of the post-outburst process. Here we examine structure in the disk around L1251 VLA 6 at frequencies of 10 GHz and 33 GHz with the Karl G. Jansky Very Large Array (VLA). We model the disk structure using Markov chain Monte Carlo (MCMC). This method is then combined with a parametric ray-tracing code to generate synthetic model images of an axisymmetric disk, allowing us to characterize the radial distribution of dust in the system. The results of our MCMC fit show that the most probable values for the mass and radius are consistent with values typical of Class I objects. We find that the total mass of the disk is $0.070^{+0.031}_{-0.2} \\rm ~ M_{\\sun}$ and investigate the conditions that could cause the accretion outburst. We conclude that the eruption is not caused by gravitational instability and consider alternative explanations and trigger mechanisms.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10131.pdf"
+    },
+    {
+        "id": 8,
+        "title": "Interpreting deviations between AR-VTG and GR",
+        "authors": "Roberto Dale, Diego S\u00e1ez",
+        "subjects": "Cosmology and Nongalactic Astrophysics (astro-ph.CO); General Relativity and Quantum Cosmology (gr-qc)",
+        "comments": "17 pages, 10 figures",
+        "abstract": "The Cosmic microwave background (CMB) anisotropies predicted by two cosmological models are compared, one of them is the standard model of general relativity with cold dark matter and cosmological constant, whereas the second model is based on a consistent vector-tensor theory of gravitation explaining solar system and cosmological observations. It is proved that the resulting differences -- between the anisotropies of both models -- are due to the so-called late integrated Sachs Wolfe effect and, consequently, cross correlations between maps of CMB temperatures and tracers of the dark matter distribution could be used in future to select one of the above models. The role of reionization is analysed in detail.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10116.pdf"
+    },
+    {
+        "id": 9,
+        "title": "Influence of the Jovian current sheet models on the mapping of the UV auroral footprints of Io, Europa, and Ganymede",
+        "authors": "Jonas Rabia, Quentin N\u00e9non, Nicolas Andr\u00e9, Vincent Hue, Daniel Santos-Costa, Aneesah Kamran, Michel Blanc",
+        "subjects": "Earth and Planetary Astrophysics (astro-ph.EP); Space Physics (physics.space-ph)",
+        "comments": "22 pages, 9 figures, 1 table. Accepted for publication in Journal of Geophysical Research: Space physics",
+        "abstract": "The in-situ characterization of moon-magnetosphere interactions at Jupiter and the mapping of moon auroral footpaths require accurate global models of the magnetospheric magnetic field. In this study, we compare the ability of two widely-used current sheet models, Khurana-2005 (KK2005) and Connerney-2020 (CON2020) combined with the most recent measurements acquired at low, medium, and high latitudes. With the adjustments of the KK2005 model to JRM33, we show that in the outer and middle magnetosphere (R>15RJ), JRM33+KK2005 is found to be the best model to reproduce the magnetic field observations of Galileo and Juno as it accounts for local time effects. JRM33+CON2020 gives the most accurate representation of the inner magnetosphere. This finding is drawn from comparisons with Juno in-situ magnetic field measurements and confirmed by contrasting the timing of the crossings of the Io, Europa, and Ganymede flux tubes identified in the Juno particles data with the two model estimates. JRM33+CON2020 also maps more accurately the UV auroral footpath of Io, Europa, and Ganymede observed by Juno than JRM33+KK2005. The JRM33+KK2005 model predicts a local time asymmetry in position of the moons' footprints, which is however not detected in Juno's UV measurements.This could indicate that local time effects on the magnetic field are marginal at the orbital locations of Io, Europa, and Ganymede. Finally, the accuracy of the models and their predictions as a function of hemisphere, local time, and longitude is explored.",
+        "date": "18 Jan 2024",
+        "pdf_url": "https://arxiv.org//pdf/2401.10115.pdf"
+    }
+]

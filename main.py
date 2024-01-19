@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from web_crawler import web_scrape, store_json 
 from text_preprocessing import preprocess_text, preprocess_abstract
 from inverted_index import create_inverted_index
-from search_engine import init_gui, print_papers
+from search_engine import SearchEngine
 
 
 try:
@@ -71,7 +71,7 @@ try:
     #------------------ Βήμα 1.γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------  
         # Κλήση της συνάρτησης store_json για την αποθήκευση των μεταδεδομένων σε JSON
         print("_____________________Βήμα 1. Σταχυολογητής (Web Crawler)_____________________") 
-        json_data = store_json(papers, 'SearchEngineData/papers.json')
+        json_data = store_json(papers, 'papers.json')
         print('\n')
     # Δεν υπάρχει περιεχόμενο που περιέχει την λίστα με όλες τις εργασίες ενός μαθήματος
     else:
@@ -81,7 +81,7 @@ try:
     #------------------ Βήμα 1.γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------    
         # Κλήση της συνάρτησης store_json για την αποθήκευση των δεδομένων σε JSON
         print("_____________________Βήμα 1. Σταχυολογητής (Web Crawler)_____________________")
-        json_data = store_json(papers, 'SearchEngineData/papers.json')
+        json_data = store_json(papers, 'papers.json')
         print('\n')
 
 
@@ -90,8 +90,7 @@ try:
         Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
    
     """""""""""""""""""""""""""""""""""""""""""""
-    #------------------ Βήμα 2.α. Επιλογή εργασιών προεπεξεργασίας κειμένου ------------------
-    with open('SearchEngineData/papers.json', 'r') as file:
+    with open('papers.json', 'r') as file:
         data = json.load(file)
 
     preprocessed_papers = []
@@ -109,35 +108,15 @@ try:
         }
         preprocessed_papers.append(data)
     
-    preprocessed_json_data = store_json(preprocessed_papers, 'SearchEngineData/preprocessed_papers.json')
+    preprocessed_json_data = store_json(preprocessed_papers, 'preprocessed_papers.json')
 
-
-    """
-    # Αρχικοποίηση της λίστας με τις προεπεξεργασμένες περιλήψεις (abstract) των εργασιών
-    # Προσπέλαση της λίστας με τα δεδομένα κάθε εργασίας δομημένα σε μία δομή λεξικού με κλειδία τα ονόματα των δεδομένων και αντίστοιχα περιεχόμενα τα δεδομένα  
-    for data in json_data:
-        title = data.get('title')                            # Ανάκτηση του περιεχομένου του λεξικού με κλειδί 'title'
-        authors = data.get('authors')
-        subjects = data.get('subjects')
-        comments = data.get('comments')
-        abstract = data.get('abstract')                      # Ανάκτηση του περιεχομένου του λεξικού με κλειδί 'abstract' 
-        date = data.get('date')
-      # Κλήση της συνάρτησης process_text για την προεπεξεργασία της περίληψης της εργασίας και αποθήκευση στην λίστα processed_abstracts
-    #------------------ Βήμα 2.β. Αιτιολόγηση επιλογής εργασιών ------------------
-    # Εκτύπωση των προεπεξεργασμένων περιλήψεων (abstracts) των εργασιών
-    print("_____________________Βήμα 2. Προεπεξεργασία κειμένου (Text processing)_____________________")
-    for index, abstract in enumerate(processed_abstracts):
-        print(f'---- Paper #{index} ----')
-        print(abstract)    
-    print('\n')
-    """
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
         Βήμα 3. Ευρετήριο (Indexing)
     
     """""""""""""""""""""""""""""""""""""""""""""
-    with open('SearchEngineData/preprocessed_papers.json', 'r') as file:
+    with open('preprocessed_papers.json', 'r') as file:
         data = json.load(file)
 
     inverted_index = create_inverted_index(data)
@@ -145,56 +124,16 @@ try:
         print(key, '-->', value)
     print('\n')
 
-    
-
-    """
-    #------------------ Βήμα 3.α. Δημιουργία της ανεστραμμένης δομής δεδομένων ευρετηρίου ------------------
-    # Κλήση της συνάρτησης create_inverted_index για την δημιουργία της ανεστραμμένης δομής δεδομένων ευρετηρίου
-    inverted_dict = create_inverted_index()
-    #------------------ Βήμα 2.α. Επιλογή εργασιών προεπεξεργασίας κειμένου ------------------
-    # Αρχικοποίηση της λίστας με τις προεπεξεργασμένες περιλήψεις (abstract) των εργασιών
-    processed_abstracts = []
-    # Προσπέλαση της λίστας με τα δεδομένα κάθε εργασίας δομημένα σε μία δομή λεξικού με κλειδία τα ονόματα των δεδομένων και αντίστοιχα περιεχόμενα τα δεδομένα  
-    for data in papers:
-        abstract = data.get('abstract')                      # Ανάκτηση του περιεχομένου του λεξικού με κλειδί 'abstract' 
-        processed_abstracts.append(process_text(abstract))   # Κλήση της συνάρτησης process_text για την προεπεξεργασία της περίληψης της εργασίας και αποθήκευση στην λίστα processed_abstracts
-    #------------------ Βήμα 2.β. Αιτιολόγηση επιλογής εργασιών ------------------
-    # Εκτύπωση των προεπεξεργασμένων περιλήψεων (abstracts) των εργασιών
-    print("_____________________Βήμα 2. Προεπεξεργασία κειμένου (Text processing)_____________________")
-    for index, abstract in enumerate(processed_abstracts):
-        print(f'---- Paper #{index} ----')
-        print(abstract)    
-    print('\n')
-    """
-
-    """"""""""""""""""""""""""""""""""""""""""""" 
-    
-        Βήμα 3. Ευρετήριο (Indexing)
-    
-    """""""""""""""""""""""""""""""""""""""""""""
-    """
-    #------------------ Βήμα 3.α. Δημιουργία της ανεστραμμένης δομής δεδομένων ευρετηρίου ------------------
-    # Κλήση της συνάρτησης create_inverted_index για την δημιουργία της ανεστραμμένης δομής δεδομένων ευρετηρίου
-    inverted_dict = create_inverted_index(processed_abstracts)
-    #------------------ Βήμα 3.β. Αποθήκευση του ευρετηρίου σε μία δομή δεδομένων ------------------
-    # Εκτύπωση του ευρετηρίου
-    print("_____________________Βήμα 3. Ευρετήριο (Indexing)_____________________")
-    for key, value in inverted_dict.items():
-        print(key, '-->', value)
-    print('\n')
-    """
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
         Βήμα 4. Μηχανή αναζήτησης (Search engine)
     
     """""""""""""""""""""""""""""""""""""""""""""
-    #------------------ Βήμα 4.α. Ανάπτυξη διεπαφής χρήστη για αναζήτηση εργασιών ------------------
-    init_gui(papers, inverted_index) # Κλήση της συνάρτησης init_gui για την ανάπτυξη διεπαφής χρήστη για αναζήτηση εργασιών
+    se = SearchEngine(json_data, preprocessed_json_data, inverted_index)
+    se.init_gui()
+      
     
-    
-
-
 except Exception as ex: 
     print("_____________________Εξαίρεση_____________________")
     print(str(ex))

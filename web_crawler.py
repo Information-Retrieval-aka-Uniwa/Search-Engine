@@ -45,7 +45,6 @@ def web_scrape(soup, max_limit):
                         pdf_href = pdf_link.get('href')                          # Εκχώρηση του περιεχομένου των ετικέτων <a> που ξεκινάνε με 'href' σε μία μεταβλητή
                         if pdf_href and pdf_href.startswith('/pdf/'):            # Έλεγχος αν υπάρχει το pdf_href και αν ξεκινά με τη συμβολοσειρά '/pdf/'
                             pdf_url = 'https://arxiv.org/' + pdf_href            # Σχηματισμός του URL για τη λήψη του PDF της εργασίας
-                    id = id + 1
                     # Αποθήκευση των δεδομένων της εργασίας σε μία δομή λεξικού
                     data = {
                         'id'   : id,
@@ -57,6 +56,7 @@ def web_scrape(soup, max_limit):
                         'date': date,
                         'pdf_url': pdf_url
                     }
+                    id = id + 1
                     papers.append(data) # Αποθήκευση του λεξικού με τα δεδομένα της εργασίας σε μία λίστα
                 else:                   # Οι εργασίες που θα συλλέγξουμε τα δεδομένα (Web Scraping) ξεπερνάνε το μέγιστο πλήθος των εργασιών που ορίσαμε στην Είσοδο[2]
                     break               # Σταματάμε την συλλογή δεδομένων

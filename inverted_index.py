@@ -21,18 +21,7 @@ def create_inverted_index(data):
 
 
 
-"""
-def create_inverted_index(data):
-    
-    inverted_index = {}                             # Αρχικοποίηση της ανεστραμμένης δομής δεδομένων ευρετηρίου (δομή λεξικού)
-    for paper_id, abstract in enumerate(data):   # Προσπέλαση της λίστας με τις περιλήψεις (abstract) των εργασιών (doc_id --> Θέση της περίληψης στην λίστα, document --> Περίληψη)
-        for word in abstract.split():               # Χωρισμός της περίληψης document σε λεκτικές μονάδες και προσπέλαση αυτών. Η προεπεξεργασία κειμένου έχει γίνει οπότε αρκεί η str.split() αντί της nltk.word_tokenize() για τον χωρισμό
-            if word not in inverted_index:          # O όρος κλειδί (word) δεν υπάρχει στο ευρετήριο 
-                inverted_index[word] = set()        # Το ευρετήριο είναι ένα λεξικό οπότε ορίζουμε το κλειδί word με κενό περιεχόμενο
-            inverted_index[word].add(doc_id)        # Προσθήκη του αριθμού της περίληψης (abs_id) στο περιεχόμενο με κλειδί τον όρο word. Η λέξη word εμφανίζεται στη περίληψη της εργασίας με abs_id
 
-    return inverted_index                           # Επιστροφή της ανεστραμμένης δομής δεδομένων ευρετηρίου (δομή λεξικού)                 
-"""
        
 
 
