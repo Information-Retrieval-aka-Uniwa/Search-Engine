@@ -2,6 +2,9 @@ import json
 import requests
 
 from bs4 import BeautifulSoup
+import json
+import requests
+from bs4 import BeautifulSoup
 
 """
 Βήμα 1. Σταχυολογητής (Web Crawler)
@@ -16,7 +19,8 @@ def web_scrape(soup, max_limit)
 """
 def web_scrape(soup, max_limit):
     
-    papers = []                                                                                             # Αρχικοποίηση της λίστας με τα δεδομένα κάθε εργασίας
+    papers = []
+    id = 0                                                                                                 # Αρχικοποίηση της λίστας με τα δεδομένα κάθε εργασίας
     for link in soup.find_all('a'):                                                                         # Αναζήτηση όλων των ετικέτων <a> από το έγγραφο HTML της σελίδας 
         href = link.get('href')                                                                             # Εκχώρηση του περιεχομένου των ετικέτων <a> που ξεκινάνε με 'href' σε μία μεταβλητή
         if href and href.startswith('/abs/'):                                                               # Το περιεχόμενο υπάρχει και ξεκινάει με την συμβολοσειρά '/abs/' (περιεχόμενο με ετικέτα href='/abs/XXXX.XXXXX' που αντιστοιχεί σε εργασία με τα δεδομένα της)
@@ -41,8 +45,10 @@ def web_scrape(soup, max_limit):
                         pdf_href = pdf_link.get('href')                          # Εκχώρηση του περιεχομένου των ετικέτων <a> που ξεκινάνε με 'href' σε μία μεταβλητή
                         if pdf_href and pdf_href.startswith('/pdf/'):            # Έλεγχος αν υπάρχει το pdf_href και αν ξεκινά με τη συμβολοσειρά '/pdf/'
                             pdf_url = 'https://arxiv.org/' + pdf_href            # Σχηματισμός του URL για τη λήψη του PDF της εργασίας
+                    id = id + 1
                     # Αποθήκευση των δεδομένων της εργασίας σε μία δομή λεξικού
                     data = {
+                        'id'   : id,
                         'title': title,
                         'authors': authors,
                         'subjects': subjects,
@@ -68,11 +74,10 @@ def store_json(papers)
 Έξοδος[1]  --> [json_data]  Τα δεδομένα κάθε εργασιάς ως μία δομημένη μορφή JSON
     
 """
-def store_json(papers):
-    
-    for index, paper in enumerate(papers):       # Προσπέλαση της λίστας με τα λεξικά που έχουν τα δεδομένα κάθε εργασίας
-        print(f'---- Paper #{index} ----')       # Εκτύπωση του αριθμού της εργασίας
-        json_data = json.dumps(paper, indent=4)  # Αποθήκευση των δεδομένων των εργασιών σε μορφή JSON με 4 χαρακτήρες κενό να προηγούνται στην αποθήκευση κάθε δεδομένου
-        print(f'JSON Data:\n{json_data}')        # Εκτύπωση των δεδομένων σε μορφή JSON
-  
-    return json_data
+def store_json(papers, json_name):
+    json_data = json.dumps(papers, indent=4)
+    with open(json_name, 'w') as file:
+        file.write(json_data)
+
+    return 'papers.json'
+

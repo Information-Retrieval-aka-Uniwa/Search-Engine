@@ -16,8 +16,7 @@ def process_text(text)
 Έξοδος[1]  --> [processed_text]  Το προεπεξεργασμένο κειμενικό περιεχόμενο
     
 """
-def process_text(text):
-    
+def preprocess_tokens(text):
     # ----- Tokenization -----
     tokens = word_tokenize(text)      # Χωρισμός του κειμένου σε λεκτικές μονάδες με χρήση της nltk.word_tokenize() για τον χωρισμό και των σημείων στίξης
 
@@ -29,6 +28,23 @@ def process_text(text):
 
     # ----- Normalization -----
     normalized_tokens = [token.lower() for token in stop_words_removal_tokens] # Αντικατάσταση όλων των κεφαλαίων γραμμάτων με πεζά
+
+    return normalized_tokens
+
+
+def preprocess_text(text):
+    
+    normalized_tokens = preprocess_tokens(text)
+
+    preprocessed_text = ' '.join(normalized_tokens)                        # Συνένωση των λέξεων της λίστας stop_words_removal_tokens ως ένα string για την τελική μορφή του προεπεξεργασμένου κείμενου
+    preprocessed_text = re.sub(r'[^a-zA-Z0-9\s]', '', preprocessed_text)
+  
+    return preprocessed_text
+
+
+def preprocess_abstract(text):
+    
+    normalized_tokens = preprocess_tokens(text)
 
     # ----- Stemming -----
     porter_stemmer = PorterStemmer()                                             # Εκτέλεση του αλγορίθμου του Porter για stemming

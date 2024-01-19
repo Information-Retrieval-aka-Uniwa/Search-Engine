@@ -1,7 +1,7 @@
 import tkinter 
 from tkinter import ttk
 
-from retrieval_algos import search_papers_boolean, search_papers_default
+from SearchEngineStore.retrieval_algos import search_papers_boolean, search_papers_default, search_papers_vector_space
 
 """
 Βήμα 4. Μηχανή αναζήτησης (Search engine)
@@ -61,6 +61,8 @@ def print_papers(search_query, retrieval_algorithm, papers, inverted_index):
 
     if retrieval_algorithm == "Boolean Retrieval":
         returned_docs = search_papers_boolean(search_query, inverted_index, len(papers))
+    elif retrieval_algorithm == "Vector Space Model":
+        returned_docs = search_papers_vector_space(search_query, papers)
     else:    
         returned_docs = search_papers_default(search_query, inverted_index) # Κλήση της συνάρτησης search_papers για την αναζήτηση των εργασιών που περιέχουν το ερώτημα αναζήτησης
 

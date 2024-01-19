@@ -1,3 +1,9 @@
+from collections import Counter, OrderedDict
+import copy
+import math
+
+from SearchEngineStore.text_preprocessing import preprocess_text
+
 def search_papers_boolean(query, inverted_index, num_of_papers):
     terms = query.lower().split()  # Μετατροπή του ερωτήματος αναζήτησης σε πεζά γράμματα και διαχωρισμός του σε λεκτικές μονάδες
     matching_papers = []           # Αρχικοποίηση της λίστας με τους αριθμούς των εργασιών που περιέχουν το ερώτημα αναζήτησης              
@@ -44,6 +50,29 @@ def search_papers_boolean(query, inverted_index, num_of_papers):
     
     overall_matching_papers = set(matching_papers)
     return overall_matching_papers # Αφαίρεση των διπλότυπων αριθμών εργασιών που περιέχουν το ερώτημα αναζήτησης
+
+
+def search_papers_vector_space(query, papers):
+    processed_query = preprocess_text(query)
+
+
+
+    
+    """ 
+    terms = sorted(set(query + paper_abstract for paper_abstract in papers.get('abstract')))
+    init_vector = OrderedDict((term, 0) for term in terms)
+
+    doc_vectors = []
+    for doc, doc_tokens in enumerate([query, paper_abstract for paper_abstract in papers.get('abstract')]):
+        vector = copy.copy(init_vector)
+        bag_of_words = Counter(doc_tokens)
+        for term, freq in bag_of_words.items():
+            vector[term] = freq / len(terms)
+        doc_vectors.append(vector)
+    return doc_vectors"""
+
+
+
 
 
 def search_papers_default(query, inverted_index):
