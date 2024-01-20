@@ -48,55 +48,5 @@
         "abstract": "imag interferometr data radio astronomi requir use nonlinear algorithm reli differ assumpt sourc structur may produc nonuniqu result especi true long baselin interferometri vlbi observ sampl fourier space spars basic tenet standard vlbi imag techniqu assum observ sourc structur evolv observ howev recent vlbi result supermass black hole smbh galact center sagittariu sgra recent report event horizon telescop collabor ehtc requir develop dynam imag algorithm sinc exhibit variabl minut timescal paper introduc new nonconvex optim problem extend standard maximum entropi method mem reconstruct intraobserv dynam imag interferometr data evolv everi integr time present rigor mathemat formal solv problem via primaldu approach build newton strategi give numer complex also give strategi iter improv obtain solut final defin novel figur merit evalu qualiti recov solut test algorithm call ngmem differ synthet dataset increas difficulti final compar anoth wellestablish dynam imag method within comparison identifi signific improv ngmem reconstruct moreov evalu integr time evolut scheme time contribut show play crucial role obtain good dynam reconstruct",
         "date": "18 jan 2024",
         "pdf_url": "https://arxiv.org//pdf/2401.10177.pdf"
-    },
-    {
-        "id": 5,
-        "title": "coollamps vi lens model new constraints properties cool j12412219 bright z 5 lyman break galaxy z 1 cluster lens",
-        "authors": "maxwell klein keren sharon kate napier michael d gladders gourav khullar matthew bayliss hkon dahle m riley owens antony stark sasha brownsberger keunho j kim nicole kuchta guillaume mahler grace smith ryan walker katya gozman michael n martinez owen s matthews acua kaiya merz jorge a sanchez daniel j kavin stein ezra o sukay kiyan tavangar",
-        "subjects": "astrophysics galaxies astrophga",
-        "comments": "submitted apj",
-        "abstract": "present strong lens analysi cool j12412219 brightest known gravit lens galaxi z geq 5 base new multiband hubbl space telescop hst imag data lens galaxi redshift z5043 place shortli end epoch reioniz ab magnitud zab2047 mag khullar et al 2021 serv touchston futur research epoch high spatial resolut hst reveal intern structur giant arc identifi 15 constraint construct robust len model use len model extract cluster mass lens magnif find mass enclos within einstein radiu z1001 cluster len 577  1079 0023 0007 significantli lower known strong lens cluster redshift averag magnif giant arc mu arc 76 40 20 factor 24 14 07 greater previous estim groundbas data fluxweight averag magnif mu arc 92 37 31 updat current measur stellar mass star format rate sfr sourc revis magnif log mstarm odot 97pm03 rm sfr 103 70 44 m odot yr 1 power lens magnif act upon cool j12412219 resolv sourc enabl futur studi properti star format clumpbyclump basi lens analysi present support upcom multiwavelength character hst jwst data stellar mass assembl physic properti highredshift lens galaxi",
-        "date": "18 jan 2024",
-        "pdf_url": "https://arxiv.org//pdf/2401.10168.pdf"
-    },
-    {
-        "id": 6,
-        "title": "mass dependence h emission stellar spindown fully convective dwarfs",
-        "authors": "emily k pass david charbonneau david w latham perry berlind michael l calkins gilbert a esquerdo jessica mink",
-        "subjects": "solar stellar astrophysics astrophsr earth planetary astrophysics astrophep",
-        "comments": "submitted apj 18 pages 8 figures 5 tables",
-        "abstract": "fulli convect dwarf typic remain rapidli rotat magnet activ billion year follow abrupt massdepend transit slow rotat quiescenc robust understand process complic difficulti estim mdwarf age potenti depend variabl birth environ metal isol effect mass consid dwarf wide binari identifi 67 wide separ fulli convect 008035m odot mdwarf binari system use gaia measur h alpha featur compon classifi pair three categori system compon activ system inact candid transit system one compon activ inact gather higherresolut spectra candid transit system verifi behavior result unresolv third compon yield one new tripl surpris activ level neglect tripl find 22 activ 36 inact 8 transit pair result consist epoch spindown binari primarili determin mass mild secondord effect place 1 sigma upper limit 05gyr 25 dispers massdepend spindown relat find suggest larg dispers spindown epoch previous observ field star given mass may stem differ birth environ addit modest intrins stochast also see evid wide binari popul dispers time due dynam process",
-        "date": "18 jan 2024",
-        "pdf_url": "https://arxiv.org//pdf/2401.10167.pdf"
-    },
-    {
-        "id": 7,
-        "title": "outbursting protostar environment l1251 vla 6",
-        "authors": "ava nederlander adele plunkett antonio hales gnes kspl jacob white makoto a johnstone mria kun pter brahm anna g hughes",
-        "subjects": "solar stellar astrophysics astrophsr",
-        "comments": "16 pages 9 figures 5 tables accepted apj",
-        "abstract": "young protostar undergo episod accret provid insight impact circumstellar environ matter accret disk onto protostar ira 223437501 four compon protostar system one fade outburst protostar refer l1251 vla 6 given rariti yso undergo type accret l1251 vla 6 elucid fade phase postoutburst process examin structur disk around l1251 vla 6 frequenc 10 ghz 33 ghz karl g janski larg array vla model disk structur use markov chain mont carlo mcmc method combin parametr raytrac code gener synthet model imag axisymmetr disk allow us character radial distribut dust system result mcmc fit show probabl valu mass radiu consist valu typic class object find total mass disk 0070 0031 02 rm m sun investig condit could caus accret outburst conclud erupt caus gravit instabl consid altern explan trigger mechan",
-        "date": "18 jan 2024",
-        "pdf_url": "https://arxiv.org//pdf/2401.10131.pdf"
-    },
-    {
-        "id": 8,
-        "title": "interpreting deviations arvtg gr",
-        "authors": "roberto dale diego sez",
-        "subjects": "cosmology nongalactic astrophysics astrophco general relativity quantum cosmology grqc",
-        "comments": "17 pages 10 figures",
-        "abstract": "cosmic microwav background cmb anisotropi predict two cosmolog model compar one standard model gener rel cold dark matter cosmolog constant wherea second model base consist vectortensor theori gravit explain solar system cosmolog observ prove result differ  anisotropi model  due socal late integr sach wolf effect consequ cross correl map cmb temperatur tracer dark matter distribut could use futur select one model role reioniz analys detail",
-        "date": "18 jan 2024",
-        "pdf_url": "https://arxiv.org//pdf/2401.10116.pdf"
-    },
-    {
-        "id": 9,
-        "title": "influence jovian current sheet models mapping uv auroral footprints io europa ganymede",
-        "authors": "jonas rabia quentin nnon nicolas andr vincent hue daniel santoscosta aneesah kamran michel blanc",
-        "subjects": "earth planetary astrophysics astrophep space physics physicsspaceph",
-        "comments": "22 pages 9 figures 1 table accepted publication journal geophysical research space physics",
-        "abstract": "insitu character moonmagnetospher interact jupit map moon auror footpath requir accur global model magnetospher magnet field studi compar abil two widelyus current sheet model khurana2005 kk2005 connerney2020 con2020 combin recent measur acquir low medium high latitud adjust kk2005 model jrm33 show outer middl magnetospher r 15rj jrm33kk2005 found best model reproduc magnet field observ galileo juno account local time effect jrm33con2020 give accur represent inner magnetospher find drawn comparison juno insitu magnet field measur confirm contrast time cross io europa ganymed flux tube identifi juno particl data two model estim jrm33con2020 also map accur uv auror footpath io europa ganymed observ juno jrm33kk2005 jrm33kk2005 model predict local time asymmetri posit moon footprint howev detect juno s uv measurementsthi could indic local time effect magnet field margin orbit locat io europa ganymed final accuraci model predict function hemispher local time longitud explor",
-        "date": "18 jan 2024",
-        "pdf_url": "https://arxiv.org//pdf/2401.10115.pdf"
     }
 ]
