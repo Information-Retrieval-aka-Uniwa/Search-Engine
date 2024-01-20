@@ -40,11 +40,11 @@ def web_crawling(random_subjects):
             abstract = elements.find('span', class_='abstract-full has-text-grey-dark mathjax').text.strip().removeprefix("Abstract:").removesuffix("\n        \u25b3 Less")
             abstract = abstract.strip()
             # --- Σχόλια ---
-            comments = elements.find('p', class_='comments is-size-7')
-            if comments is None:
+            has_comments = elements.find('p', class_='comments is-size-7')
+            if has_comments is None:
                 comments = ' '
             else:
-                comments = comments.text.strip().removeprefix("Comments:").replace("\n", "")
+                comments = has_comments.text.strip().removeprefix("Comments:").replace("\n", "")
             # --- Ημερομηνία δημοσίευσης ---
             date = elements.find('p', class_='is-size-7').text.strip().removeprefix("Submitted ").split(";")[0]
             # --- URL λήψης του pdf της εργασίας ---

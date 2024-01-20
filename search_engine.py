@@ -12,7 +12,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import math
 
-from web_crawler import web_scrape
+from web_crawler import web_crawling, store_json
 
 """
 Βήμα 4. Μηχανή αναζήτησης (Search engine)
@@ -74,7 +74,7 @@ class SearchEngine:
         # ----- Ερώτημα αναζήτησης (query) -----
         def get_query():                                        # Inline συνάρτηση που επιστρέφει το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
             search_query = search_entry.get()                   # Το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
-            documents = web_scrape(search_query)
+            #documents = web_scrape(search_query)
             retrieval_algorithm = combobox.get()                 # Επιλεγμένος αλγόριθμος ανάκτησης
             print("Selected Algorithm:", retrieval_algorithm)    # Εκτύπωση του επιλεγμένου αλγορίθμου ανάκτησης
             self.search_papers(search_query, retrieval_algorithm)  # Κλήση της print_papers για την εκτύπωση των δεδομένων των εργασιών που περιέχουν το ερώτημα αναζήτησης
