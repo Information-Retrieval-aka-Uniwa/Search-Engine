@@ -17,7 +17,7 @@ def create_inverted_index(data):
                 inverted_index[term] = set()         # Αρχικοποίηση του συνόλου με τους αριθμούς των εργασιών που περιέχουν τον όρο κλειδί (term)
             inverted_index[term].add(paper['id'])    # Προσθήκη του αριθμού της εργασίας στο σύνολο με τους αριθμούς των εργασιών που περιέχουν τον όρο κλειδί (term)
     
-    inverted_index = dict(sorted(inverted_index.items()))  # Ταξινόμηση του ανεστραμμένου ευρετηρίου (inverted_index) βάσει των κλειδιών
+    inverted_index = dict(sorted(inverted_index.items()))  # Ταξινόμηση του ανεστραμμένου ευρετηρίου (inverted_index) βάση των κλειδιών
     
     return inverted_index                     # Επιστροφή του ανεστραμμένου ευρετηρίου (inverted_index)
 

@@ -46,6 +46,7 @@ class SearchEngine:
         self.okapi_bm_25_results = []                   # Λίστα με τα δεδομένα των εργασιών που περιέχουν το ερώτημα αναζήτησης με τον αλγόριθμο Okapi BM25
 
 
+
     def init_gui(self):
         # ----- Παράθυρο διεπαφής χρήστη -----
         window = tkinter.Tk()                          # Αρχικοποίηση του παραθύρου της διεπαφής χρήστη
@@ -73,8 +74,18 @@ class SearchEngine:
         search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query) # Ορισμός του κουμπιού αναζήτησης και κλήση της inline συνάρτησης get_query, όταν πατηθεί το κουμπί
         search_button.pack()                                                        # Ορισμός του κουμπιού αναζήτησης στο παράθυρο
 
+        # ----- Κουμπί φιλτραρίσματος -----
+        def filtering():
+            print("Filtering results...")  # Εκτύπωση μηνύματος φιλτραρίσματος
+            self.filter(self.data,self.preprocessed_data)
+            # Εδώ μπορείτε να προσθέσετε τον κώδικα για το φιλτράρισμα των αποτελεσμάτων
+
+        filter_button = tkinter.Button(window, text="Φιλτράρισμα", command=filtering)  # Ορισμός του κουμπιού φιλτραρίσματος και κλήση της συνάρτησης filtering, όταν πατηθεί το κουμπί
+        filter_button.pack()                                                             # Ορισμός του κουμπιού φιλτραρίσματος στο παράθυρο
+
         # ----- Εκτέλεση του παραθύρου -----
         window.mainloop()
+
 
     def search_papers(self, search_query, retrieval_algorithm):
 
@@ -190,6 +201,48 @@ class SearchEngine:
                 score += inverse_paper_frequency * ((term_frequency * (k + 1)) / (term_frequency + k * (1 - b + b * (paper_length / average_paper_length))))
     
         return score
+    
+    
+    def filter(self, papers, preprocessed_papers):
+    
+        answer = ''
+
+        while answer != 'q' or answer != 'n' or answer != 'd' :
+            answer = input("Για έξοδο απ το πρόγραμμα γράψτε 'q', για ταξινόμηση βάση ημερομηνίας γράψτε 'd', για ταξινόμηση βάση συγγραφέων γράψτε 'a': \n")
+            answer = answer.lower()
+
+            if answer == 'a':
+                preprocessed_papers = sorted(preprocessed_papers, key=lambda k: k['authors'])
+                for preproccessed_paper in preprocessed_papers:
+                    for paper in papers:
+                        if paper['id'] == preproccessed_paper['id']:
+                            print(paper['id'])
+                            print(paper['title'])
+                            print(paper['authors'])
+                            print(paper['subjects'])
+                            print(paper['comments'])
+                            print(paper['abstract'])
+                            print(paper['date'])
+                            print(paper['pdf_url'])
+                            print("\n")
+                    
+            if answer == 'd':
+                preprocessed_papers = sorted(preprocessed_papers, key=lambda k: k['date'])
+                for preproccessed_paper in preprocessed_papers:
+                    for paper in papers:
+                        if paper['id'] == preproccessed_paper['id']:
+                            print(paper['id'])
+                            print(paper['title'])
+                            print(paper['authors'])
+                            print(paper['subjects'])
+                            print(paper['comments'])
+                            print(paper['abstract'])
+                            print(paper['date'])
+                            print(paper['pdf_url'])
+                            print("\n")
+                        
+            if answer == 'q':
+                break
     
                  
         

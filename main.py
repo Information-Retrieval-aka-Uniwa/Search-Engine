@@ -50,7 +50,7 @@ try:
     papers = []
 
     # Μέγιστος αριθμός των εργασιών, των οποίων θέλουμε να συλλέξουμε τα δεδομένα
-    max_limit = 5
+    max_limit = 10
 
     # Υπάρχει περιεχόμενο που περιέχει την λίστα με όλες τις εργασίες ενός μαθήματος
     if "pastweek?show=" in all_papers_url:
@@ -130,40 +130,6 @@ try:
     se = SearchEngine(json_data, preprocessed_json_data, inverted_index)
     se.init_gui()
 
-    answer = ''
-    while answer != 'q' or answer != 'n' or answer != 'd' :
-        answer = input("Για έξοδο απ το πρόγραμμα γράψτε 'q', για ταξινόμηση βάση ημερομηνίας γράψτε 'd', για ταξινόμηση βάση συγγραφέων γράψτε 'a': \n")
-        answer = answer.lower()
-        if answer == 'a':
-            sorted_papers = sorted(preprocessed_papers, key=lambda x: x['authors'])
-            for paper in sorted_papers:
-                for data in json_data:
-                    if int(paper['id']) == int(data['id']):
-                        print(data['id'])
-                        print(data['title'])
-                        print(data['authors'])
-                        print(data['subjects'])
-                        print(data['comments'])
-                        print(data['abstract'])
-                        print(data['date'])
-                        print(data['pdf_url'])
-        
-        if answer == 'd':
-            sorted_papers = sorted(preprocessed_papers, key=lambda x: x['date'])
-            for paper in sorted_papers:
-                for data in json_data:
-                    if int(paper['id']) == int(data['id']):
-                        print(data['id'])
-                        print(data['title'])
-                        print(data['authors'])
-                        print(data['subjects'])
-                        print(data['comments'])
-                        print(data['abstract'])
-                        print(data['date'])
-                        print(data['pdf_url'])
-                    
-        if answer == 'q':
-            break
 
 
     
