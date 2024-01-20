@@ -6,6 +6,8 @@ import nltk
 from text_preprocessing import preprocess_text
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import math
+from collections import Counter
 
 def search_papers_boolean(query, inverted_index, num_of_papers):
     terms = query.lower().split()  # Μετατροπή του ερωτήματος αναζήτησης σε πεζά γράμματα και διαχωρισμός του σε λεκτικές μονάδες
@@ -90,8 +92,14 @@ def search_papers_vector_space(query, papers, preprocessed_papers):
     return set()
 
 
+def search_papers_okapi_bm25(query, papers, preprocessed_papers):
 
+    tokenized_query = nltk.word_tokenize(preprocess_text(query))
+    doc_id = [doc['id'] for doc in papers]
+    preprocessed_abstracts = [doc['abstract'] for doc in preprocessed_papers]
+    tokenized_abstracts = [nltk.word_tokenize(doc) for doc in preprocessed_abstracts]
 
+    return set()
 
 
 def search_papers_default(query, inverted_index):

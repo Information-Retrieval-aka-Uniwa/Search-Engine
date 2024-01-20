@@ -2,7 +2,7 @@ import json
 import tkinter 
 from tkinter import ttk
 
-from retrieval_algos import search_papers_boolean, search_papers_default, search_papers_vector_space
+from retrieval_algos import search_papers_boolean, search_papers_default, search_papers_vector_space, search_papers_okapi_bm25
 import tkinter
 from tkinter import ttk
 
