@@ -17,8 +17,64 @@ def web_scrape(soup, max_limit)
 Έξοδος[1]  --> [papers]    Λίστα με τα δεδομένα κάθε εργασίας δομημένα σε μία δομή λεξικού (data) με κλειδία τα ονόματα των δεδομένων και αντίστοιχα περιεχόμενα τα δεδομένα    
     
 """
-def web_scrape(soup, max_limit):
-    
+def web_crawling(random_subjects):
+    dataset = []
+    doc_id = 0
+    for sub in random_subjects:
+        url = 'https://arxiv.org/search/?query=' + sub + '&searchtype=all&source=header&size=100'
+        page = requests.get(url)
+        page.raise_for_status()
+        soup = BeautifulSoup(page.text, 'html.parser')
+        for elements in soup.find_all('li', class_='arxiv-result'):
+            # --- Τίτλος ---
+            title = elements.find('p', class_='title is-5 mathjax').text.strip()
+            # --- Συγγραφείς ---
+            authors = elements.find('p', class_='authors').text.strip().removeprefix("Authors:").split(", ")
+            authors = [author.strip() for author in authors]
+            # --- Μαθήματα ---
+            subjects = []
+            for subject in elements.find_all('span'):
+                if subject.get('data-tooltip') is not None:
+                    subjects.append(subject.get('data-tooltip')) 
+            # --- Περίληψη ---
+            abstract = elements.find('span', class_='abstract-full has-text-grey-dark mathjax').text.strip().removeprefix("Abstract:").removesuffix("\n        \u25b3 Less")
+            abstract = abstract.strip()
+            # --- Σχόλια ---
+            comments = elements.find('p', class_='comments is-size-7')
+            if comments is None:
+                comments = ' '
+            else:
+                comments = comments.text.strip().removeprefix("Comments:").replace("\n", "")
+            # --- Ημερομηνία δημοσίευσης ---
+            date = elements.find('p', class_='is-size-7').text.strip().removeprefix("Submitted ").split(";")[0]
+            # --- URL λήψης του pdf της εργασίας ---
+            for pdf_link in elements.find_all('a'):                     
+                pdf_href = pdf_link.get('href')                       
+                if pdf_href and pdf_href.startswith('https://arxiv.org/pdf/'):         
+                    pdf_url = pdf_href 
+            data = {
+                'doc_id'   : doc_id,
+                'title'    : title,
+                'authors'  : authors,
+                'subjects' : subjects,
+                'abstract' : abstract,
+                'comments' : comments,
+                'date'     : date,
+                'pdf_url'  : pdf_url
+            }
+            doc_id = doc_id + 1
+            dataset.append(data)
+
+    return dataset    
+
+    """
+    tokens_query = query.split()
+    url = 'https://arxiv.org/search/?query=' + '+'.join(tokens_query) + '&searchtype=all&source=header&size=100'
+    page = requests.get(url)
+    page.raise_for_status()
+    soup = BeautifulSoup(page.text, 'html.parser')
+    """
+    """
     papers = []
     id = 0                                                                                                 # Αρχικοποίηση της λίστας με τα δεδομένα κάθε εργασίας
     for link in soup.find_all('a'):                                                                         # Αναζήτηση όλων των ετικέτων <a> από το έγγραφο HTML της σελίδας 
@@ -63,6 +119,7 @@ def web_scrape(soup, max_limit):
 
 
     return papers # Επιστροφή της λίστας με τα δεδομένα κάθε εργασίας
+    """
 
 """
 Βήμα 1. Σταχυολογητής (Web Crawler)
@@ -79,5 +136,4 @@ def store_json(papers, json_name):
     with open(json_name, 'w') as file:
         file.write(json_data)
 
-    return json_name
 

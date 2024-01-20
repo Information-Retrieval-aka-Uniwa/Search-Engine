@@ -12,6 +12,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import math
 
+from web_crawler import web_scrape
+
 """
 Βήμα 4. Μηχανή αναζήτησης (Search engine)
 
@@ -35,15 +37,22 @@ def print_papers(search_query, papers, inverted_dict)
 """
 
 class SearchEngine:
+    def __init__(self):
+        self.data = {}                   # papers in dictionary format
+        self.preprocessed_data = {}      # papers with preprocessed data in dictionary format
+        self.inverted_index = {}         # inverted index
+        self.boolean_retrieval_results = []             # List of papers that match the search query using the Boolean Retrieval algorithm
+        self.vector_space_model_results = []            # List of papers that match the search query using the Vector Space Model algorithm
+        self.okapi_bm_25_results = []                   # List of papers that match the search query using the Okapi BM25 algorithm
+
+    """
     def __init__(self, json_data, json_preprocessed_data, inverted_index):   # Constructor της κλάσης SearchEngine
         with open(json_data, 'r') as file:
             self.data = json.load(file)                 # papers σε μορφή λεξικού 
         with open(json_preprocessed_data, 'r') as file:
             self.preprocessed_data = json.load(file)    # papers σε μορφή λεξικού με προεπεξεργασμένα δεδομένα
         self.inverted_index = inverted_index            # Ανεστραμμένο ευρετήριο
-        self.boolean_retrieval_results = []             # Λίστα με τα δεδομένα των εργασιών που περιέχουν το ερώτημα αναζήτησης με τον αλγόριθμο Boolean Retrieval
-        self.vector_space_model_results = []            # Λίστα με τα δεδομένα των εργασιών που περιέχουν το ερώτημα αναζήτησης με τον αλγόριθμο Vector Space Model
-        self.okapi_bm_25_results = []                   # Λίστα με τα δεδομένα των εργασιών που περιέχουν το ερώτημα αναζήτησης με τον αλγόριθμο Okapi BM25
+    """
 
 
     def init_gui(self):
@@ -65,6 +74,7 @@ class SearchEngine:
         # ----- Ερώτημα αναζήτησης (query) -----
         def get_query():                                        # Inline συνάρτηση που επιστρέφει το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
             search_query = search_entry.get()                   # Το query που εισήγαγε ο χρήστης στην διεπαφή χρήστη
+            documents = web_scrape(search_query)
             retrieval_algorithm = combobox.get()                 # Επιλεγμένος αλγόριθμος ανάκτησης
             print("Selected Algorithm:", retrieval_algorithm)    # Εκτύπωση του επιλεγμένου αλγορίθμου ανάκτησης
             self.search_papers(search_query, retrieval_algorithm)  # Κλήση της print_papers για την εκτύπωση των δεδομένων των εργασιών που περιέχουν το ερώτημα αναζήτησης

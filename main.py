@@ -2,10 +2,11 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-from web_crawler import web_scrape, store_json 
+from web_crawler import web_crawling, store_json 
 from text_preprocessing import preprocess_text, preprocess_abstract
 from inverted_index import create_inverted_index
 from search_engine import SearchEngine
+import random
 
 
 try:
@@ -14,6 +15,10 @@ try:
         Βήμα 1. Σταχυολογητής (Web Crawler)
  
     """""""""""""""""""""""""""""""""""""""""""""
+    
+
+
+    """
     #------------------ Βήμα 1.α. Επιλογή ιστοτόπου-στόχου (arXiv) ------------------
     # Εισαγωγή του URL της σελίδας του μαθήματος που ενδιαφέρομαι για την αναζήτηση εργασιών
     # subject_url = input("Δώσε το url της σελίδας του μαθήματος : ") 
@@ -79,13 +84,14 @@ try:
     #------------------ Βήμα 1.γ. Αποθήκευση δεδομένων σε δομημένη μορφή (JSON) ------------------    
         # Κλήση της συνάρτησης store_json για την αποθήκευση των δεδομένων σε JSON
         json_data = store_json(papers, 'papers.json')
-
+    """
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
         Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
    
     """""""""""""""""""""""""""""""""""""""""""""
+    """
     with open('papers.json', 'r') as file:
         data = json.load(file)
 
@@ -105,13 +111,14 @@ try:
         preprocessed_papers.append(data)
     
     preprocessed_json_data = store_json(preprocessed_papers, 'preprocessed_papers.json')
-
+    """
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
         Βήμα 3. Ευρετήριο (Indexing)
     
     """""""""""""""""""""""""""""""""""""""""""""
+    """
     with open('preprocessed_papers.json', 'r') as file:
         data = json.load(file)
 
@@ -119,7 +126,7 @@ try:
     with open('inverted_index.txt', 'w') as file2:
         for key, value in inverted_index.items():
             file2.write(f"{key} --> {value}\n")
-            
+    """        
 
 
     """"""""""""""""""""""""""""""""""""""""""""" 
@@ -127,8 +134,17 @@ try:
         Βήμα 4. Μηχανή αναζήτησης (Search engine)
     
     """""""""""""""""""""""""""""""""""""""""""""
-    se = SearchEngine(json_data, preprocessed_json_data, inverted_index)
-    se.init_gui()
+    subjects = ['Physics', 'Mathematics', 'Computer Science', 'Quantitative Biology', 'Quantitative Finance', 'Statistics', 'Electrical Engineering and Systems Science', 'Economics']
+
+    num_subjects = random.randint(1, len(subjects))
+    random_subjects = random.sample(subjects, num_subjects)
+
+    documents = web_crawling(random_subjects)
+
+    store_json(documents, 'dataset.json')
+
+    #se = SearchEngine()
+    #se.init_gui()
       
     
 except Exception as ex: 
