@@ -56,10 +56,10 @@ try:
         Βήμα 3. Ευρετήριο (Indexing)
     
     """""""""""""""""""""""""""""""""""""""""""""
-    with open('preprocessed_papers.json', 'r') as file:
+    with open('preprocessed_dataset.json', 'r') as file:
         preprocessed_data = json.load(file)
 
-    inverted_index = create_inverted_index(data)
+    inverted_index = create_inverted_index(preprocessed_data)
     with open('inverted_index.txt', 'w') as file2:
         for key, value in inverted_index.items():
             file2.write(f"{key} --> {value}\n")

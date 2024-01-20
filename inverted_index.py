@@ -6,16 +6,16 @@
 Έξοδος[1]     --> [inverted_index]  Ανεστραμμένη δομή δεδομένων ευρετηρίου (inverted_index)
     
 """
-def create_inverted_index(data):
+def create_inverted_index(preprocessed_dataset):
     
     inverted_index = {}                              # Αρχικοποίηση του ανεστραμμένου ευρετηρίου (inverted_index) σε κενό λεξικό
-    for paper in data:                               # Προσπέλαση των δεδομένων των εργασιών
-        abstract = paper.get('abstract')             # Ανάκτηση της περίληψης (abstract) της εργασίας
+    for doc in preprocessed_dataset:                               # Προσπέλαση των δεδομένων των εργασιών
+        abstract = doc.get('abstract')             # Ανάκτηση της περίληψης (abstract) της εργασίας
         terms = abstract.split()                     # Διαχωρισμός του κειμένου σε λεκτικές μονάδες
         for term in terms:                           # Προσπέλαση των λεκτικών μονάδων
             if term not in inverted_index:           # Έλεγχος για το αν ο όρος κλειδί (term) υπάρχει στο ανεστραμμένο ευρετήριο (inverted_index)
                 inverted_index[term] = set()         # Αρχικοποίηση του συνόλου με τους αριθμούς των εργασιών που περιέχουν τον όρο κλειδί (term)
-            inverted_index[term].add(paper['id'])    # Προσθήκη του αριθμού της εργασίας στο σύνολο με τους αριθμούς των εργασιών που περιέχουν τον όρο κλειδί (term)
+            inverted_index[term].add(doc['doc_id'])    # Προσθήκη του αριθμού της εργασίας στο σύνολο με τους αριθμούς των εργασιών που περιέχουν τον όρο κλειδί (term)
     
     inverted_index = dict(sorted(inverted_index.items()))  # Ταξινόμηση του ανεστραμμένου ευρετηρίου (inverted_index) βάσει των κλειδιών
     
