@@ -10,6 +10,7 @@ from tkinter import ttk
 from text_preprocessing import preprocess_text
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import math
 
 """
 Βήμα 4. Μηχανή αναζήτησης (Search engine)
@@ -83,12 +84,13 @@ class SearchEngine:
         elif retrieval_algorithm == "Vector Space Model":
             self.search_papers_vector_space_model(search_query)
             # Print the ranked documents
-            for doc, similarity in self.vector_space_model_results:    # Εκτύπωση των αριθμών των εργασιών και των συνημιτονικών ομοιοτήτων τους
-                print(f"Similarity: {similarity:.4f}\n{doc}\n")
+            for paper, similarity in self.vector_space_model_results:    # Εκτύπωση των αριθμών των εργασιών και των συνημιτονικών ομοιοτήτων τους
+                print(f"Similarity: {similarity:.4f}\n{paper}\n")
         elif retrieval_algorithm == "Okapi BM25":
-            print('Okapi BM25')
-            #self.search_papers_okapi_bm25(search_query)
-            #print(self.okapi_bm_25_results)
+            self.search_papers_okapi_bm25(search_query)
+            for paper, score in self.okapi_bm_25_results:    # Εκτύπωση των αριθμών των εργασιών και των συνημιτονικών ομοιοτήτων τους
+                print(f"Score: {score:.4f}\n{paper}\n")
+           
 
     
     def search_papers_boolean_retrieval(self, query):
@@ -133,14 +135,14 @@ class SearchEngine:
     def search_papers_vector_space_model(self, query):
         # Step 1: Tokenize and preprocess the text
         tokenized_query = nltk.word_tokenize(preprocess_text(query))                         # Μετατροπή του ερωτήματος αναζήτησης σε λεκτικές μονάδες και προεπεξεργασία του κειμένου
-        doc_id = [doc['id'] for doc in self.data]                                               # Λίστα με τους αριθμούς των εργασιών
+        paper_id = [paper['id'] for paper in self.data]                                               # Λίστα με τους αριθμούς των εργασιών
         #title = [doc['title'] for doc in papers]
-        preprocessed_abstracts = [doc['abstract'] for doc in self.preprocessed_data]            # Λίστα με τις προεπεξεργασμένες περιλήψεις (abstracts) των εργασιών
-        tokenized_abstracts = [nltk.word_tokenize(doc) for doc in preprocessed_abstracts]    # Λίστα με τις λεκτικές μονάδες των προεπεξεργασμένων περιλήψεων (abstracts) των εργασιών
+        preprocessed_abstracts = [paper['abstract'] for paper in self.preprocessed_data]            # Λίστα με τις προεπεξεργασμένες περιλήψεις (abstracts) των εργασιών
+        tokenized_abstracts = [nltk.word_tokenize(paper) for paper in preprocessed_abstracts]    # Λίστα με τις λεκτικές μονάδες των προεπεξεργασμένων περιλήψεων (abstracts) των εργασιών
 
         # Step 2: Calculate TF-IDF
         # Convert tokenized documents to text
-        preprocessed_abstracts = [' '.join(doc) for doc in tokenized_abstracts]              # Μετατροπή των λεκτικών μονάδων των περιλήψεων (abstracts) σε κείμενο
+        preprocessed_abstracts = [' '.join(paper) for paper in tokenized_abstracts]              # Μετατροπή των λεκτικών μονάδων των περιλήψεων (abstracts) σε κείμενο
         preprocessed_query = ' '.join(tokenized_query)                                       # Μετατροπή των λεκτικών μονάδων του ερωτήματος αναζήτησης σε κείμενο
 
         # Create a TF-IDF vectorizer
@@ -154,10 +156,40 @@ class SearchEngine:
         cosine_similarities = cosine_similarity(query_vector, tfidf_matrix)                  # Υπολογισμός της συνημιτονικής ομοιότητας του ερωτήματος αναζήτησης με τα TF-IDF vectors των περιλήψεων (abstracts) των εργασιών
 
         # Step 4: Rank documents by similarity
-        self.vector_space_model_results = [(doc_id[i], cosine_similarities[0][i]) for i in range(len(doc_id))]       # Αποθήκευση των αριθμών των εργασιών και των συνημιτονικών ομοιοτήτων τους σε μία λίστα
+        self.vector_space_model_results = [(paper_id[i], cosine_similarities[0][i]) for i in range(len(paper_id))]       # Αποθήκευση των αριθμών των εργασιών και των συνημιτονικών ομοιοτήτων τους σε μία λίστα
         self.vector_space_model_results.sort(key=lambda x: x[1], reverse=True)                                       # Ταξινόμηση του αποτελέσματος
 
 
+    def search_papers_okapi_bm25(self, query):
+        for paper in self.preprocessed_data:
+            paper['score'] = self.calculate_okapi_bm25_score(query, paper['abstract'])
+            self.okapi_bm_25_results.append(paper)
+        self.okapi_bm_25_results.sort(key=lambda x: x['score'], reverse=True)  # Sort the results by 'score'
+        self.okapi_bm_25_results = [(paper['id'], paper['score']) for paper in self.okapi_bm_25_results]  # Store the sorted results in a list of tuples
+    
+    def calculate_okapi_bm25_score(self, query, paper, k = 1.2, b = 0.75):
+        score = 0
+        # Calculate document length
+        paper_length = len(paper)
+    
+        # Calculate average document length
+        total_papers = len(self.inverted_index.keys())
+        total_paper_length = sum([len(paper) for paper in self.inverted_index.values()])
+        average_paper_length = total_paper_length / total_papers
+    
+        # Calculate IDF for each term in the query
+        for term in query:
+            if term in self.inverted_index:
+                paper_frequency = len(self.inverted_index[term])
+                inverse_paper_frequency = math.log((total_papers - paper_frequency + 0.5) / (paper_frequency + 0.5))
+            
+                # Calculate term frequency in the document
+                term_frequency = paper.count(term)
+            
+                # Calculate BM25 score for the term
+                score += inverse_paper_frequency * ((term_frequency * (k + 1)) / (term_frequency + k * (1 - b + b * (paper_length / average_paper_length))))
+    
+        return score
     
                  
         
