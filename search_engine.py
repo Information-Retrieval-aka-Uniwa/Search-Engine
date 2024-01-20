@@ -74,10 +74,17 @@ class SearchEngine:
         search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query) # Ορισμός του κουμπιού αναζήτησης και κλήση της inline συνάρτησης get_query, όταν πατηθεί το κουμπί
         search_button.pack()                                                        # Ορισμός του κουμπιού αναζήτησης στο παράθυρο
 
+
         # ----- Κουμπί φιλτραρίσματος -----
+        options = ["Φιλτράρισμα κατά Ημερομηνία", "Φιλτράρισμα κατά Συγγραφέα"]
+        combobox2 = ttk.Combobox(window, values=options, state="readonly", width=30)
+        combobox2.set("Επιλογή Φιλτραρίσματος")
+        combobox2.pack()
+
         def filtering():
+            filtering_choice = combobox2.get()
             print("Filtering results...")  # Εκτύπωση μηνύματος φιλτραρίσματος
-            self.filter(self.data,self.preprocessed_data)
+            self.filter(self.data,self.preprocessed_data, filtering_choice)
             # Εδώ μπορείτε να προσθέσετε τον κώδικα για το φιλτράρισμα των αποτελεσμάτων
 
         filter_button = tkinter.Button(window, text="Φιλτράρισμα", command=filtering)  # Ορισμός του κουμπιού φιλτραρίσματος και κλήση της συνάρτησης filtering, όταν πατηθεί το κουμπί
@@ -203,15 +210,9 @@ class SearchEngine:
         return score
     
     
-    def filter(self, papers, preprocessed_papers):
+    def filter(self, papers, preprocessed_papers, filtering_choice):
     
-        answer = ''
-
-        while answer != 'q' or answer != 'n' or answer != 'd' :
-            answer = input("Για έξοδο απ το πρόγραμμα γράψτε 'q', για ταξινόμηση βάση ημερομηνίας γράψτε 'd', για ταξινόμηση βάση συγγραφέων γράψτε 'a': \n")
-            answer = answer.lower()
-
-            if answer == 'a':
+            if filtering_choice == "Φιλτράρισμα κατά Συγγραφέα":
                 preprocessed_papers = sorted(preprocessed_papers, key=lambda k: k['authors'])
                 for preproccessed_paper in preprocessed_papers:
                     for paper in papers:
@@ -226,7 +227,7 @@ class SearchEngine:
                             print(paper['pdf_url'])
                             print("\n")
                     
-            if answer == 'd':
+            if filtering_choice == "Φιλτράρισμα κατά Ημερομηνία":
                 preprocessed_papers = sorted(preprocessed_papers, key=lambda k: k['date'])
                 for preproccessed_paper in preprocessed_papers:
                     for paper in papers:
@@ -240,9 +241,6 @@ class SearchEngine:
                             print(paper['date'])
                             print(paper['pdf_url'])
                             print("\n")
-                        
-            if answer == 'q':
-                break
     
                  
         
