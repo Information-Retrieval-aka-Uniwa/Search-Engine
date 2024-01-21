@@ -3,18 +3,15 @@ import tkinter
 import nltk 
 from tkinter import ttk
 
-#from retrieval_algos import search_papers_boolean, search_papers_default, search_papers_vector_space
 import tkinter
 from tkinter import ttk
-from query_processing import query_processing
+from query_processing import query_processing, replace_terms_with_docs
 
 from text_preprocessing import preprocess_text
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from nltk.tokenize import word_tokenize
 import math
 
-from web_crawler import web_crawling
 
 class SearchEngine:
 
@@ -68,24 +65,10 @@ class SearchEngine:
             for paper, score in results_bm25:
                 print(f"Score: {score:.4f}\n{paper}\n")
 
+
     def search_papers_boolean_retrieval(self, query):
-        boolean_stack = self.create_boolean_stack(query)
-        for boolean_query in boolean_stack:
-            results_boolean = query_processing(boolean_query, self.inverted_index, self.dataset)
-
-
-    def replace_terms_with_docs(self, query):
-        terms = word_tokenize(query.lower())
-        for term in terms:
-            if term in self.inverted_index:
-                if term != 'not' and term != 'and' and term != 'or' and term != '(' and term != ')':
-                    docs_term = self.inverted_index[term]
-                    terms[terms.index(term)] = docs_term
-
-        return terms
-
-    def create_boolean_stack(self, terms):
         res = []
+        terms = replace_terms_with_docs(query, self.inverted_index)
         while len(terms) > 1:
             if '(' and ')' in terms:
                 start = terms.index('(')
@@ -95,12 +78,12 @@ class SearchEngine:
                     if 'not' in subterms:
                         not_index = subterms.index('not')
                         not_query = subterms[not_index:not_index+2]
-                        res = query_processing(not_query, self.dataset)
+                        res = query_processing(not_query, len(self.dataset))
                         subterms[not_index] = res 
                         subterms.pop(not_index + 1)
                     else:
                         and_or_query = subterms[0:3]
-                        res = query_processing(and_or_query, self.dataset)
+                        res = query_processing(and_or_query, len(self.dataset))
                         subterms[0] = res 
                         subterms.pop(1)
                         subterms.pop(1) 
@@ -109,20 +92,20 @@ class SearchEngine:
             else:
                 if 'not' in terms:
                     not_index = terms.index('not')
-                    not_query = terms[not_index:not_index+2]
-                    res = query_processing(not_query, self.dataset)
+                    not_query = terms[not_index:not_index + 2]
+                    res = query_processing(not_query, len(self.dataset))
                     terms[not_index] = res 
                     terms.pop(not_index + 1)
                 else:
                     and_or_query = terms[0:3]
-                    res = query_processing(and_or_query, self.dataset)
+                    res = query_processing(and_or_query, len(self.dataset))
                     terms[0] = res 
                     terms.pop(1)
                     terms.pop(1)        
 
         return res
     
-    
+
     def search_papers_vector_space_model(self, query):
         vector_space_model_results = []
         # Step 1: Tokenize and preprocess the text

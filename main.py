@@ -80,10 +80,7 @@ try:
     query = "abil or abl and not ablat or (abrupt and not absenc) or not absent and not (absolut or absorb)"
     #for i, boolean in enumerate(se.search_papers_boolean_retrieval(query)):
      #   print(f"{i + 1} : {boolean}\n")
-    docs_query = se.replace_terms_with_docs(query)
-    for i, terms in enumerate(docs_query):
-        print(f"{i + 1} : {terms}\n")
-    results = se.create_boolean_stack(docs_query)
+    results = se.search_papers_boolean_retrieval(query)
     for i, boolean in enumerate(results):
         print(f"{i + 1} : {boolean}\n")
     
