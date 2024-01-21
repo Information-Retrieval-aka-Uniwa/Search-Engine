@@ -1,3 +1,9 @@
+""""""""""""""""""""""""""""""""""""""""""""" 
+    
+    Βήμα 3. Ευρετήριο (Indexing)
+    
+"""""""""""""""""""""""""""""""""""""""""""""
+
 def create_inverted_index(preprocessed_dataset):
     inverted_index = {}
     for doc in preprocessed_dataset:

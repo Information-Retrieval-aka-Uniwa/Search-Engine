@@ -1,5 +1,11 @@
+""""""""""""""""""""""""""""""""""""""""""""" 
+    
+    Βήμα 4. Επεξεργασία ερωτήματος (Query Processing)
+    
+"""""""""""""""""""""""""""""""""""""""""""""
 from nltk.tokenize import word_tokenize
 
+# ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
 def query_processing(terms, num_of_docs):
     for i, term in enumerate(terms):
         if term == "and":
@@ -19,6 +25,7 @@ def query_processing(terms, num_of_docs):
 
     return boolean_retrieval_results
 
+# ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
 def replace_terms_with_docs(query, inverted_index):
     terms = word_tokenize(query.lower())
     for term in terms:
@@ -28,7 +35,7 @@ def replace_terms_with_docs(query, inverted_index):
                     docs_term = inverted_index[term]
                     terms[terms.index(term)] = docs_term
             else:
-                raise Exception("Term not found in the inverted index")
+                raise Exception("Ο όρος δεν βρέθηκε στο ευρετήριο")
 
     return terms
 
