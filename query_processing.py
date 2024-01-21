@@ -22,12 +22,13 @@ def query_processing(terms, num_of_docs):
 def replace_terms_with_docs(query, inverted_index):
     terms = word_tokenize(query.lower())
     for term in terms:
-        if term in inverted_index:
-            if term != 'not' and term != 'and' and term != 'or' and term != '(' and term != ')':
-                docs_term = inverted_index[term]
-                terms[terms.index(term)] = docs_term
-        else:
-            raise Exception("Term not found in the inverted index")
+        if term != 'and' and term != 'or' and term != 'not' and term != '(' and term != ')': 
+            if term in inverted_index:
+                if term != 'not' and term != 'and' and term != 'or' and term != '(' and term != ')':
+                    docs_term = inverted_index[term]
+                    terms[terms.index(term)] = docs_term
+            else:
+                raise Exception("Term not found in the inverted index")
 
     return terms
 

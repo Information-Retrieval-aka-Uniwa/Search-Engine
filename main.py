@@ -77,7 +77,8 @@ try:
     
     """""""""""""""""""""""""""""""""""""""""""""
     se = SearchEngine(inverted_index)
-    query = "asdfsdf and abl"
+    #se.init_gui()
+    query = "abil or abl and not ablat or (abrupt and not absenc) or not absent and not (absolut or absorb)"
     #for i, boolean in enumerate(se.search_papers_boolean_retrieval(query)):
      #   print(f"{i + 1} : {boolean}\n")
     results = se.search_papers_boolean_retrieval(query)
