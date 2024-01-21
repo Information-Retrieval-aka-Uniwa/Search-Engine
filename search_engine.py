@@ -22,7 +22,7 @@ class SearchEngine:
             self.preprocessed_dataset = json.load(file)
         self.inverted_index = inverted_index
 
-        self.boolean_results = [] 
+        self.results_boolean = [] 
         self.vector_space_model_results = []
         self.okapi_bm25_results = []     
 
@@ -65,7 +65,7 @@ class SearchEngine:
             print("Filtered by: ", filter)
             self.filtering(filter, combobox.get())
             if combobox.get() == "Boolean Retrieval":
-                print("Boolean Results: ", self.boolean_results)
+                print("Boolean Results: ", self.results_boolean)
 
         # ----- Κουμπί επιλογής -----
         filter_button = tkinter.Button(window, text="Αναζήτηση", command=get_filter)
@@ -203,9 +203,9 @@ class SearchEngine:
               
                 self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'][0])
                 
-                
+
                 for preprocessed_paper in self.preprocessed_dataset:
-                    for paper in self.boolean_results:
+                    for paper in self.results_boolean:
                         if paper == preprocessed_paper['doc_id']:                               
                             results.append(paper)
 
@@ -218,7 +218,7 @@ class SearchEngine:
                 self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['date'])
 
                 for preprocessed_paper in self.preprocessed_dataset:
-                    for paper in self.boolean_results:
+                    for paper in self.results_boolean:
                         if paper == preprocessed_paper['doc_id']:                               
                             results.append(paper)
 
