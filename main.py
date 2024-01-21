@@ -57,18 +57,16 @@ try:
 
 
     """"""""""""""""""""""""""""""""""""""""""""" 
-    
+        
         Βήμα 3. Ευρετήριο (Indexing)
-    
+        
     """""""""""""""""""""""""""""""""""""""""""""
 
     with open('dataset/preprocessed_dataset.json', 'r') as file:
         preprocessed_data = json.load(file)
+    
 
-    inverted_index = create_inverted_index(preprocessed_data , 'abstract')
-    with open('dataset/inverted_index.txt', 'w') as file2:
-        for key, value in inverted_index.items():
-            file2.write(f"{key} --> {value}\n")
+    inverted_index = create_inverted_index(preprocessed_data, 'abstract')
     
 
     """"""""""""""""""""""""""""""""""""""""""""" 
@@ -77,13 +75,15 @@ try:
     
     """""""""""""""""""""""""""""""""""""""""""""
     se = SearchEngine(inverted_index)
-    #se.init_gui()
-    query = "abil or abl and not ablat or (abrupt and not absenc) or not absent and not (absolut or absorb)"
+    se.init_gui()
+    #query = "ability or acyclic"
     #for i, boolean in enumerate(se.search_papers_boolean_retrieval(query)):
      #   print(f"{i + 1} : {boolean}\n")
-    results = se.search_papers_boolean_retrieval(query)
+    #results = se.search_papers_boolean_retrieval(query)
+    '''
     for i, boolean in enumerate(results):
         print(f"{i + 1} : {boolean}\n")
+    '''
     
 except Exception as ex: 
     print("_____________________Εξαίρεση_____________________")

@@ -6,6 +6,7 @@ from tkinter import ttk
 import tkinter
 from tkinter import ttk
 from query_processing import query_processing, replace_terms_with_docs
+from inverted_index import create_inverted_index
 
 from text_preprocessing import preprocess_text
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -47,7 +48,25 @@ class SearchEngine:
 
         # ----- Κουμπί αναζήτησης -----
         search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query)
-        search_button.pack()                                                       
+        search_button.pack()
+        
+        # ----- Πεδίο επιλογής τεχνικής φιλτραρίσματος -----
+        filtering_options = ["title", "date"]
+        filtering_combobox = ttk.Combobox(window, values=filtering_options, state="readonly", width=30)
+        filtering_combobox.set("Επιλογή Τεχνικής Φιλτραρίσματος")
+        filtering_combobox.pack()
+
+        # ----- Ερώτημα φιλτραρίσματος -----
+        def get_filtering():
+            filtering_technique = filtering_combobox.get()
+            print("Selected Filtering Technique: By ", filtering_technique)
+            self.inverted_index = create_inverted_index(self.preprocessed_dataset, filtering_technique)
+
+            # Call the filtering function with the selected technique
+
+        # ----- Κουμπί φιλτραρίσματος -----
+        filtering_button = tkinter.Button(window, text="Φιλτράρισμα", command=get_filtering)
+        filtering_button.pack()                                                       
 
         # ----- Εκτέλεση του παραθύρου -----
         window.mainloop()
