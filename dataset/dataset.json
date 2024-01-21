@@ -1,0 +1,1757 @@
+[
+    {
+        "doc_id": 0,
+        "title": "Non-perturbative Wavefunction of the Universe in Inflation with (Resonant) Features",
+        "authors": [
+            "Paolo Creminelli",
+            "S\u00e9bastien Renaux-Petel",
+            "Giovanni Tambalo",
+            "Vicharit Yingcharoenrat"
+        ],
+        "subjects": [
+            "High Energy Physics - Theory",
+            "Cosmology and Nongalactic Astrophysics",
+            "General Relativity and Quantum Cosmology"
+        ],
+        "abstract": "We study the statistics of scalar perturbations in models of inflation with small and rapid oscillations in the inflaton potential (resonant non-Gaussianity). We do so by deriving the wavefunction $\u03a8[\u03b6(\\boldsymbol{x})]$ non-perturbatively in $\u03b6$, but at first order in the amplitude of the oscillations. The expression of the wavefunction of the universe (WFU) is explicit and does not require solving partial differential equations. One finds qualitative deviations from perturbation theory for $ |\u03b6| \\gtrsim \u03b1^{-2}$, where $\u03b1\\gg 1$ is the number of oscillations per Hubble time. Notably, the WFU exhibits distinct behaviours for negative and positive values of $\u03b6$ (troughs and peaks respectively). While corrections for $\u03b6<0$ remain relatively small, of the order of the oscillation amplitude, positive $\u03b6$ yields substantial effects, growing exponentially as $e^{\u03c0\u03b1/2}$ in the limit of large $\u03b6$. This indicates that even minute oscillations give large effects on the tail of the distribution.",
+        "comments": "56 pages, 10 figures",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10212"
+    },
+    {
+        "doc_id": 1,
+        "title": "Maximal-Capacity Discrete Memoryless Channel Identification",
+        "authors": [
+            "Maximilian Egger",
+            "Rawad Bitar",
+            "Antonia Wachter-Zeh",
+            "Deniz G\u00fcnd\u00fcz",
+            "Nir Weinberger"
+        ],
+        "subjects": [
+            "Information Theory",
+            "Machine Learning"
+        ],
+        "abstract": "The problem of identifying the channel with the highest capacity among several discrete memoryless channels (DMCs) is considered. The problem is cast as a pure-exploration multi-armed bandit problem, which follows the practical use of training sequences to sense the communication channel statistics. A capacity estimator is proposed and tight confidence bounds on the estimator error are derived. Based on this capacity estimator, a gap-elimination algorithm termed BestChanID is proposed, which is oblivious to the capacity-achieving input distribution and is guaranteed to output the DMC with the largest capacity, with a desired confidence. Furthermore, two additional algorithms NaiveChanSel and MedianChanEl, that output with certain confidence a DMC with capacity close to the maximal, are introduced. Each of those algorithms is beneficial in a different regime and can be used as a subroutine in BestChanID. The sample complexity of all algorithms is analyzed as a function of the desired confidence parameter, the number of channels, and the channels' input and output alphabet sizes. The cost of best channel identification is shown to scale quadratically with the alphabet size, and a fundamental lower bound for the required number of channel senses to identify the best channel with a certain confidence is derived.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10204"
+    },
+    {
+        "doc_id": 2,
+        "title": "Functional Conditional Gaussian Graphical Models",
+        "authors": [
+            "Rita Fici",
+            "Luigi Augugliaro",
+            "Ernst-Jan Camiel Wit"
+        ],
+        "subjects": [
+            "Methodology"
+        ],
+        "abstract": "Functional data has become a commonly encountered data type. In this paper, we contribute to the literature on functional graphical modelling by extending the notion of conditional Gaussian Graphical models and proposing a double-penalized estimator by which to recover the edge-set of the corresponding graph. Penalty parameters play a crucial role in determining the precision matrices for the response variables and the regression matrices. The performance and model selection process in the proposed framework are investigated using information criteria. Moreover, we propose a novel version of the Kullback-Leibler cross-validation designed for conditional joint Gaussian Graphical Models. The evaluation of model performance is done in terms of Kullback-Leibler divergence and graph recovery power.",
+        "comments": "19 pages",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10196"
+    },
+    {
+        "doc_id": 3,
+        "title": "tinyVAST: R package with an expressive interface to specify lagged and simultaneous effects in multivariate spatio-temporal models",
+        "authors": [
+            "James T. Thorson",
+            "Sean C. Anderson",
+            "Pamela Goddard",
+            "Christopher N. Rooper"
+        ],
+        "subjects": [
+            "Methodology",
+            "Applications"
+        ],
+        "abstract": "Multivariate spatio-temporal models are widely applicable, but specifying their structure is complicated and may inhibit wider use. We introduce the R package tinyVAST from two viewpoints: the software user and the statistician. From the user viewpoint, tinyVAST adapts a widely used formula interface to specify generalized additive models, and combines this with arguments to specify spatial and spatio-temporal interactions among variables. These interactions are specified using arrow notation (from structural equation models), or an extended arrow-and-lag notation that allows simultaneous, lagged, and recursive dependencies among variables over time. The user also specifies a spatial domain for areal (gridded), continuous (point-count), or stream-network data. From the statistician viewpoint, tinyVAST constructs sparse precision matrices representing multivariate spatio-temporal variation, and parameters are estimated by specifying a generalized linear mixed model (GLMM). This expressive interface encompasses vector autoregressive, empirical orthogonal functions, spatial factor analysis, and ARIMA models. To demonstrate, we fit to data from two survey platforms sampling corals, sponges, rockfishes, and flatfishes in the Gulf of Alaska and Aleutian Islands. We then compare eight alternative model structures using different assumptions about habitat drivers and survey detectability. Model selection suggests that towed-camera and bottom trawl gears have spatial variation in detectability but sample the same underlying density of flatfishes and rockfishes, and that rockfishes are positively associated with sponges while flatfishes are negatively associated with corals. We conclude that tinyVAST can be used to test complicated dependencies representing alternative structural assumptions for research and real-world policy evaluation.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10193"
+    },
+    {
+        "doc_id": 4,
+        "title": "Generalized Decomposition Priors on R2",
+        "authors": [
+            "Javier Enrique Aguilar",
+            "Paul-Christian B\u00fcrkner"
+        ],
+        "subjects": [
+            "Methodology"
+        ],
+        "abstract": "The adoption of continuous shrinkage priors in high-dimensional linear models has gained momentum, driven by their theoretical and practical advantages. One of these shrinkage priors is the R2D2 prior, which comes with intuitive hyperparameters and well understood theoretical properties. The core idea is to specify a prior on the percentage of explained variance $R^2$ and to conduct a Dirichlet decomposition to distribute the explained variance among all the regression terms of the model. Due to the properties of the Dirichlet distribution, the competition among variance components tends to gravitate towards negative dependence structures, fully determined by the individual components' means. Yet, in reality, specific coefficients or groups may compete differently for the total variability than the Dirichlet would allow for. In this work we address this limitation by proposing a generalization of the R2D2 prior, which we term the Generalized Decomposition R2 (GDR2) prior.\n  Our new prior provides great flexibility in expressing dependency structures as well as enhanced shrinkage properties. Specifically, we explore the capabilities of variance decomposition via logistic normal distributions. Through extensive simulations and real-world case studies, we demonstrate that GDR2 priors yield strongly improved out-of-sample predictive performance and parameter recovery compared to R2D2 priors with similar hyper-parameter choices.",
+        "comments": "31 pages, 12 figures",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10180"
+    },
+    {
+        "doc_id": 5,
+        "title": "Building a Life Cycle Assessment Model using Bayesian Networks",
+        "authors": [
+            "Cedric Fraces Gasmi",
+            "Wennan Long"
+        ],
+        "subjects": [
+            "Data Analysis, Statistics and Probability"
+        ],
+        "abstract": "This paper introduces the Oilfield Pollutant Graphical Model (OPGM), an innovative approach designed to improve the benchmarking and uncertainty analysis of greenhouse gas (GHG) emissions in oilfields. Building on the robust foundation provided by the Oil Production Greenhouse Gas Emission Estimator (OPGEE) framework, OPGM retains all essential functionalities of the latest OPGEE iteration (v3.0c), while offering substantial improvements in user experience and computational performance. Key advances of OPGM include a streamlined user interface for more intuitive interaction, which facilitates transparent visualization of intermediate results and thus contributes to a more interpretable and accessible analysis process. A notable feature of the OPGM is its ability to naturally perform sensitivity analyzes. This is achieved by allowing users to seamlessly transition nodes from deterministic to probabilistic, thereby integrating uncertainty directly into the core structure of the model. OPGM achieves remarkable computational efficiency, executing analyzes at a speed 1e+5 times faster than the Excel-based OPGEE, thus facilitating rapid large-scale emissions assessments. This leap in processing speed represents a significant step forward in emissions modeling, enabling more agile and accurate environmental impact assessments. The integration of OPGM into existing Life Cycle Assessment (LCA) practices holds the promise of significantly improving the precision and speed of environmental impact analyses, offering a vital tool for policymakers and industry stakeholders in their efforts to better understand and manage the environmental impacts of oilfield operations.",
+        "comments": " ",
+        "date": "11 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10170"
+    },
+    {
+        "doc_id": 6,
+        "title": "DISTINQT: A Distributed Privacy Aware Learning Framework for QoS Prediction for Future Mobile and Wireless Networks",
+        "authors": [
+            "Nikolaos Koursioumpas",
+            "Lina Magoula",
+            "Ioannis Stavrakakis",
+            "Nancy Alonistioti",
+            "M. A. Gutierrez-Estevez",
+            "Ramin Khalili"
+        ],
+        "subjects": [
+            "Networking and Internet Architecture",
+            "Artificial Intelligence",
+            "Cryptography and Security",
+            "Distributed, Parallel, and Cluster Computing",
+            "Machine Learning"
+        ],
+        "abstract": "Beyond 5G and 6G networks are expected to support new and challenging use cases and applications that depend on a certain level of Quality of Service (QoS) to operate smoothly. Predicting the QoS in a timely manner is of high importance, especially for safety-critical applications as in the case of vehicular communications. Although until recent years the QoS prediction has been carried out by centralized Artificial Intelligence (AI) solutions, a number of privacy, computational, and operational concerns have emerged. Alternative solutions have been surfaced (e.g. Split Learning, Federated Learning), distributing AI tasks of reduced complexity across nodes, while preserving the privacy of the data. However, new challenges rise when it comes to scalable distributed learning approaches, taking into account the heterogeneous nature of future wireless networks. The current work proposes DISTINQT, a privacy-aware distributed learning framework for QoS prediction. Our framework supports multiple heterogeneous nodes, in terms of data types and model architectures, by sharing computations across them. This, enables the incorporation of diverse knowledge into a sole learning process that will enhance the robustness and generalization capabilities of the final QoS prediction model. DISTINQT also contributes to data privacy preservation by encoding any raw input data into a non-linear latent representation before any transmission. Evaluation results showcase that our framework achieves a statistically identical performance compared to its centralized version and an average performance improvement of up to 65% against six state-of-the-art centralized baseline solutions in the Tele-Operated Driving use case.",
+        "comments": "11 Pages Double Column, 9 Figures, Submitted for possible publication in the IEEE Transactions on Vehicular Technology (IEEE TVT)",
+        "date": "15 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10158"
+    },
+    {
+        "doc_id": 7,
+        "title": "Lower Ricci Curvature for Efficient Community Detection",
+        "authors": [
+            "Yun Jin Park",
+            "Didong Li"
+        ],
+        "subjects": [
+            "Methodology",
+            "Social and Information Networks",
+            "Physics and Society",
+            "Applications"
+        ],
+        "abstract": "This study introduces the Lower Ricci Curvature (LRC), a novel, scalable, and scale-free discrete curvature designed to enhance community detection in networks. Addressing the computational challenges posed by existing curvature-based methods, LRC offers a streamlined approach with linear computational complexity, making it well-suited for large-scale network analysis. We further develop an LRC-based preprocessing method that effectively augments popular community detection algorithms. Through comprehensive simulations and applications on real-world datasets, including the NCAA football league network, the DBLP collaboration network, the Amazon product co-purchasing network, and the YouTube social network, we demonstrate the efficacy of our method in significantly improving the performance of various community detection algorithms.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10124"
+    },
+    {
+        "doc_id": 8,
+        "title": "Time-Dependent Urn Models reproduce the full spectrum of novelties discovery",
+        "authors": [
+            "Alessandro Bellina",
+            "Giordano De Marzo",
+            "Vittorio Loreto"
+        ],
+        "subjects": [
+            "Statistical Mechanics",
+            "Probability"
+        ],
+        "abstract": "Systems driven by innovation, a pivotal force in human society, present various intriguing statistical regularities, from the Heaps' law to logarithmic scaling or somewhat different patterns for the innovation rates. The Urn Model with Triggering (UMT) has been instrumental in modelling these innovation dynamics. Yet, a generalisation is needed to capture the richer empirical phenomenology. Here, we introduce a Time-dependent Urn Model with Triggering (TUMT), a generalisation of the UMT that crucially integrates time-dependent parameters for reinforcement and triggering to offer a broader framework for modelling innovation in non-stationary systems. Through analytical computation and numerical simulations, we show that the TUMT reconciles various behaviours observed in a broad spectrum of systems, from patenting activity to the analysis of gene mutations. We highlight how the TUMT features a \"critical\" region where both Heaps' and Zipf's laws coexist, for which we compute the exponents.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10114"
+    },
+    {
+        "doc_id": 9,
+        "title": "The Interaction between Solar Convection and Rotation",
+        "authors": [
+            "Haibin Chen",
+            "Rong Wu"
+        ],
+        "subjects": [
+            "Solar and Stellar Astrophysics",
+            "Fluid Dynamics"
+        ],
+        "abstract": "The rotational energy of a fluid parcel changes during isotropic expansion or compression. In solar convection, rotation absorbs energy from convection and inhibits it, causing the motion of fluid parcels larger than a critical size to become vibration. Turbulence and inertial oscillations can cause the deformation of fluid parcels to deviate from isotropic, altering the equilibrium position of the vibration and forming motion larger than the critical size, respectively, the large granules within the granules and probably the mesogranulation. The change in rotational energy of granules during convection causes their rotation speed to differ from the local speed, forming a statistically significant solar radial differential rotation. The meridional circulation driven by radial differential rotation transports angular momentum towards the equator, forming the latitudinal differential rotation. A model constructed by combining mixing length theory explains why granule size and temperature distribution are independent of latitude, and the structure produced by this mechanism is similar to the characteristics of supergranules.",
+        "comments": "13pages,2figures",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10105"
+    },
+    {
+        "doc_id": 10,
+        "title": "Counterfactual Reasoning with Probabilistic Graphical Models for Analyzing Socioecological Systems",
+        "authors": [
+            "Rafael Caba\u00f1as",
+            "Ana D. Maldonado",
+            "Mar\u00eda Morales",
+            "Pedro A. Aguilera",
+            "Antonio Salmer\u00f3n"
+        ],
+        "subjects": [
+            "Artificial Intelligence",
+            "Probability",
+            "Applications"
+        ],
+        "abstract": "Causal and counterfactual reasoning are emerging directions in data science that allow us to reason about hypothetical scenarios. This is particularly useful in domains where experimental data are usually not available. In the context of environmental and ecological sciences, causality enables us, for example, to predict how an ecosystem would respond to hypothetical interventions. A structural causal model is a class of probabilistic graphical models for causality, which, due to its intuitive nature, can be easily understood by experts in multiple fields. However, certain queries, called unidentifiable, cannot be calculated in an exact and precise manner. This paper proposes applying a novel and recent technique for bounding unidentifiable queries within the domain of socioecological systems. Our findings indicate that traditional statistical analysis, including probabilistic graphical models, can identify the influence between variables. However, such methods do not offer insights into the nature of the relationship, specifically whether it involves necessity or sufficiency. This is where counterfactual reasoning becomes valuable.",
+        "comments": "34 pages",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10101"
+    },
+    {
+        "doc_id": 11,
+        "title": "Statistics of ranks, determinants and characteristic polynomials of rational matrices",
+        "authors": [
+            "Muhammad Afifurrahman",
+            "Alina Ostafe",
+            "Igor E. Shparlinski"
+        ],
+        "subjects": [
+            "Number Theory"
+        ],
+        "abstract": "We consider the set of $n\\times n$ matrices with rational entries having numerator and denominator of size at most $H$ and obtain upper and lower bounds on the number of such matrices of a given rank and then apply them to count such matrices with a given determinant, or a given characteristic polynomial.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10086"
+    },
+    {
+        "doc_id": 12,
+        "title": "A locally statistical active contour model for SAR image segmentation can be solved by denoising algorithms",
+        "authors": [
+            "Guangming Liu",
+            "Quanying Sun",
+            "Jing Liang",
+            "Qi Liu"
+        ],
+        "subjects": [
+            "Computer Vision and Pattern Recognition"
+        ],
+        "abstract": "In this paper, we propose a novel locally statistical variational active contour model based on I-divergence-TV denoising model, which hybrides geodesic active contour (GAC) model with active contours without edges (ACWE) model, and can be used to segment images corrupted by multiplicative gamma noise. By adding a diffusion term into the level set evolution (LSE) equation of the proposed model, we construct a reaction-diffusion (RD) equation, which can gradually regularize the level set function (LSF) to be piecewise constant in each segment domain and gain the stable solution. We further transform the proposed model into classic ROF model by adding a proximity term. Inspired by a fast denoising algorithm proposed by Jia-Zhao recently, we propose two fast fixed point algorithms to solve SAR image segmentation question. Experimental results for real SAR images show that the proposed image segmentation model can efficiently stop the contours at weak or blurred edges, and can automatically detect the exterior and interior boundaries of images with multiplicative gamma noise. The proposed FPRD1/FPRD2 models are about 1/2 (or less than) of the time required for the SBRD model based on the Split Bregman technique.",
+        "comments": "18 pages, 15 figures. arXiv admin note: substantial text overlap with arXiv:2312.11849, arXiv:2312.08376, arXiv:2312.09365",
+        "date": "9 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10083"
+    },
+    {
+        "doc_id": 13,
+        "title": "Preoperative Prediction of Catheter Ablation Outcome in Persistent Atrial Fibrillation Patients through Spectral Organization Analysis of the Surface Fibrillatory Waves",
+        "authors": [
+            "P. Escribano",
+            "J. Rodenas",
+            "M. Garcia",
+            "M. A. Arias",
+            "V. M. Hidalgo",
+            "S. Calero",
+            "J. J. Rieta",
+            "R. Alcaraz"
+        ],
+        "subjects": [
+            "Signal Processing"
+        ],
+        "abstract": "Catheter ablation (CA) is a commonly used treatment for persistent atrial fibrillation (AF). Since its medium/long-term success rate remains limited, preoperative prediction of its outcome is gaining clinical interest to optimally select candidates for the procedure. Among predictors based on the surface electrocardiogram, the dominant frequency (DF) and harmonic exponential decay (g) of the fibrillatory waves ( f -waves) have reported promising but clinically insufficient results. Hence, the main goal of this work was to conduct a broader analysis of the f -wave harmonic spectral structure to improve CA outcome prediction through several entropy-based measures computed on different frequency bands. On a database of 151 persistent AF patients under radio-frequency CA and a follow-up of 9 months, the newly introduced parameters discriminated between patients who relapsed to AF and those who maintained SR at about 70%, which was statistically superior to the DF and approximately similar to g. They also provided complementary information to g through different combinations in multivariate models based on lineal discriminant analysis and report classification performance improvement of about 5%. These results suggest that the presence of larger harmonics and a proportionally smaller DF peak is associated with a decreased probability of AF recurrence after CA.",
+        "comments": "Journal ref:        J. Pers. Med. 2022, 12, 1721",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10081"
+    },
+    {
+        "doc_id": 14,
+        "title": "Level spacing distribution of localized phases induced by quasiperiodic potentials",
+        "authors": [
+            "Chao Yang",
+            "Yucheng Wang"
+        ],
+        "subjects": [
+            "Disordered Systems and Neural Networks",
+            "Mathematical Physics",
+            "Quantum Physics"
+        ],
+        "abstract": "Level statistics is a crucial tool in the exploration of localization physics. The level spacing distribution of localized states in disordered systems follows Poisson statistics, and many studies naturally apply it to the localization induced by quasiperiodic potentials. Taking the Aubry-Andr\u00e9 model as an example, we investigate the level spacing distribution of the localized phase caused by quasiperiodic potential. We analytically and numerically calculate its level spacing distribution and find that it does not adhere to Poisson statistics. Moreover, based on this level statistics, we derive the ratio of adjacent gaps and find that for a single sample, it is a $\u03b4-$function, which is in excellent agreement with numerical studies. Additionally, unlike disordered systems, in quasiperiodic systems, there are variations in the level spacing distribution across different regions of the spectrum, and increasing the size and increasing the sample are non-equivalent. Our findings carry significant implications for the reevaluation of level statistics in quasiperiodic systems and a profound understanding of the distinct effects of quasiperiodic potentials and disorder-induced localization.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10067"
+    },
+    {
+        "doc_id": 15,
+        "title": "Poisson approximation for stochastic processes summed over amenable groups",
+        "authors": [
+            "Haoyu Ye",
+            "Peter Orbanz",
+            "Morgane Austern"
+        ],
+        "subjects": [
+            "Probability",
+            "Statistics Theory"
+        ],
+        "abstract": "We generalize the Poisson limit theorem to binary functions of random objects whose law is invariant under the action of an amenable group. Examples include stationary random fields, exchangeable sequences, and exchangeable graphs. A celebrated result of E. Lindenstrauss shows that normalized sums over certain increasing subsets of such groups approximate expectations. Our results clarify that the corresponding unnormalized sums of binary statistics are asymptotically Poisson, provided suitable mixing conditions hold. They extend further to randomly subsampled sums and also show that strict invariance of the distribution is not needed if the requisite mixing condition defined by the group holds. We illustrate the results with applications to random fields, Cayley graphs, and Poisson processes on groups.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10060"
+    },
+    {
+        "doc_id": 16,
+        "title": "A method for characterizing disease emergence curves from paired pathogen detection and serology data",
+        "authors": [
+            "Joshua Hewitt",
+            "Grete Wilson-Henjum",
+            "Derek T. Collins",
+            "Jourdan M. Ringenberg",
+            "Christopher A. Quintanal",
+            "Robert Pleszewski",
+            "Jeffrey C. Chandler",
+            "Thomas J. DeLiberto",
+            "Kim M. Pepin"
+        ],
+        "subjects": [
+            "Methodology",
+            "Physics and Society",
+            "Applications"
+        ],
+        "abstract": "Wildlife disease surveillance programs and research studies track infection and identify risk factors for wild populations, humans, and agriculture. Often, several types of samples are collected from individuals to provide more complete information about an animal's infection history. Methods that jointly analyze multiple data streams to study disease emergence and drivers of infection via epidemiological process models remain underdeveloped. Joint-analysis methods can more thoroughly analyze all available data, more precisely quantifying epidemic processes, outbreak status, and risks. We contribute a paired data modeling approach that analyzes multiple samples from individuals. We use \"characterization maps\" to link paired data to epidemiological processes through a hierarchical statistical observation model. Our approach can provide both Bayesian and frequentist estimates of epidemiological parameters and state. We motivate our approach through the need to use paired pathogen and antibody detection tests to estimate parameters and infection trajectories for the widely applicable susceptible, infectious, recovered (SIR) model. We contribute general formulas to link characterization maps to arbitrary process models and datasets and an extended SIR model that better accommodates paired data. We find via simulation that paired data can more efficiently estimate SIR parameters than unpaired data, requiring samples from 5-10 times fewer individuals. We then study SARS-CoV-2 in wild White-tailed deer (Odocoileus virginianus) from three counties in the United States. Estimates for average infectious times corroborate captive animal studies. Our methods use general statistical theory to let applications extend beyond the SIR model we consider, and to more complicated examples of paired data.",
+        "comments": "20 pages, 5 figures, 1 table",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10057"
+    },
+    {
+        "doc_id": 17,
+        "title": "Gender Bias in Machine Translation and The Era of Large Language Models",
+        "authors": [
+            "Eva Vanmassenhove"
+        ],
+        "subjects": [
+            "Computation and Language",
+            "Artificial Intelligence",
+            "Computers and Society"
+        ],
+        "abstract": "This chapter examines the role of Machine Translation in perpetuating gender bias, highlighting the challenges posed by cross-linguistic settings and statistical dependencies. A comprehensive overview of relevant existing work related to gender bias in both conventional Neural Machine Translation approaches and Generative Pretrained Transformer models employed as Machine Translation systems is provided. Through an experiment using ChatGPT (based on GPT-3.5) in an English-Italian translation context, we further assess ChatGPT's current capacity to address gender bias. The findings emphasize the ongoing need for advancements in mitigating bias in Machine Translation systems and underscore the importance of fostering fairness and inclusivity in language technologies.",
+        "comments": "24 pages",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10016"
+    },
+    {
+        "doc_id": 18,
+        "title": "A global kernel estimator for partially linear varying coefficient additive hazards models",
+        "authors": [
+            "Hoi Min Ng",
+            "Kin Yau Wong"
+        ],
+        "subjects": [
+            "Methodology"
+        ],
+        "abstract": "In biomedical studies, we are often interested in the association between different types of covariates and the times to disease events. Because the relationship between the covariates and event times is often complex, standard survival models that assume a linear covariate effect are inadequate. A flexible class of models for capturing complex interaction effects among types of covariates is the varying coefficient models, where the effects of a type of covariates can be modified by another type of covariates. In this paper, we study kernel-based estimation methods for varying coefficient additive hazards models. Unlike many existing kernel-based methods that use a local neighborhood of subjects for the estimation of the varying coefficient function, we propose a novel global approach that is generally more efficient. We establish theoretical properties of the proposed estimators and demonstrate their superior performance compared with existing local methods through large-scale simulation studies. To illustrate the proposed method, we provide an application to a motivating cancer genomic study.",
+        "comments": "27 pages",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10010"
+    },
+    {
+        "doc_id": 19,
+        "title": "Regime change detection in irregularly sampled time series",
+        "authors": [
+            "Norbert Marwan",
+            "Deniz Eroglu",
+            "Ibrahim Ozken",
+            "Thomas Stemler",
+            "Karl-Heinz Wyrwoll",
+            "J\u00fcrgen Kurths"
+        ],
+        "subjects": [
+            "Data Analysis, Statistics and Probability",
+            "Chaotic Dynamics",
+            "Atmospheric and Oceanic Physics"
+        ],
+        "abstract": "Irregular sampling is a common problem in palaeoclimate studies. We propose a method that provides regularly sampled time series and at the same time a difference filtering of the data. The differences between successive time instances are derived by a transformation costs procedure. A subsequent recurrence analysis is used to investigate regime transitions. This approach is applied on speleothem based palaeoclimate proxy data from the Indonesian-Australian monsoon region. We can clearly identify Heinrich events in the palaeoclimate as characteristic changes in the dynamics.",
+        "comments": "12 pages, 3 figures",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10006"
+    },
+    {
+        "doc_id": 20,
+        "title": "Bayesian modeling of spatial ordinal data from health surveys",
+        "authors": [
+            "Miguel \u00c1ngel Beltr\u00e1n S\u00e1nchez",
+            "Miguel \u00c1ngel Mart\u00ednez Beneito",
+            "Ana Corber\u00e1n Vallet"
+        ],
+        "subjects": [
+            "Methodology"
+        ],
+        "abstract": "Health surveys allow exploring health indicators that are of great value from a public health point of view and that cannot normally be studied from regular health registries. These indicators are usually coded as ordinal variables and may depend on covariates associated with individuals. In this paper, we propose a Bayesian individual-level model for small-area estimation of survey-based health indicators. A categorical likelihood is used at the first level of the model hierarchy to describe the ordinal data, and spatial dependence among small areas is taken into account by using a conditional autoregressive (CAR) distribution. Post-stratification of the results of the proposed individual-level model allows extrapolating the results to any administrative areal division, even for small areas. We apply this methodology to the analysis of the Health Survey of the Region of Valencia (Spain) of 2016 to describe the geographical distribution of a self-perceived health indicator of interest in this region.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09994"
+    },
+    {
+        "doc_id": 21,
+        "title": "The diversity of spectral shapes of hydrogen Lyman lines and Mg II lines in a quiescent prominence",
+        "authors": [
+            "P. Schwartz",
+            "S. Gunar",
+            "J. Koza",
+            "P. Heinzel"
+        ],
+        "subjects": [
+            "Solar and Stellar Astrophysics"
+        ],
+        "abstract": "Broad sets of spectroscopic observations comprising multiple lines represent an excellent opportunity for diagnostics of the properties of the prominence plasma and the dynamics of their fine structures. However, they also bring significant challenges when they are compared with synthetic spectra provided by radiative transfer modeling. In this work, we provide a statistical spectroscopic analysis of a unique dataset of coordinated prominence observations in the Lyman lines (Ly_alpha to Ly_delta) and the Mg II k and h lines. The observed data were obtained by the Solar Ultraviolet Measurements of Emitted Radiation (SUMER) spectrograph on board of the Solar and Heliospheric Observatory (SoHO) satellite and the Interface Region Imaging Spectrograph (IRIS) on 22 October 2013. We focus on the following profile characteristics: the shape of the observed line profiles based on the number of distinct peaks, the integrated line intensity, the center-to-peak ratio describing the depth of the reversal of two-peaked profiles, and the asymmetry of these peaks. We show that the presence of noise has a negligible effect on the integrated intensity of all observed lines, but it significantly affects the classification of spectral profiles using the number of distinct peaks, the reversal depth, and also the peak asymmetry. We also demonstrate that by taking the influence of noise into account, we can assess which profile characteristics in which spectral lines are suitable for diagnostics of different properties of the observed prominence.",
+        "comments": "20 pages in main part of the paper, 6 additional pages in Appendices A and B, 9 figures and 4 tables in main part of the paper plus 3 figures and 3 tables in Appendices A and B",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09992"
+    },
+    {
+        "doc_id": 22,
+        "title": "Power Grid Parameter Estimation Without Phase Measurements: Theory and Empirical Validation",
+        "authors": [
+            "Jean-S\u00e9bastien Brouillon",
+            "Keith Moffat",
+            "Florian D\u00f6rfler",
+            "Giancarlo Ferrari-trecate"
+        ],
+        "subjects": [
+            "Systems and Control",
+            "Applications"
+        ],
+        "abstract": "Reliable integration and operation of renewable distributed energy resources requires accurate distribution grid models. However, obtaining precise models is often prohibitively expensive, given their large scale and the ongoing nature of grid operations. To address this challenge, considerable efforts have been devoted to harnessing abundant consumption data for automatic model inference. The primary result of the paper is that, while the impedance of a line or a network can be estimated without synchronized phase angle measurements in a consistent way, the admittance cannot. Furthermore, a detailed statistical analysis is presented, quantifying the expected estimation errors of four prevalent admittance estimation methods. Such errors constitute fundamental model inference limitations that cannot be resolved with more data. These findings are empirically validated using synthetic data and real measurements from the town of Walenstadt, Switzerland, confirming the theory. The results contribute to our understanding of grid estimation limitations and uncertainties, offering guidance for both practitioners and researchers in the pursuit of more reliable and cost-effective solutions.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09989"
+    },
+    {
+        "doc_id": 23,
+        "title": "False Discovery Rate Control for Gaussian Graphical Models via Neighborhood Screening",
+        "authors": [
+            "Taulant Koka",
+            "Jasin Machkour",
+            "Michael Muma"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Machine Learning"
+        ],
+        "abstract": "Gaussian graphical models emerge in a wide range of fields. They model the statistical relationships between variables as a graph, where an edge between two variables indicates conditional dependence. Unfortunately, well-established estimators, such as the graphical lasso or neighborhood selection, are known to be susceptible to a high prevalence of false edge detections. False detections may encourage inaccurate or even incorrect scientific interpretations, with major implications in applications, such as biomedicine or healthcare. In this paper, we introduce a nodewise variable selection approach to graph learning and provably control the false discovery rate of the selected edge set at a self-estimated level. A novel fusion method of the individual neighborhoods outputs an undirected graph estimate. The proposed method is parameter-free and does not require tuning by the user. Benchmarks against competing false discovery rate controlling methods in numerical experiments considering different graph topologies show a significant gain in performance.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09979"
+    },
+    {
+        "doc_id": 24,
+        "title": "Biases in Expected Goals Models Confound Finishing Ability",
+        "authors": [
+            "Jesse Davis",
+            "Pieter Robberechts"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Applications"
+        ],
+        "abstract": "Expected Goals (xG) has emerged as a popular tool for evaluating finishing skill in soccer analytics. It involves comparing a player's cumulative xG with their actual goal output, where consistent overperformance indicates strong finishing ability. However, the assessment of finishing skill in soccer using xG remains contentious due to players' difficulty in consistently outperforming their cumulative xG. In this paper, we aim to address the limitations and nuances surrounding the evaluation of finishing skill using xG statistics. Specifically, we explore three hypotheses: (1) the deviation between actual and expected goals is an inadequate metric due to the high variance of shot outcomes and limited sample sizes, (2) the inclusion of all shots in cumulative xG calculation may be inappropriate, and (3) xG models contain biases arising from interdependencies in the data that affect skill measurement. We found that sustained overperformance of cumulative xG requires both high shot volumes and exceptional finishing, including all shot types can obscure the finishing ability of proficient strikers, and that there is a persistent bias that makes the actual and expected goals closer for excellent finishers than it really is. Overall, our analysis indicates that we need more nuanced quantitative approaches for investigating a player's finishing ability, which we achieved using a technique from AI fairness to learn an xG model that is calibrated for multiple subgroups of players. As a concrete use case, we show that (1) the standard biased xG model underestimates Messi's GAX by 17% and (2) Messi's GAX is 27% higher than the typical elite high-shot-volume attacker, indicating that Messi is even a more exceptional finisher than people commonly believed.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09940"
+    },
+    {
+        "doc_id": 25,
+        "title": "A Quantile Nelson-Siegel model",
+        "authors": [
+            "Matteo Iacopini",
+            "Aubrey Poon",
+            "Luca Rossini",
+            "Dan Zhu"
+        ],
+        "subjects": [
+            "Applications",
+            "Econometrics"
+        ],
+        "abstract": "A widespread approach to modelling the interaction between macroeconomic variables and the yield curve relies on three latent factors usually interpreted as the level, slope, and curvature (Diebold et al., 2006). This approach is inherently focused on the conditional mean of the yields and postulates a dynamic linear model where the latent factors smoothly change over time. However, periods of deep crisis, such as the Great Recession and the recent pandemic, have highlighted the importance of statistical models that account for asymmetric shocks and are able to forecast the tails of a variable's distribution. A new version of the dynamic three-factor model is proposed to address this issue based on quantile regressions. The novel approach leverages the potential of quantile regression to model the entire (conditional) distribution of the yields instead of restricting to its mean. An application to US data from the 1970s shows the significant heterogeneity of the interactions between financial and macroeconomic variables across different quantiles. Moreover, an out-of-sample forecasting exercise showcases the proposed method's advantages in predicting the yield distribution tails compared to the standard conditional mean model. Finally, by inspecting the posterior distribution of the three factors during the recent major crises, new evidence is found that supports the greater and longer-lasting negative impact of the great recession on the yields compared to the COVID-19 pandemic.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09874"
+    },
+    {
+        "doc_id": 26,
+        "title": "Wealth dynamics in a multi-aggregate closed monetary system",
+        "authors": [
+            "Andrea Monaco",
+            "Matteo Ghio",
+            "Adamaria Perrotta"
+        ],
+        "subjects": [
+            "Theoretical Economics"
+        ],
+        "abstract": "We examine the statistical properties of a closed monetary economy with multi-aggregates interactions. Building upon Yakovenko's single-agent monetary model (Dragulescu and Yakovenko, 2000), we investigate the joint equilibrium distribution of aggregate size and wealth. By comparing theoretical and simulated data, we validate our findings and investigate the influence of both micro dynamics and macro characteristics of the system on the distribution. Additionally, we analyze the system's convergence towards equilibrium under various conditions. Our laboratory model may offer valuable insights into macroeconomic phenomena allowing to reproduce typical wealth distribution features observed in real economy.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09871"
+    },
+    {
+        "doc_id": 27,
+        "title": "Efficient Computation of Large-Scale Statistical Solutions to Incompressible Fluid Flows",
+        "authors": [
+            "Tobias Rohner",
+            "Siddhartha Mishra"
+        ],
+        "subjects": [
+            "Fluid Dynamics"
+        ],
+        "abstract": "This work presents the development, performance analysis and subsequent optimization of a GPU-based spectral hyperviscosity solver for turbulent flows described by the three dimensional incompressible Navier-Stokes equations. The method solves for the fluid velocity fields directly in Fourier space, eliminating the need to solve a large-scale linear system of equations in order to find the pressure field. Special focus is put on the communication intensive transpose operation required by the Fast Fourier transform when using distributed memory parallelism. After multiple iterations of benchmarking and improving the code, the simulation achieves close to optimal performance on the Piz Daint supercomputer cluster, even outperforming the Cray MPI implementation on Piz Daint in its communication routines. This optimal performance enables the computation of large-scale statistical solutions of incompressible fluid flows in three space dimensions.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09843"
+    },
+    {
+        "doc_id": 28,
+        "title": "FREED++: Improving RL Agents for Fragment-Based Molecule Generation by Thorough Reproduction",
+        "authors": [
+            "Alexander Telepov",
+            "Artem Tsypin",
+            "Kuzma Khrabrov",
+            "Sergey Yakukhnov",
+            "Pavel Strashnov",
+            "Petr Zhilyaev",
+            "Egor Rumiantsev",
+            "Daniel Ezhov",
+            "Manvel Avetisian",
+            "Olga Popova",
+            "Artur Kadurin"
+        ],
+        "subjects": [
+            "Biomolecules",
+            "Machine Learning",
+            "Machine Learning"
+        ],
+        "abstract": "A rational design of new therapeutic drugs aims to find a molecular structure with desired biological functionality, e.g., an ability to activate or suppress a specific protein via binding to it. Molecular docking is a common technique for evaluating protein-molecule interactions. Recently, Reinforcement Learning (RL) has emerged as a promising approach to generating molecules with the docking score (DS) as a reward. In this work, we reproduce, scrutinize and improve the recent RL model for molecule generation called FREED (arXiv:2110.01219). Extensive evaluation of the proposed method reveals several limitations and challenges despite the outstanding results reported for three target proteins. Our contributions include fixing numerous implementation bugs and simplifying the model while increasing its quality, significantly extending experiments, and conducting an accurate comparison with current state-of-the-art methods for protein-conditioned molecule generation. We show that the resulting fixed model is capable of producing molecules with superior docking scores compared to alternative approaches.",
+        "comments": "37 pages, 10 figures, to be published in TMLR journal (https://www.jmlr.org/tmlr/)",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09840"
+    },
+    {
+        "doc_id": 29,
+        "title": "Jackknife empirical likelihood ratio test for testing the equality of semivariance",
+        "authors": [
+            "Saparya",
+            "S",
+            "Sudheesh",
+            "K K"
+        ],
+        "subjects": [
+            "Methodology"
+        ],
+        "abstract": "Semivariance is a measure of the dispersion of all observations that fall above the mean or target value of a random variable and it plays an important role in life-length, actuarial and income studies. In this paper, we develop a new non-parametric test for equality of upper semi-variance. We use the U-statistic theory to derive the test statistic and then study the asymptotic properties of the test statistic. We also develop a jackknife empirical likelihood (JEL) ratio test for equality of upper Semivariance. Extensive Monte Carlo simulation studies are carried out to validate the performance of the proposed JEL-based test. We illustrate the test procedure using real data.",
+        "comments": "MSC Class:          62G10",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09816"
+    },
+    {
+        "doc_id": 30,
+        "title": "Querying Easily Flip-flopped Samples for Deep Active Learning",
+        "authors": [
+            "Seong Jin Cho",
+            "Gwangsu Kim",
+            "Junghyun Lee",
+            "Jinwoo Shin",
+            "Chang D. Yoo"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Artificial Intelligence",
+            "Machine Learning"
+        ],
+        "abstract": "Active learning is a machine learning paradigm that aims to improve the performance of a model by strategically selecting and querying unlabeled data. One effective selection strategy is to base it on the model's predictive uncertainty, which can be interpreted as a measure of how informative a sample is. The sample's distance to the decision boundary is a natural measure of predictive uncertainty, but it is often intractable to compute, especially for complex decision boundaries formed in multiclass classification tasks. To address this issue, this paper proposes the {\\it least disagree metric} (LDM), defined as the smallest probability of disagreement of the predicted label, and an estimator for LDM proven to be asymptotically consistent under mild assumptions. The estimator is computationally efficient and can be easily implemented for deep learning models using parameter perturbation. The LDM-based active learning is performed by querying unlabeled data with the smallest LDM. Experimental results show that our LDM-based active learning algorithm obtains state-of-the-art overall performance on all considered datasets and deep architectures.",
+        "comments": "34 pages, 17 figures, 5 tables. Accepted to the 12th International Conference on Learning Representations (ICLR 2024)",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09787"
+    },
+    {
+        "doc_id": 31,
+        "title": "Cross-Domain Behavioral Credit Modeling: transferability from private to central data",
+        "authors": [
+            "O. Didkovskyi",
+            "N. Jean",
+            "G. Le Pera",
+            "C. Nordio"
+        ],
+        "subjects": [
+            "Risk Management",
+            "Statistical Finance"
+        ],
+        "abstract": "This paper introduces a credit risk rating model for credit risk assessment in quantitative finance, aiming to categorize borrowers based on their behavioral data. The model is trained on data from Experian, a widely recognized credit bureau, to effectively identify instances of loan defaults among bank customers. Employing state-of-the-art statistical and machine learning techniques ensures the model's predictive accuracy. Furthermore, we assess the model's transferability by testing it on behavioral data from the Bank of Italy, demonstrating its potential applicability across diverse datasets during prediction. This study highlights the benefits of incorporating external behavioral data to improve credit risk assessment in financial institutions.",
+        "comments": "25 pages, 15 figures",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09778"
+    },
+    {
+        "doc_id": 32,
+        "title": "Impact of Limited Statistics on the Measured Hyper-Order Cumulants of Net-Proton Distributions in Heavy-Ion Collisions",
+        "authors": [
+            "Lizhu Chen",
+            "Ye-Yin Zhao",
+            "Yunshan Cheng",
+            "Gang Wang",
+            "Zhiming Li",
+            "Yuanfang Wu"
+        ],
+        "subjects": [
+            "Nuclear Theory",
+            "Nuclear Experiment"
+        ],
+        "abstract": "Hyper-order cumulants $C_5/C_1$ and $C_6/C_2$ of net-baryon distributions are anticipated to offer crucial insights into the phase transition from quark-gluon plasma to hadronic matter in heavy-ion collisions. However, the accuracy of $C_5$ and $C_6$ is highly contingent on the fine shape of the distribution's tail, the detectable range of which could be essentially truncated by low statistics. In this paper, we use the fast Skellam-based simulations, as well as the Ultrarelativistic Quantum Molecular Dynamics model, to assess the impact of limited statistics on the measurements of $C_5/C_1$ and $C_6/C_2$ of net-proton distributions at lower RHIC energies. Both ratios decrease from the unity baseline as we reduce statistics, and could even turn negative without a pertinent physics mechanism. By incorporating statistics akin to experimental data, we can replicate the net-proton $C_5/C_1$ and $C_6/C_2$ values comparable to the corresponding measurements for Au+Au collisions at $\\sqrt{s_{NN}} =$ 7.7, 11.5 and 14.5 GeV. Our findings underscore a caveat to the interpretation of the observed beam energy dependence of hyper-order cumulants.",
+        "comments": "6 pages, 7 figures",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09745"
+    },
+    {
+        "doc_id": 33,
+        "title": "Kernel-based multi-marker tests of association based on the accelerated failure time model",
+        "authors": [
+            "Chenxi Li",
+            "Di Wu",
+            "Qing Lu"
+        ],
+        "subjects": [
+            "Methodology"
+        ],
+        "abstract": "Kernel-based multi-marker tests for survival outcomes use primarily the Cox model to adjust for covariates. The proportional hazards assumption made by the Cox model could be unrealistic, especially in the long-term follow-up. We develop a suite of novel multi-marker survival tests for genetic association based on the accelerated failure time model, which is a popular alternative to the Cox model due to its direct physical interpretation. The tests are based on the asymptotic distributions of their test statistics and are thus computationally efficient. The association tests can account for the heterogeneity of genetic effects across sub-populations/individuals to increase the power. All the new tests can deal with competing risks and left truncation. Moreover, we develop small-sample corrections to the tests to improve their accuracy under small samples. Extensive numerical experiments show that the new tests perform very well in various scenarios. An application to a genetic dataset of Alzheimer's disease illustrates the tests' practical utility.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09719"
+    },
+    {
+        "doc_id": 34,
+        "title": "Fast Variational Inference of Latent Space Models for Dynamic Networks Using Bayesian P-Splines",
+        "authors": [
+            "Joshua Daniel Loyal"
+        ],
+        "subjects": [
+            "Methodology",
+            "Computation"
+        ],
+        "abstract": "Latent space models (LSMs) are often used to analyze dynamic (time-varying) networks that evolve in continuous time. Existing approaches to Bayesian inference for these models rely on Markov chain Monte Carlo algorithms, which cannot handle modern large-scale networks. To overcome this limitation, we introduce a new prior for continuous-time LSMs based on Bayesian P-splines that allows the posterior to adapt to the dimension of the latent space and the temporal variation in each latent position. We propose a stochastic variational inference algorithm to estimate the model parameters. We use stochastic optimization to subsample both dyads and observed time points to design a fast algorithm that is linear in the number of edges in the dynamic network. Furthermore, we establish non-asymptotic error bounds for point estimates derived from the variational posterior. To our knowledge, this is the first such result for Bayesian estimators of continuous-time LSMs. Lastly, we use the method to analyze a large data set of international conflicts consisting of 4,456,095 relations from 2018 to 2022.",
+        "comments": "75 pages, 8 figures, and 2 tables",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09715"
+    },
+    {
+        "doc_id": 35,
+        "title": "Rejection Sampling with Vertical Weighted Strips",
+        "authors": [
+            "Andrew M. Raim",
+            "James A. Livsey",
+            "Kyle M. Irimata"
+        ],
+        "subjects": [
+            "Methodology",
+            "Computation"
+        ],
+        "abstract": "A number of distributions that arise in statistical applications can be expressed in the form of a weighted density: the product of a base density and a nonnegative weight function. Generating variates from such a distribution may be nontrivial and can involve an intractable normalizing constant. Rejection sampling may be used to generate exact draws, but requires formulation of a suitable proposal distribution. To be practically useful, the proposal must both be convenient to sample from and not reject candidate draws too frequently. A well-known approach to design a proposal involves decomposing the target density into a finite mixture, whose components may correspond to a partition of the support. This work considers such a construction that focuses on majorization of the weight function. This approach may be applicable when assumptions for adaptive rejection sampling and related algorithms are not met. An upper bound for the rejection probability based on this construction can be expressed to evaluate the efficiency of the proposal before sampling. A method to partition the support is considered where regions are bifurcated based on their contribution to the bound. Examples based on the von Mises Fisher distribution and Gaussian Process regression are provided to illustrate the method.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09696"
+    },
+    {
+        "doc_id": 36,
+        "title": "Harnessing Density Ratios for Online Reinforcement Learning",
+        "authors": [
+            "Philip Amortila",
+            "Dylan J. Foster",
+            "Nan Jiang",
+            "Ayush Sekhari",
+            "Tengyang Xie"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Machine Learning"
+        ],
+        "abstract": "The theories of offline and online reinforcement learning, despite having evolved in parallel, have begun to show signs of the possibility for a unification, with algorithms and analysis techniques for one setting often having natural counterparts in the other. However, the notion of density ratio modeling, an emerging paradigm in offline RL, has been largely absent from online RL, perhaps for good reason: the very existence and boundedness of density ratios relies on access to an exploratory dataset with good coverage, but the core challenge in online RL is to collect such a dataset without having one to start. In this work we show -- perhaps surprisingly -- that density ratio-based algorithms have online counterparts. Assuming only the existence of an exploratory distribution with good coverage, a structural condition known as coverability (Xie et al., 2023), we give a new algorithm (GLOW) that uses density ratio realizability and value function realizability to perform sample-efficient online exploration. GLOW addresses unbounded density ratios via careful use of truncation, and combines this with optimism to guide exploration. GLOW is computationally inefficient; we complement it with a more efficient counterpart, HyGLOW, for the Hybrid RL setting (Song et al., 2022) wherein online RL is augmented with additional offline data. HyGLOW is derived as a special case of a more general meta-algorithm that provides a provable black-box reduction from hybrid RL to offline RL, which may be of independent interest.",
+        "comments": "ICLR 2024",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09681"
+    },
+    {
+        "doc_id": 37,
+        "title": "Easy JavaScript Simulation (EJSS) Data Analytics for Singapore",
+        "authors": [
+            "Loo Kang Wee",
+            "Darren Tan",
+            "F\u00e9lix Jes\u00fas Garcia Clemente",
+            "Francisco Eequembre"
+        ],
+        "subjects": [
+            "Physics Education",
+            "Data Analysis, Statistics and Probability"
+        ],
+        "abstract": "We have integrated Easy JavaScript Simulation (EJSS) Data Analytics into the national Learning Management System for Singapore schools, known as the Singapore Student Learning Space (SLS). EJSS Data Analytics enhances the teaching and learning experience for educators and students by enabling educators to monitor and evaluate students interactions with interactive computer simulations. The data analytics and visualisation capabilities are delivered using the Moodle platform and version 1.3 of the specifications for Learning Tools Interoperability (LTI). In this paper, we showcase the potential for EJSS Data Analytics to identify students learning difficulties and misconceptions. Four examples of EJSS Data Analytics applications are provided to illustrate insights on aspects that include understanding a students sequential actions leading to specific task outcomes, the frequency of task attempts by each student, and the ratio of students achieving correct versus incorrect task completions. We identify five key considerations for designing the EJSS teacher dashboard. These considerations relate to Student Thought Process, Student Behaviour, Student Engagement, Student Choice, and Teacher Feedback. These five facets provide a framework for aligning our design efforts with the needs of students and teachers, also drawing upon research in data analytics for education.",
+        "comments": "10 pages, 12 figures, 26th International Conference on Multimedia in Physics Teaching and Learning (MPTL'26)",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09676"
+    },
+    {
+        "doc_id": 38,
+        "title": "Data-Driven Assessment of the County-Level Breast Cancer Incidence in the United States: Impacts of Modifiable and Non-Modifiable Factors",
+        "authors": [
+            "Tingting Zhao",
+            "Qing Han",
+            "Jinfeng Zhang"
+        ],
+        "subjects": [
+            "Applications"
+        ],
+        "abstract": "Female breast cancer (FBC) incidence rate (IR) varies greatly by counties across the United States (US). Factors responsible for such high spatial disparities are not well understood, making it challenging to design effective intervention strategies. We predicted FBC IRs using prevailing machine learning techniques for 1,754 US counties with a female population over 10,000. Outlier counties with the unexpectedly high or low FBC IRs were identified by controlling the non-modifiable factors (demographics and socioeconomics). Impacts of the modifiable factors (lifestyle, healthcare accessibility, and environment) were mapped. Our study also shed light on hidden FBC risk factors at the regional scale. Methods developed in our study may be used to discover the place-specific, population-level, modifiable factors for the intervention of other types of cancer or chronic diseases.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09660"
+    },
+    {
+        "doc_id": 39,
+        "title": "Elementary Particles and Plasma in the First Hour of the Early Universe",
+        "authors": [
+            "Cheng Tao Yang"
+        ],
+        "subjects": [
+            "High Energy Physics - Phenomenology",
+            "Cosmology and Nongalactic Astrophysics"
+        ],
+        "abstract": "This dissertation aims to deepen the understanding of the primordial composition of the Universe in the temperature range 300 MeV>T>0.02 MeV. I exploit known properties of elementary particles and apply methods of kinetic theory and statistical physics to advance the understanding of the cosmic plasma.\n  Within the Big Bang model, we begin by considering the Universe being a highly energetic fireball, an ultra-relativistic plasma exhibiting distinct properties. Fundamental particles such as quarks, leptons, and even heavier gauge bosons play a crucial role in the understanding of the early Universe. Our research focuses on the investigation of these fundamental particles as constituents of the dense Universe plasma during the epoch which transits from primordial quark-gluon plasma to the era of normal hadron matter, passing through the decoupling of neutrinos and addressing in detail the electron-positron antimatter plasma.",
+        "comments": "PhD thesis, 150 pages, 31 figures. Includes work done in collaboration with Andrew Steinmetz, Christopher Grayson, Martin Formanek, Jeremiah Birrell, and Johann Rafelski Martin Formanek, Cheng Tao Yang, and Johann Rafelski",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09653"
+    },
+    {
+        "doc_id": 40,
+        "title": "Functional Linear Non-Gaussian Acyclic Model for Causal Discovery",
+        "authors": [
+            "Tian-Le Yang",
+            "Kuang-Yao Lee",
+            "Kun Zhang",
+            "Joe Suzuki"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Statistics Theory",
+            "Neurons and Cognition",
+            "Methodology"
+        ],
+        "abstract": "In causal discovery, non-Gaussianity has been used to characterize the complete configuration of a Linear Non-Gaussian Acyclic Model (LiNGAM), encompassing both the causal ordering of variables and their respective connection strengths. However, LiNGAM can only deal with the finite-dimensional case. To expand this concept, we extend the notion of variables to encompass vectors and even functions, leading to the Functional Linear Non-Gaussian Acyclic Model (Func-LiNGAM). Our motivation stems from the desire to identify causal relationships in brain-effective connectivity tasks involving, for example, fMRI and EEG datasets. We demonstrate why the original LiNGAM fails to handle these inherently infinite-dimensional datasets and explain the availability of functional data analysis from both empirical and theoretical perspectives. {We establish theoretical guarantees of the identifiability of the causal relationship among non-Gaussian random vectors and even random functions in infinite-dimensional Hilbert spaces.} To address the issue of sparsity in discrete time points within intrinsic infinite-dimensional functional data, we propose optimizing the coordinates of the vectors using functional principal component analysis. Experimental results on synthetic data verify the ability of the proposed framework to identify causal relationships among multivariate functions using the observed samples. For real data, we focus on analyzing the brain connectivity patterns derived from fMRI data.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09641"
+    },
+    {
+        "doc_id": 41,
+        "title": "Multiple Locally Linear Kernel Machines",
+        "authors": [
+            "David Picard"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Machine Learning"
+        ],
+        "abstract": "In this paper we propose a new non-linear classifier based on a combination of locally linear classifiers. A well known optimization formulation is given as we cast the problem in a $\\ell_1$ Multiple Kernel Learning (MKL) problem using many locally linear kernels. Since the number of such kernels is huge, we provide a scalable generic MKL training algorithm handling streaming kernels. With respect to the inference time, the resulting classifier fits the gap between high accuracy but slow non-linear classifiers (such as classical MKL) and fast but low accuracy linear classifiers.",
+        "comments": "This paper was written in 2014 and was originally submitted but rejected at ICML'15",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09629"
+    },
+    {
+        "doc_id": 42,
+        "title": "Evaluating tree-based imputation methods as an alternative to MICE PMM for drawing inference in empirical studies",
+        "authors": [
+            "Jakob Schwerter",
+            "Ketevan Gurtskaia",
+            "Andr\u00e9s Romero",
+            "Birgit Zeyer-Gliozzo",
+            "Markus Pauly"
+        ],
+        "subjects": [
+            "Applications",
+            "Machine Learning"
+        ],
+        "abstract": "Dealing with missing data is an important problem in statistical analysis that is often addressed with imputation procedures. The performance and validity of such methods are of great importance for their application in empirical studies. While the prevailing method of Multiple Imputation by Chained Equations (MICE) with Predictive Mean Matching (PMM) is considered standard in the social science literature, the increase in complex datasets may require more advanced approaches based on machine learning. In particular, tree-based imputation methods have emerged as very competitive approaches. However, the performance and validity are not completely understood, particularly compared to the standard MICE PMM. This is especially true for inference in linear models. In this study, we investigate the impact of various imputation methods on coefficient estimation, Type I error, and power, to gain insights that can help empirical researchers deal with missingness more effectively. We explore MICE PMM alongside different tree-based methods, such as MICE with Random Forest (RF), Chained Random Forests with and without PMM (missRanger), and Extreme Gradient Boosting (MIXGBoost), conducting a realistic simulation study using the German National Educational Panel Study (NEPS) as the original data source. Our results reveal that Random Forest-based imputations, especially MICE RF and missRanger with PMM, consistently perform better in most scenarios. Standard MICE PMM shows partially increased bias and overly conservative test decisions, particularly with non-true zero coefficients. Our results thus underscore the potential advantages of tree-based imputation methods, albeit with a caveat that all methods perform worse with an increased missingness, particularly missRanger.",
+        "comments": "The project \"From Prediction to Agile Interventions in the Social Sciences (FAIR)\" is receiving funding from the programme \"Profilbildung 2020'', an initiative of the Ministry of Culture and Science of the State of Northrhine Westphalia. The sole responsibility for the content of this publication lies with the authors",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09602"
+    },
+    {
+        "doc_id": 43,
+        "title": "Statistical Analysis and Optimization of a Fifth-Percentile User Rate Constrained Design for FFR/SFR-Aided OFDMA-Based Cellular Networks",
+        "authors": [
+            "Jan Garc\u00eda Morales",
+            "Guillem Femenias",
+            "Felip Riera Palou"
+        ],
+        "subjects": [
+            "Signal Processing"
+        ],
+        "abstract": "Interference mitigation strategies are deemed to play a key role in the context of the next generation (B4G/5G) of multicellular networks based on orthogonal frequency division multiple access. Fractional and soft frequency reuse (FFR, SFR) constitute two powerful mechanisms for intercell interference coordination that have been already adopted by emerging cellular deployments as an efficient way to improve the throughput performance perceived by cell-edge users. This paper presents a novel optimal fifth-percentile user rate constrained design for FFR/SFR-based networks that, by appropriately dimensioning the center and edge regions of the cell, rightly splitting the available bandwidth among these two areas while assigning the corresponding transmit power, allows a tradeoff between cell throughput performance and fairness to be established. To this end, both the cumulative distribution function of the user throughput and the average spectral efficiency of the system are derived assuming the use of the ubiquitous proportional fair scheduling policy. The mathematical framework is then used to obtain numerical results showing that the novel proposed design clearly outperforms previous schemes in terms of throughput fairness control due to a more rational compromise between average cell throughput and cell-edge ICIC.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09600"
+    },
+    {
+        "doc_id": 44,
+        "title": "Asymptotic Online FWER Control for Dependent Test Statistics",
+        "authors": [
+            "Vincent Jankovic",
+            "Lasse Fischer",
+            "Werner Brannath"
+        ],
+        "subjects": [
+            "Methodology"
+        ],
+        "abstract": "In online multiple testing, an a priori unknown number of hypotheses are tested sequentially, i.e. at each time point a test decision for the current hypothesis has to be made using only the data available so far. Although many powerful test procedures have been developed for online error control in recent years, most of them are designed solely for independent or at most locally dependent test statistics. In this work, we provide a new framework for deriving online multiple test procedures which ensure asymptotical (with respect to the sample size) control of the familywise error rate (FWER), regardless of the dependence structure between test statistics. In this context, we give a few concrete examples of such test procedures and discuss their properties. Furthermore, we conduct a simulation study in which the type I error control of these test procedures is also confirmed for a finite sample size and a gain in power is indicated.",
+        "comments": "18 pages, 6 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09559"
+    },
+    {
+        "doc_id": 45,
+        "title": "A Volume-Limited Sample of Ultracool Dwarfs. II. The Substellar Age and Mass Functions in the Solar Neighborhood",
+        "authors": [
+            "William M. J. Best",
+            "Aniket Sanghi",
+            "Michael C. Liu",
+            "Eugene A. Magnier",
+            "Trent J. Dupuy"
+        ],
+        "subjects": [
+            "Solar and Stellar Astrophysics",
+            "Earth and Planetary Astrophysics",
+            "Astrophysics of Galaxies"
+        ],
+        "abstract": "We present the most precise constraints to date for the mass and age distributions of single ultracool dwarfs in the solar neighborhood, based on an updated volume-limited sample of 504 L, T, and Y dwarfs within 25 pc. We develop a Monte Carlo approach using the $\\langle V/V_{\\rm max}\\rangle$ statistic to correct for incompleteness and obtain a space density of $(1.83_{-0.15}^{+0.16})\\times10^{-2}$ pc$^{-3}$ for spectral types L0-Y2. We calculate bolometric luminosities for our sample, using an updated \"super-magnitude\" method for the faintest objects. We use our resulting luminosity function and a likelihood-based population synthesis approach to simultaneously constrain the mass and age distributions. We employ the fraction of young L0-L7 dwarfs as a novel input for this analysis that is crucial for constraining the age distribution. For a power-law mass function $\\frac{dN}{dM} \\propto M^{-\u03b1}$ we find $\u03b1=0.58_{-0.20}^{+0.16}$, indicating an increase in numbers toward lower masses, consistent with measurements in nearby star-forming regions. For an exponential age distribution $b(t) \\propto e^{-\u03b2t}$ we find $\u03b2=-0.44\\pm0.14$, i.e., a population with fewer old objects than often assumed, which may reflect dynamical heating of the Galactic plane as much as the historical brown dwarf birthrate. We compare our analysis to Kirkpatrick et al. (2021), who used a similar volume-limited sample. Although our mass function measurements are numerically consistent, their assumption of a flat age distribution is disfavored by our analysis, and we identify several important methodological differences between our two studies. Our calculation of the age distribution of solar neighborhood brown dwarfs is the first based on a volume-limited sample.",
+        "comments": "Accepted to ApJ. 49 pages, 14 figures, 6 tables",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09535"
+    },
+    {
+        "doc_id": 46,
+        "title": "Learning New Physics from Data -- a Symmetrized Approach",
+        "authors": [
+            "Shikma Bressler",
+            "Inbar Savoray",
+            "Yuval Zurgil"
+        ],
+        "subjects": [
+            "High Energy Physics - Experiment",
+            "High Energy Physics - Phenomenology"
+        ],
+        "abstract": "Thousands of person-years have been invested in searches for New Physics (NP), the majority of them motivated by theoretical considerations. Yet, no evidence of beyond the Standard Model (BSM) physics has been found. This suggests that model-agnostic searches might be an important key to explore NP, and help discover unexpected phenomena which can inspire future theoretical developments. A possible strategy for such searches is identifying asymmetries between data samples that are expected to be symmetric within the Standard Model (SM). We propose exploiting neural networks (NNs) to quickly fit and statistically test the differences between two samples. Our method is based on an earlier work, originally designed for inferring the deviations of an observed dataset from that of a much larger reference dataset. We present a symmetric formalism, generalizing the original one; avoiding fine-tuning of the NN parameters and any constraints on the relative sizes of the samples. Our formalism could be used to detect small symmetry violations, extending the discovery potential of current and future particle physics experiments.",
+        "comments": "34 pages, 10 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09530"
+    },
+    {
+        "doc_id": 47,
+        "title": "The Beam-Dump Ceiling and Its Experimental Implication: The Case of a Portable Experiment",
+        "authors": [
+            "Doojin Kim",
+            "Jaehoon Yu",
+            "Jong-Chul Park",
+            "Hyunyong Kim"
+        ],
+        "subjects": [
+            "High Energy Physics - Phenomenology",
+            "High Energy Physics - Experiment"
+        ],
+        "abstract": "We generalize the nature of the so-called beam-dump \"ceiling\" beyond which the improvement on the sensitivity reach in the search for fast-decaying mediators dramatically slows down, and point out its experimental implications that motivate tabletop-size beam-dump experiments for the search. Light (bosonic) mediators are well-motivated new-physics particles as they can appear in dark-sector portal scenarios and models to explain various laboratory-based anomalies. Due to their low mass and feebly interacting nature, beam-dump-type experiments, utilizing high-intensity particle beams can play a crucial role in probing the parameter space of visibly decaying such mediators, in particular, the ``prompt-decay'' region where the mediators feature relatively large coupling and mass. We present a general and semi-analytic proof that the ceiling effectively arises in the prompt-decay region of an experiment and show its insensitivity to data statistics, background estimates, and systematic uncertainties, considering a concrete example, the search for axion-like particles interacting with ordinary photons at three benchmark beam facilities, PIP-II at FNAL and SPS and LHC-dump at CERN. We then identify optimal criteria to perform a cost-effective and short-term experiment to reach the ceiling, demonstrating that very short-baseline compact experiments enable access to the parameter space unreachable thus far.",
+        "comments": "6 pages, 2 figures, 1 table",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09529"
+    },
+    {
+        "doc_id": 48,
+        "title": "Universal Vortex Statistics and Stochastic Geometry of Bose-Einstein Condensation",
+        "authors": [
+            "Mithun Thudiyangal",
+            "Adolfo del Campo"
+        ],
+        "subjects": [
+            "Quantum Gases",
+            "Statistical Mechanics",
+            "Quantum Physics"
+        ],
+        "abstract": "The cooling of a Bose gas in finite time results in the formation of a Bose-Einstein condensate that is spontaneously proliferated with vortices. We propose that the vortex spatial statistics is described by a homogeneous Poisson point process (PPP) with a density dictated by the Kibble-Zurek mechanism (KZM). We validate this model using numerical simulations of the two-dimensional stochastic Gross-Pitaevskii equation (SGPE) for both a homogeneous and a hard-wall trapped condensate. The KZM scaling of the average vortex number with the cooling rate is established along with the universal character of the vortex number distribution. The spatial statistics between vortices is characterized by analyzing the two-point defect-defect correlation function, the corresponding spacing distributions, and the random tessellation of the vortex pattern using the Voronoi cell area statistics. Combining the PPP description with the KZM, we derive universal theoretical predictions for each of these quantities and find them in agreement with the SGPE simulations. Our results establish the universal character of the spatial statistics of point-like topological defects generated during a continuous phase transition and the associated stochastic geometry.",
+        "comments": "16 pages, 16 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09525"
+    },
+    {
+        "doc_id": 49,
+        "title": "4D-ONIX: A deep learning approach for reconstructing 3D movies from sparse X-ray projections",
+        "authors": [
+            "Yuhe Zhang",
+            "Zisheng Yao",
+            "Robert Kl\u00f6fkorn",
+            "Tobias Ritschel",
+            "Pablo Villanueva-Perez"
+        ],
+        "subjects": [
+            "Image and Video Processing",
+            "Data Analysis, Statistics and Probability"
+        ],
+        "abstract": "The X-ray flux provided by X-ray free-electron lasers and storage rings offers new spatiotemporal possibilities to study in-situ and operando dynamics, even using single pulses of such facilities. X-ray Multi-Projection Imaging (XMPI) is a novel technique that enables volumetric information using single pulses of such facilities and avoids centrifugal forces induced by state-of-the-art time-resolved 3D methods such as time-resolved tomography. As a result, XMPI can acquire 3D movies (4D) at least three orders of magnitude faster than current methods. However, no algorithm can reconstruct 4D from highly sparse projections acquired by XMPI. Here, we present 4D-ONIX, a Deep Learning (DL)-based approach that learns to reconstruct 3D movies (4D) from an extremely limited number of projections. It combines the computational physical model of X-ray interaction with matter and state-of-the-art DL methods. We demonstrate the potential of 4D-ONIX to generate high-quality 4D by generalizing over multiple experiments with only two projections per timestamp for binary droplet collisions. We envision that 4D-ONIX will become an enabling tool for 4D analysis, offering new spatiotemporal resolutions to study processes not possible before.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09508"
+    },
+    {
+        "doc_id": 50,
+        "title": "Large sensory analysis of vegetables from conventional, organic and no-till practices",
+        "authors": [
+            "S\u00e9bastien Loustau",
+            "F Lefer",
+            "S Ducos"
+        ],
+        "subjects": [
+            "Physics and Society"
+        ],
+        "abstract": "There is a growing interest in agriculture to address soil deterioration issues and achieve a sustainable agrosystem. Many producers introduce no-till techniques and show significant yields with better ecosystem functioning, as well as improved carbon and water cycles. However, sensory analysis to compare vegetables from these practices are scarce. In this paper, we conduct triangle and hedonic tests over 15 panels of consumers for a total of more than 950 consumers. Based on statistical hypothesis testing and maximum likelihood estimation, significant statistical differences (P < 0.05 and less) are produced for both triangle tests and hedonic ranking in some specific cases. These results show a trend for sensory preferences of no-till practices.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09503"
+    },
+    {
+        "doc_id": 51,
+        "title": "Functional Autoencoder for Smoothing and Representation Learning",
+        "authors": [
+            "Sidi Wu",
+            "C\u00e9dric Beaulac",
+            "Jiguo Cao"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Machine Learning"
+        ],
+        "abstract": "A common pipeline in functional data analysis is to first convert the discretely observed data to smooth functions, and then represent the functions by a finite-dimensional vector of coefficients summarizing the information. Existing methods for data smoothing and dimensional reduction mainly focus on learning the linear mappings from the data space to the representation space, however, learning only the linear representations may not be sufficient. In this study, we propose to learn the nonlinear representations of functional data using neural network autoencoders designed to process data in the form it is usually collected without the need of preprocessing. We design the encoder to employ a projection layer computing the weighted inner product of the functional data and functional weights over the observed timestamp, and the decoder to apply a recovery layer that maps the finite-dimensional vector extracted from the functional data back to functional space using a set of predetermined basis functions. The developed architecture can accommodate both regularly and irregularly spaced data. Our experiments demonstrate that the proposed method outperforms functional principal component analysis in terms of prediction and classification, and maintains superior smoothing ability and better computational efficiency in comparison to the conventional autoencoders under both linear and nonlinear settings.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09499"
+    },
+    {
+        "doc_id": 52,
+        "title": "Uncertainty-Aware Calibration of a Hot-Wire Anemometer With Gaussian Process Regression",
+        "authors": [
+            "Rub\u00e9n Antonio Garc\u00eda-Ruiz",
+            "Jos\u00e9 Luis Blanco-Claraco",
+            "Javier L\u00f3pez-Mart\u00ednez",
+            "\u00c1ngel Jes\u00fas Callej\u00f3n-Ferre"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Applications",
+            "Machine Learning"
+        ],
+        "abstract": "Expensive ultrasonic anemometers are usually required to measure wind speed accurately. The aim of this work is to overcome the loss of accuracy of a low cost hot-wire anemometer caused by the changes of air temperature, by means of a probabilistic calibration using Gaussian Process Regression. Gaussian Process Regression is a non-parametric, Bayesian, and supervised learning method designed to make predictions of an unknown target variable as a function of one or more known input variables. Our approach is validated against real datasets, obtaining a good performance in inferring the actual wind speed values. By performing, before its real use in the field, a calibration of the hot-wire anemometer taking into account air temperature, permits that the wind speed can be estimated for the typical range of ambient temperatures, including a grounded uncertainty estimation for each speed measure.",
+        "comments": "10 pages, 6 figures, Published in \"IEEE Sensors Journal\"",
+        "date": "16 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09492"
+    },
+    {
+        "doc_id": 53,
+        "title": "3DMASC: Accessible, explainable 3D point clouds classification. Application to Bi-spectral Topo-bathymetric lidar data",
+        "authors": [
+            "Mathilde Letard",
+            "Dimitri Lague",
+            "Arthur Le Guennec",
+            "S\u00e9bastien Lef\u00e8vre",
+            "Baptiste Feldmann",
+            "Paul Leroy",
+            "Daniel Girardeau-Montaut",
+            "Thomas Corpetti"
+        ],
+        "subjects": [
+            "Image and Video Processing"
+        ],
+        "abstract": "Three-dimensional data have become increasingly present in earth observation over the last decades. However, many 3D surveys are still underexploited due to the lack of accessible and explainable automatic classification methods, for example, new topo-bathymetric lidar data. In this work, we introduce explainable machine learning for 3D data classification using Multiple Attributes, Scales, and Clouds under 3DMASC, a new workflow. This workflow introduces multi-cloud classification through dual-cloud features, encrypting local spectral and geometrical ratios and differences. 3DMASC uses classical multi-scale descriptors adapted to all types of 3D point clouds and new ones based on their spatial variations. In this paper, we present the performances of 3DMASC for multi-class classification of topo-bathymetric lidar data in coastal and fluvial environments. We show how multivariate and embedded feature selection allows the building of optimized predictor sets of reduced complexity, and we identify features particularly relevant for coastal and riverine scene descriptions. Our results show the importance of dual-cloud features, lidar return-based attributes averaged over specific scales, and of statistics of dimensionality-based and spectral features. Additionally, they indicate that small to medium spherical neighbourhood diameters (<7 m) are sufficient to build effective classifiers, namely when combined with distance-to-ground or distance-to-water-surface features. Without using optional RGB information, and with a maximum of 37 descriptors, we obtain classification accuracies between 91 % for complex multi-class tasks and 98 % for lower-level processing using models trained on less than 2000 samples per class. Comparisons with classical point cloud classification methods show that 3DMASC features have a significantly improved descriptive power. Our contributions are made available through a plugin in the CloudCompare software, allowing non-specialist users to create classifiers for any type of 3D data characterized by 1 or 2 point clouds (airborne or terrestrial lidar, structure from motion), and two labelled topo-bathymetric lidar datasets, available on https://opentopography.org/.",
+        "comments": "Journal ref:        ISPRS Journal of Photogrammetry and Remote Sensing, 2024, 207, pp.175-197",
+        "date": "15 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09481"
+    },
+    {
+        "doc_id": 54,
+        "title": "Uncertainty-Aware Hardware Trojan Detection Using Multimodal Deep Learning",
+        "authors": [
+            "Rahul Vishwakarma",
+            "Amin Rezaei"
+        ],
+        "subjects": [
+            "Cryptography and Security",
+            "Artificial Intelligence",
+            "Machine Learning"
+        ],
+        "abstract": "The risk of hardware Trojans being inserted at various stages of chip production has increased in a zero-trust fabless era. To counter this, various machine learning solutions have been developed for the detection of hardware Trojans. While most of the focus has been on either a statistical or deep learning approach, the limited number of Trojan-infected benchmarks affects the detection accuracy and restricts the possibility of detecting zero-day Trojans. To close the gap, we first employ generative adversarial networks to amplify our data in two alternative representation modalities, a graph and a tabular, ensuring that the dataset is distributed in a representative manner. Further, we propose a multimodal deep learning approach to detect hardware Trojans and evaluate the results from both early fusion and late fusion strategies. We also estimate the uncertainty quantification metrics of each prediction for risk-aware decision-making. The outcomes not only confirms the efficacy of our proposed hardware Trojan detection method but also opens a new door for future studies employing multimodality and uncertainty quantification to address other hardware security challenges.",
+        "comments": "2024 Design, Automation and Test in Europe Conference | The European Event for Electronic System Design & Test (accepted)",
+        "date": "15 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09479"
+    },
+    {
+        "doc_id": 55,
+        "title": "Parametric Constraints for Bayesian Knowledge Tracing from First Principles",
+        "authors": [
+            "Denis Shchepakin",
+            "Sreecharan Sankaranarayanan",
+            "Dawn Zimmaro"
+        ],
+        "subjects": [
+            "Computers and Society",
+            "Machine Learning",
+            "Machine Learning"
+        ],
+        "abstract": "Bayesian Knowledge Tracing (BKT) is a probabilistic model of a learner's state of mastery corresponding to a knowledge component. It considers the learner's state of mastery as a \"hidden\" or latent binary variable and updates this state based on the observed correctness of the learner's response using parameters that represent transition probabilities between states. BKT is often represented as a Hidden Markov Model and the Expectation-Maximization (EM) algorithm is used to infer these parameters. However, this algorithm can suffer from several issues including producing multiple viable sets of parameters, settling into a local minima, producing degenerate parameter values, and a high computational cost during fitting. This paper takes a \"from first principles\" approach to deriving constraints that can be imposed on the BKT parameter space. Starting from the basic mathematical truths of probability and building up to the behaviors expected of the BKT parameters in real systems, this paper presents a mathematical derivation that results in succinct constraints that can be imposed on the BKT parameter space. Since these constraints are necessary conditions, they can be applied prior to fitting in order to reduce computational cost and the likelihood of issues that can emerge from the EM procedure. In order to see that promise through, the paper further introduces a novel algorithm for estimating BKT parameters subject to the newly defined constraints. While the issue of degenerate parameter values has been reported previously, this paper is the first, to our best knowledge, to derive the constrains from first principles while also presenting an algorithm that respects those constraints.",
+        "comments": "MSC Class:          62F15 (Primary) 62M05; 60J20; 68T30; 91E40 (Secondary)",
+        "date": "22 December, 2023",
+        "pdf_url": "https://arxiv.org/pdf/2401.09456"
+    },
+    {
+        "doc_id": 56,
+        "title": "Reasoning with random sets: An agenda for the future",
+        "authors": [
+            "Fabio Cuzzolin"
+        ],
+        "subjects": [
+            "Statistics Theory",
+            "Artificial Intelligence",
+            "Machine Learning"
+        ],
+        "abstract": "In this paper, we discuss a potential agenda for future work in the theory of random sets and belief functions, touching upon a number of focal issues: the development of a fully-fledged theory of statistical reasoning with random sets, including the generalisation of logistic regression and of the classical laws of probability; the further development of the geometric approach to uncertainty, to include general random sets, a wider range of uncertainty measures and alternative geometric representations; the application of this new theory to high-impact areas such as climate change, machine learning and statistical learning theory.",
+        "comments": "94 pages, 17 figures",
+        "date": "19 December, 2023",
+        "pdf_url": "https://arxiv.org/pdf/2401.09435"
+    },
+    {
+        "doc_id": 57,
+        "title": "Randomized Kaczmarz with geometrically smoothed momentum",
+        "authors": [
+            "Seth J. Alderman",
+            "Roan W. Luikart",
+            "Nicholas F. Marshall"
+        ],
+        "subjects": [
+            "Numerical Analysis",
+            "Probability",
+            "Machine Learning"
+        ],
+        "abstract": "This paper studies the effect of adding geometrically smoothed momentum to the randomized Kaczmarz algorithm, which is an instance of stochastic gradient descent on a linear least squares loss function. We prove a result about the expected error in the direction of singular vectors of the matrix defining the least squares loss. We present several numerical examples illustrating the utility of our result and pose several questions.",
+        "comments": "21 pages, 9 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09415"
+    },
+    {
+        "doc_id": 58,
+        "title": "PERMUTOOLS: A MATLAB Package for Multivariate Permutation Testing",
+        "authors": [
+            "Michael J. Crosse",
+            "John J. Foxe",
+            "Sophie Molholm"
+        ],
+        "subjects": [
+            "Methodology",
+            "Quantitative Methods",
+            "Computation"
+        ],
+        "abstract": "Statistical hypothesis testing and effect size measurement are routine parts of quantitative research. Advancements in computer processing power have greatly improved the capability of statistical inference through the availability of resampling methods. However, many of the statistical practices used today are based on traditional, parametric methods that rely on assumptions about the underlying population. These assumptions may not always be valid, leading to inaccurate results and misleading interpretations. Permutation testing, on the other hand, generates the sampling distribution empirically by permuting the observed data, providing distribution-free hypothesis testing. Furthermore, this approach lends itself to a powerful method for multiple comparison correction - known as max correction - which is less prone to type II errors than conventional correction methods. Parametric methods have also traditionally been utilized for estimating the confidence interval of various test statistics and effect size measures. However, these too can be estimated empirically using permutation or bootstrapping techniques. Whilst resampling methods are generally considered preferable, many popular programming languages and statistical software packages lack efficient implementations. Here, we introduce PERMUTOOLS, a MATLAB package for multivariate permutation testing and effect size measurement.",
+        "comments": "7 pages, 2 figures, for PERMUTOOLS toolbox, see https://github.com/mickcrosse/PERMUTOOLS",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09401"
+    },
+    {
+        "doc_id": 59,
+        "title": "Yielding and plasticity in amorphous solids",
+        "authors": [
+            "Ludovic Berthier",
+            "Giulio Biroli",
+            "M. Lisa Manning",
+            "Francesco Zamponi"
+        ],
+        "subjects": [
+            "Statistical Mechanics",
+            "Disordered Systems and Neural Networks",
+            "Soft Condensed Matter"
+        ],
+        "abstract": "The physics of disordered media, from metallic glasses to colloidal suspensions, granular matter and biological tissues, offers difficult challenges because it often occurs far from equilibrium, in materials lacking symmetries and evolving through complex energy landscapes. Here, we review recent theoretical efforts to provide microscopic insights into the mechanical properties of amorphous media using approaches from statistical mechanics as unifying frameworks. We cover both the initial regime corresponding to small deformations, and the yielding transition marking a change between elastic response and plastic flow. We discuss the specific features arising for systems evolving near a jamming transition, and extend our discussion to recent studies of the rheology of dense biological and active materials.",
+        "comments": "20 pages, 7 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09385"
+    },
+    {
+        "doc_id": 60,
+        "title": "Modelling clusters in network time series with an application to presidential elections in the USA",
+        "authors": [
+            "Guy Nason",
+            "Daniel Salnikov",
+            "Mario Cortina-Borja"
+        ],
+        "subjects": [
+            "Methodology",
+            "Applications"
+        ],
+        "abstract": "Network time series are becoming increasingly relevant in the study of dynamic processes characterised by a known or inferred underlying network structure. Generalised Network Autoregressive (GNAR) models provide a parsimonious framework for exploiting the underlying network, even in the high-dimensional setting. We extend the GNAR framework by introducing the $\\textit{community}$-$\u03b1$ GNAR model that exploits prior knowledge and/or exogenous variables for identifying and modelling dynamic interactions across communities in the underlying network. We further analyse the dynamics of $\\textit{Red, Blue}$ and $\\textit{Swing}$ states throughout presidential elections in the USA. Our analysis shows that dynamics differ among the state-wise clusters.",
+        "comments": "18 pages, 12 figures. Pre-print",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09381"
+    },
+    {
+        "doc_id": 61,
+        "title": "Merging uncertainty sets via majority vote",
+        "authors": [
+            "Matteo Gasparin",
+            "Aaditya Ramdas"
+        ],
+        "subjects": [
+            "Methodology"
+        ],
+        "abstract": "Given $K$ uncertainty sets that are arbitrarily dependent -- for example, confidence intervals for an unknown parameter obtained with $K$ different estimators, or prediction sets obtained via conformal prediction based on $K$ different algorithms on shared data -- we address the question of how to efficiently combine them in a black-box manner to produce a single uncertainty set. We present a simple and broadly applicable majority vote procedure that produces a merged set with nearly the same error guarantee as the input sets. We then extend this core idea in a few ways: we show that weighted averaging can be a powerful way to incorporate prior information, and a simple randomization trick produces strictly smaller merged sets without altering the coverage guarantee. Along the way, we prove an intriguing result that R\u00fcger's combination rules (eg: twice the median of dependent p-values is a p-value) can be strictly improved with randomization. When deployed in online settings, we show how the exponential weighted majority algorithm can be employed in order to learn a good weighting over time. We then combine this method with adaptive conformal inference to deliver a simple conformal online model aggregation (COMA) method for nonexchangeable data.",
+        "comments": "26 pages, 10 figures, 2 tables",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09379"
+    },
+    {
+        "doc_id": 62,
+        "title": "Unlocking Unlabeled Data: Ensemble Learning with the Hui- Walter Paradigm for Performance Estimation in Online and Static Settings",
+        "authors": [
+            "Kevin Slote",
+            "Elaine Lee"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Statistics Theory",
+            "Machine Learning"
+        ],
+        "abstract": "In the realm of machine learning and statistical modeling, practitioners often work under the assumption of accessible, static, labeled data for evaluation and training. However, this assumption often deviates from reality where data may be private, encrypted, difficult- to-measure, or unlabeled. In this paper, we bridge this gap by adapting the Hui-Walter paradigm, a method traditionally applied in epidemiology and medicine, to the field of machine learning. This approach enables us to estimate key performance metrics such as false positive rate, false negative rate, and priors in scenarios where no ground truth is available. We further extend this paradigm for handling online data, opening up new possibilities for dynamic data environments. Our methodology involves partitioning data into latent classes to simulate multiple data populations (if natural populations are unavailable) and independently training models to replicate multiple tests. By cross-tabulating binary outcomes across ensemble categorizers and multiple populations, we are able to estimate unknown parameters through Gibbs sampling, eliminating the need for ground-truth or labeled data. This paper showcases the potential of our methodology to transform machine learning practices by allowing for accurate model assessment under dynamic and uncertain data conditions.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09376"
+    },
+    {
+        "doc_id": 63,
+        "title": "Anticipating Tipping Points for Disordered Traffic: Critical Slowing Down on the Onset of Congestion",
+        "authors": [
+            "Shankha Narayan Chattopadhyay",
+            "Arvind Kumar Gupta"
+        ],
+        "subjects": [
+            "Dynamical Systems"
+        ],
+        "abstract": "Regime shifts are quite common in complex systems like cell regulations, disease transmissions, ecosystems, marine ice instability, etc. Several statistical indicators known as early warning signals (EWS) have been theorized to anticipate these abrupt transitions in advance. These regime shifts happen because they cross some critical value of the parameter that influences the overall dynamics. This critical threshold is known as tipping point. In the vicinity of a tipping point, perturbations gradually increases, and as a consequence, system-state extensively swing around the quasi-static attractor, and the local dynamics become progressively slow, which is known as critical slowing down (CSD). Because of this CSD, statistical measures known as early warning signals (EWS) such as variance and lag-1 autocorrelation increase. From the point of view of physics, a free flow can become congested when the mean car density crosses its tipping point. Recently, for lane-based traffic system using continuum model, study reveals that analysis of the generic EWSs serve as a good measure to predict upstream stop-and-go traffic jams. Now, we introduce EWSs to anticipate traffic jam for heterogeneous disordered traffic relevant for non-lane-based systems. We have analyzed a lattice hydrodynamic area occupancy model with passing and through numerical simulations, we have shown emergence of kink or chaotic jam. Also, we provided proper framework for prediction of traffic jams via different EWSs. From simulated data, we demonstrated that EWSs are sensitive as tipping is approached.",
+        "comments": "12 pages, 4 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09364"
+    },
+    {
+        "doc_id": 64,
+        "title": "Neural Hawkes: Non-Parametric Estimation in High Dimension and Causality Analysis in Cryptocurrency Markets",
+        "authors": [
+            "Timoth\u00e9e Fabre",
+            "Ioane Muni Toke"
+        ],
+        "subjects": [
+            "Trading and Market Microstructure",
+            "Mathematical Finance"
+        ],
+        "abstract": "We propose a novel approach to marked Hawkes kernel inference which we name the moment-based neural Hawkes estimation method. Hawkes processes are fully characterized by their first and second order statistics through a Fredholm integral equation of the second kind. Using recent advances in solving partial differential equations with physics-informed neural networks, we provide a numerical procedure to solve this integral equation in high dimension. Together with an adapted training pipeline, we give a generic set of hyperparameters that produces robust results across a wide range of kernel shapes. We conduct an extensive numerical validation on simulated data. We finally propose two applications of the method to the analysis of the microstructure of cryptocurrency markets. In a first application we extract the influence of volume on the arrival rate of BTC-USD trades and in a second application we analyze the causality relationships and their directions amongst a universe of 15 cryptocurrency pairs in a centralized exchange.",
+        "comments": " ",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09361"
+    },
+    {
+        "doc_id": 65,
+        "title": "Potential Energy Landscape of a Flexible Water Model: Equation-of-State, Configurational Entropy, and Adam-Gibbs Relationship",
+        "authors": [
+            "Ali Eltareb",
+            "Gustavo E. Lopez",
+            "Nicolas Giovambattista"
+        ],
+        "subjects": [
+            "Soft Condensed Matter",
+            "Chemical Physics"
+        ],
+        "abstract": "The potential energy landscape (PEL) formalism is a tool within statistical mechanics that has been used in the past to calculate the equation of states (EOS) of classical rigid model liquids at low temperatures, where computer simulations may be challenging. In this work, we use classical molecular dynamics (MD) simulations and the PEL formalism to calculate the EOS of the flexible q-TIP4P/F water model. This model exhibits a liquid-liquid critical point (LLCP) in the supercooled regime, at ($P_c = 150$ MPa, $T_c = 190$ K, $\u03c1_c = 1.04$ g/cm$^3$) [using the reaction field technique]. The PEL-EOS of q-TIP4P/F water, and the corresponding location of the LLCP, are in very good agreement with the MD simulations. We show that the PEL of q-TIP4P/F water is Gaussian which allows us to calculate the configurational entropy of the system, $S_{conf}$. The $S_{conf}$ of q-TIP4P/F water is surprisingly similar to that reported previously for rigid water models, suggesting that intramolecular flexibility does not necessarily add roughness to the PEL. We also show that the Adam-Gibbs relation, which relates the diffusion coefficient $D$ with $S_{conf}$, holds for the flexible q-TIP4P/F water model. Overall, our results indicate that the PEL formalism can be used to study molecular systems that include molecular flexibility, the common case in standard force fields. This is not trivial since the introduction of large bending/stretching mode frequencies is problematic in classical statistical mechanics. For example, as shown previously, we find that such high-frequencies lead to an unphysical (negative) entropy for q-TIP4P/F water (yet the PEL formalism can be applied successfully).",
+        "comments": "38 pages, 9 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09355"
+    },
+    {
+        "doc_id": 66,
+        "title": "High Confidence Level Inference is Almost Free using Parallel Stochastic Optimization",
+        "authors": [
+            "Wanrong Zhu",
+            "Zhipeng Lou",
+            "Ziyang Wei",
+            "Wei Biao Wu"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Machine Learning"
+        ],
+        "abstract": "Uncertainty quantification for estimation through stochastic optimization solutions in an online setting has gained popularity recently. This paper introduces a novel inference method focused on constructing confidence intervals with efficient computation and fast convergence to the nominal level. Specifically, we propose to use a small number of independent multi-runs to acquire distribution information and construct a t-based confidence interval. Our method requires minimal additional computation and memory beyond the standard updating of estimates, making the inference process almost cost-free. We provide a rigorous theoretical guarantee for the confidence interval, demonstrating that the coverage is approximately exact with an explicit convergence rate and allowing for high confidence level inference. In particular, a new Gaussian approximation result is developed for the online estimators to characterize the coverage properties of our confidence intervals in terms of relative errors. Additionally, our method also allows for leveraging parallel computing to further accelerate calculations using multiple cores. It is easy to implement and can be integrated with existing stochastic algorithms without the need for complicated modifications.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09346"
+    },
+    {
+        "doc_id": 67,
+        "title": "Central Limit Theorem for Two-Timescale Stochastic Approximation with Markovian Noise: Theory and Applications",
+        "authors": [
+            "Jie Hu",
+            "Vishwaraj Doshi",
+            "Do Young Eun"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Machine Learning",
+            "Optimization and Control"
+        ],
+        "abstract": "Two-timescale stochastic approximation (TTSA) is among the most general frameworks for iterative stochastic algorithms. This includes well-known stochastic optimization methods such as SGD variants and those designed for bilevel or minimax problems, as well as reinforcement learning like the family of gradient-based temporal difference (GTD) algorithms. In this paper, we conduct an in-depth asymptotic analysis of TTSA under controlled Markovian noise via central limit theorem (CLT), uncovering the coupled dynamics of TTSA influenced by the underlying Markov chain, which has not been addressed by previous CLT results of TTSA only with Martingale difference noise. Building upon our CLT, we expand its application horizon of efficient sampling strategies from vanilla SGD to a wider TTSA context in distributed learning, thus broadening the scope of Hu et al. (2022). In addition, we leverage our CLT result to deduce the statistical properties of GTD algorithms with nonlinear function approximation using Markovian samples and show their identical asymptotic performance, a perspective not evident from current finite-time bounds.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09339"
+    },
+    {
+        "doc_id": 68,
+        "title": "On the structure of the large-$N$ expansion in SU($N$) Yang-Mills theory",
+        "authors": [
+            "Marco Bochicchio",
+            "Mauro Papinutto",
+            "Francesco Scardino"
+        ],
+        "subjects": [
+            "High Energy Physics - Theory",
+            "High Energy Physics - Phenomenology"
+        ],
+        "abstract": "Recently, we have computed the short-distance asymptotics of the generating functional of Euclidean correlators of single-trace twist-$2$ operators in the large-$N$ expansion of SU($N$) Yang-Mills (YM) theory to the leading-nonplanar order. Remarkably, it has the structure of the logarithm of a functional determinant, but with the sign opposite to the one that would follow from the spin-statistics theorem for the glueballs. In order to solve this sign puzzle, we have reconsidered the proof in the literature that in the 't Hooft topological expansion of large-$N$ YM theory the leading-nonplanar contribution to the generating functional consists of the sum over punctures of $n$-punctured tori. We have discovered that for twist-$2$ operators it contains -- in addition to the $n$-punctured tori -- the normalization of tori with $1 \\leq p \\leq n$ pinches and $n-p$ punctures. Once the existence of the new sector is taken into account, the violation of the spin-statistics theorem disappears. Moreover, the new sector contributes trivially to the nonperturbative $S$ matrix because -- for example -- the $n$-pinched torus represents nonperturbatively a loop of $n$ glueball propagators with no external leg. This opens the way for an exact solution limited to the new sector that may be solvable thanks to the vanishing $S$ matrix.",
+        "comments": "12 pages, 16 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09312"
+    },
+    {
+        "doc_id": 69,
+        "title": "Asymmetric games on networks: mapping to Ising models and bounded rationality",
+        "authors": [
+            "Filippo Zimmaro",
+            "Serge Galam",
+            "Marco Alberto Javarone"
+        ],
+        "subjects": [
+            "Physics and Society"
+        ],
+        "abstract": "We investigate the dynamics of coordination and consensus in an agent population. Considering agents endowed with bounded rationality, we study asymmetric coordination games using a mapping to random field Ising models. In doing so, we investigate the relationship between group coordination and agent rationality. Analytical calculations and numerical simulations of the proposed model lead to novel insight into opinion dynamics. For instance, we find that bounded rationality and preference intensity can determine a series of possible scenarios with different levels of opinion polarization. To conclude, we deem our investigation opens a new avenue for studying game dynamics through methods of statistical physics.",
+        "comments": "15 pages, 4 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09310"
+    },
+    {
+        "doc_id": 70,
+        "title": "Simultaneously search for multi-target Galactic binary gravitational waves in reduced parameter space with LMPSO-CV",
+        "authors": [
+            "Pin Gao",
+            "Xilong Fan",
+            "Zhoujian Cao"
+        ],
+        "subjects": [
+            "General Relativity and Quantum Cosmology",
+            "High Energy Astrophysical Phenomena",
+            "Instrumentation and Methods for Astrophysics"
+        ],
+        "abstract": "We propose an innovative approach to the concurrent exploration of gravitational waves originating from Galactic binaries through the development of a new Local Maxima Particle Swarm Optimization (LMPSO) algorithm. Our methodology employs strategic Create Voids (CV) to streamline parameter space, maximizing the identification of local maxima for the $\\mathcal{F}$-statistic even in the overlapped signals case. Subsequently, a ``find-real-$\\mathcal{F}$-statistic-analysis\", which implements the astrophysical models and properties of $\\mathcal{F}$-statistic in parameter space, is conducted to reveal Galactic binary gravitational wave signals within the dataset. Our new approach eliminates inaccuracies associated with signal subtraction contamination, which is a challenge for traditional iterative-subtraction methods when addressing low signal-to-noise ratio signals (e.g., SNR $<$ 15). To demonstrate the efficacy of our approach, we utilize the residuals from the LISA mock data challenge (LDC1-4), where 10982 injection sources with optimal SNR $>$ 15 have been eliminated. The LMPSO-CV method efficiently identifies 8995 signals with a 47.7\\% false source fraction or 3463 signals with a 26.9\\% false source fraction when the correlation coefficient threshold is set to 0.8.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09300"
+    },
+    {
+        "doc_id": 71,
+        "title": "Spectral Distribution Complexity of the Surface Fibrillatory Waves Predicts Post-Catheter Ablation Relapse in Persistent Atrial Fibrillation",
+        "authors": [
+            "Pilar Escribano",
+            "Juan Rodenas",
+            "Manuel Garcia",
+            "Miguel A Arias",
+            "Jose J Rieta",
+            "Raul Alcaraz"
+        ],
+        "subjects": [
+            "Signal Processing",
+            "Medical Physics"
+        ],
+        "abstract": "As for most of cardiac arrhythmias, atrial fibrillation (AF) is primarily treated by catheter ablation (CA). However, the mid-term recurrence rate of this procedure in persistent AF patients is still limited and the preoperative prediction of its outcome is clinically interesting to select candidates who could benefit the most from the intervention. This context encouraged the study of C0 complexity as a novel predictor, because it estimates organization of the power spectral distribution (PSD) of the fibrillatory waves (f-waves). For that purpose, the PSD was divided into two divergent components using a threshold, theta, which was considered by multiplying the mean value of the PSD by a factor, alpha, ranging between 1.5 and 2.5. On a database of 74 patients, the values of C0 complexity computed for all alpha factors reported statistically significant differences between the patients who maintained sinus rhythm and those who relapsed to AF after a follow-up of 9 months. They also showed higher values of sensitivity (Se), specificity (Sp), and accuracy (Acc) than the well known predictors of the dominant frequency (DF) and f-wave amplitude. Moreover, the combination of the DF and the C0 complexity computed with alpha = 2, via a decision tree, improved classification until values of Se, Sp and Acc of 75.33, 77.33 and 76.58%, respectively. These results manifests the relevance of the f-wave PSD distribution to anticipate CA outcome in persistent AF patients.",
+        "comments": "Journal ref:        Computing in Cardiology 2022; Vol 49",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09297"
+    },
+    {
+        "doc_id": 72,
+        "title": "Using pairwise comparisons to determine consumer preferences in hotel selection",
+        "authors": [
+            "N. Krivulin",
+            "A. Prinkov",
+            "I. Gladkikh"
+        ],
+        "subjects": [
+            "Optimization and Control",
+            "Applications"
+        ],
+        "abstract": "We consider the problem of evaluating preferences for criteria used by university students when selecting a hotel for accommodation during a professional development program in a foreign country. Input data for analysis come from a survey of 202 respondents, who indicated their age, sex and whether they have previously visited the country. The criteria under evaluation are location, accommodation cost, typical guests, free breakfast, room amenities and courtesy of staff. The respondents assess the criteria both directly by providing estimates of absolute ratings and ranks, and indirectly by relative estimates using ratios of pairwise comparisons. To improve the accuracy of ratings derived from pairwise comparisons, we concurrently apply the principal eigenvector method, the geometric mean method and the method of log-Chebyshev approximation. Then, the results from the direct and indirect evaluation of ratings and ranks are examined together to analyze how the results from pairwise comparisons may differ from each other and from the results of direct assessment by respondents. We apply statistical techniques, such as estimation of means, standard deviations and correlations, to the vectors of ratings and ranks provided directly or indirectly by respondents, and then use the estimates to make accurate assessment of the criteria under study.",
+        "comments": "27 pages, 16 tables",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09287"
+    },
+    {
+        "doc_id": 73,
+        "title": "A New Approach to Find the B\u00f6hm-Vitense gap",
+        "authors": [
+            "Tahereh Ramezani",
+            "Ernst Paunzen",
+            "Martin Piecka",
+            "Michal Kajan"
+        ],
+        "subjects": [
+            "Astrophysics of Galaxies"
+        ],
+        "abstract": "This paper discusses the B\u00f6hm-Vitense gap, a gap in the colours of stars that occurs when the atmosphere changes from radiative to convective in deep layers. We are using different algorithms for detecting gaps in colour-magnitude diagrams (CMDs), including the k-nearest neighbours (k-NN) and UniDip algorithms. We propose using a combination of the k-NN algorithm and the UniDip algorithm and manual verification to identify gaps unlikely to be of a statistical origin. Using the $Gaia$ photometric system, i.e. BP-RP, we took the data of 130 star clusters and searched for gaps in the ranges of 0.40 to 0.47 mag, and 0.56 to 0.60 mag, respectively. We analysed all data statistically and identified the gaps in the individual clusters. Finally, we applied the kernel density estimator to see how the gaps are distributed.",
+        "comments": "arXiv admin note: text overlap with arXiv:astro-ph/9802204 by other authors",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09264"
+    },
+    {
+        "doc_id": 74,
+        "title": "Mitigating distribution shift in machine learning-augmented hybrid simulation",
+        "authors": [
+            "Jiaxi Zhao",
+            "Qianxiao Li"
+        ],
+        "subjects": [
+            "Numerical Analysis",
+            "Dynamical Systems",
+            "Machine Learning"
+        ],
+        "abstract": "We study the problem of distribution shift generally arising in machine-learning augmented hybrid simulation, where parts of simulation algorithms are replaced by data-driven surrogates. We first establish a mathematical framework to understand the structure of machine-learning augmented hybrid simulation problems, and the cause and effect of the associated distribution shift. We show correlations between distribution shift and simulation error both numerically and theoretically. Then, we propose a simple methodology based on tangent-space regularized estimator to control the distribution shift, thereby improving the long-term accuracy of the simulation results. In the linear dynamics case, we provide a thorough theoretical analysis to quantify the effectiveness of the proposed method. Moreover, we conduct several numerical experiments, including simulating a partially known reaction-diffusion equation and solving Navier-Stokes equations using the projection method with a data-driven pressure solver. In all cases, we observe marked improvements in simulation accuracy under the proposed method, especially for systems with high degrees of distribution shift, such as those with relatively strong non-linear reaction mechanisms, or flows at large Reynolds numbers.",
+        "comments": "MSC Class:          68T99; 65M15; 37M05",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09259"
+    },
+    {
+        "doc_id": 75,
+        "title": "Accurate Memory Kernel Extraction from Discretized Time Series Data",
+        "authors": [
+            "Lucas Tepper",
+            "Benjamin Dalton",
+            "Roland R. Netz"
+        ],
+        "subjects": [
+            "Data Analysis, Statistics and Probability",
+            "Computational Physics"
+        ],
+        "abstract": "Memory effects emerge as a fundamental consequence of dimensionality reduction when low-dimensional observables are used to describe the dynamics of complex many-body systems. In the context of molecular dynamics (MD) data analysis, accounting for memory effects using the framework of the generalized Langevin equation (GLE) has proven efficient, accurate and insightful, particularly when working with high-resolution time series data. However, in experimental systems, high-resolution data is often unavailable, raising questions about the impact of the data resolution on the estimated GLE parameters. This study demonstrates that direct memory extraction remains accurate when the discretization time is below the memory time. To obtain memory functions reliably even when the discretization time exceeds the memory time, we introduce a Gaussian Process Optimization (GPO) scheme. This scheme minimizes the deviation of discretized two-point correlation functions between MD and GLE simulations and is able to estimate accurate memory kernels as long as the discretization time stays below the longest time scale in the data, typically the barrier crossing time.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09249"
+    },
+    {
+        "doc_id": 76,
+        "title": "A closer look at the chemical potential of an ideal agent system",
+        "authors": [
+            "Christoph J. B\u00f6rner",
+            "Ingo Hoffmann",
+            "John H. Stiebel"
+        ],
+        "subjects": [
+            "Statistical Finance"
+        ],
+        "abstract": "Models for spin systems known from statistical physics are used in econometrics in the form of agent-based models. Econophysics research in econometrics is increasingly developing general market models that describe exchange phenomena and use the chemical potential $\u03bc$ known from physics in the context of particle number changes. In statistical physics, equations of state are known for the chemical potential, which take into account the respective model framework and the corresponding state variables. A simple transfer of these equations of state to problems in econophysics appears difficult. To the best of our knowledge, the equation of state for the chemical potential is currently missing even for the simplest conceivable model of an ideal agent system. In this paper, this research gap is closed and the equation of state for the chemical potential is derived from the econophysical model assumptions of the ideal agent system. An interpretation of the equation of state leads to fundamental relationships that could also have been guessed, but are shown here by the theory.",
+        "comments": "11 Pages, 0 Figures, Working Paper, Theoretical Contribution",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09233"
+    },
+    {
+        "doc_id": 77,
+        "title": "An Optimal Transport Approach for Computing Adversarial Training Lower Bounds in Multiclass Classification",
+        "authors": [
+            "Nicolas Garcia Trillos",
+            "Matt Jacobs",
+            "Jakwang Kim",
+            "Matthew Werenski"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Optimization and Control",
+            "Machine Learning"
+        ],
+        "abstract": "Despite the success of deep learning-based algorithms, it is widely known that neural networks may fail to be robust. A popular paradigm to enforce robustness is adversarial training (AT), however, this introduces many computational and theoretical difficulties. Recent works have developed a connection between AT in the multiclass classification setting and multimarginal optimal transport (MOT), unlocking a new set of tools to study this problem. In this paper, we leverage the MOT connection to propose computationally tractable numerical algorithms for computing universal lower bounds on the optimal adversarial risk and identifying optimal classifiers. We propose two main algorithms based on linear programming (LP) and entropic regularization (Sinkhorn). Our key insight is that one can harmlessly truncate the higher order interactions between classes, preventing the combinatorial run times typically encountered in MOT problems. We validate these results with experiments on MNIST and CIFAR-$10$, which demonstrate the tractability of our approach.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09191"
+    },
+    {
+        "doc_id": 78,
+        "title": "Exploring the Role of Convolutional Neural Networks (CNN) in Dental Radiography Segmentation: A Comprehensive Systematic Literature Review",
+        "authors": [
+            "Walid Brahmi",
+            "Imen Jdey",
+            "Fadoua Drira"
+        ],
+        "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Machine Learning"
+        ],
+        "abstract": "In the field of dentistry, there is a growing demand for increased precision in diagnostic tools, with a specific focus on advanced imaging techniques such as computed tomography, cone beam computed tomography, magnetic resonance imaging, ultrasound, and traditional intra-oral periapical X-rays. Deep learning has emerged as a pivotal tool in this context, enabling the implementation of automated segmentation techniques crucial for extracting essential diagnostic data. This integration of cutting-edge technology addresses the urgent need for effective management of dental conditions, which, if left undetected, can have a significant impact on human health. The impressive track record of deep learning across various domains, including dentistry, underscores its potential to revolutionize early detection and treatment of oral health issues. Objective: Having demonstrated significant results in diagnosis and prediction, deep convolutional neural networks (CNNs) represent an emerging field of multidisciplinary research. The goals of this study were to provide a concise overview of the state of the art, standardize the current debate, and establish baselines for future research. Method: In this study, a systematic literature review is employed as a methodology to identify and select relevant studies that specifically investigate the deep learning technique for dental imaging analysis. This study elucidates the methodological approach, including the systematic collection of data, statistical analysis, and subsequent dissemination of outcomes. Conclusion: This work demonstrates how Convolutional Neural Networks (CNNs) can be employed to analyze images, serving as effective tools for detecting dental pathologies. Although this research acknowledged some limitations, CNNs utilized for segmenting and categorizing teeth exhibited their highest level of performance overall.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09190"
+    },
+    {
+        "doc_id": 79,
+        "title": "A Two-Scale Complexity Measure for Deep Learning Models",
+        "authors": [
+            "Massimiliano Datres",
+            "Gian Paolo Leonardi",
+            "Alessio Figalli",
+            "David Sutter"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Machine Learning"
+        ],
+        "abstract": "We introduce a novel capacity measure 2sED for statistical models based on the effective dimension. The new quantity provably bounds the generalization error under mild assumptions on the model. Furthermore, simulations on standard data sets and popular model architectures show that 2sED correlates well with the training error. For Markovian models, we show how to efficiently approximate 2sED from below through a layerwise iterative approach, which allows us to tackle deep learning models with a large number of parameters. Simulation results suggest that the approximation is good for different prominent models and data sets.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09184"
+    },
+    {
+        "doc_id": 80,
+        "title": "Splitting the spacetime: A systematic analysis of foliation dependence in cosmic averaging",
+        "authors": [
+            "Pierre Mourier",
+            "Asta Heinesen"
+        ],
+        "subjects": [
+            "General Relativity and Quantum Cosmology",
+            "Cosmology and Nongalactic Astrophysics"
+        ],
+        "abstract": "It is a fundamental unsolved question in general relativity how to unambiguously characterize the effective collective dynamics of an ensemble of fluid elements sourcing the local geometry, in the absence of exact symmetries. In a cosmological context this is sometimes referred to as the averaging problem. At the heart of this problem in relativity is the non-uniqueness of the choice of foliation within which the statistical properties of the local spacetime are quantified, which can lead to ambiguity in the formulated average theory. This has led to debate in the literature on how to best construct and view such a coarse-grained hydrodynamic theory. Here, we address this ambiguity by performing the first quantitative investigation of foliation dependence in cosmological spatial averaging. Starting from the aim of constructing slicing-independent integral functionals (volume, mass, entropy, etc.) as well as average functionals (mean density, average curvature, etc.) defined on spatial volume sections, we investigate infinitesimal foliation variations and derive results on the foliation dependence of functionals and on extremal leaves. Our results show that one may only identify fully foliation-independent integral functionals in special scenarios, requiring the existence of associated conserved currents. We then derive bounds on the foliation dependence of integral functionals for general scalar quantities under finite variations within physically motivated classes of foliations. Our findings provide tools that are useful for quantifying, eliminating or constraining the foliation dependence in cosmological averaging.",
+        "comments": "32 pages. Comments welcome",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09170"
+    },
+    {
+        "doc_id": 81,
+        "title": "Your blush gives you away: detecting hidden mental states with remote photoplethysmography and thermal imaging",
+        "authors": [
+            "Ivan Liu",
+            "Fangyuan Liu",
+            "Qi Zhong",
+            "Fei Ma",
+            "Shiguang Ni"
+        ],
+        "subjects": [
+            "Computers and Society"
+        ],
+        "abstract": "Multimodal emotion recognition techniques are increasingly essential for assessing mental states. Image-based methods, however, tend to focus predominantly on overt visual cues and often overlook subtler mental state changes. Psychophysiological research has demonstrated that HR and skin temperature are effective in detecting ANS activities, thereby revealing these subtle changes. However, traditional HR tools are generally more costly and less portable, while skin temperature analysis usually necessitates extensive manual processing. Advances in remote-PPG and automatic thermal ROI detection algorithms have been developed to address these issues, yet their accuracy in practical applications remains limited. This study aims to bridge this gap by integrating r-PPG with thermal imaging to enhance prediction performance. Ninety participants completed a 20-minute questionnaire to induce cognitive stress, followed by watching a film aimed at eliciting moral elevation. The results demonstrate that the combination of r-PPG and thermal imaging effectively detects emotional shifts. Using r-PPG alone, the prediction accuracy was 77% for cognitive stress and 61% for moral elevation, as determined by SVM. Thermal imaging alone achieved 79% accuracy for cognitive stress and 78% for moral elevation, utilizing a RF algorithm. An early fusion strategy of these modalities significantly improved accuracies, achieving 87% for cognitive stress and 83% for moral elevation using RF. Further analysis, which utilized statistical metrics and explainable machine learning methods including SHAP, highlighted key features and clarified the relationship between cardiac responses and facial temperature variations. Notably, it was observed that cardiovascular features derived from r-PPG models had a more pronounced influence in data fusion, despite thermal imaging's higher predictive accuracy in unimodal analysis.",
+        "comments": "28 pages, 6 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09145"
+    },
+    {
+        "doc_id": 82,
+        "title": "Monitoring Machine Learning Forecasts for Platform Data Streams",
+        "authors": [
+            "Jeroen Rombouts",
+            "Ines Wilms"
+        ],
+        "subjects": [
+            "Applications",
+            "Machine Learning"
+        ],
+        "abstract": "Data stream forecasts are essential inputs for decision making at digital platforms. Machine learning algorithms are appealing candidates to produce such forecasts. Yet, digital platforms require a large-scale forecast framework that can flexibly respond to sudden performance drops. Re-training ML algorithms at the same speed as new data batches enter is usually computationally too costly. On the other hand, infrequent re-training requires specifying the re-training frequency and typically comes with a severe cost of forecast deterioration. To ensure accurate and stable forecasts, we propose a simple data-driven monitoring procedure to answer the question when the ML algorithm should be re-trained. Instead of investigating instability of the data streams, we test if the incoming streaming forecast loss batch differs from a well-defined reference batch. Using a novel dataset constituting 15-min frequency data streams from an on-demand logistics platform operating in London, we apply the monitoring procedure to popular ML algorithms including random forest, XGBoost and lasso. We show that monitor-based re-training produces accurate forecasts compared to viable benchmarks while preserving computational feasibility. Moreover, the choice of monitoring procedure is more important than the choice of ML algorithm, thereby permitting practitioners to combine the proposed monitoring procedure with one's favorite forecasting algorithm.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09144"
+    },
+    {
+        "doc_id": 83,
+        "title": "Understanding Heterophily for Graph Neural Networks",
+        "authors": [
+            "Junfu Wang",
+            "Yuanfang Guo",
+            "Liang Yang",
+            "Yunhong Wang"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Machine Learning"
+        ],
+        "abstract": "Graphs with heterophily have been regarded as challenging scenarios for Graph Neural Networks (GNNs), where nodes are connected with dissimilar neighbors through various patterns. In this paper, we present theoretical understandings of the impacts of different heterophily patterns for GNNs by incorporating the graph convolution (GC) operations into fully connected networks via the proposed Heterophilous Stochastic Block Models (HSBM), a general random graph model that can accommodate diverse heterophily patterns. Firstly, we show that by applying a GC operation, the separability gains are determined by two factors, i.e., the Euclidean distance of the neighborhood distributions and $\\sqrt{\\mathbb{E}\\left[\\operatorname{deg}\\right]}$, where $\\mathbb{E}\\left[\\operatorname{deg}\\right]$ is the averaged node degree. It reveals that the impact of heterophily on classification needs to be evaluated alongside the averaged node degree. Secondly, we show that the topological noise has a detrimental impact on separability, which is equivalent to degrading $\\mathbb{E}\\left[\\operatorname{deg}\\right]$. Finally, when applying multiple GC operations, we show that the separability gains are determined by the normalized distance of the $l$-powered neighborhood distributions. It indicates that the nodes still possess separability as $l$ goes to infinity in a wide range of regimes. Extensive experiments on both synthetic and real-world data verify the effectiveness of our theory.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09125"
+    },
+    {
+        "doc_id": 84,
+        "title": "A hybrid tau-leap for simulating chemical kinetics with applications to parameter estimation",
+        "authors": [
+            "Thomas Trigo Trindade",
+            "Konstantinos C. Zygalakis"
+        ],
+        "subjects": [
+            "Molecular Networks",
+            "Numerical Analysis",
+            "Computation"
+        ],
+        "abstract": "We consider the problem of efficiently simulating stochastic models of chemical kinetics. The Gillespie Stochastic Simulation algorithm (SSA) is often used to simulate these models, however, in many scenarios of interest, the computational cost quickly becomes prohibitive. This is further exasperated in the Bayesian inference context when estimating parameters of chemical models, as the intractability of the likelihood requires multiple simulations of the underlying system. To deal with issues of computational complexity in this paper, we propose a novel hybrid $\u03c4$-leap algorithm for simulating well-mixed chemical systems. In particular, the algorithm uses $\u03c4$-leap when appropriate (high population densities), and SSA when necessary (low population densities, when discrete effects become non-negligible). In the intermediate regime, a combination of the two methods, which leverages the properties of the underlying Poisson formulation, is employed. As illustrated through a number of numerical experiments the hybrid $\u03c4$ offers significant computational savings when compared to SSA without however sacrificing the overall accuracy. This feature is particularly welcomed in the Bayesian inference context, as it allows for parameter estimation of stochastic chemical kinetics at reduced computational cost.",
+        "comments": "25 pages, 8 figures",
+        "date": "18 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09097"
+    },
+    {
+        "doc_id": 85,
+        "title": "Fixed-Budget Differentially Private Best Arm Identification",
+        "authors": [
+            "Zhirui Chen",
+            "P. N. Karthik",
+            "Yeow Meng Chee",
+            "Vincent Y. F. Tan"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Artificial Intelligence",
+            "Information Theory",
+            "Statistics Theory",
+            "Machine Learning"
+        ],
+        "abstract": "We study best arm identification (BAI) in linear bandits in the fixed-budget regime under differential privacy constraints, when the arm rewards are supported on the unit interval. Given a finite budget $T$ and a privacy parameter $\\varepsilon>0$, the goal is to minimise the error probability in finding the arm with the largest mean after $T$ sampling rounds, subject to the constraint that the policy of the decision maker satisfies a certain {\\em $\\varepsilon$-differential privacy} ($\\varepsilon$-DP) constraint. We construct a policy satisfying the $\\varepsilon$-DP constraint (called {\\sc DP-BAI}) by proposing the principle of {\\em maximum absolute determinants}, and derive an upper bound on its error probability. Furthermore, we derive a minimax lower bound on the error probability, and demonstrate that the lower and the upper bounds decay exponentially in $T$, with exponents in the two bounds matching order-wise in (a) the sub-optimality gaps of the arms, (b) $\\varepsilon$, and (c) the problem complexity that is expressible as the sum of two terms, one characterising the complexity of standard fixed-budget BAI (without privacy constraints), and the other accounting for the $\\varepsilon$-DP constraint. Additionally, we present some auxiliary results that contribute to the derivation of the lower bound on the error probability. These results, we posit, may be of independent interest and could prove instrumental in proving lower bounds on error probabilities in several other bandit problems. Whereas prior works provide results for BAI in the fixed-budget regime without privacy constraints or in the fixed-confidence regime with privacy constraints, our work fills the gap in the literature by providing the results for BAI in the fixed-budget regime under the $\\varepsilon$-DP constraint.",
+        "comments": "Accepted to ICLR 2024",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09073"
+    },
+    {
+        "doc_id": 86,
+        "title": "Accelerating HEP simulations with Neural Importance Sampling",
+        "authors": [
+            "Nicolas Deutschmann",
+            "Niklas G\u00f6tz"
+        ],
+        "subjects": [
+            "High Energy Physics - Phenomenology",
+            "High Energy Physics - Experiment",
+            "High Energy Physics - Theory",
+            "Computational Physics",
+            "Data Analysis, Statistics and Probability"
+        ],
+        "abstract": "Virtually all high-energy-physics (HEP) simulations for the LHC rely on Monte Carlo using importance sampling by means of the VEGAS algorithm. However, complex high-precision calculations have become a challenge for the standard toolbox. As a result, there has been keen interest in HEP for modern machine learning to power adaptive sampling. Despite previous work proving that normalizing-flow-powered neural importance sampling (NIS) sometimes outperforms VEGAS, existing research has still left major questions open, which we intend to solve by introducing Z\u00fcNIS, a fully automated NIS library. We first show how to extend the original formulation of NIS to reuse samples over multiple gradient steps, yielding a significant improvement for slow functions. We then benchmark Z\u00fcNIS over a range of problems and show high performance with limited fine-tuning. The library can be used by non-experts with minimal effort, which is crucial to become a mature tool for the wider HEP public.",
+        "comments": "28 pages, 11 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09069"
+    },
+    {
+        "doc_id": 87,
+        "title": "IRS-Enhanced Anti-Jamming Precoding Against DISCO Physical Layer Jamming Attacks",
+        "authors": [
+            "Huan Huang",
+            "Hongliang Zhang",
+            "Yi Cai",
+            "Yunjing Zhang",
+            "A. Lee Swindlehurst",
+            "Zhu Han"
+        ],
+        "subjects": [
+            "Information Theory",
+            "Signal Processing"
+        ],
+        "abstract": "Illegitimate intelligent reflective surfaces (IRSs) can pose significant physical layer security risks on multi-user multiple-input single-output (MU-MISO) systems. Recently, a DISCO approach has been proposed an illegitimate IRS with random and time-varying reflection coefficients, referred to as a \"disco\" IRS (DIRS). Such DIRS can attack MU-MISO systems without relying on either jamming power or channel state information (CSI), and classical anti-jamming techniques are ineffective for the DIRS-based fully-passive jammers (DIRS-based FPJs). In this paper, we propose an IRS-enhanced anti-jamming precoder against DIRS-based FPJs that requires only statistical rather than instantaneous CSI of the DIRS-jammed channels. Specifically, a legitimate IRS is introduced to reduce the strength of the DIRS-based jamming relative to the transmit signals at a legitimate user (LU). In addition, the active beamforming at the legitimate access point (AP) is designed to maximize the signal-to-jamming-plus-noise ratios (SJNRs). Numerical results are presented to evaluate the effectiveness of the proposed IRS-enhanced anti-jamming precoder against DIRS-based FPJs.",
+        "comments": "This paper has been accepted by IEEE ICC 2024",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09036"
+    },
+    {
+        "doc_id": 88,
+        "title": "A Novel Interpretable Fusion Analytic Framework for Investigating Functional Brain Connectivity Differences in Cognitive Impairments",
+        "authors": [
+            "Yeseul Jeon",
+            "Jeong-Jae Kim",
+            "SuMin Yu",
+            "Junggu Choi",
+            "Sanghoon Han"
+        ],
+        "subjects": [
+            "Applications"
+        ],
+        "abstract": "Functional magnetic resonance imaging (fMRI) data is characterized by its complexity and high--dimensionality, encompassing signals from various regions of interests (ROIs) that exhibit intricate correlations. Analyzing fMRI data directly proves challenging due to its intricate structure. Nevertheless, ROIs convey crucial information about brain activities through their connections, offering insights into distinctive brain activity characteristics between different groups. To address this, we propose a cutting-edge interpretable fusion analytic framework that facilitates the identification and understanding of ROI connectivity disparities between two groups, thereby revealing their unique features. Our novel approach encompasses three key steps. Firstly, we construct ROI functional connectivity networks (FCNs) to effectively manage fMRI data. Secondly, employing the FCNs, we utilize a self--attention deep learning model for binary classification, generating an attention distribution that encodes group differences. Lastly, we employ a latent space item-response model to extract group representative ROI features, visualizing these features on the group summary FCNs. We validate the effectiveness of our framework by analyzing four types of cognitive impairments, showcasing its capability to identify significant ROIs contributing to the differences between the two disease groups. This novel interpretable fusion analytic framework holds immense potential for advancing our understanding of cognitive impairments and could pave the way for more targeted therapeutic interventions.",
+        "comments": "arXiv admin note: text overlap with arXiv:2207.01581",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09028"
+    },
+    {
+        "doc_id": 89,
+        "title": "Fast parallel sampling under isoperimetry",
+        "authors": [
+            "Nima Anari",
+            "Sinho Chewi",
+            "Thuy-Duong Vuong"
+        ],
+        "subjects": [
+            "Data Structures and Algorithms",
+            "Statistics Theory",
+            "Machine Learning"
+        ],
+        "abstract": "We show how to sample in parallel from a distribution $\u03c0$ over $\\mathbb R^d$ that satisfies a log-Sobolev inequality and has a smooth log-density, by parallelizing the Langevin (resp. underdamped Langevin) algorithms. We show that our algorithm outputs samples from a distribution $\\hat\u03c0$ that is close to $\u03c0$ in Kullback--Leibler (KL) divergence (resp. total variation (TV) distance), while using only $\\log(d)^{O(1)}$ parallel rounds and $\\widetilde{O}(d)$ (resp. $\\widetilde O(\\sqrt d)$) gradient evaluations in total. This constitutes the first parallel sampling algorithms with TV distance guarantees.\n  For our main application, we show how to combine the TV distance guarantees of our algorithms with prior works and obtain RNC sampling-to-counting reductions for families of discrete distribution on the hypercube $\\{\\pm 1\\}^n$ that are closed under exponential tilts and have bounded covariance. Consequently, we obtain an RNC sampler for directed Eulerian tours and asymmetric determinantal point processes, resolving open questions raised in prior works.",
+        "comments": "23 pages",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09016"
+    },
+    {
+        "doc_id": 90,
+        "title": "Estimation of Tsallis entropy for exponentially distributed several populations",
+        "authors": [
+            "Naveen Kumar",
+            "Ambesh Dixit",
+            "Vivek Vijay"
+        ],
+        "subjects": [
+            "Statistics Theory"
+        ],
+        "abstract": "We study the estimation of Tsallis entropy of a finite number of independent populations, each following an exponential distribution with the same scale parameter and distinct location parameters for $q>0$. We derive a Stein-type improved estimate, establishing the inadmissibility of the best affine equivariant estimate of the parameter function. A class of smooth estimates utilizing the Brewster technique is obtained, resulting in a significant improvement in the risk value. We computed the Brewster-Zidek estimates for both one and two populations, to illustrate the comparison with best affine equivariant and Stein-type estimates. We further derive that the Bayesian estimate, employing an inverse gamma prior, which takes the best affine equivariant estimate as a particular case. We provide a numerical illustration utilizing simulated samples for a single population. The purpose is to demonstrate the impact of sample size, location parameter, and entropic index on the estimates.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09009"
+    },
+    {
+        "doc_id": 91,
+        "title": "Enablers and Barriers of Empathy in Software Developer and User Interaction: A Mixed Methods Case Study",
+        "authors": [
+            "Hashini Gunatilake",
+            "John Grundy",
+            "Rashina Hoda",
+            "Ingo Mueller"
+        ],
+        "subjects": [
+            "Software Engineering"
+        ],
+        "abstract": "Software engineering (SE) requires developers to collaborate with stakeholders, and understanding their emotions and perspectives is often vital. Empathy is a concept characterising a person's ability to understand and share the feelings of another. However, empathy continues to be an under-researched human aspect in SE. We studied how empathy is practised between developers and end users using a mixed methods case study. We used an empathy test, observations and interviews to collect data, and socio technical grounded theory and descriptive statistics to analyse data. We identified the nature of awareness required to trigger empathy and enablers of empathy. We discovered barriers to empathy and a set of potential strategies to overcome these barriers. We report insights on emerging relationships and present a set of recommendations and potential future works on empathy and SE for software practitioners and SE researchers.",
+        "comments": " ",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09001"
+    },
+    {
+        "doc_id": 92,
+        "title": "Trade-off Between Dependence and Complexity for Nonparametric Learning -- an Empirical Process Approach",
+        "authors": [
+            "Nabarun Deb",
+            "Debarghya Mukherjee"
+        ],
+        "subjects": [
+            "Statistics Theory",
+            "Machine Learning"
+        ],
+        "abstract": "Empirical process theory for i.i.d. observations has emerged as a ubiquitous tool for understanding the generalization properties of various statistical problems. However, in many applications where the data exhibit temporal dependencies (e.g., in finance, medical imaging, weather forecasting etc.), the corresponding empirical processes are much less understood. Motivated by this observation, we present a general bound on the expected supremum of empirical processes under standard $\u03b2/\u03c1$-mixing assumptions. Unlike most prior work, our results cover both the long and the short-range regimes of dependence. Our main result shows that a non-trivial trade-off between the complexity of the underlying function class and the dependence among the observations characterizes the learning rate in a large class of nonparametric problems. This trade-off reveals a new phenomenon, namely that even under long-range dependence, it is possible to attain the same rates as in the i.i.d. setting, provided the underlying function class is complex enough. We demonstrate the practical implications of our findings by analyzing various statistical estimators in both fixed and growing dimensions. Our main examples include a comprehensive case study of generalization error bounds in nonparametric regression over smoothness classes in fixed as well as growing dimension using neural nets, shape-restricted multivariate convex regression, estimating the optimal transport (Wasserstein) distance between two probability distributions, and classification under the Mammen-Tsybakov margin condition -- all under appropriate mixing assumptions. In the process, we also develop bounds on $L_r$ ($1\\le r\\le 2$)-localized empirical processes with dependent observations, which we then leverage to get faster rates for (a) tuning-free adaptation, and (b) set-structured learning problems.",
+        "comments": "94 pages, 1 figure",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08978"
+    },
+    {
+        "doc_id": 93,
+        "title": "Nonparametric Mean and Variance Adaptive Classification Rule for High-Dimensional Data with Heteroscedastic Variances",
+        "authors": [
+            "Seungyeon Oh",
+            "Hoyoung Park"
+        ],
+        "subjects": [
+            "Applications"
+        ],
+        "abstract": "In this study, we introduce an innovative methodology aimed at enhancing Fisher's Linear Discriminant Analysis (LDA) in the context of high-dimensional data classification scenarios, specifically addressing situations where each feature exhibits distinct variances. Our approach leverages Nonparametric Maximum Likelihood Estimation (NPMLE) techniques to estimate both the mean and variance parameters. By accommodating varying variances among features, our proposed method leads to notable improvements in classification performance. In particular, unlike numerous prior studies that assume the distribution of heterogeneous variances follows a right-skewed inverse gamma distribution, our proposed method demonstrates excellent performance even when the distribution of heterogeneous variances takes on left-skewed, symmetric, or right-skewed forms. We conducted a series of rigorous experiments to empirically validate the effectiveness of our approach. The results of these experiments demonstrate that our proposed methodology excels in accurately classifying high-dimensional data characterized by heterogeneous variances.",
+        "comments": "25 pages and 7 figures",
+        "date": "17 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08975"
+    },
+    {
+        "doc_id": 94,
+        "title": "A Powerful and Precise Feature-level Filter using Group Knockoffs",
+        "authors": [
+            "Jiaqi Gu",
+            "Zihuai He"
+        ],
+        "subjects": [
+            "Methodology"
+        ],
+        "abstract": "Selecting important features that have substantial effects on the response with provable type-I error rate control is a fundamental concern in statistics, with wide-ranging practical applications. Existing knockoff filters, although shown to provide theoretical guarantee on false discovery rate (FDR) control, often struggle to strike a balance between high power and precision in pinpointing important features when there exist large groups of strongly correlated features. To address this challenge, we develop a new filter using group knockoffs to achieve both powerful and precise selection of important features. Via experiments of simulated data and analysis of a real Alzheimer's disease genetic dataset, it is found that the proposed filter can not only control the proportion of false discoveries but also identify important features with comparable power and greater precision than the existing group knockoffs filter.",
+        "comments": "34 pages, 5 figures",
+        "date": "16 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08941"
+    },
+    {
+        "doc_id": 95,
+        "title": "How do transportation professionals perceive the impacts of AI applications in transportation? A latent class cluster analysis",
+        "authors": [
+            "Yiheng Qian",
+            "Tejaswi Polimetla",
+            "Thomas W. Sanchez",
+            "Xiang Yan"
+        ],
+        "subjects": [
+            "Applications",
+            "Computers and Society"
+        ],
+        "abstract": "Recent years have witnessed an increasing number of artificial intelligence (AI) applications in transportation. As a new and emerging technology, AI's potential to advance transportation goals and the full extent of its impacts on the transportation sector is not yet well understood. As the transportation community explores these topics, it is critical to understand how transportation professionals, the driving force behind AI Transportation applications, perceive AI's potential efficiency and equity impacts. Toward this goal, we surveyed transportation professionals in the United States and collected a total of 354 responses. Based on the survey responses, we conducted both descriptive analysis and latent class cluster analysis (LCCA). The former provides an overview of prevalent attitudes among transportation professionals, while the latter allows the identification of distinct segments based on their latent attitudes toward AI. We find widespread optimism regarding AI's potential to improve many aspects of transportation (e.g., efficiency, cost reduction, and traveler experience); however, responses are mixed regarding AI's potential to advance equity. Moreover, many respondents are concerned that AI ethics are not well understood in the transportation community and that AI use in transportation could exaggerate existing inequalities. Through LCCA, we have identified four latent segments: AI Neutral, AI Optimist, AI Pessimist, and AI Skeptic. The latent class membership is significantly associated with respondents' age, education level, and AI knowledge level. Overall, the study results shed light on the extent to which the transportation community as a whole is ready to leverage AI systems to transform current practices and inform targeted education to improve the understanding of AI among transportation professionals.",
+        "comments": " ",
+        "date": "16 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08915"
+    },
+    {
+        "doc_id": 96,
+        "title": "DCRMTA: Unbiased Causal Representation for Multi-touch Attribution",
+        "authors": [
+            "Jiaming Tang"
+        ],
+        "subjects": [
+            "Machine Learning",
+            "Artificial Intelligence",
+            "Methodology"
+        ],
+        "abstract": "Multi-touch attribution (MTA) currently plays a pivotal role in achieving a fair estimation of the contributions of each advertising touchpoint to-wards conversion behavior, deeply influencing budget allocation and advertising recommenda-tion. Traditional multi-touch attribution methods initially build a conversion prediction model, an-ticipating learning the inherent relationship be-tween touchpoint sequences and user purchasing behavior through historical data. Based on this, counterfactual touchpoint sequences are con-structed from the original sequence subset, and conversions are estimated using the prediction model, thus calculating advertising contributions. A covert assumption of these methods is the un-biased nature of conversion prediction models. However, due to confounding variables factors arising from user preferences and internet recom-mendation mechanisms such as homogenization of ad recommendations resulting from past shop-ping records, bias can easily occur in conversion prediction models trained on observational data. This paper redefines the causal effect of user fea-tures on conversions and proposes a novel end-to-end approach, Deep Causal Representation for MTA (DCRMTA). Our model while eliminating confounding variables, extracts features with causal relations to conversions from users. Fur-thermore, Extensive experiments on both synthet-ic and real-world Criteo data demonstrate DCRMTA's superior performance in converting prediction across varying data distributions, while also effectively attributing value across dif-ferent advertising channels",
+        "comments": "9 pages, 7 figures",
+        "date": "16 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08875"
+    },
+    {
+        "doc_id": 97,
+        "title": "Benchmarking Particle Filter Algorithms for Efficient Velodyne-Based Vehicle Localization",
+        "authors": [
+            "Jose Luis Blanco-Claraco",
+            "Francisco Ma\u00f1as-Alvarez",
+            "Jose Luis Torres-Moreno",
+            "Francisco Rodriguez",
+            "Antonio Gimenez-Fernandez"
+        ],
+        "subjects": [
+            "Robotics",
+            "Applications"
+        ],
+        "abstract": "Keeping a vehicle well-localized within a prebuilt-map is at the core of any autonomous vehicle navigation system. In this work, we show that both standard SIR sampling and rejection-based optimal sampling are suitable for efficient (10 to 20 ms) real-time pose tracking without feature detection that is using raw point clouds from a 3D LiDAR. Motivated by the large amount of information captured by these sensors, we perform a systematic statistical analysis of how many points are actually required to reach an optimal ratio between efficiency and positioning accuracy. Furthermore, initialization from adverse conditions, e.g., poor GPS signal in urban canyons, we also identify the optimal particle filter settings required to ensure convergence. Our findings include that a decimation factor between 100 and 200 on incoming point clouds provides a large savings in computational cost with a negligible loss in localization accuracy for a VLP-16 scanner. Furthermore, an initial density of $\\sim$2 particles/m$^2$ is required to achieve 100% convergence success for large-scale ($\\sim$100,000 m$^2$), outdoor global localization without any additional hint from GPS or magnetic field sensors. All implementations have been released as open-source software.",
+        "comments": "24 pages, 13 figures",
+        "date": "16 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08870"
+    },
+    {
+        "doc_id": 98,
+        "title": "The Effect of Intrinsic Dataset Properties on Generalization: Unraveling Learning Differences Between Natural and Medical Images",
+        "authors": [
+            "Nicholas Konz",
+            "Maciej A. Mazurowski"
+        ],
+        "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Machine Learning",
+            "Image and Video Processing",
+            "Machine Learning"
+        ],
+        "abstract": "This paper investigates discrepancies in how neural networks learn from different imaging domains, which are commonly overlooked when adopting computer vision techniques from the domain of natural images to other specialized domains such as medical images. Recent works have found that the generalization error of a trained network typically increases with the intrinsic dimension ($d_{data}$) of its training set. Yet, the steepness of this relationship varies significantly between medical (radiological) and natural imaging domains, with no existing theoretical explanation. We address this gap in knowledge by establishing and empirically validating a generalization scaling law with respect to $d_{data}$, and propose that the substantial scaling discrepancy between the two considered domains may be at least partially attributed to the higher intrinsic \"label sharpness\" ($K_F$) of medical imaging datasets, a metric which we propose. Next, we demonstrate an additional benefit of measuring the label sharpness of a training set: it is negatively correlated with the trained model's adversarial robustness, which notably leads to models for medical images having a substantially higher vulnerability to adversarial attack. Finally, we extend our $d_{data}$ formalism to the related metric of learned representation intrinsic dimension ($d_{repr}$), derive a generalization scaling law with respect to $d_{repr}$, and show that $d_{data}$ serves as an upper bound for $d_{repr}$. Our theoretical results are supported by thorough experiments with six models and eleven natural and medical imaging datasets over a range of training set sizes. Our findings offer insights into the influence of intrinsic dataset properties on generalization, representation learning, and robustness in deep neural networks.",
+        "comments": "ICLR 2024. Code: https://github.com/mazurowski-lab/intrinsic-properties",
+        "date": "16 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08865"
+    },
+    {
+        "doc_id": 99,
+        "title": "An Empirical Study of Counterfactual Visualization to Support Visual Causal Inference",
+        "authors": [
+            "Arran Zeyu Wang",
+            "David Borland",
+            "David Gotz"
+        ],
+        "subjects": [
+            "Human-Computer Interaction"
+        ],
+        "abstract": "Counterfactuals -- expressing what might have been true under different circumstances -- have been widely applied in statistics and machine learning to help understand causal relationships. More recently, counterfactuals have begun to emerge as a technique being applied within visualization research. However, it remains unclear to what extent counterfactuals can aid with visual data communication. In this paper, we primarily focus on assessing the quality of users' understanding of data when provided with counterfactual visualizations. We propose a preliminary model of causality comprehension by connecting theories from causal inference and visual data communication. Leveraging this model, we conducted an empirical study to explore how counterfactuals can improve users' understanding of data in static visualizations. Our results indicate that visualizing counterfactuals had a positive impact on participants' interpretations of causal relations within datasets. These results motivate a discussion of how to more effectively incorporate counterfactuals into data visualizations.",
+        "comments": "Accepted for publication in Information Visualization",
+        "date": "16 January, 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08822"
+    }
+]

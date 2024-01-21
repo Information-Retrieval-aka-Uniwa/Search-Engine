@@ -1,0 +1,1757 @@
+[
+    {
+        "doc_id": 0,
+        "title": "nonperturbative wavefunction universe inflation resonant features",
+        "authors": [
+            "paolo creminelli",
+            "sbastien renauxpetel",
+            "giovanni tambalo",
+            "vicharit yingcharoenrat"
+        ],
+        "subjects": [
+            "high energy physics theory",
+            "cosmology nongalactic astrophysics",
+            "general relativity quantum cosmology"
+        ],
+        "abstract": "studi statist scalar perturb model inflat small rapid oscil inflaton potenti reson nongaussian deriv wavefunct boldsymbol x nonperturb first order amplitud oscil express wavefunct univers wfu explicit requir solv partial differenti equat one find qualit deviat perturb theori gtrsim 2 gg 1 number oscil per hubbl time notabl wfu exhibit distinct behaviour neg posit valu trough peak respect correct 0 remain rel small order oscil amplitud posit yield substanti effect grow exponenti e 2 limit larg indic even minut oscil give larg effect tail distribut",
+        "comments": "56 pages 10 figures",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10212"
+    },
+    {
+        "doc_id": 1,
+        "title": "maximalcapacity discrete memoryless channel identification",
+        "authors": [
+            "maximilian egger",
+            "rawad bitar",
+            "antonia wachterzeh",
+            "deniz gndz",
+            "nir weinberger"
+        ],
+        "subjects": [
+            "information theory",
+            "machine learning"
+        ],
+        "abstract": "problem identifi channel highest capac among sever discret memoryless channel dmc consid problem cast pureexplor multiarm bandit problem follow practic use train sequenc sens commun channel statist capac estim propos tight confid bound estim error deriv base capac estim gapelimin algorithm term bestchanid propos oblivi capacityachiev input distribut guarante output dmc largest capac desir confid furthermor two addit algorithm naivechansel medianchanel output certain confid dmc capac close maxim introduc algorithm benefici differ regim use subroutin bestchanid sampl complex algorithm analyz function desir confid paramet number channel channel input output alphabet size cost best channel identif shown scale quadrat alphabet size fundament lower bound requir number channel sens identifi best channel certain confid deriv",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10204"
+    },
+    {
+        "doc_id": 2,
+        "title": "functional conditional gaussian graphical models",
+        "authors": [
+            "rita fici",
+            "luigi augugliaro",
+            "ernstjan camiel wit"
+        ],
+        "subjects": [
+            "methodology"
+        ],
+        "abstract": "function data becom commonli encount data type paper contribut literatur function graphic model extend notion condit gaussian graphic model propos doublepen estim recov edgeset correspond graph penalti paramet play crucial role determin precis matric respons variabl regress matric perform model select process propos framework investig use inform criteria moreov propos novel version kullbackleibl crossvalid design condit joint gaussian graphic model evalu model perform done term kullbackleibl diverg graph recoveri power",
+        "comments": "19 pages",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10196"
+    },
+    {
+        "doc_id": 3,
+        "title": "tinyvast r package expressive interface specify lagged simultaneous effects multivariate spatiotemporal models",
+        "authors": [
+            "james thorson",
+            "sean c anderson",
+            "pamela goddard",
+            "christopher n rooper"
+        ],
+        "subjects": [
+            "methodology",
+            "applications"
+        ],
+        "abstract": "multivari spatiotempor model wide applic specifi structur complic may inhibit wider use introduc r packag tinyvast two viewpoint softwar user statistician user viewpoint tinyvast adapt wide use formula interfac specifi gener addit model combin argument specifi spatial spatiotempor interact among variabl interact specifi use arrow notat structur equat model extend arrowandlag notat allow simultan lag recurs depend among variabl time user also specifi spatial domain areal grid continu pointcount streamnetwork data statistician viewpoint tinyvast construct spars precis matric repres multivari spatiotempor variat paramet estim specifi gener linear mix model glmm express interfac encompass vector autoregress empir orthogon function spatial factor analysi arima model demonstr fit data two survey platform sampl coral spong rockfish flatfish gulf alaska aleutian island compar eight altern model structur use differ assumpt habitat driver survey detect model select suggest towedcamera bottom trawl gear spatial variat detect sampl underli densiti flatfish rockfish rockfish posit associ spong flatfish neg associ coral conclud tinyvast use test complic depend repres altern structur assumpt research realworld polici evalu",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10193"
+    },
+    {
+        "doc_id": 4,
+        "title": "generalized decomposition priors r2",
+        "authors": [
+            "javier enrique aguilar",
+            "paulchristian brkner"
+        ],
+        "subjects": [
+            "methodology"
+        ],
+        "abstract": "adopt continu shrinkag prior highdimension linear model gain momentum driven theoret practic advantag one shrinkag prior r2d2 prior come intuit hyperparamet well understood theoret properti core idea specifi prior percentag explain varianc r2 conduct dirichlet decomposit distribut explain varianc among regress term model due properti dirichlet distribut competit among varianc compon tend gravit toward neg depend structur fulli determin individu compon mean yet realiti specif coeffici group may compet differ total variabl dirichlet would allow work address limit propos gener r2d2 prior term gener decomposit r2 gdr2 prior new prior provid great flexibl express depend structur well enhanc shrinkag properti specif explor capabl varianc decomposit via logist normal distribut extens simul realworld case studi demonstr gdr2 prior yield strongli improv outofsampl predict perform paramet recoveri compar r2d2 prior similar hyperparamet choic",
+        "comments": "31 pages 12 figures",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10180"
+    },
+    {
+        "doc_id": 5,
+        "title": "building life cycle assessment model using bayesian networks",
+        "authors": [
+            "cedric fraces gasmi",
+            "wennan long"
+        ],
+        "subjects": [
+            "data analysis statistics probability"
+        ],
+        "abstract": "paper introduc oilfield pollut graphic model opgm innov approach design improv benchmark uncertainti analysi greenhous ga ghg emiss oilfield build robust foundat provid oil product greenhous ga emiss estim opge framework opgm retain essenti function latest opge iter v30c offer substanti improv user experi comput perform key advanc opgm includ streamlin user interfac intuit interact facilit transpar visual intermedi result thu contribut interpret access analysi process notabl featur opgm abil natur perform sensit analyz achiev allow user seamlessli transit node determinist probabilist therebi integr uncertainti directli core structur model opgm achiev remark comput effici execut analyz speed 1e5 time faster excelbas opge thu facilit rapid largescal emiss assess leap process speed repres signific step forward emiss model enabl agil accur environment impact assess integr opgm exist life cycl assess lca practic hold promis significantli improv precis speed environment impact analys offer vital tool policymak industri stakehold effort better understand manag environment impact oilfield oper",
+        "comments": "",
+        "date": "11 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10170"
+    },
+    {
+        "doc_id": 6,
+        "title": "distinqt distributed privacy aware learning framework qos prediction future mobile wireless networks",
+        "authors": [
+            "nikolaos koursioumpas",
+            "lina magoula",
+            "ioannis stavrakakis",
+            "nancy alonistioti",
+            "gutierrezestevez",
+            "ramin khalili"
+        ],
+        "subjects": [
+            "networking internet architecture",
+            "artificial intelligence",
+            "cryptography security",
+            "distributed parallel cluster computing",
+            "machine learning"
+        ],
+        "abstract": "beyond 5g 6g network expect support new challeng use case applic depend certain level qualiti servic qo oper smoothli predict qo time manner high import especi safetycrit applic case vehicular commun although recent year qo predict carri central artifici intellig ai solut number privaci comput oper concern emerg altern solut surfac eg split learn feder learn distribut ai task reduc complex across node preserv privaci data howev new challeng rise come scalabl distribut learn approach take account heterogen natur futur wireless network current work propos distinqt privacyawar distribut learn framework qo predict framework support multipl heterogen node term data type model architectur share comput across enabl incorpor divers knowledg sole learn process enhanc robust gener capabl final qo predict model distinqt also contribut data privaci preserv encod raw input data nonlinear latent represent transmiss evalu result showcas framework achiev statist ident perform compar central version averag perform improv 65 six stateoftheart central baselin solut teleoper drive use case",
+        "comments": "11 pages double column 9 figures submitted possible publication ieee transactions vehicular technology ieee tvt",
+        "date": "15 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10158"
+    },
+    {
+        "doc_id": 7,
+        "title": "lower ricci curvature efficient community detection",
+        "authors": [
+            "yun jin park",
+            "didong li"
+        ],
+        "subjects": [
+            "methodology",
+            "social information networks",
+            "physics society",
+            "applications"
+        ],
+        "abstract": "studi introduc lower ricci curvatur lrc novel scalabl scalefre discret curvatur design enhanc commun detect network address comput challeng pose exist curvaturebas method lrc offer streamlin approach linear comput complex make wellsuit largescal network analysi develop lrcbase preprocess method effect augment popular commun detect algorithm comprehens simul applic realworld dataset includ ncaa footbal leagu network dblp collabor network amazon product copurchas network youtub social network demonstr efficaci method significantli improv perform variou commun detect algorithm",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10124"
+    },
+    {
+        "doc_id": 8,
+        "title": "timedependent urn models reproduce full spectrum novelties discovery",
+        "authors": [
+            "alessandro bellina",
+            "giordano de marzo",
+            "vittorio loreto"
+        ],
+        "subjects": [
+            "statistical mechanics",
+            "probability"
+        ],
+        "abstract": "system driven innov pivot forc human societi present variou intrigu statist regular heap law logarithm scale somewhat differ pattern innov rate urn model trigger umt instrument model innov dynam yet generalis need captur richer empir phenomenolog introduc timedepend urn model trigger tumt generalis umt crucial integr timedepend paramet reinforc trigger offer broader framework model innov nonstationari system analyt comput numer simul show tumt reconcil variou behaviour observ broad spectrum system patent activ analysi gene mutat highlight tumt featur critic region heap zipf law coexist comput expon",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10114"
+    },
+    {
+        "doc_id": 9,
+        "title": "interaction solar convection rotation",
+        "authors": [
+            "haibin chen",
+            "rong wu"
+        ],
+        "subjects": [
+            "solar stellar astrophysics",
+            "fluid dynamics"
+        ],
+        "abstract": "rotat energi fluid parcel chang isotrop expans compress solar convect rotat absorb energi convect inhibit caus motion fluid parcel larger critic size becom vibrat turbul inerti oscil caus deform fluid parcel deviat isotrop alter equilibrium posit vibrat form motion larger critic size respect larg granul within granul probabl mesogranul chang rotat energi granul convect caus rotat speed differ local speed form statist signific solar radial differenti rotat meridion circul driven radial differenti rotat transport angular momentum toward equat form latitudin differenti rotat model construct combin mix length theori explain granul size temperatur distribut independ latitud structur produc mechan similar characterist supergranul",
+        "comments": "13pages2figures",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10105"
+    },
+    {
+        "doc_id": 10,
+        "title": "counterfactual reasoning probabilistic graphical models analyzing socioecological systems",
+        "authors": [
+            "rafael cabaas",
+            "ana maldonado",
+            "mara morales",
+            "pedro aguilera",
+            "antonio salmern"
+        ],
+        "subjects": [
+            "artificial intelligence",
+            "probability",
+            "applications"
+        ],
+        "abstract": "causal counterfactu reason emerg direct data scienc allow us reason hypothet scenario particularli use domain experiment data usual avail context environment ecolog scienc causal enabl us exampl predict ecosystem would respond hypothet intervent structur causal model class probabilist graphic model causal due intuit natur easili understood expert multipl field howev certain queri call unidentifi calcul exact precis manner paper propos appli novel recent techniqu bound unidentifi queri within domain socioecolog system find indic tradit statist analysi includ probabilist graphic model identifi influenc variabl howev method offer insight natur relationship specif whether involv necess suffici counterfactu reason becom valuabl",
+        "comments": "34 pages",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10101"
+    },
+    {
+        "doc_id": 11,
+        "title": "statistics ranks determinants characteristic polynomials rational matrices",
+        "authors": [
+            "muhammad afifurrahman",
+            "alina ostafe",
+            "igor e shparlinski"
+        ],
+        "subjects": [
+            "number theory"
+        ],
+        "abstract": "consid set ntime n matric ration entri numer denomin size h obtain upper lower bound number matric given rank appli count matric given determin given characterist polynomi",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10086"
+    },
+    {
+        "doc_id": 12,
+        "title": "locally statistical active contour model sar image segmentation solved denoising algorithms",
+        "authors": [
+            "guangming liu",
+            "quanying sun",
+            "jing liang",
+            "qi liu"
+        ],
+        "subjects": [
+            "computer vision pattern recognition"
+        ],
+        "abstract": "paper propos novel local statist variat activ contour model base idivergencetv denois model hybrid geodes activ contour gac model activ contour without edg acw model use segment imag corrupt multipl gamma nois ad diffus term level set evolut lse equat propos model construct reactiondiffus rd equat gradual regular level set function lsf piecewis constant segment domain gain stabl solut transform propos model classic rof model ad proxim term inspir fast denois algorithm propos jiazhao recent propos two fast fix point algorithm solv sar imag segment question experiment result real sar imag show propos imag segment model effici stop contour weak blur edg automat detect exterior interior boundari imag multipl gamma nois propos fprd1fprd2 model 12 less time requir sbrd model base split bregman techniqu",
+        "comments": "18 pages 15 figures arxiv admin note substantial text overlap arxiv231211849 arxiv231208376 arxiv231209365",
+        "date": "9 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10083"
+    },
+    {
+        "doc_id": 13,
+        "title": "preoperative prediction catheter ablation outcome persistent atrial fibrillation patients spectral organization analysis surface fibrillatory waves",
+        "authors": [
+            "p escribano",
+            "j rodenas",
+            "garcia",
+            "arias",
+            "v hidalgo",
+            "calero",
+            "j j rieta",
+            "r alcaraz"
+        ],
+        "subjects": [
+            "signal processing"
+        ],
+        "abstract": "cathet ablat ca commonli use treatment persist atrial fibril af sinc mediumlongterm success rate remain limit preoper predict outcom gain clinic interest optim select candid procedur among predictor base surfac electrocardiogram domin frequenc df harmon exponenti decay g fibrillatori wave f wave report promis clinic insuffici result henc main goal work conduct broader analysi f wave harmon spectral structur improv ca outcom predict sever entropybas measur comput differ frequenc band databas 151 persist af patient radiofrequ ca followup 9 month newli introduc paramet discrimin patient relaps af maintain sr 70 statist superior df approxim similar g also provid complementari inform g differ combin multivari model base lineal discrimin analysi report classif perform improv 5 result suggest presenc larger harmon proport smaller df peak associ decreas probabl af recurr ca",
+        "comments": "journal ref j pers med 2022 12 1721",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10081"
+    },
+    {
+        "doc_id": 14,
+        "title": "level spacing distribution localized phases induced quasiperiodic potentials",
+        "authors": [
+            "chao yang",
+            "yucheng wang"
+        ],
+        "subjects": [
+            "disordered systems neural networks",
+            "mathematical physics",
+            "quantum physics"
+        ],
+        "abstract": "level statist crucial tool explor local physic level space distribut local state disord system follow poisson statist mani studi natur appli local induc quasiperiod potenti take aubryandr model exampl investig level space distribut local phase caus quasiperiod potenti analyt numer calcul level space distribut find adher poisson statist moreov base level statist deriv ratio adjac gap find singl sampl function excel agreement numer studi addit unlik disord system quasiperiod system variat level space distribut across differ region spectrum increas size increas sampl nonequival find carri signific implic reevalu level statist quasiperiod system profound understand distinct effect quasiperiod potenti disorderinduc local",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10067"
+    },
+    {
+        "doc_id": 15,
+        "title": "poisson approximation stochastic processes summed amenable groups",
+        "authors": [
+            "haoyu ye",
+            "peter orbanz",
+            "morgane austern"
+        ],
+        "subjects": [
+            "probability",
+            "statistics theory"
+        ],
+        "abstract": "gener poisson limit theorem binari function random object whose law invari action amen group exampl includ stationari random field exchang sequenc exchang graph celebr result e lindenstrauss show normal sum certain increas subset group approxim expect result clarifi correspond unnorm sum binari statist asymptot poisson provid suitabl mix condit hold extend randomli subsampl sum also show strict invari distribut need requisit mix condit defin group hold illustr result applic random field cayley graph poisson process group",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10060"
+    },
+    {
+        "doc_id": 16,
+        "title": "method characterizing disease emergence curves paired pathogen detection serology data",
+        "authors": [
+            "joshua hewitt",
+            "grete wilsonhenjum",
+            "derek collins",
+            "jourdan ringenberg",
+            "christopher quintanal",
+            "robert pleszewski",
+            "jeffrey c chandler",
+            "thomas j deliberto",
+            "kim pepin"
+        ],
+        "subjects": [
+            "methodology",
+            "physics society",
+            "applications"
+        ],
+        "abstract": "wildlif diseas surveil program research studi track infect identifi risk factor wild popul human agricultur often sever type sampl collect individu provid complet inform anim infect histori method jointli analyz multipl data stream studi diseas emerg driver infect via epidemiolog process model remain underdevelop jointanalysi method thoroughli analyz avail data precis quantifi epidem process outbreak statu risk contribut pair data model approach analyz multipl sampl individu use character map link pair data epidemiolog process hierarch statist observ model approach provid bayesian frequentist estim epidemiolog paramet state motiv approach need use pair pathogen antibodi detect test estim paramet infect trajectori wide applic suscept infecti recov sir model contribut gener formula link character map arbitrari process model dataset extend sir model better accommod pair data find via simul pair data effici estim sir paramet unpair data requir sampl 510 time fewer individu studi sarscov2 wild whitetail deer odocoileu virginianu three counti unit state estim averag infecti time corrobor captiv anim studi method use gener statist theori let applic extend beyond sir model consid complic exampl pair data",
+        "comments": "20 pages 5 figures 1 table",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10057"
+    },
+    {
+        "doc_id": 17,
+        "title": "gender bias machine translation era large language models",
+        "authors": [
+            "eva vanmassenhove"
+        ],
+        "subjects": [
+            "computation language",
+            "artificial intelligence",
+            "computers society"
+        ],
+        "abstract": "chapter examin role machin translat perpetu gender bia highlight challeng pose crosslinguist set statist depend comprehens overview relev exist work relat gender bia convent neural machin translat approach gener pretrain transform model employ machin translat system provid experi use chatgpt base gpt35 englishitalian translat context assess chatgpt current capac address gender bia find emphas ongo need advanc mitig bia machin translat system underscor import foster fair inclus languag technolog",
+        "comments": "24 pages",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10016"
+    },
+    {
+        "doc_id": 18,
+        "title": "global kernel estimator partially linear varying coefficient additive hazards models",
+        "authors": [
+            "hoi min ng",
+            "kin yau wong"
+        ],
+        "subjects": [
+            "methodology"
+        ],
+        "abstract": "biomed studi often interest associ differ type covari time diseas event relationship covari event time often complex standard surviv model assum linear covari effect inadequ flexibl class model captur complex interact effect among type covari vari coeffici model effect type covari modifi anoth type covari paper studi kernelbas estim method vari coeffici addit hazard model unlik mani exist kernelbas method use local neighborhood subject estim vari coeffici function propos novel global approach gener effici establish theoret properti propos estim demonstr superior perform compar exist local method largescal simul studi illustr propos method provid applic motiv cancer genom studi",
+        "comments": "27 pages",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10010"
+    },
+    {
+        "doc_id": 19,
+        "title": "regime change detection irregularly sampled time series",
+        "authors": [
+            "norbert marwan",
+            "deniz eroglu",
+            "ibrahim ozken",
+            "thomas stemler",
+            "karlheinz wyrwoll",
+            "jrgen kurths"
+        ],
+        "subjects": [
+            "data analysis statistics probability",
+            "chaotic dynamics",
+            "atmospheric oceanic physics"
+        ],
+        "abstract": "irregular sampl common problem palaeoclim studi propos method provid regularli sampl time seri time differ filter data differ success time instanc deriv transform cost procedur subsequ recurr analysi use investig regim transit approach appli speleothem base palaeoclim proxi data indonesianaustralian monsoon region clearli identifi heinrich event palaeoclim characterist chang dynam",
+        "comments": "12 pages 3 figures",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.10006"
+    },
+    {
+        "doc_id": 20,
+        "title": "bayesian modeling spatial ordinal data health surveys",
+        "authors": [
+            "miguel ngel beltrn snchez",
+            "miguel ngel martnez beneito",
+            "ana corbern vallet"
+        ],
+        "subjects": [
+            "methodology"
+        ],
+        "abstract": "health survey allow explor health indic great valu public health point view normal studi regular health registri indic usual code ordin variabl may depend covari associ individu paper propos bayesian individuallevel model smallarea estim surveybas health indic categor likelihood use first level model hierarchi describ ordin data spatial depend among small area taken account use condit autoregress car distribut poststratif result propos individuallevel model allow extrapol result administr areal divis even small area appli methodolog analysi health survey region valencia spain 2016 describ geograph distribut selfperceiv health indic interest region",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09994"
+    },
+    {
+        "doc_id": 21,
+        "title": "diversity spectral shapes hydrogen lyman lines mg ii lines quiescent prominence",
+        "authors": [
+            "p schwartz",
+            "gunar",
+            "j koza",
+            "p heinzel"
+        ],
+        "subjects": [
+            "solar stellar astrophysics"
+        ],
+        "abstract": "broad set spectroscop observ compris multipl line repres excel opportun diagnost properti promin plasma dynam fine structur howev also bring signific challeng compar synthet spectra provid radi transfer model work provid statist spectroscop analysi uniqu dataset coordin promin observ lyman line lyalpha lydelta mg ii k h line observ data obtain solar ultraviolet measur emit radiat sumer spectrograph board solar heliospher observatori soho satellit interfac region imag spectrograph iri 22 octob 2013 focu follow profil characterist shape observ line profil base number distinct peak integr line intens centertopeak ratio describ depth revers twopeak profil asymmetri peak show presenc nois neglig effect integr intens observ line significantli affect classif spectral profil use number distinct peak revers depth also peak asymmetri also demonstr take influenc nois account assess profil characterist spectral line suitabl diagnost differ properti observ promin",
+        "comments": "20 pages main part paper 6 additional pages appendices b 9 figures 4 tables main part paper plus 3 figures 3 tables appendices b",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09992"
+    },
+    {
+        "doc_id": 22,
+        "title": "power grid parameter estimation without phase measurements theory empirical validation",
+        "authors": [
+            "jeansbastien brouillon",
+            "keith moffat",
+            "florian drfler",
+            "giancarlo ferraritrecate"
+        ],
+        "subjects": [
+            "systems control",
+            "applications"
+        ],
+        "abstract": "reliabl integr oper renew distribut energi resourc requir accur distribut grid model howev obtain precis model often prohibit expens given larg scale ongo natur grid oper address challeng consider effort devot har abund consumpt data automat model infer primari result paper imped line network estim without synchron phase angl measur consist way admitt furthermor detail statist analysi present quantifi expect estim error four preval admitt estim method error constitut fundament model infer limit resolv data find empir valid use synthet data real measur town walenstadt switzerland confirm theori result contribut understand grid estim limit uncertainti offer guidanc practition research pursuit reliabl costeffect solut",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09989"
+    },
+    {
+        "doc_id": 23,
+        "title": "false discovery rate control gaussian graphical models via neighborhood screening",
+        "authors": [
+            "taulant koka",
+            "jasin machkour",
+            "michael muma"
+        ],
+        "subjects": [
+            "machine learning",
+            "machine learning"
+        ],
+        "abstract": "gaussian graphic model emerg wide rang field model statist relationship variabl graph edg two variabl indic condit depend unfortun wellestablish estim graphic lasso neighborhood select known suscept high preval fals edg detect fals detect may encourag inaccur even incorrect scientif interpret major implic applic biomedicin healthcar paper introduc nodewis variabl select approach graph learn provabl control fals discoveri rate select edg set selfestim level novel fusion method individu neighborhood output undirect graph estim propos method parameterfre requir tune user benchmark compet fals discoveri rate control method numer experi consid differ graph topolog show signific gain perform",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09979"
+    },
+    {
+        "doc_id": 24,
+        "title": "biases expected goals models confound finishing ability",
+        "authors": [
+            "jesse davis",
+            "pieter robberechts"
+        ],
+        "subjects": [
+            "machine learning",
+            "applications"
+        ],
+        "abstract": "expect goal xg emerg popular tool evalu finish skill soccer analyt involv compar player cumul xg actual goal output consist overperform indic strong finish abil howev assess finish skill soccer use xg remain contenti due player difficulti consist outperform cumul xg paper aim address limit nuanc surround evalu finish skill use xg statist specif explor three hypothes 1 deviat actual expect goal inadequ metric due high varianc shot outcom limit sampl size 2 inclus shot cumul xg calcul may inappropri 3 xg model contain bias aris interdepend data affect skill measur found sustain overperform cumul xg requir high shot volum except finish includ shot type obscur finish abil profici striker persist bia make actual expect goal closer excel finish realli overal analysi indic need nuanc quantit approach investig player finish abil achiev use techniqu ai fair learn xg model calibr multipl subgroup player concret use case show 1 standard bias xg model underestim messi gax 17 2 messi gax 27 higher typic elit highshotvolum attack indic messi even except finish peopl commonli believ",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09940"
+    },
+    {
+        "doc_id": 25,
+        "title": "quantile nelsonsiegel model",
+        "authors": [
+            "matteo iacopini",
+            "aubrey poon",
+            "luca rossini",
+            "dan zhu"
+        ],
+        "subjects": [
+            "applications",
+            "econometrics"
+        ],
+        "abstract": "widespread approach model interact macroeconom variabl yield curv reli three latent factor usual interpret level slope curvatur diebold et al 2006 approach inher focus condit mean yield postul dynam linear model latent factor smoothli chang time howev period deep crisi great recess recent pandem highlight import statist model account asymmetr shock abl forecast tail variabl distribut new version dynam threefactor model propos address issu base quantil regress novel approach leverag potenti quantil regress model entir condit distribut yield instead restrict mean applic us data 1970 show signific heterogen interact financi macroeconom variabl across differ quantil moreov outofsampl forecast exercis showcas propos method advantag predict yield distribut tail compar standard condit mean model final inspect posterior distribut three factor recent major crise new evid found support greater longerlast neg impact great recess yield compar covid19 pandem",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09874"
+    },
+    {
+        "doc_id": 26,
+        "title": "wealth dynamics multiaggregate closed monetary system",
+        "authors": [
+            "andrea monaco",
+            "matteo ghio",
+            "adamaria perrotta"
+        ],
+        "subjects": [
+            "theoretical economics"
+        ],
+        "abstract": "examin statist properti close monetari economi multiaggreg interact build upon yakovenko singleag monetari model dragulescu yakovenko 2000 investig joint equilibrium distribut aggreg size wealth compar theoret simul data valid find investig influenc micro dynam macro characterist system distribut addit analyz system converg toward equilibrium variou condit laboratori model may offer valuabl insight macroeconom phenomena allow reproduc typic wealth distribut featur observ real economi",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09871"
+    },
+    {
+        "doc_id": 27,
+        "title": "efficient computation largescale statistical solutions incompressible fluid flows",
+        "authors": [
+            "tobias rohner",
+            "siddhartha mishra"
+        ],
+        "subjects": [
+            "fluid dynamics"
+        ],
+        "abstract": "work present develop perform analysi subsequ optim gpubas spectral hyperviscos solver turbul flow describ three dimension incompress navierstok equat method solv fluid veloc field directli fourier space elimin need solv largescal linear system equat order find pressur field special focu put commun intens transpos oper requir fast fourier transform use distribut memori parallel multipl iter benchmark improv code simul achiev close optim perform piz daint supercomput cluster even outperform cray mpi implement piz daint commun routin optim perform enabl comput largescal statist solut incompress fluid flow three space dimens",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09843"
+    },
+    {
+        "doc_id": 28,
+        "title": "freed improving rl agents fragmentbased molecule generation thorough reproduction",
+        "authors": [
+            "alexander telepov",
+            "artem tsypin",
+            "kuzma khrabrov",
+            "sergey yakukhnov",
+            "pavel strashnov",
+            "petr zhilyaev",
+            "egor rumiantsev",
+            "daniel ezhov",
+            "manvel avetisian",
+            "olga popova",
+            "artur kadurin"
+        ],
+        "subjects": [
+            "biomolecules",
+            "machine learning",
+            "machine learning"
+        ],
+        "abstract": "ration design new therapeut drug aim find molecular structur desir biolog function eg abil activ suppress specif protein via bind molecular dock common techniqu evalu proteinmolecul interact recent reinforc learn rl emerg promis approach gener molecul dock score ds reward work reproduc scrutin improv recent rl model molecul gener call freed arxiv211001219 extens evalu propos method reveal sever limit challeng despit outstand result report three target protein contribut includ fix numer implement bug simplifi model increas qualiti significantli extend experi conduct accur comparison current stateoftheart method proteincondit molecul gener show result fix model capabl produc molecul superior dock score compar altern approach",
+        "comments": "37 pages 10 figures published tmlr journal https wwwjmlrorgtmlr",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09840"
+    },
+    {
+        "doc_id": 29,
+        "title": "jackknife empirical likelihood ratio test testing equality semivariance",
+        "authors": [
+            "saparya",
+            "",
+            "sudheesh",
+            "k k"
+        ],
+        "subjects": [
+            "methodology"
+        ],
+        "abstract": "semivari measur dispers observ fall mean target valu random variabl play import role lifelength actuari incom studi paper develop new nonparametr test equal upper semivari use ustatist theori deriv test statist studi asymptot properti test statist also develop jackknif empir likelihood jel ratio test equal upper semivari extens mont carlo simul studi carri valid perform propos jelbas test illustr test procedur use real data",
+        "comments": "msc class 62g10",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09816"
+    },
+    {
+        "doc_id": 30,
+        "title": "querying easily flipflopped samples deep active learning",
+        "authors": [
+            "seong jin cho",
+            "gwangsu kim",
+            "junghyun lee",
+            "jinwoo shin",
+            "chang yoo"
+        ],
+        "subjects": [
+            "machine learning",
+            "artificial intelligence",
+            "machine learning"
+        ],
+        "abstract": "activ learn machin learn paradigm aim improv perform model strateg select queri unlabel data one effect select strategi base model predict uncertainti interpret measur inform sampl sampl distanc decis boundari natur measur predict uncertainti often intract comput especi complex decis boundari form multiclass classif task address issu paper propos least disagre metric ldm defin smallest probabl disagr predict label estim ldm proven asymptot consist mild assumpt estim comput effici easili implement deep learn model use paramet perturb ldmbase activ learn perform queri unlabel data smallest ldm experiment result show ldmbase activ learn algorithm obtain stateoftheart overal perform consid dataset deep architectur",
+        "comments": "34 pages 17 figures 5 tables accepted 12th international conference learning representations iclr 2024",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09787"
+    },
+    {
+        "doc_id": 31,
+        "title": "crossdomain behavioral credit modeling transferability private central data",
+        "authors": [
+            "didkovskyi",
+            "n jean",
+            "g le pera",
+            "c nordio"
+        ],
+        "subjects": [
+            "risk management",
+            "statistical finance"
+        ],
+        "abstract": "paper introduc credit risk rate model credit risk assess quantit financ aim categor borrow base behavior data model train data experian wide recogn credit bureau effect identifi instanc loan default among bank custom employ stateoftheart statist machin learn techniqu ensur model predict accuraci furthermor assess model transfer test behavior data bank itali demonstr potenti applic across divers dataset predict studi highlight benefit incorpor extern behavior data improv credit risk assess financi institut",
+        "comments": "25 pages 15 figures",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09778"
+    },
+    {
+        "doc_id": 32,
+        "title": "impact limited statistics measured hyperorder cumulants netproton distributions heavyion collisions",
+        "authors": [
+            "lizhu chen",
+            "yeyin zhao",
+            "yunshan cheng",
+            "gang wang",
+            "zhiming li",
+            "yuanfang wu"
+        ],
+        "subjects": [
+            "nuclear theory",
+            "nuclear experiment"
+        ],
+        "abstract": "hyperord cumul c5c1 c6c2 netbaryon distribut anticip offer crucial insight phase transit quarkgluon plasma hadron matter heavyion collis howev accuraci c5 c6 highli conting fine shape distribut tail detect rang could essenti truncat low statist paper use fast skellambas simul well ultrarelativist quantum molecular dynam model assess impact limit statist measur c5c1 c6c2 netproton distribut lower rhic energi ratio decreas uniti baselin reduc statist could even turn neg without pertin physic mechan incorpor statist akin experiment data replic netproton c5c1 c6c2 valu compar correspond measur auau collis sqrt nn 77 115 145 gev find underscor caveat interpret observ beam energi depend hyperord cumul",
+        "comments": "6 pages 7 figures",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09745"
+    },
+    {
+        "doc_id": 33,
+        "title": "kernelbased multimarker tests association based accelerated failure time model",
+        "authors": [
+            "chenxi li",
+            "di wu",
+            "qing lu"
+        ],
+        "subjects": [
+            "methodology"
+        ],
+        "abstract": "kernelbas multimark test surviv outcom use primarili cox model adjust covari proport hazard assumpt made cox model could unrealist especi longterm followup develop suit novel multimark surviv test genet associ base acceler failur time model popular altern cox model due direct physic interpret test base asymptot distribut test statist thu comput effici associ test account heterogen genet effect across subpopulationsindividu increas power new test deal compet risk left truncat moreov develop smallsampl correct test improv accuraci small sampl extens numer experi show new test perform well variou scenario applic genet dataset alzheim diseas illustr test practic util",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09719"
+    },
+    {
+        "doc_id": 34,
+        "title": "fast variational inference latent space models dynamic networks using bayesian psplines",
+        "authors": [
+            "joshua daniel loyal"
+        ],
+        "subjects": [
+            "methodology",
+            "computation"
+        ],
+        "abstract": "latent space model lsm often use analyz dynam timevari network evolv continu time exist approach bayesian infer model reli markov chain mont carlo algorithm handl modern largescal network overcom limit introduc new prior continuoustim lsm base bayesian pspline allow posterior adapt dimens latent space tempor variat latent posit propos stochast variat infer algorithm estim model paramet use stochast optim subsampl dyad observ time point design fast algorithm linear number edg dynam network furthermor establish nonasymptot error bound point estim deriv variat posterior knowledg first result bayesian estim continuoustim lsm lastli use method analyz larg data set intern conflict consist 4456095 relat 2018 2022",
+        "comments": "75 pages 8 figures 2 tables",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09715"
+    },
+    {
+        "doc_id": 35,
+        "title": "rejection sampling vertical weighted strips",
+        "authors": [
+            "andrew raim",
+            "james livsey",
+            "kyle irimata"
+        ],
+        "subjects": [
+            "methodology",
+            "computation"
+        ],
+        "abstract": "number distribut aris statist applic express form weight densiti product base densiti nonneg weight function gener variat distribut may nontrivi involv intract normal constant reject sampl may use gener exact draw requir formul suitabl propos distribut practic use propos must conveni sampl reject candid draw frequent wellknown approach design propos involv decompos target densiti finit mixtur whose compon may correspond partit support work consid construct focus major weight function approach may applic assumpt adapt reject sampl relat algorithm met upper bound reject probabl base construct express evalu effici propos sampl method partit support consid region bifurc base contribut bound exampl base von mise fisher distribut gaussian process regress provid illustr method",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09696"
+    },
+    {
+        "doc_id": 36,
+        "title": "harnessing density ratios online reinforcement learning",
+        "authors": [
+            "philip amortila",
+            "dylan j foster",
+            "nan jiang",
+            "ayush sekhari",
+            "tengyang xie"
+        ],
+        "subjects": [
+            "machine learning",
+            "machine learning"
+        ],
+        "abstract": "theori offlin onlin reinforc learn despit evolv parallel begun show sign possibl unif algorithm analysi techniqu one set often natur counterpart howev notion densiti ratio model emerg paradigm offlin rl larg absent onlin rl perhap good reason exist bounded densiti ratio reli access exploratori dataset good coverag core challeng onlin rl collect dataset without one start work show perhap surprisingli densiti ratiobas algorithm onlin counterpart assum exist exploratori distribut good coverag structur condit known cover xie et al 2023 give new algorithm glow use densiti ratio realiz valu function realiz perform sampleeffici onlin explor glow address unbound densiti ratio via care use truncat combin optim guid explor glow comput ineffici complement effici counterpart hyglow hybrid rl set song et al 2022 wherein onlin rl augment addit offlin data hyglow deriv special case gener metaalgorithm provid provabl blackbox reduct hybrid rl offlin rl may independ interest",
+        "comments": "iclr 2024",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09681"
+    },
+    {
+        "doc_id": 37,
+        "title": "easy javascript simulation ejss data analytics singapore",
+        "authors": [
+            "loo kang wee",
+            "darren tan",
+            "flix jess garcia clemente",
+            "francisco eequembre"
+        ],
+        "subjects": [
+            "physics education",
+            "data analysis statistics probability"
+        ],
+        "abstract": "integr easi javascript simul ejss data analyt nation learn manag system singapor school known singapor student learn space sl ejss data analyt enhanc teach learn experi educ student enabl educ monitor evalu student interact interact comput simul data analyt visualis capabl deliv use moodl platform version 13 specif learn tool interoper lti paper showcas potenti ejss data analyt identifi student learn difficulti misconcept four exampl ejss data analyt applic provid illustr insight aspect includ understand student sequenti action lead specif task outcom frequenc task attempt student ratio student achiev correct versu incorrect task complet identifi five key consider design ejss teacher dashboard consider relat student thought process student behaviour student engag student choic teacher feedback five facet provid framework align design effort need student teacher also draw upon research data analyt educ",
+        "comments": "10 pages 12 figures 26th international conference multimedia physics teaching learning mptl26",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09676"
+    },
+    {
+        "doc_id": 38,
+        "title": "datadriven assessment countylevel breast cancer incidence united states impacts modifiable nonmodifiable factors",
+        "authors": [
+            "tingting zhao",
+            "qing han",
+            "jinfeng zhang"
+        ],
+        "subjects": [
+            "applications"
+        ],
+        "abstract": "femal breast cancer fbc incid rate ir vari greatli counti across unit state us factor respons high spatial dispar well understood make challeng design effect intervent strategi predict fbc ir use prevail machin learn techniqu 1754 us counti femal popul 10000 outlier counti unexpectedli high low fbc ir identifi control nonmodifi factor demograph socioeconom impact modifi factor lifestyl healthcar access environ map studi also shed light hidden fbc risk factor region scale method develop studi may use discov placespecif populationlevel modifi factor intervent type cancer chronic diseas",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09660"
+    },
+    {
+        "doc_id": 39,
+        "title": "elementary particles plasma first hour early universe",
+        "authors": [
+            "cheng tao yang"
+        ],
+        "subjects": [
+            "high energy physics phenomenology",
+            "cosmology nongalactic astrophysics"
+        ],
+        "abstract": "dissert aim deepen understand primordi composit univers temperatur rang 300 mev 002 mev exploit known properti elementari particl appli method kinet theori statist physic advanc understand cosmic plasma within big bang model begin consid univers highli energet firebal ultrarelativist plasma exhibit distinct properti fundament particl quark lepton even heavier gaug boson play crucial role understand earli univers research focus investig fundament particl constitu dens univers plasma epoch transit primordi quarkgluon plasma era normal hadron matter pass decoupl neutrino address detail electronpositron antimatt plasma",
+        "comments": "phd thesis 150 pages 31 figures includes work done collaboration andrew steinmetz christopher grayson martin formanek jeremiah birrell johann rafelski martin formanek cheng tao yang johann rafelski",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09653"
+    },
+    {
+        "doc_id": 40,
+        "title": "functional linear nongaussian acyclic model causal discovery",
+        "authors": [
+            "tianle yang",
+            "kuangyao lee",
+            "kun zhang",
+            "joe suzuki"
+        ],
+        "subjects": [
+            "machine learning",
+            "statistics theory",
+            "neurons cognition",
+            "methodology"
+        ],
+        "abstract": "causal discoveri nongaussian use character complet configur linear nongaussian acycl model lingam encompass causal order variabl respect connect strength howev lingam deal finitedimension case expand concept extend notion variabl encompass vector even function lead function linear nongaussian acycl model funclingam motiv stem desir identifi causal relationship braineffect connect task involv exampl fmri eeg dataset demonstr origin lingam fail handl inher infinitedimension dataset explain avail function data analysi empir theoret perspect establish theoret guarante identifi causal relationship among nongaussian random vector even random function infinitedimension hilbert space address issu sparsiti discret time point within intrins infinitedimension function data propos optim coordin vector use function princip compon analysi experiment result synthet data verifi abil propos framework identifi causal relationship among multivari function use observ sampl real data focu analyz brain connect pattern deriv fmri data",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09641"
+    },
+    {
+        "doc_id": 41,
+        "title": "multiple locally linear kernel machines",
+        "authors": [
+            "david picard"
+        ],
+        "subjects": [
+            "machine learning",
+            "machine learning"
+        ],
+        "abstract": "paper propos new nonlinear classifi base combin local linear classifi well known optim formul given cast problem ell1 multipl kernel learn mkl problem use mani local linear kernel sinc number kernel huge provid scalabl gener mkl train algorithm handl stream kernel respect infer time result classifi fit gap high accuraci slow nonlinear classifi classic mkl fast low accuraci linear classifi",
+        "comments": "paper written 2014 originally submitted rejected icml15",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09629"
+    },
+    {
+        "doc_id": 42,
+        "title": "evaluating treebased imputation methods alternative mice pmm drawing inference empirical studies",
+        "authors": [
+            "jakob schwerter",
+            "ketevan gurtskaia",
+            "andrs romero",
+            "birgit zeyergliozzo",
+            "markus pauly"
+        ],
+        "subjects": [
+            "applications",
+            "machine learning"
+        ],
+        "abstract": "deal miss data import problem statist analysi often address imput procedur perform valid method great import applic empir studi prevail method multipl imput chain equat mice predict mean match pmm consid standard social scienc literatur increas complex dataset may requir advanc approach base machin learn particular treebas imput method emerg competit approach howev perform valid complet understood particularli compar standard mice pmm especi true infer linear model studi investig impact variou imput method coeffici estim type error power gain insight help empir research deal missing effect explor mice pmm alongsid differ treebas method mice random forest rf chain random forest without pmm missrang extrem gradient boost mixgboost conduct realist simul studi use german nation educ panel studi nep origin data sourc result reveal random forestbas imput especi mice rf missrang pmm consist perform better scenario standard mice pmm show partial increas bia overli conserv test decis particularli nontru zero coeffici result thu underscor potenti advantag treebas imput method albeit caveat method perform wors increas missing particularli missrang",
+        "comments": "project prediction agile interventions social sciences fair receiving funding programme profilbildung 2020 initiative ministry culture science state northrhine westphalia sole responsibility content publication lies authors",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09602"
+    },
+    {
+        "doc_id": 43,
+        "title": "statistical analysis optimization fifthpercentile user rate constrained design ffrsfraided ofdmabased cellular networks",
+        "authors": [
+            "jan garca morales",
+            "guillem femenias",
+            "felip riera palou"
+        ],
+        "subjects": [
+            "signal processing"
+        ],
+        "abstract": "interfer mitig strategi deem play key role context next gener b4g5g multicellular network base orthogon frequenc divis multipl access fraction soft frequenc reus ffr sfr constitut two power mechan intercel interfer coordin alreadi adopt emerg cellular deploy effici way improv throughput perform perceiv celledg user paper present novel optim fifthpercentil user rate constrain design ffrsfrbase network appropri dimens center edg region cell rightli split avail bandwidth among two area assign correspond transmit power allow tradeoff cell throughput perform fair establish end cumul distribut function user throughput averag spectral effici system deriv assum use ubiquit proport fair schedul polici mathemat framework use obtain numer result show novel propos design clearli outperform previou scheme term throughput fair control due ration compromis averag cell throughput celledg icic",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09600"
+    },
+    {
+        "doc_id": 44,
+        "title": "asymptotic online fwer control dependent test statistics",
+        "authors": [
+            "vincent jankovic",
+            "lasse fischer",
+            "werner brannath"
+        ],
+        "subjects": [
+            "methodology"
+        ],
+        "abstract": "onlin multipl test priori unknown number hypothes test sequenti ie time point test decis current hypothesi made use data avail far although mani power test procedur develop onlin error control recent year design sole independ local depend test statist work provid new framework deriv onlin multipl test procedur ensur asymptot respect sampl size control familywis error rate fwer regardless depend structur test statist context give concret exampl test procedur discuss properti furthermor conduct simul studi type error control test procedur also confirm finit sampl size gain power indic",
+        "comments": "18 pages 6 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09559"
+    },
+    {
+        "doc_id": 45,
+        "title": "volumelimited sample ultracool dwarfs ii substellar age mass functions solar neighborhood",
+        "authors": [
+            "william j best",
+            "aniket sanghi",
+            "michael c liu",
+            "eugene magnier",
+            "trent j dupuy"
+        ],
+        "subjects": [
+            "solar stellar astrophysics",
+            "earth planetary astrophysics",
+            "astrophysics galaxies"
+        ],
+        "abstract": "present precis constraint date mass age distribut singl ultracool dwarf solar neighborhood base updat volumelimit sampl 504 l dwarf within 25 pc develop mont carlo approach use langl vv rm max rangl statist correct incomplet obtain space densiti 183 015 016 times10 2 pc 3 spectral type l0y2 calcul bolometr luminos sampl use updat supermagnitud method faintest object use result luminos function likelihoodbas popul synthesi approach simultan constrain mass age distribut employ fraction young l0l7 dwarf novel input analysi crucial constrain age distribut powerlaw mass function frac dn dm propto find 058 020 016 indic increas number toward lower mass consist measur nearbi starform region exponenti age distribut b propto e find 044pm014 ie popul fewer old object often assum may reflect dynam heat galact plane much histor brown dwarf birthrat compar analysi kirkpatrick et al 2021 use similar volumelimit sampl although mass function measur numer consist assumpt flat age distribut disfavor analysi identifi sever import methodolog differ two studi calcul age distribut solar neighborhood brown dwarf first base volumelimit sampl",
+        "comments": "accepted apj 49 pages 14 figures 6 tables",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09535"
+    },
+    {
+        "doc_id": 46,
+        "title": "learning new physics data symmetrized approach",
+        "authors": [
+            "shikma bressler",
+            "inbar savoray",
+            "yuval zurgil"
+        ],
+        "subjects": [
+            "high energy physics experiment",
+            "high energy physics phenomenology"
+        ],
+        "abstract": "thousand personyear invest search new physic np major motiv theoret consider yet evid beyond standard model bsm physic found suggest modelagnost search might import key explor np help discov unexpect phenomena inspir futur theoret develop possibl strategi search identifi asymmetri data sampl expect symmetr within standard model sm propos exploit neural network nn quickli fit statist test differ two sampl method base earlier work origin design infer deviat observ dataset much larger refer dataset present symmetr formal gener origin one avoid finetun nn paramet constraint rel size sampl formal could use detect small symmetri violat extend discoveri potenti current futur particl physic experi",
+        "comments": "34 pages 10 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09530"
+    },
+    {
+        "doc_id": 47,
+        "title": "beamdump ceiling experimental implication case portable experiment",
+        "authors": [
+            "doojin kim",
+            "jaehoon yu",
+            "jongchul park",
+            "hyunyong kim"
+        ],
+        "subjects": [
+            "high energy physics phenomenology",
+            "high energy physics experiment"
+        ],
+        "abstract": "gener natur socal beamdump ceil beyond improv sensit reach search fastdecay mediat dramat slow point experiment implic motiv tabletops beamdump experi search light boson mediat wellmotiv newphys particl appear darksector portal scenario model explain variou laboratorybas anomali due low mass feebli interact natur beamdumptyp experi util highintens particl beam play crucial role probe paramet space visibl decay mediat particular promptdecay region mediat featur rel larg coupl mass present gener semianalyt proof ceil effect aris promptdecay region experi show insensit data statist background estim systemat uncertainti consid concret exampl search axionlik particl interact ordinari photon three benchmark beam facil pipii fnal sp lhcdump cern identifi optim criteria perform costeffect shortterm experi reach ceil demonstr shortbaselin compact experi enabl access paramet space unreach thu far",
+        "comments": "6 pages 2 figures 1 table",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09529"
+    },
+    {
+        "doc_id": 48,
+        "title": "universal vortex statistics stochastic geometry boseeinstein condensation",
+        "authors": [
+            "mithun thudiyangal",
+            "adolfo del campo"
+        ],
+        "subjects": [
+            "quantum gases",
+            "statistical mechanics",
+            "quantum physics"
+        ],
+        "abstract": "cool bose ga finit time result format boseeinstein condens spontan prolifer vortic propos vortex spatial statist describ homogen poisson point process ppp densiti dictat kibblezurek mechan kzm valid model use numer simul twodimension stochast grosspitaevskii equat sgpe homogen hardwal trap condens kzm scale averag vortex number cool rate establish along univers charact vortex number distribut spatial statist vortic character analyz twopoint defectdefect correl function correspond space distribut random tessel vortex pattern use voronoi cell area statist combin ppp descript kzm deriv univers theoret predict quantiti find agreement sgpe simul result establish univers charact spatial statist pointlik topolog defect gener continu phase transit associ stochast geometri",
+        "comments": "16 pages 16 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09525"
+    },
+    {
+        "doc_id": 49,
+        "title": "4donix deep learning approach reconstructing 3d movies sparse xray projections",
+        "authors": [
+            "yuhe zhang",
+            "zisheng yao",
+            "robert klfkorn",
+            "tobias ritschel",
+            "pablo villanuevaperez"
+        ],
+        "subjects": [
+            "image video processing",
+            "data analysis statistics probability"
+        ],
+        "abstract": "xray flux provid xray freeelectron laser storag ring offer new spatiotempor possibl studi insitu operando dynam even use singl puls facil xray multiproject imag xmpi novel techniqu enabl volumetr inform use singl puls facil avoid centrifug forc induc stateoftheart timeresolv 3d method timeresolv tomographi result xmpi acquir 3d movi 4d least three order magnitud faster current method howev algorithm reconstruct 4d highli spars project acquir xmpi present 4donix deep learn dl base approach learn reconstruct 3d movi 4d extrem limit number project combin comput physic model xray interact matter stateoftheart dl method demonstr potenti 4donix gener highqual 4d gener multipl experi two project per timestamp binari droplet collis envis 4donix becom enabl tool 4d analysi offer new spatiotempor resolut studi process possibl",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09508"
+    },
+    {
+        "doc_id": 50,
+        "title": "large sensory analysis vegetables conventional organic notill practices",
+        "authors": [
+            "sbastien loustau",
+            "f lefer",
+            "ducos"
+        ],
+        "subjects": [
+            "physics society"
+        ],
+        "abstract": "grow interest agricultur address soil deterior issu achiev sustain agrosystem mani produc introduc notil techniqu show signific yield better ecosystem function well improv carbon water cycl howev sensori analysi compar veget practic scarc paper conduct triangl hedon test 15 panel consum total 950 consum base statist hypothesi test maximum likelihood estim signific statist differ p 005 less produc triangl test hedon rank specif case result show trend sensori prefer notil practic",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09503"
+    },
+    {
+        "doc_id": 51,
+        "title": "functional autoencoder smoothing representation learning",
+        "authors": [
+            "sidi wu",
+            "cdric beaulac",
+            "jiguo cao"
+        ],
+        "subjects": [
+            "machine learning",
+            "machine learning"
+        ],
+        "abstract": "common pipelin function data analysi first convert discret observ data smooth function repres function finitedimension vector coeffici summar inform exist method data smooth dimension reduct mainli focu learn linear map data space represent space howev learn linear represent may suffici studi propos learn nonlinear represent function data use neural network autoencod design process data form usual collect without need preprocess design encod employ project layer comput weight inner product function data function weight observ timestamp decod appli recoveri layer map finitedimension vector extract function data back function space use set predetermin basi function develop architectur accommod regularli irregularli space data experi demonstr propos method outperform function princip compon analysi term predict classif maintain superior smooth abil better comput effici comparison convent autoencod linear nonlinear set",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09499"
+    },
+    {
+        "doc_id": 52,
+        "title": "uncertaintyaware calibration hotwire anemometer gaussian process regression",
+        "authors": [
+            "rubn antonio garcaruiz",
+            "jos luis blancoclaraco",
+            "javier lpezmartnez",
+            "ngel jess callejnferre"
+        ],
+        "subjects": [
+            "machine learning",
+            "applications",
+            "machine learning"
+        ],
+        "abstract": "expens ultrason anemomet usual requir measur wind speed accur aim work overcom loss accuraci low cost hotwir anemomet caus chang air temperatur mean probabilist calibr use gaussian process regress gaussian process regress nonparametr bayesian supervis learn method design make predict unknown target variabl function one known input variabl approach valid real dataset obtain good perform infer actual wind speed valu perform real use field calibr hotwir anemomet take account air temperatur permit wind speed estim typic rang ambient temperatur includ ground uncertainti estim speed measur",
+        "comments": "10 pages 6 figures published ieee sensors journal",
+        "date": "16 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09492"
+    },
+    {
+        "doc_id": 53,
+        "title": "3dmasc accessible explainable 3d point clouds classification application bispectral topobathymetric lidar data",
+        "authors": [
+            "mathilde letard",
+            "dimitri lague",
+            "arthur le guennec",
+            "sbastien lefvre",
+            "baptiste feldmann",
+            "paul leroy",
+            "daniel girardeaumontaut",
+            "thomas corpetti"
+        ],
+        "subjects": [
+            "image video processing"
+        ],
+        "abstract": "threedimension data becom increasingli present earth observ last decad howev mani 3d survey still underexploit due lack access explain automat classif method exampl new topobathymetr lidar data work introduc explain machin learn 3d data classif use multipl attribut scale cloud 3dmasc new workflow workflow introduc multicloud classif dualcloud featur encrypt local spectral geometr ratio differ 3dmasc use classic multiscal descriptor adapt type 3d point cloud new one base spatial variat paper present perform 3dmasc multiclass classif topobathymetr lidar data coastal fluvial environ show multivari embed featur select allow build optim predictor set reduc complex identifi featur particularli relev coastal riverin scene descript result show import dualcloud featur lidar returnbas attribut averag specif scale statist dimensionalitybas spectral featur addit indic small medium spheric neighbourhood diamet 7 suffici build effect classifi name combin distancetoground distancetowatersurfac featur without use option rgb inform maximum 37 descriptor obtain classif accuraci 91 complex multiclass task 98 lowerlevel process use model train less 2000 sampl per class comparison classic point cloud classif method show 3dmasc featur significantli improv descript power contribut made avail plugin cloudcompar softwar allow nonspecialist user creat classifi type 3d data character 1 2 point cloud airborn terrestri lidar structur motion two label topobathymetr lidar dataset avail http opentopographyorg",
+        "comments": "journal ref isprs journal photogrammetry remote sensing 2024 207 pp175197",
+        "date": "15 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09481"
+    },
+    {
+        "doc_id": 54,
+        "title": "uncertaintyaware hardware trojan detection using multimodal deep learning",
+        "authors": [
+            "rahul vishwakarma",
+            "amin rezaei"
+        ],
+        "subjects": [
+            "cryptography security",
+            "artificial intelligence",
+            "machine learning"
+        ],
+        "abstract": "risk hardwar trojan insert variou stage chip product increas zerotrust fabless era counter variou machin learn solut develop detect hardwar trojan focu either statist deep learn approach limit number trojaninfect benchmark affect detect accuraci restrict possibl detect zeroday trojan close gap first employ gener adversari network amplifi data two altern represent modal graph tabular ensur dataset distribut repres manner propos multimod deep learn approach detect hardwar trojan evalu result earli fusion late fusion strategi also estim uncertainti quantif metric predict riskawar decisionmak outcom confirm efficaci propos hardwar trojan detect method also open new door futur studi employ multimod uncertainti quantif address hardwar secur challeng",
+        "comments": "2024 design automation test europe conference european event electronic system design test accepted",
+        "date": "15 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09479"
+    },
+    {
+        "doc_id": 55,
+        "title": "parametric constraints bayesian knowledge tracing first principles",
+        "authors": [
+            "denis shchepakin",
+            "sreecharan sankaranarayanan",
+            "dawn zimmaro"
+        ],
+        "subjects": [
+            "computers society",
+            "machine learning",
+            "machine learning"
+        ],
+        "abstract": "bayesian knowledg trace bkt probabilist model learner state masteri correspond knowledg compon consid learner state masteri hidden latent binari variabl updat state base observ correct learner respons use paramet repres transit probabl state bkt often repres hidden markov model expectationmaxim em algorithm use infer paramet howev algorithm suffer sever issu includ produc multipl viabl set paramet settl local minima produc degener paramet valu high comput cost fit paper take first principl approach deriv constraint impos bkt paramet space start basic mathemat truth probabl build behavior expect bkt paramet real system paper present mathemat deriv result succinct constraint impos bkt paramet space sinc constraint necessari condit appli prior fit order reduc comput cost likelihood issu emerg em procedur order see promis paper introduc novel algorithm estim bkt paramet subject newli defin constraint issu degener paramet valu report previous paper first best knowledg deriv constrain first principl also present algorithm respect constraint",
+        "comments": "msc class 62f15 primary 62m05 60j20 68t30 91e40 secondary",
+        "date": "22 december 2023",
+        "pdf_url": "https://arxiv.org/pdf/2401.09456"
+    },
+    {
+        "doc_id": 56,
+        "title": "reasoning random sets agenda future",
+        "authors": [
+            "fabio cuzzolin"
+        ],
+        "subjects": [
+            "statistics theory",
+            "artificial intelligence",
+            "machine learning"
+        ],
+        "abstract": "paper discuss potenti agenda futur work theori random set belief function touch upon number focal issu develop fullyfledg theori statist reason random set includ generalis logist regress classic law probabl develop geometr approach uncertainti includ gener random set wider rang uncertainti measur altern geometr represent applic new theori highimpact area climat chang machin learn statist learn theori",
+        "comments": "94 pages 17 figures",
+        "date": "19 december 2023",
+        "pdf_url": "https://arxiv.org/pdf/2401.09435"
+    },
+    {
+        "doc_id": 57,
+        "title": "randomized kaczmarz geometrically smoothed momentum",
+        "authors": [
+            "seth j alderman",
+            "roan w luikart",
+            "nicholas f marshall"
+        ],
+        "subjects": [
+            "numerical analysis",
+            "probability",
+            "machine learning"
+        ],
+        "abstract": "paper studi effect ad geometr smooth momentum random kaczmarz algorithm instanc stochast gradient descent linear least squar loss function prove result expect error direct singular vector matrix defin least squar loss present sever numer exampl illustr util result pose sever question",
+        "comments": "21 pages 9 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09415"
+    },
+    {
+        "doc_id": 58,
+        "title": "permutools matlab package multivariate permutation testing",
+        "authors": [
+            "michael j crosse",
+            "john j foxe",
+            "sophie molholm"
+        ],
+        "subjects": [
+            "methodology",
+            "quantitative methods",
+            "computation"
+        ],
+        "abstract": "statist hypothesi test effect size measur routin part quantit research advanc comput process power greatli improv capabl statist infer avail resampl method howev mani statist practic use today base tradit parametr method reli assumpt underli popul assumpt may alway valid lead inaccur result mislead interpret permut test hand gener sampl distribut empir permut observ data provid distributionfre hypothesi test furthermor approach lend power method multipl comparison correct known max correct less prone type ii error convent correct method parametr method also tradit util estim confid interv variou test statist effect size measur howev estim empir use permut bootstrap techniqu whilst resampl method gener consid prefer mani popular program languag statist softwar packag lack effici implement introduc permutool matlab packag multivari permut test effect size measur",
+        "comments": "7 pages 2 figures permutools toolbox see https githubcommickcrossepermutools",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09401"
+    },
+    {
+        "doc_id": 59,
+        "title": "yielding plasticity amorphous solids",
+        "authors": [
+            "ludovic berthier",
+            "giulio biroli",
+            "lisa manning",
+            "francesco zamponi"
+        ],
+        "subjects": [
+            "statistical mechanics",
+            "disordered systems neural networks",
+            "soft condensed matter"
+        ],
+        "abstract": "physic disord media metal glass colloid suspens granular matter biolog tissu offer difficult challeng often occur far equilibrium materi lack symmetri evolv complex energi landscap review recent theoret effort provid microscop insight mechan properti amorph media use approach statist mechan unifi framework cover initi regim correspond small deform yield transit mark chang elast respons plastic flow discuss specif featur aris system evolv near jam transit extend discuss recent studi rheolog dens biolog activ materi",
+        "comments": "20 pages 7 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09385"
+    },
+    {
+        "doc_id": 60,
+        "title": "modelling clusters network time series application presidential elections usa",
+        "authors": [
+            "guy nason",
+            "daniel salnikov",
+            "mario cortinaborja"
+        ],
+        "subjects": [
+            "methodology",
+            "applications"
+        ],
+        "abstract": "network time seri becom increasingli relev studi dynam process characteris known infer underli network structur generalis network autoregress gnar model provid parsimoni framework exploit underli network even highdimension set extend gnar framework introduc textit commun gnar model exploit prior knowledg andor exogen variabl identifi model dynam interact across commun underli network analys dynam textit red blue textit swing state throughout presidenti elect usa analysi show dynam differ among statewis cluster",
+        "comments": "18 pages 12 figures preprint",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09381"
+    },
+    {
+        "doc_id": 61,
+        "title": "merging uncertainty sets via majority vote",
+        "authors": [
+            "matteo gasparin",
+            "aaditya ramdas"
+        ],
+        "subjects": [
+            "methodology"
+        ],
+        "abstract": "given k uncertainti set arbitrarili depend exampl confid interv unknown paramet obtain k differ estim predict set obtain via conform predict base k differ algorithm share data address question effici combin blackbox manner produc singl uncertainti set present simpl broadli applic major vote procedur produc merg set nearli error guarante input set extend core idea way show weight averag power way incorpor prior inform simpl random trick produc strictli smaller merg set without alter coverag guarante along way prove intrigu result rger combin rule eg twice median depend pvalu pvalu strictli improv random deploy onlin set show exponenti weight major algorithm employ order learn good weight time combin method adapt conform infer deliv simpl conform onlin model aggreg coma method nonexchang data",
+        "comments": "26 pages 10 figures 2 tables",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09379"
+    },
+    {
+        "doc_id": 62,
+        "title": "unlocking unlabeled data ensemble learning hui walter paradigm performance estimation online static settings",
+        "authors": [
+            "kevin slote",
+            "elaine lee"
+        ],
+        "subjects": [
+            "machine learning",
+            "statistics theory",
+            "machine learning"
+        ],
+        "abstract": "realm machin learn statist model practition often work assumpt access static label data evalu train howev assumpt often deviat realiti data may privat encrypt difficult tomeasur unlabel paper bridg gap adapt huiwalt paradigm method tradit appli epidemiolog medicin field machin learn approach enabl us estim key perform metric fals posit rate fals neg rate prior scenario ground truth avail extend paradigm handl onlin data open new possibl dynam data environ methodolog involv partit data latent class simul multipl data popul natur popul unavail independ train model replic multipl test crosstabul binari outcom across ensembl categor multipl popul abl estim unknown paramet gibb sampl elimin need groundtruth label data paper showcas potenti methodolog transform machin learn practic allow accur model assess dynam uncertain data condit",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09376"
+    },
+    {
+        "doc_id": 63,
+        "title": "anticipating tipping points disordered traffic critical slowing onset congestion",
+        "authors": [
+            "shankha narayan chattopadhyay",
+            "arvind kumar gupta"
+        ],
+        "subjects": [
+            "dynamical systems"
+        ],
+        "abstract": "regim shift quit common complex system like cell regul diseas transmiss ecosystem marin ice instabl etc sever statist indic known earli warn signal ew theoriz anticip abrupt transit advanc regim shift happen cross critic valu paramet influenc overal dynam critic threshold known tip point vicin tip point perturb gradual increas consequ systemst extens swing around quasistat attractor local dynam becom progress slow known critic slow csd csd statist measur known earli warn signal ew varianc lag1 autocorrel increas point view physic free flow becom congest mean car densiti cross tip point recent lanebas traffic system use continuum model studi reveal analysi gener ewss serv good measur predict upstream stopandgo traffic jam introduc ewss anticip traffic jam heterogen disord traffic relev nonlanebas system analyz lattic hydrodynam area occup model pass numer simul shown emerg kink chaotic jam also provid proper framework predict traffic jam via differ ewss simul data demonstr ewss sensit tip approach",
+        "comments": "12 pages 4 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09364"
+    },
+    {
+        "doc_id": 64,
+        "title": "neural hawkes nonparametric estimation high dimension causality analysis cryptocurrency markets",
+        "authors": [
+            "timothe fabre",
+            "ioane muni toke"
+        ],
+        "subjects": [
+            "trading market microstructure",
+            "mathematical finance"
+        ],
+        "abstract": "propos novel approach mark hawk kernel infer name momentbas neural hawk estim method hawk process fulli character first second order statist fredholm integr equat second kind use recent advanc solv partial differenti equat physicsinform neural network provid numer procedur solv integr equat high dimens togeth adapt train pipelin give gener set hyperparamet produc robust result across wide rang kernel shape conduct extens numer valid simul data final propos two applic method analysi microstructur cryptocurr market first applic extract influenc volum arriv rate btcusd trade second applic analyz causal relationship direct amongst univers 15 cryptocurr pair central exchang",
+        "comments": "",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09361"
+    },
+    {
+        "doc_id": 65,
+        "title": "potential energy landscape flexible water model equationofstate configurational entropy adamgibbs relationship",
+        "authors": [
+            "ali eltareb",
+            "gustavo e lopez",
+            "nicolas giovambattista"
+        ],
+        "subjects": [
+            "soft condensed matter",
+            "chemical physics"
+        ],
+        "abstract": "potenti energi landscap pel formal tool within statist mechan use past calcul equat state eo classic rigid model liquid low temperatur comput simul may challeng work use classic molecular dynam md simul pel formal calcul eo flexibl qtip4pf water model model exhibit liquidliquid critic point llcp supercool regim pc 150 mpa tc 190 k c 104 gcm 3 use reaction field techniqu peleo qtip4pf water correspond locat llcp good agreement md simul show pel qtip4pf water gaussian allow us calcul configur entropi system conf conf qtip4pf water surprisingli similar report previous rigid water model suggest intramolecular flexibl necessarili add rough pel also show adamgibb relat relat diffus coeffici conf hold flexibl qtip4pf water model overal result indic pel formal use studi molecular system includ molecular flexibl common case standard forc field trivial sinc introduct larg bendingstretch mode frequenc problemat classic statist mechan exampl shown previous find highfrequ lead unphys neg entropi qtip4pf water yet pel formal appli success",
+        "comments": "38 pages 9 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09355"
+    },
+    {
+        "doc_id": 66,
+        "title": "high confidence level inference almost free using parallel stochastic optimization",
+        "authors": [
+            "wanrong zhu",
+            "zhipeng lou",
+            "ziyang wei",
+            "wei biao wu"
+        ],
+        "subjects": [
+            "machine learning",
+            "machine learning"
+        ],
+        "abstract": "uncertainti quantif estim stochast optim solut onlin set gain popular recent paper introduc novel infer method focus construct confid interv effici comput fast converg nomin level specif propos use small number independ multirun acquir distribut inform construct tbase confid interv method requir minim addit comput memori beyond standard updat estim make infer process almost costfre provid rigor theoret guarante confid interv demonstr coverag approxim exact explicit converg rate allow high confid level infer particular new gaussian approxim result develop onlin estim character coverag properti confid interv term rel error addit method also allow leverag parallel comput acceler calcul use multipl core easi implement integr exist stochast algorithm without need complic modif",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09346"
+    },
+    {
+        "doc_id": 67,
+        "title": "central limit theorem twotimescale stochastic approximation markovian noise theory applications",
+        "authors": [
+            "jie hu",
+            "vishwaraj doshi",
+            "young eun"
+        ],
+        "subjects": [
+            "machine learning",
+            "machine learning",
+            "optimization control"
+        ],
+        "abstract": "twotimescal stochast approxim ttsa among gener framework iter stochast algorithm includ wellknown stochast optim method sgd variant design bilevel minimax problem well reinforc learn like famili gradientbas tempor differ gtd algorithm paper conduct indepth asymptot analysi ttsa control markovian nois via central limit theorem clt uncov coupl dynam ttsa influenc underli markov chain address previou clt result ttsa martingal differ nois build upon clt expand applic horizon effici sampl strategi vanilla sgd wider ttsa context distribut learn thu broaden scope hu et al 2022 addit leverag clt result deduc statist properti gtd algorithm nonlinear function approxim use markovian sampl show ident asymptot perform perspect evid current finitetim bound",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09339"
+    },
+    {
+        "doc_id": 68,
+        "title": "structure large n expansion su n yangmills theory",
+        "authors": [
+            "marco bochicchio",
+            "mauro papinutto",
+            "francesco scardino"
+        ],
+        "subjects": [
+            "high energy physics theory",
+            "high energy physics phenomenology"
+        ],
+        "abstract": "recent comput shortdist asymptot gener function euclidean correl singletrac twist 2 oper larg n expans su n yangmil ym theori leadingnonplanar order remark structur logarithm function determin sign opposit one would follow spinstatist theorem gluebal order solv sign puzzl reconsid proof literatur hooft topolog expans larg n ym theori leadingnonplanar contribut gener function consist sum punctur n punctur tori discov twist 2 oper contain addit n punctur tori normal tori 1 leq p leq n pinch np punctur exist new sector taken account violat spinstatist theorem disappear moreov new sector contribut trivial nonperturb matrix exampl n pinch toru repres nonperturb loop n gluebal propag extern leg open way exact solut limit new sector may solvabl thank vanish matrix",
+        "comments": "12 pages 16 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09312"
+    },
+    {
+        "doc_id": 69,
+        "title": "asymmetric games networks mapping ising models bounded rationality",
+        "authors": [
+            "filippo zimmaro",
+            "serge galam",
+            "marco alberto javarone"
+        ],
+        "subjects": [
+            "physics society"
+        ],
+        "abstract": "investig dynam coordin consensu agent popul consid agent endow bound ration studi asymmetr coordin game use map random field ise model investig relationship group coordin agent ration analyt calcul numer simul propos model lead novel insight opinion dynam instanc find bound ration prefer intens determin seri possibl scenario differ level opinion polar conclud deem investig open new avenu studi game dynam method statist physic",
+        "comments": "15 pages 4 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09310"
+    },
+    {
+        "doc_id": 70,
+        "title": "simultaneously search multitarget galactic binary gravitational waves reduced parameter space lmpsocv",
+        "authors": [
+            "pin gao",
+            "xilong fan",
+            "zhoujian cao"
+        ],
+        "subjects": [
+            "general relativity quantum cosmology",
+            "high energy astrophysical phenomena",
+            "instrumentation methods astrophysics"
+        ],
+        "abstract": "propos innov approach concurr explor gravit wave origin galact binari develop new local maxima particl swarm optim lmpso algorithm methodolog employ strateg creat void cv streamlin paramet space maxim identif local maxima mathcal f statist even overlap signal case subsequ findreal mathcal f statisticanalysi implement astrophys model properti mathcal f statist paramet space conduct reveal galact binari gravit wave signal within dataset new approach elimin inaccuraci associ signal subtract contamin challeng tradit iterativesubtract method address low signaltonois ratio signal eg snr 15 demonstr efficaci approach util residu lisa mock data challeng ldc14 10982 inject sourc optim snr 15 elimin lmpsocv method effici identifi 8995 signal 477 fals sourc fraction 3463 signal 269 fals sourc fraction correl coeffici threshold set 08",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09300"
+    },
+    {
+        "doc_id": 71,
+        "title": "spectral distribution complexity surface fibrillatory waves predicts postcatheter ablation relapse persistent atrial fibrillation",
+        "authors": [
+            "pilar escribano",
+            "juan rodenas",
+            "manuel garcia",
+            "miguel arias",
+            "jose j rieta",
+            "raul alcaraz"
+        ],
+        "subjects": [
+            "signal processing",
+            "medical physics"
+        ],
+        "abstract": "cardiac arrhythmia atrial fibril af primarili treat cathet ablat ca howev midterm recurr rate procedur persist af patient still limit preoper predict outcom clinic interest select candid could benefit intervent context encourag studi c0 complex novel predictor estim organ power spectral distribut psd fibrillatori wave fwave purpos psd divid two diverg compon use threshold theta consid multipli mean valu psd factor alpha rang 15 25 databas 74 patient valu c0 complex comput alpha factor report statist signific differ patient maintain sinu rhythm relaps af followup 9 month also show higher valu sensit se specif sp accuraci acc well known predictor domin frequenc df fwave amplitud moreov combin df c0 complex comput alpha 2 via decis tree improv classif valu se sp acc 7533 7733 7658 respect result manifest relev fwave psd distribut anticip ca outcom persist af patient",
+        "comments": "journal ref computing cardiology 2022 vol 49",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09297"
+    },
+    {
+        "doc_id": 72,
+        "title": "using pairwise comparisons determine consumer preferences hotel selection",
+        "authors": [
+            "n krivulin",
+            "prinkov",
+            "gladkikh"
+        ],
+        "subjects": [
+            "optimization control",
+            "applications"
+        ],
+        "abstract": "consid problem evalu prefer criteria use univers student select hotel accommod profession develop program foreign countri input data analysi come survey 202 respond indic age sex whether previous visit countri criteria evalu locat accommod cost typic guest free breakfast room amen courtesi staff respond assess criteria directli provid estim absolut rate rank indirectli rel estim use ratio pairwis comparison improv accuraci rate deriv pairwis comparison concurr appli princip eigenvector method geometr mean method method logchebyshev approxim result direct indirect evalu rate rank examin togeth analyz result pairwis comparison may differ result direct assess respond appli statist techniqu estim mean standard deviat correl vector rate rank provid directli indirectli respond use estim make accur assess criteria studi",
+        "comments": "27 pages 16 tables",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09287"
+    },
+    {
+        "doc_id": 73,
+        "title": "new approach find bhmvitense gap",
+        "authors": [
+            "tahereh ramezani",
+            "ernst paunzen",
+            "martin piecka",
+            "michal kajan"
+        ],
+        "subjects": [
+            "astrophysics galaxies"
+        ],
+        "abstract": "paper discuss bhmvitens gap gap colour star occur atmospher chang radi convect deep layer use differ algorithm detect gap colourmagnitud diagram cmd includ knearest neighbour knn unidip algorithm propos use combin knn algorithm unidip algorithm manual verif identifi gap unlik statist origin use gaia photometr system ie bprp took data 130 star cluster search gap rang 040 047 mag 056 060 mag respect analys data statist identifi gap individu cluster final appli kernel densiti estim see gap distribut",
+        "comments": "arxiv admin note text overlap arxiv astroph9802204 authors",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09264"
+    },
+    {
+        "doc_id": 74,
+        "title": "mitigating distribution shift machine learningaugmented hybrid simulation",
+        "authors": [
+            "jiaxi zhao",
+            "qianxiao li"
+        ],
+        "subjects": [
+            "numerical analysis",
+            "dynamical systems",
+            "machine learning"
+        ],
+        "abstract": "studi problem distribut shift gener aris machinelearn augment hybrid simul part simul algorithm replac datadriven surrog first establish mathemat framework understand structur machinelearn augment hybrid simul problem caus effect associ distribut shift show correl distribut shift simul error numer theoret propos simpl methodolog base tangentspac regular estim control distribut shift therebi improv longterm accuraci simul result linear dynam case provid thorough theoret analysi quantifi effect propos method moreov conduct sever numer experi includ simul partial known reactiondiffus equat solv navierstok equat use project method datadriven pressur solver case observ mark improv simul accuraci propos method especi system high degre distribut shift rel strong nonlinear reaction mechan flow larg reynold number",
+        "comments": "msc class 68t99 65m15 37m05",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09259"
+    },
+    {
+        "doc_id": 75,
+        "title": "accurate memory kernel extraction discretized time series data",
+        "authors": [
+            "lucas tepper",
+            "benjamin dalton",
+            "roland r netz"
+        ],
+        "subjects": [
+            "data analysis statistics probability",
+            "computational physics"
+        ],
+        "abstract": "memori effect emerg fundament consequ dimension reduct lowdimension observ use describ dynam complex manybodi system context molecular dynam md data analysi account memori effect use framework gener langevin equat gle proven effici accur insight particularli work highresolut time seri data howev experiment system highresolut data often unavail rais question impact data resolut estim gle paramet studi demonstr direct memori extract remain accur discret time memori time obtain memori function reliabl even discret time exce memori time introduc gaussian process optim gpo scheme scheme minim deviat discret twopoint correl function md gle simul abl estim accur memori kernel long discret time stay longest time scale data typic barrier cross time",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09249"
+    },
+    {
+        "doc_id": 76,
+        "title": "closer look chemical potential ideal agent system",
+        "authors": [
+            "christoph j brner",
+            "ingo hoffmann",
+            "john h stiebel"
+        ],
+        "subjects": [
+            "statistical finance"
+        ],
+        "abstract": "model spin system known statist physic use econometr form agentbas model econophys research econometr increasingli develop gener market model describ exchang phenomena use chemic potenti known physic context particl number chang statist physic equat state known chemic potenti take account respect model framework correspond state variabl simpl transfer equat state problem econophys appear difficult best knowledg equat state chemic potenti current miss even simplest conceiv model ideal agent system paper research gap close equat state chemic potenti deriv econophys model assumpt ideal agent system interpret equat state lead fundament relationship could also guess shown theori",
+        "comments": "11 pages 0 figures working paper theoretical contribution",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09233"
+    },
+    {
+        "doc_id": 77,
+        "title": "optimal transport approach computing adversarial training lower bounds multiclass classification",
+        "authors": [
+            "nicolas garcia trillos",
+            "matt jacobs",
+            "jakwang kim",
+            "matthew werenski"
+        ],
+        "subjects": [
+            "machine learning",
+            "optimization control",
+            "machine learning"
+        ],
+        "abstract": "despit success deep learningbas algorithm wide known neural network may fail robust popular paradigm enforc robust adversari train howev introduc mani comput theoret difficulti recent work develop connect multiclass classif set multimargin optim transport mot unlock new set tool studi problem paper leverag mot connect propos comput tractabl numer algorithm comput univers lower bound optim adversari risk identifi optim classifi propos two main algorithm base linear program lp entrop regular sinkhorn key insight one harmlessli truncat higher order interact class prevent combinatori run time typic encount mot problem valid result experi mnist cifar 10 demonstr tractabl approach",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09191"
+    },
+    {
+        "doc_id": 78,
+        "title": "exploring role convolutional neural networks cnn dental radiography segmentation comprehensive systematic literature review",
+        "authors": [
+            "walid brahmi",
+            "imen jdey",
+            "fadoua drira"
+        ],
+        "subjects": [
+            "computer vision pattern recognition",
+            "machine learning"
+        ],
+        "abstract": "field dentistri grow demand increas precis diagnost tool specif focu advanc imag techniqu comput tomographi cone beam comput tomographi magnet reson imag ultrasound tradit intraor periap xray deep learn emerg pivot tool context enabl implement autom segment techniqu crucial extract essenti diagnost data integr cuttingedg technolog address urgent need effect manag dental condit left undetect signific impact human health impress track record deep learn across variou domain includ dentistri underscor potenti revolution earli detect treatment oral health issu object demonstr signific result diagnosi predict deep convolut neural network cnn repres emerg field multidisciplinari research goal studi provid concis overview state art standard current debat establish baselin futur research method studi systemat literatur review employ methodolog identifi select relev studi specif investig deep learn techniqu dental imag analysi studi elucid methodolog approach includ systemat collect data statist analysi subsequ dissemin outcom conclus work demonstr convolut neural network cnn employ analyz imag serv effect tool detect dental patholog although research acknowledg limit cnn util segment categor teeth exhibit highest level perform overal",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09190"
+    },
+    {
+        "doc_id": 79,
+        "title": "twoscale complexity measure deep learning models",
+        "authors": [
+            "massimiliano datres",
+            "gian paolo leonardi",
+            "alessio figalli",
+            "david sutter"
+        ],
+        "subjects": [
+            "machine learning",
+            "machine learning"
+        ],
+        "abstract": "introduc novel capac measur 2sed statist model base effect dimens new quantiti provabl bound gener error mild assumpt model furthermor simul standard data set popular model architectur show 2sed correl well train error markovian model show effici approxim 2sed layerwis iter approach allow us tackl deep learn model larg number paramet simul result suggest approxim good differ promin model data set",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09184"
+    },
+    {
+        "doc_id": 80,
+        "title": "splitting spacetime systematic analysis foliation dependence cosmic averaging",
+        "authors": [
+            "pierre mourier",
+            "asta heinesen"
+        ],
+        "subjects": [
+            "general relativity quantum cosmology",
+            "cosmology nongalactic astrophysics"
+        ],
+        "abstract": "fundament unsolv question gener rel unambigu character effect collect dynam ensembl fluid element sourc local geometri absenc exact symmetri cosmolog context sometim refer averag problem heart problem rel nonuniqu choic foliat within statist properti local spacetim quantifi lead ambigu formul averag theori led debat literatur best construct view coarsegrain hydrodynam theori address ambigu perform first quantit investig foliat depend cosmolog spatial averag start aim construct slicingindepend integr function volum mass entropi etc well averag function mean densiti averag curvatur etc defin spatial volum section investig infinitesim foliat variat deriv result foliat depend function extrem leav result show one may identifi fulli foliationindepend integr function special scenario requir exist associ conserv current deriv bound foliat depend integr function gener scalar quantiti finit variat within physic motiv class foliat find provid tool use quantifi elimin constrain foliat depend cosmolog averag",
+        "comments": "32 pages comments welcome",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09170"
+    },
+    {
+        "doc_id": 81,
+        "title": "blush gives away detecting hidden mental states remote photoplethysmography thermal imaging",
+        "authors": [
+            "ivan liu",
+            "fangyuan liu",
+            "qi zhong",
+            "fei",
+            "shiguang ni"
+        ],
+        "subjects": [
+            "computers society"
+        ],
+        "abstract": "multimod emot recognit techniqu increasingli essenti assess mental state imagebas method howev tend focu predominantli overt visual cue often overlook subtler mental state chang psychophysiolog research demonstr hr skin temperatur effect detect an activ therebi reveal subtl chang howev tradit hr tool gener costli less portabl skin temperatur analysi usual necessit extens manual process advanc remoteppg automat thermal roi detect algorithm develop address issu yet accuraci practic applic remain limit studi aim bridg gap integr rppg thermal imag enhanc predict perform nineti particip complet 20minut questionnair induc cognit stress follow watch film aim elicit moral elev result demonstr combin rppg thermal imag effect detect emot shift use rppg alon predict accuraci 77 cognit stress 61 moral elev determin svm thermal imag alon achiev 79 accuraci cognit stress 78 moral elev util rf algorithm earli fusion strategi modal significantli improv accuraci achiev 87 cognit stress 83 moral elev use rf analysi util statist metric explain machin learn method includ shap highlight key featur clarifi relationship cardiac respons facial temperatur variat notabl observ cardiovascular featur deriv rppg model pronounc influenc data fusion despit thermal imag higher predict accuraci unimod analysi",
+        "comments": "28 pages 6 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09145"
+    },
+    {
+        "doc_id": 82,
+        "title": "monitoring machine learning forecasts platform data streams",
+        "authors": [
+            "jeroen rombouts",
+            "ines wilms"
+        ],
+        "subjects": [
+            "applications",
+            "machine learning"
+        ],
+        "abstract": "data stream forecast essenti input decis make digit platform machin learn algorithm appeal candid produc forecast yet digit platform requir largescal forecast framework flexibl respond sudden perform drop retrain ml algorithm speed new data batch enter usual comput costli hand infrequ retrain requir specifi retrain frequenc typic come sever cost forecast deterior ensur accur stabl forecast propos simpl datadriven monitor procedur answer question ml algorithm retrain instead investig instabl data stream test incom stream forecast loss batch differ welldefin refer batch use novel dataset constitut 15min frequenc data stream ondemand logist platform oper london appli monitor procedur popular ml algorithm includ random forest xgboost lasso show monitorbas retrain produc accur forecast compar viabl benchmark preserv comput feasibl moreov choic monitor procedur import choic ml algorithm therebi permit practition combin propos monitor procedur one favorit forecast algorithm",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09144"
+    },
+    {
+        "doc_id": 83,
+        "title": "understanding heterophily graph neural networks",
+        "authors": [
+            "junfu wang",
+            "yuanfang guo",
+            "liang yang",
+            "yunhong wang"
+        ],
+        "subjects": [
+            "machine learning",
+            "machine learning"
+        ],
+        "abstract": "graph heterophili regard challeng scenario graph neural network gnn node connect dissimilar neighbor variou pattern paper present theoret understand impact differ heterophili pattern gnn incorpor graph convolut gc oper fulli connect network via propos heterophil stochast block model hsbm gener random graph model accommod divers heterophili pattern firstli show appli gc oper separ gain determin two factor ie euclidean distanc neighborhood distribut sqrt mathbb e left operatornam deg right mathbb e left operatornam deg right averag node degre reveal impact heterophili classif need evalu alongsid averag node degre secondli show topolog nois detriment impact separ equival degrad mathbb e left operatornam deg right final appli multipl gc oper show separ gain determin normal distanc l power neighborhood distribut indic node still possess separ l goe infin wide rang regim extens experi synthet realworld data verifi effect theori",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09125"
+    },
+    {
+        "doc_id": 84,
+        "title": "hybrid tauleap simulating chemical kinetics applications parameter estimation",
+        "authors": [
+            "thomas trigo trindade",
+            "konstantinos c zygalakis"
+        ],
+        "subjects": [
+            "molecular networks",
+            "numerical analysis",
+            "computation"
+        ],
+        "abstract": "consid problem effici simul stochast model chemic kinet gillespi stochast simul algorithm ssa often use simul model howev mani scenario interest comput cost quickli becom prohibit exasper bayesian infer context estim paramet chemic model intract likelihood requir multipl simul underli system deal issu comput complex paper propos novel hybrid leap algorithm simul wellmix chemic system particular algorithm use leap appropri high popul densiti ssa necessari low popul densiti discret effect becom nonneglig intermedi regim combin two method leverag properti underli poisson formul employ illustr number numer experi hybrid offer signific comput save compar ssa without howev sacrif overal accuraci featur particularli welcom bayesian infer context allow paramet estim stochast chemic kinet reduc comput cost",
+        "comments": "25 pages 8 figures",
+        "date": "18 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09097"
+    },
+    {
+        "doc_id": 85,
+        "title": "fixedbudget differentially private best arm identification",
+        "authors": [
+            "zhirui chen",
+            "p n karthik",
+            "yeow meng chee",
+            "vincent f tan"
+        ],
+        "subjects": [
+            "machine learning",
+            "artificial intelligence",
+            "information theory",
+            "statistics theory",
+            "machine learning"
+        ],
+        "abstract": "studi best arm identif bai linear bandit fixedbudget regim differenti privaci constraint arm reward support unit interv given finit budget privaci paramet varepsilon 0 goal minimis error probabl find arm largest mean sampl round subject constraint polici decis maker satisfi certain em varepsilon differenti privaci varepsilon dp constraint construct polici satisfi varepsilon dp constraint call sc dpbai propos principl em maximum absolut determin deriv upper bound error probabl furthermor deriv minimax lower bound error probabl demonstr lower upper bound decay exponenti expon two bound match orderwis suboptim gap arm b varepsilon c problem complex express sum two term one characteris complex standard fixedbudget bai without privaci constraint account varepsilon dp constraint addit present auxiliari result contribut deriv lower bound error probabl result posit may independ interest could prove instrument prove lower bound error probabl sever bandit problem wherea prior work provid result bai fixedbudget regim without privaci constraint fixedconfid regim privaci constraint work fill gap literatur provid result bai fixedbudget regim varepsilon dp constraint",
+        "comments": "accepted iclr 2024",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09073"
+    },
+    {
+        "doc_id": 86,
+        "title": "accelerating hep simulations neural importance sampling",
+        "authors": [
+            "nicolas deutschmann",
+            "niklas gtz"
+        ],
+        "subjects": [
+            "high energy physics phenomenology",
+            "high energy physics experiment",
+            "high energy physics theory",
+            "computational physics",
+            "data analysis statistics probability"
+        ],
+        "abstract": "virtual highenergyphys hep simul lhc reli mont carlo use import sampl mean vega algorithm howev complex highprecis calcul becom challeng standard toolbox result keen interest hep modern machin learn power adapt sampl despit previou work prove normalizingflowpow neural import sampl ni sometim outperform vega exist research still left major question open intend solv introduc zni fulli autom ni librari first show extend origin formul ni reus sampl multipl gradient step yield signific improv slow function benchmark zni rang problem show high perform limit finetun librari use nonexpert minim effort crucial becom matur tool wider hep public",
+        "comments": "28 pages 11 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09069"
+    },
+    {
+        "doc_id": 87,
+        "title": "irsenhanced antijamming precoding disco physical layer jamming attacks",
+        "authors": [
+            "huan huang",
+            "hongliang zhang",
+            "yi cai",
+            "yunjing zhang",
+            "lee swindlehurst",
+            "zhu han"
+        ],
+        "subjects": [
+            "information theory",
+            "signal processing"
+        ],
+        "abstract": "illegitim intellig reflect surfac irss pose signific physic layer secur risk multius multipleinput singleoutput mumiso system recent disco approach propos illegitim ir random timevari reflect coeffici refer disco ir dir dir attack mumiso system without reli either jam power channel state inform csi classic antijam techniqu ineffect dirsbas fullypass jammer dirsbas fpj paper propos irsenhanc antijam precod dirsbas fpj requir statist rather instantan csi dirsjam channel specif legitim ir introduc reduc strength dirsbas jam rel transmit signal legitim user lu addit activ beamform legitim access point ap design maxim signaltojammingplusnois ratio sjnr numer result present evalu effect propos irsenhanc antijam precod dirsbas fpj",
+        "comments": "paper accepted ieee icc 2024",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09036"
+    },
+    {
+        "doc_id": 88,
+        "title": "novel interpretable fusion analytic framework investigating functional brain connectivity differences cognitive impairments",
+        "authors": [
+            "yeseul jeon",
+            "jeongjae kim",
+            "sumin yu",
+            "junggu choi",
+            "sanghoon han"
+        ],
+        "subjects": [
+            "applications"
+        ],
+        "abstract": "function magnet reson imag fmri data character complex high dimension encompass signal variou region interest roi exhibit intric correl analyz fmri data directli prove challeng due intric structur nevertheless roi convey crucial inform brain activ connect offer insight distinct brain activ characterist differ group address propos cuttingedg interpret fusion analyt framework facilit identif understand roi connect dispar two group therebi reveal uniqu featur novel approach encompass three key step firstli construct roi function connect network fcn effect manag fmri data secondli employ fcn util self attent deep learn model binari classif gener attent distribut encod group differ lastli employ latent space itemrespons model extract group repres roi featur visual featur group summari fcn valid effect framework analyz four type cognit impair showcas capabl identifi signific roi contribut differ two diseas group novel interpret fusion analyt framework hold immens potenti advanc understand cognit impair could pave way target therapeut intervent",
+        "comments": "arxiv admin note text overlap arxiv220701581",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09028"
+    },
+    {
+        "doc_id": 89,
+        "title": "fast parallel sampling isoperimetry",
+        "authors": [
+            "nima anari",
+            "sinho chewi",
+            "thuyduong vuong"
+        ],
+        "subjects": [
+            "data structures algorithms",
+            "statistics theory",
+            "machine learning"
+        ],
+        "abstract": "show sampl parallel distribut mathbb rd satisfi logsobolev inequ smooth logdens parallel langevin resp underdamp langevin algorithm show algorithm output sampl distribut hat close kullback leibler kl diverg resp total variat tv distanc use log 1 parallel round widetild resp widetild sqrt gradient evalu total constitut first parallel sampl algorithm tv distanc guarante main applic show combin tv distanc guarante algorithm prior work obtain rnc samplingtocount reduct famili discret distribut hypercub pm 1 n close exponenti tilt bound covari consequ obtain rnc sampler direct eulerian tour asymmetr determinant point process resolv open question rais prior work",
+        "comments": "23 pages",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09016"
+    },
+    {
+        "doc_id": 90,
+        "title": "estimation tsallis entropy exponentially distributed several populations",
+        "authors": [
+            "naveen kumar",
+            "ambesh dixit",
+            "vivek vijay"
+        ],
+        "subjects": [
+            "statistics theory"
+        ],
+        "abstract": "studi estim tsalli entropi finit number independ popul follow exponenti distribut scale paramet distinct locat paramet q 0 deriv steintyp improv estim establish inadmiss best affin equivari estim paramet function class smooth estim util brewster techniqu obtain result signific improv risk valu comput brewsterzidek estim one two popul illustr comparison best affin equivari steintyp estim deriv bayesian estim employ invers gamma prior take best affin equivari estim particular case provid numer illustr util simul sampl singl popul purpos demonstr impact sampl size locat paramet entrop index estim",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09009"
+    },
+    {
+        "doc_id": 91,
+        "title": "enablers barriers empathy software developer user interaction mixed methods case study",
+        "authors": [
+            "hashini gunatilake",
+            "john grundy",
+            "rashina hoda",
+            "ingo mueller"
+        ],
+        "subjects": [
+            "software engineering"
+        ],
+        "abstract": "softwar engin se requir develop collabor stakehold understand emot perspect often vital empathi concept characteris person abil understand share feel anoth howev empathi continu underresearch human aspect se studi empathi practis develop end user use mix method case studi use empathi test observ interview collect data socio technic ground theori descript statist analys data identifi natur awar requir trigger empathi enabl empathi discov barrier empathi set potenti strategi overcom barrier report insight emerg relationship present set recommend potenti futur work empathi se softwar practition se research",
+        "comments": "",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.09001"
+    },
+    {
+        "doc_id": 92,
+        "title": "tradeoff dependence complexity nonparametric learning empirical process approach",
+        "authors": [
+            "nabarun deb",
+            "debarghya mukherjee"
+        ],
+        "subjects": [
+            "statistics theory",
+            "machine learning"
+        ],
+        "abstract": "empir process theori iid observ emerg ubiquit tool understand gener properti variou statist problem howev mani applic data exhibit tempor depend eg financ medic imag weather forecast etc correspond empir process much less understood motiv observ present gener bound expect supremum empir process standard mix assumpt unlik prior work result cover long shortrang regim depend main result show nontrivi tradeoff complex underli function class depend among observ character learn rate larg class nonparametr problem tradeoff reveal new phenomenon name even longrang depend possibl attain rate iid set provid underli function class complex enough demonstr practic implic find analyz variou statist estim fix grow dimens main exampl includ comprehens case studi gener error bound nonparametr regress smooth class fix well grow dimens use neural net shaperestrict multivari convex regress estim optim transport wasserstein distanc two probabl distribut classif mammentsybakov margin condit appropri mix assumpt process also develop bound lr 1le rle 2 local empir process depend observ leverag get faster rate tuningfre adapt b setstructur learn problem",
+        "comments": "94 pages 1 figure",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08978"
+    },
+    {
+        "doc_id": 93,
+        "title": "nonparametric mean variance adaptive classification rule highdimensional data heteroscedastic variances",
+        "authors": [
+            "seungyeon oh",
+            "hoyoung park"
+        ],
+        "subjects": [
+            "applications"
+        ],
+        "abstract": "studi introduc innov methodolog aim enhanc fisher linear discrimin analysi lda context highdimension data classif scenario specif address situat featur exhibit distinct varianc approach leverag nonparametr maximum likelihood estim npmle techniqu estim mean varianc paramet accommod vari varianc among featur propos method lead notabl improv classif perform particular unlik numer prior studi assum distribut heterogen varianc follow rightskew invers gamma distribut propos method demonstr excel perform even distribut heterogen varianc take leftskew symmetr rightskew form conduct seri rigor experi empir valid effect approach result experi demonstr propos methodolog excel accur classifi highdimension data character heterogen varianc",
+        "comments": "25 pages 7 figures",
+        "date": "17 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08975"
+    },
+    {
+        "doc_id": 94,
+        "title": "powerful precise featurelevel filter using group knockoffs",
+        "authors": [
+            "jiaqi gu",
+            "zihuai"
+        ],
+        "subjects": [
+            "methodology"
+        ],
+        "abstract": "select import featur substanti effect respons provabl typei error rate control fundament concern statist widerang practic applic exist knockoff filter although shown provid theoret guarante fals discoveri rate fdr control often struggl strike balanc high power precis pinpoint import featur exist larg group strongli correl featur address challeng develop new filter use group knockoff achiev power precis select import featur via experi simul data analysi real alzheim diseas genet dataset found propos filter control proport fals discoveri also identifi import featur compar power greater precis exist group knockoff filter",
+        "comments": "34 pages 5 figures",
+        "date": "16 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08941"
+    },
+    {
+        "doc_id": 95,
+        "title": "transportation professionals perceive impacts ai applications transportation latent class cluster analysis",
+        "authors": [
+            "yiheng qian",
+            "tejaswi polimetla",
+            "thomas w sanchez",
+            "xiang yan"
+        ],
+        "subjects": [
+            "applications",
+            "computers society"
+        ],
+        "abstract": "recent year wit increas number artifici intellig ai applic transport new emerg technolog ai potenti advanc transport goal full extent impact transport sector yet well understood transport commun explor topic critic understand transport profession drive forc behind ai transport applic perceiv ai potenti effici equiti impact toward goal survey transport profession unit state collect total 354 respons base survey respons conduct descript analysi latent class cluster analysi lcca former provid overview preval attitud among transport profession latter allow identif distinct segment base latent attitud toward ai find widespread optim regard ai potenti improv mani aspect transport eg effici cost reduct travel experi howev respons mix regard ai potenti advanc equiti moreov mani respond concern ai ethic well understood transport commun ai use transport could exagger exist inequ lcca identifi four latent segment ai neutral ai optimist ai pessimist ai skeptic latent class membership significantli associ respond age educ level ai knowledg level overal studi result shed light extent transport commun whole readi leverag ai system transform current practic inform target educ improv understand ai among transport profession",
+        "comments": "",
+        "date": "16 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08915"
+    },
+    {
+        "doc_id": 96,
+        "title": "dcrmta unbiased causal representation multitouch attribution",
+        "authors": [
+            "jiaming tang"
+        ],
+        "subjects": [
+            "machine learning",
+            "artificial intelligence",
+            "methodology"
+        ],
+        "abstract": "multitouch attribut mta current play pivot role achiev fair estim contribut advertis touchpoint toward convers behavior deepli influenc budget alloc advertis recommend tradit multitouch attribut method initi build convers predict model anticip learn inher relationship touchpoint sequenc user purchas behavior histor data base counterfactu touchpoint sequenc construct origin sequenc subset convers estim use predict model thu calcul advertis contribut covert assumpt method unbias natur convers predict model howev due confound variabl factor aris user prefer internet recommend mechan homogen ad recommend result past shop record bia easili occur convers predict model train observ data paper redefin causal effect user featur convers propos novel endtoend approach deep causal represent mta dcrmta model elimin confound variabl extract featur causal relat convers user furthermor extens experi synthet realworld criteo data demonstr dcrmta superior perform convert predict across vari data distribut also effect attribut valu across differ advertis channel",
+        "comments": "9 pages 7 figures",
+        "date": "16 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08875"
+    },
+    {
+        "doc_id": 97,
+        "title": "benchmarking particle filter algorithms efficient velodynebased vehicle localization",
+        "authors": [
+            "jose luis blancoclaraco",
+            "francisco maasalvarez",
+            "jose luis torresmoreno",
+            "francisco rodriguez",
+            "antonio gimenezfernandez"
+        ],
+        "subjects": [
+            "robotics",
+            "applications"
+        ],
+        "abstract": "keep vehicl wellloc within prebuiltmap core autonom vehicl navig system work show standard sir sampl rejectionbas optim sampl suitabl effici 10 20 ms realtim pose track without featur detect use raw point cloud 3d lidar motiv larg amount inform captur sensor perform systemat statist analysi mani point actual requir reach optim ratio effici posit accuraci furthermor initi advers condit eg poor gp signal urban canyon also identifi optim particl filter set requir ensur converg find includ decim factor 100 200 incom point cloud provid larg save comput cost neglig loss local accuraci vlp16 scanner furthermor initi densiti sim 2 particlesm 2 requir achiev 100 converg success largescal sim 100000 2 outdoor global local without addit hint gp magnet field sensor implement releas opensourc softwar",
+        "comments": "24 pages 13 figures",
+        "date": "16 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08870"
+    },
+    {
+        "doc_id": 98,
+        "title": "effect intrinsic dataset properties generalization unraveling learning differences natural medical images",
+        "authors": [
+            "nicholas konz",
+            "maciej mazurowski"
+        ],
+        "subjects": [
+            "computer vision pattern recognition",
+            "machine learning",
+            "image video processing",
+            "machine learning"
+        ],
+        "abstract": "paper investig discrep neural network learn differ imag domain commonli overlook adopt comput vision techniqu domain natur imag special domain medic imag recent work found gener error train network typic increas intrins dimens data train set yet steep relationship vari significantli medic radiolog natur imag domain exist theoret explan address gap knowledg establish empir valid gener scale law respect data propos substanti scale discrep two consid domain may least partial attribut higher intrins label sharp kf medic imag dataset metric propos next demonstr addit benefit measur label sharp train set neg correl train model adversari robust notabl lead model medic imag substanti higher vulner adversari attack final extend data formal relat metric learn represent intrins dimens repr deriv gener scale law respect repr show data serv upper bound repr theoret result support thorough experi six model eleven natur medic imag dataset rang train set size find offer insight influenc intrins dataset properti gener represent learn robust deep neural network",
+        "comments": "iclr 2024 code https githubcommazurowskilabintrinsicproperties",
+        "date": "16 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08865"
+    },
+    {
+        "doc_id": 99,
+        "title": "empirical study counterfactual visualization support visual causal inference",
+        "authors": [
+            "arran zeyu wang",
+            "david borland",
+            "david gotz"
+        ],
+        "subjects": [
+            "humancomputer interaction"
+        ],
+        "abstract": "counterfactu express might true differ circumst wide appli statist machin learn help understand causal relationship recent counterfactu begun emerg techniqu appli within visual research howev remain unclear extent counterfactu aid visual data commun paper primarili focu assess qualiti user understand data provid counterfactu visual propos preliminari model causal comprehens connect theori causal infer visual data commun leverag model conduct empir studi explor counterfactu improv user understand data static visual result indic visual counterfactu posit impact particip interpret causal relat within dataset result motiv discuss effect incorpor counterfactu data visual",
+        "comments": "accepted publication information visualization",
+        "date": "16 january 2024",
+        "pdf_url": "https://arxiv.org/pdf/2401.08822"
+    }
+]
