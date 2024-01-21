@@ -65,7 +65,7 @@ try:
     with open('dataset/preprocessed_dataset.json', 'r') as file:
         preprocessed_data = json.load(file)
 
-    inverted_index = create_inverted_index(preprocessed_data)
+    inverted_index = create_inverted_index(preprocessed_data , 'abstract')
     with open('dataset/inverted_index.txt', 'w') as file2:
         for key, value in inverted_index.items():
             file2.write(f"{key} --> {value}\n")
