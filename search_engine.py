@@ -74,10 +74,18 @@ class SearchEngine:
             results_boolean = query_processing(boolean_query, self.inverted_index, self.dataset)
 
 
-    def create_boolean_stack(self, query):
+    def replace_terms_with_docs(self, query):
         terms = word_tokenize(query.lower())
-        stack_boolean = []
-        count_stack = 0
+        for term in terms:
+            if term in self.inverted_index:
+                if term != 'not' and term != 'and' and term != 'or' and term != '(' and term != ')':
+                    docs_term = self.inverted_index[term]
+                    terms[terms.index(term)] = docs_term
+
+        return terms
+
+    def create_boolean_stack(self, terms):
+        res = []
         while len(terms) > 1:
             if '(' and ')' in terms:
                 start = terms.index('(')
@@ -85,47 +93,36 @@ class SearchEngine:
                 subterms = terms[start + 1:end]
                 while (len(subterms) > 1):
                     if 'not' in subterms:
-                        stack_boolean, count_stack, subterms = self.not_query(stack_boolean, count_stack, subterms)
+                        not_index = subterms.index('not')
+                        not_query = subterms[not_index:not_index+2]
+                        res = query_processing(not_query, self.dataset)
+                        subterms[not_index] = res 
+                        subterms.pop(not_index + 1)
                     else:
-                        stack_boolean, count_stack, subterms = self.and_or_query(stack_boolean, count_stack, subterms)
-                terms[start] = str(count_stack)
+                        and_or_query = subterms[0:3]
+                        res = query_processing(and_or_query, self.dataset)
+                        subterms[0] = res 
+                        subterms.pop(1)
+                        subterms.pop(1) 
+                terms[start] = [num for sublist in subterms for num in sublist]
                 del terms[start + 1:end + 1]
             else:
                 if 'not' in terms:
-                    stack_boolean, count_stack, subterms = self.not_query(stack_boolean, count_stack, terms)
+                    not_index = terms.index('not')
+                    not_query = terms[not_index:not_index+2]
+                    res = query_processing(not_query, self.dataset)
+                    terms[not_index] = res 
+                    terms.pop(not_index + 1)
                 else:
-                    stack_boolean, count_stack, subterms = self.and_or_query(stack_boolean, count_stack, terms)       
+                    and_or_query = terms[0:3]
+                    res = query_processing(and_or_query, self.dataset)
+                    terms[0] = res 
+                    terms.pop(1)
+                    terms.pop(1)        
 
-        return stack_boolean
+        return res
     
-    def not_query(self, stack_boolean, count_stack, terms):
-        not_index = terms.index('not')
-        not_query = terms[not_index:not_index+2]
-        stack_boolean.append(' '.join(not_query))
-        count_stack += 1
-        terms[not_index] = str(count_stack)
-        terms.pop(not_index + 1)
-        
-        return stack_boolean, count_stack, terms
     
-
-    def and_or_query(self, stack_boolean, count_stack, terms):
-        query = terms[0:3]
-        stack_boolean.append(' '.join(query))
-        count_stack += 1
-        terms[0] = str(count_stack)
-        terms.pop(1)
-        terms.pop(1)
-
-        return stack_boolean, count_stack, terms
-   
-
- 
-
-
-
-
-
     def search_papers_vector_space_model(self, query):
         vector_space_model_results = []
         # Step 1: Tokenize and preprocess the text
