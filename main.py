@@ -15,7 +15,7 @@ try:
         Βήμα 1. Σταχυολογητής (Web Crawler)
  
     """""""""""""""""""""""""""""""""""""""""""""
- 
+    '''
     subjects = ['Physics', 'Mathematics', 'Computer Science', 'Quantitative Biology', 'Quantitative Finance', 'Statistics', 'Electrical Engineering and Systems Science', 'Economics']
 
     num_subjects = random.randint(1, len(subjects))
@@ -28,7 +28,7 @@ try:
     with open('dataset/dataset.json', 'w') as f:
         json.dump(documents, f, indent=4)
  
-
+    '''
     """"""""""""""""""""""""""""""""""""""""""""" 
     
         Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
@@ -77,13 +77,13 @@ try:
     
     """""""""""""""""""""""""""""""""""""""""""""
     se = SearchEngine(inverted_index)
-    #se.init_gui()
-    query = "abil or abl and not ablat or (abrupt and not absenc) or not absent and not (absolut or absorb)"
+    se.init_gui()
+    #query = "abil or abl and not ablat or (abrupt and not absenc) or not absent and not (absolut or absorb)"
     #for i, boolean in enumerate(se.search_papers_boolean_retrieval(query)):
      #   print(f"{i + 1} : {boolean}\n")
-    results = se.search_papers_boolean_retrieval(query)
-    for i, boolean in enumerate(results):
-        print(f"{i + 1} : {boolean}\n")
+    #results = se.search_papers_boolean_retrieval(query)
+    #for i, boolean in enumerate(results):
+    #    print(f"{i + 1} : {boolean}\n")
     
 except Exception as ex: 
     print("_____________________Εξαίρεση_____________________")

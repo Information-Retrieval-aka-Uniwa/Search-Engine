@@ -20,7 +20,11 @@ class SearchEngine:
             self.dataset = json.load(file)               
         with open('dataset/preprocessed_dataset.json', 'r') as file:
             self.preprocessed_dataset = json.load(file)
-        self.inverted_index = inverted_index      
+        self.inverted_index = inverted_index
+
+        self.boolean_results = [] 
+        self.vector_space_model_results = []
+        self.okapi_bm25_results = []     
 
     def init_gui(self):
         # ----- Παράθυρο διεπαφής χρήστη -----
@@ -47,7 +51,25 @@ class SearchEngine:
 
         # ----- Κουμπί αναζήτησης -----
         search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query)
-        search_button.pack()                                                       
+        search_button.pack()
+        
+         # ----- Πεδίο επιλογής φιλτρου -----
+        options = ["Authors", "Date"]           
+        combobox2 = ttk.Combobox(window, values=options, state="readonly", width=30) 
+        combobox2.set("Επιλογή Φίλτρου")                                
+        combobox2.pack()
+
+        # ----- Επιλογή φίλτρου -----
+        def get_filter():                                                        
+            filter = combobox2.get()          
+            print("Filtered by: ", filter)
+            self.filtering(filter, combobox.get())
+            if combobox.get() == "Boolean Retrieval":
+                print("Boolean Results: ", self.boolean_results)
+
+        # ----- Κουμπί επιλογής -----
+        filter_button = tkinter.Button(window, text="Αναζήτηση", command=get_filter)
+        filter_button.pack()                                                      
 
         # ----- Εκτέλεση του παραθύρου -----
         window.mainloop()
@@ -170,7 +192,70 @@ class SearchEngine:
     
         return score
     
-                 
+
+    def filtering(self, filtering_choice, retrieval_algorithm):
+
+        results = [] 
+
+        if retrieval_algorithm == "Boolean Retrieval":
+            
+          if filtering_choice == "Authors":
+              
+                self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'][0])
+                
+                
+                for preprocessed_paper in self.preprocessed_dataset:
+                    for paper in self.boolean_results:
+                        if paper == preprocessed_paper['doc_id']:                               
+                            results.append(paper)
+
+                print(results)
+        
+          else:
+
+            if filtering_choice == "Date":
+              
+                self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['date'])
+
+                for preprocessed_paper in self.preprocessed_dataset:
+                    for paper in self.boolean_results:
+                        if paper == preprocessed_paper['doc_id']:                               
+                            results.append(paper)
+
+                print(results)
+                
+
+        else:
+            if filtering_choice == "Authors":
+                    self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'][0])
+                    for preprocessed_paper in self.preprocessed_dataset:
+                        for paper in self.dataset:
+                            if paper['doc_id'] == preprocessed_paper['doc_id']:
+                                print(paper['doc_id'])
+                                print(paper['title'])
+                                print(paper['authors'])
+                                print(paper['subjects'])
+                                print(paper['comments'])
+                                print(paper['abstract'])
+                                print(paper['date'])
+                                print(paper['pdf_url'])
+                                print("\n")
+
+
+            if filtering_choice == "Date":
+                    self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['date'])
+                    for preprocessed_paper in self.preprocessed_dataset:
+                        for paper in self.dataset:
+                            if paper['doc_id'] == preprocessed_paper['doc_id']:
+                                print(paper['doc_id'])
+                                print(paper['title'])
+                                print(paper['authors'])
+                                print(paper['subjects'])
+                                print(paper['comments'])
+                                print(paper['abstract'])
+                                print(paper['date'])
+                                print(paper['pdf_url'])
+                                print("\n")           
         
 
 
