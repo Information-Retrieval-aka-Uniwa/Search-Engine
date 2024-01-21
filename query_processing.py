@@ -26,6 +26,8 @@ def replace_terms_with_docs(query, inverted_index):
             if term != 'not' and term != 'and' and term != 'or' and term != '(' and term != ')':
                 docs_term = inverted_index[term]
                 terms[terms.index(term)] = docs_term
+        else:
+            raise Exception("Term not found in the inverted index")
 
     return terms
 
