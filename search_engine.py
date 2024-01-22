@@ -22,9 +22,7 @@ class SearchEngine:
             self.preprocessed_dataset = json.load(file)
         self.inverted_index = inverted_index
 
-        self.results_boolean = [] 
-        self.vector_space_model_results = []
-        self.okapi_bm25_results = []     
+        self.results_boolean = []    
 
     def init_gui(self):
         # ----- Παράθυρο διεπαφής χρήστη -----
@@ -64,8 +62,6 @@ class SearchEngine:
             filter = combobox2.get()          
             print("Filtered by: ", filter)
             self.filtering(filter, combobox.get())
-            if combobox.get() == "Boolean Retrieval":
-                print("Boolean Results: ", self.results_boolean)
 
         # ----- Κουμπί επιλογής -----
         filter_button = tkinter.Button(window, text="Αναζήτηση", command=get_filter)
@@ -76,8 +72,8 @@ class SearchEngine:
 
     def search_papers(self, search_query, retrieval_algorithm):
         if retrieval_algorithm == "Boolean Retrieval":
-            results_boolean = self.search_papers_boolean_retrieval(search_query)
-            print(results_boolean)
+            self.results_boolean = self.search_papers_boolean_retrieval(search_query)
+            print(self.results_boolean)
         elif retrieval_algorithm == "Vector Space Model":
             results_vsm = self.search_papers_vector_space_model(search_query)
             for paper, similarity in results_vsm:
@@ -201,19 +197,28 @@ class SearchEngine:
             
           if filtering_choice == "Authors":
               
-                self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'][0])
-                
+
+                self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'])
 
                 for preprocessed_paper in self.preprocessed_dataset:
                     for paper in self.results_boolean:
                         if paper == preprocessed_paper['doc_id']:                               
                             results.append(paper)
 
-                print(results)
+                for result in results:
+                    for paper in self.dataset:
+                        if paper['doc_id'] == result:
+                            print(paper['doc_id'])
+                            print(paper['title'])
+                            print(paper['authors'])
+                            print(paper['subjects'])
+                            print(paper['comments'])
+                            print(paper['abstract'])
+                            print(paper['date'])
+                            print(paper['pdf_url'])
+                            print("\n")
         
           else:
-
-            if filtering_choice == "Date":
               
                 self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['date'])
 
@@ -221,13 +226,26 @@ class SearchEngine:
                     for paper in self.results_boolean:
                         if paper == preprocessed_paper['doc_id']:                               
                             results.append(paper)
+                
+                for result in results:
+                    for paper in self.dataset:
+                        if paper['doc_id'] == result:
+                            print(paper['doc_id'])
+                            print(paper['title'])
+                            print(paper['authors'])
+                            print(paper['subjects'])
+                            print(paper['comments'])
+                            print(paper['abstract'])
+                            print(paper['date'])
+                            print(paper['pdf_url'])
+                            print("\n")
 
-                print(results)
                 
 
         else:
+
             if filtering_choice == "Authors":
-                    self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'][0])
+                    self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'])
                     for preprocessed_paper in self.preprocessed_dataset:
                         for paper in self.dataset:
                             if paper['doc_id'] == preprocessed_paper['doc_id']:
