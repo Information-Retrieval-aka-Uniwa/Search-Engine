@@ -57,7 +57,7 @@ class SearchEngine:
         search_button.pack()                                                       
 
         # ----- Πεδίο επιλογής φιλτρου -----
-        options = ["Authors", "Date"]           
+        options = ["Συγγραφείς", "Ημερομηνία", 'Κανένα φίλτρο']           
         combobox2 = ttk.Combobox(window, values=options, state="readonly", width=30) 
         combobox2.set("Επιλογή Φίλτρου")                                
         combobox2.pack()
@@ -215,10 +215,10 @@ class SearchEngine:
 
         if retrieval_algorithm == "Boolean Retrieval":
             
-          if filtering_choice == "Authors":
+          if filtering_choice == "Συγγραφείς":
               
 
-                self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'])
+                self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'][0])
 
                 for preprocessed_paper in self.preprocessed_dataset:
                     for paper in self.boolean_results:
@@ -238,7 +238,7 @@ class SearchEngine:
                             print(paper['pdf_url'])
                             print("\n")
         
-          else:
+          elif filtering_choice == "Ημερομηνία":
               
                 self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['date'])
 
@@ -259,13 +259,15 @@ class SearchEngine:
                             print(paper['date'])
                             print(paper['pdf_url'])
                             print("\n")
+            
+          else:
+            print ("Δεν επιλέχθηκε φίλτρο")
 
-                
 
         else:
 
-            if filtering_choice == "Authors":
-                    self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'])
+            if filtering_choice == "Συγγραφείς":
+                    self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'][0])
                     for preprocessed_paper in self.preprocessed_dataset:
                         for paper in self.dataset:
                             if paper['doc_id'] == preprocessed_paper['doc_id']:
@@ -280,7 +282,7 @@ class SearchEngine:
                                 print("\n")
 
 
-            if filtering_choice == "Date":
+            if filtering_choice == "Ημερομηνία":
                     self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['date'])
                     for preprocessed_paper in self.preprocessed_dataset:
                         for paper in self.dataset:
@@ -293,7 +295,10 @@ class SearchEngine:
                                 print(paper['abstract'])
                                 print(paper['date'])
                                 print(paper['pdf_url'])
-                                print("\n")             
+                                print("\n")
+
+            else:
+                print ("Δεν επιλέχθηκε φίλτρο")             
         
 
 

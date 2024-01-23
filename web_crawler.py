@@ -6,6 +6,7 @@
 import requests
 
 from bs4 import BeautifulSoup
+from datetime import datetime
 
 def web_crawling(random_subjects):
     dataset = []
@@ -39,6 +40,10 @@ def web_crawling(random_subjects):
                 comments = has_comments.text.strip().removeprefix("Comments:").replace("\n", "")
             # ------ Ημερομηνία δημοσίευσης ------
             date = elements.find('p', class_='is-size-7').text.strip().removeprefix("Submitted ").split(";")[0]
+
+            # Μετατροπή της ημερομηνίας στη μορφή yyyy-mm-dd
+            date = datetime.strptime(date, "%d %B, %Y").strftime("%Y-%m-%d")
+            
             # ------ URL λήψης του pdf της εργασίας ------
             for pdf_link in elements.find_all('a'):                     
                 pdf_href = pdf_link.get('href')                       
