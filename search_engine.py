@@ -80,8 +80,8 @@ class SearchEngine:
     def search_papers(self, search_query, retrieval_algorithm):
         print(f'============ Ερώτημα αναζήτησης: {search_query} ============\n')
         if retrieval_algorithm == "Boolean Retrieval":
-            results_boolean = self.search_papers_boolean_retrieval(search_query)
-            for doc_id in results_boolean:
+            self.boolean_results = self.search_papers_boolean_retrieval(search_query)
+            for doc_id in self.boolean_results:
                 for key, value in self.dataset[doc_id].items():
                     print(f"'{key}': '{value}'")
                 print("\n")
