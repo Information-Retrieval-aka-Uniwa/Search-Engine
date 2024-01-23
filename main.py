@@ -15,7 +15,7 @@ try:
     """""""""""""""""""""""""""""""""""""""""""""
     # ------ Δημιουργία του dataset ------
     subjects = ['Physics', 'Mathematics', 'Computer Science', 'Quantitative Biology', 'Quantitative Finance', 'Statistics', 'Electrical Engineering and Systems Science', 'Economics']
-    num_subjects = random.randint(1, len(subjects))
+    num_subjects = random.randint(2, len(subjects))
     random_subjects = random.sample(subjects, num_subjects)
     # ------ Βήμα 1.α. Επιλογή ιστοτόπου-στόχου -----
     # ------ Βήμα 1.β. Υλοποίηση web crawler ------
@@ -33,8 +33,8 @@ try:
     # ------ Προεπεξεργασία του dataset ------
     with open('dataset/dataset.json', 'r') as file:
         dataset = json.load(file)
-    # ------ Βήμα 2.α. Επιλογή εργασιών προεπεξεργασίας κειμένου ------
-    # ------ Βήμα 2.β. Αιτιολόγηση επιλογής εργασιών ------
+    # ------ Βήμα 2.α. Προεπεξεργασία του αποθετηρίου (dataset) ------
+    # ------ Βήμα 2.β. Επιλογή τεχνικών προεπεξεργασίας κειμένου ------
     preprocessed_docs = []   
     for doc in dataset:
         preprocessed_data = {
@@ -48,7 +48,7 @@ try:
             'pdf_url'   : doc.get('pdf_url')
         }
         preprocessed_docs.append(preprocessed_data)
-    # ------ Βήμα 2.γ. Αποθήκευση προεπεξεργασμένων δεδομένων σε δομημένη μορφή  ------
+    # ------ Βήμα 2.γ. Αποθήκευση των προεπεξεργασμένων δεδομένων σε δομημένη μορφή  ------
     with open('dataset/preprocessed_dataset.json', 'w') as f:
         json.dump(preprocessed_docs, f, indent=4)
 

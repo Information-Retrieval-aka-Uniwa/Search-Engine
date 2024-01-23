@@ -17,7 +17,7 @@ def preprocess_list_of_texts(key, dataset):
     return preprocessed_data
 
 def preprocess_text(key, dataset):
-    # ------ Βήμα 2.β. Αιτιολόγηση επιλογής εργασιών ------
+    # ------ Βήμα 2.β. Επιλογή τεχνικών προεπεξεργασίας κειμένου ------
     # ------ Tokenization ------
     tokens = word_tokenize(dataset)
 
@@ -32,10 +32,10 @@ def preprocess_text(key, dataset):
     # ------ Normalization ------
     normal_tokens = [token.lower() for token in special_tokens]
 
-    # ------ Stop words removal ------
+    # ------ Stopwords removal ------
     stop_words = stopwords.words('english')
     stop_tokens = [word for word in normal_tokens if word.lower() not in stop_words]
-    # ------ Stemming ------
+    # ------ Μόνο για τα πεδία abstract και του ερωτήματος χρήστη ------
     if key == 'abstract' or 'query':
         # ------ Stemming ------
         porter_stemmer = PorterStemmer()
