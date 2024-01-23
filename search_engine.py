@@ -65,16 +65,22 @@ class SearchEngine:
         print(f'============ Ερώτημα αναζήτησης: {search_query} ============\n')
         
         if retrieval_algorithm == "Boolean Retrieval":
+            i = 1
             results_boolean = self.search_papers_boolean_retrieval(search_query)
             for doc_id in results_boolean:
+                print('--------------------------------------------------')
+                print(f"#{i}")
+                print('--------------------------------------------------')
                 for key, value in self.dataset[doc_id].items():
                     print(f"'{key}': '{value}'")
                 print("\n")
+                i += 1
+                time.sleep(1)
             print("\n")
         
         elif retrieval_algorithm == "Vector Space Model":
-            results_vsm = self.search_papers_vector_space_model(search_query)
             i = 1
+            results_vsm = self.search_papers_vector_space_model(search_query)
             for doc, score in results_vsm:
                 print('--------------------------------------------------')
                 print(f"#{i} Cosine Similarity: {score:.2f}")
