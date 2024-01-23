@@ -3,6 +3,7 @@
     Βήμα 4. Μηχανή αναζήτησης (Search engine)
     
 """""""""""""""""""""""""""""""""""""""""""""
+from collections import Counter
 import json
 import tkinter
 import nltk
@@ -12,7 +13,7 @@ from tkinter import ttk
 import tkinter
 from tkinter import ttk
 from query_processing import query_processing, replace_terms_with_docs
-from ranking import rank_documents_vsm, rank_documents_bm25
+from ranking import calculate_cosine_similarity, calculate_tfidf_docs, calculate_tfidf_query, rank_documents_vsm, rank_documents_bm25
 from text_preprocessing import preprocess_text
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -132,29 +133,13 @@ class SearchEngine:
     # ------ Βήμα 4.β.2 Vector Space Model (VSM) ------
     # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
     def search_papers_vector_space_model(self, query):                     
-        # ------ Tokenize & preprocess ------
-        tokenized_query = nltk.word_tokenize(preprocess_text('query', query))                      
-        docs = [doc['doc_id'] for doc in self.dataset]                                              
-        preprocessed_abstracts = [doc['abstract'] for doc in self.preprocessed_dataset]        
-        tokenized_abstracts = [nltk.word_tokenize(doc) for doc in preprocessed_abstracts]    
+        tfidf_docs, idf_docs = calculate_tfidf_docs(self.dataset)
+        tfidf_query = calculate_tfidf_query(query, idf_docs)
 
-        # ------ Υπολογισμός TF-IDF ------
-        # ------ Επανασύνθεση των abstracts και του query μετά την προεπεξεργασία τους ------
-        preprocessed_abstracts = [' '.join(paper) for paper in tokenized_abstracts]          
-        preprocessed_query = ' '.join(tokenized_query)                                      
+        cosine_similarities = [calculate_cosine_similarity(tfidf_query, doc) for doc in tfidf_docs]
 
-        # ------ Κατασκευή διανύσματος TF-IDF για τα abstracts ------
-        tfidf_vectorizer = TfidfVectorizer()                                                
-        tfidf_matrix = tfidf_vectorizer.fit_transform(preprocessed_abstracts)               
+        return rank_documents_vsm(self.dataset, cosine_similarities) 
 
-        # ------ Κατασκευή διανύσματος TF-IDF για το query ------
-        query_vector = tfidf_vectorizer.transform([preprocessed_query])                
-
-        # ------ Υπολογισμός ομοιότητας από την γωνία που σχηματίζουν τα διανύσματα των abstract με αυτό του query ------
-        cosine_similarities = cosine_similarity(query_vector, tfidf_matrix)                 
-
-        # ------ Κατάταξη αποτελεσμάτων με βάση την ομοιότητα ------
-        return rank_documents_vsm(docs, cosine_similarities[0])
 
     # ------ Βήμα 4.β.3 Probabilistic retrieval models (Okabi BM25) ------
     # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------

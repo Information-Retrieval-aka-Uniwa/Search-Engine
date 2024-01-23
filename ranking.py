@@ -4,37 +4,44 @@
     
 """""""""""""""""""""""""""""""""""""""""""""
 import math
+import nltk
 from collections import Counter
 
 # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
-def calculate_tf(term_freq):
-    max_freq = max(term_freq.values())
-    tf = {term: freq / max_freq for term, freq in term_freq.items()}
-    return tf
+def calculate_tfidf_docs(docs):
+    abstracts = [doc['abstract'] for doc in docs] 
+    tokenized_docs = [nltk.word_tokenize(doc) for doc in abstracts] 
 
-def calculate_idf(docs, term):
-    num_documents_with_word = sum(1 for doc in docs if term in doc)
-    idf = math.log(len(docs) / (1 + num_documents_with_word))
-    return idf
+    # ------ Υπολογισμός TF ------
+    tf = [Counter(doc) for doc in tokenized_docs]
 
-def calculate_tfidf(query, docs):
-    term_freq = Counter(query)
-    tf = calculate_tf(term_freq)
-    tfidf = {term: tf[term] * calculate_idf(docs, term) for term in term_freq}
-    return tfidf
+    # ------ Υπολογισμός DF ------
+    df = Counter(term for doc in tokenized_docs for term in doc)
 
-def cosine_similarity(tfidf_query, tfidf_docs):
-    tfidf_query = [val for val in tfidf_query.values()] 
-    tfidf_docs = [val for val in tfidf_docs.values()]
+    # ------ Υπολογισμός IDF ------
+    idf = {term: math.log(len(docs) / freq) for term, freq in df.items()}
 
-    dot_prod = 0.0
-    for i, v in enumerate(tfidf_docs):
-        dot_prod += v * tfidf_query[i]
+    # ------ Υπολογισμός TF-IDF ------
+    tfidf_docs = [{term: freq * idf[term] for term, freq in doc.items()} for doc in tf]
 
-    mag_1 = math.sqrt(sum([x**2 for x in tfidf_query]))
-    mag_2 = math.sqrt(sum([x**2 for x in tfidf_docs]))
+    return tfidf_docs, idf
 
-    return dot_prod / (mag_1 * mag_2) 
+def calculate_tfidf_query(query, idf_docs):
+    tokenized_query = nltk.word_tokenize(query.lower()) 
+
+    # ------ Υπολογισμός TF-IDF ------
+    tfidf_query = {term: tokenized_query.count(term) * idf_docs.get(term, 0) for term in tokenized_query}
+
+    return tfidf_query
+
+def calculate_cosine_similarity(tfidf_query, doc):
+    dot_product = sum(tfidf_query.get(term, 0) * doc.get(term, 0) for term in tfidf_query)
+    norm_query = math.sqrt(sum(val**2 for val in tfidf_query.values()))
+    norm_doc = math.sqrt(sum(val**2 for val in doc.values()))
+    cosine_similarity = dot_product / (norm_query * norm_doc)
+
+    return cosine_similarity
+
 
 def rank_documents_vsm(docs, cosine_similarities):
     results = [(docs[i], cosine_similarities[i]) for i in range(len(docs))]

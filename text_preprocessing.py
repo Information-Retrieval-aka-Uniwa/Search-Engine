@@ -36,7 +36,7 @@ def preprocess_text(key, dataset):
     stop_words = stopwords.words('english')
     stop_tokens = [word for word in normal_tokens if word.lower() not in stop_words]
     # ------ Μόνο για τα πεδία abstract και του ερωτήματος χρήστη ------
-    if key == 'abstract' or 'query':
+    if key == 'abstract':
         # ------ Stemming ------
         porter_stemmer = PorterStemmer()
         stemmed_tokens = [porter_stemmer.stem(token) for token in stop_tokens]
