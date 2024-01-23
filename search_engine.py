@@ -3,7 +3,9 @@
     Βήμα 4. Μηχανή αναζήτησης (Search engine)
     
 """""""""""""""""""""""""""""""""""""""""""""
+from collections import Counter
 import json
+import time
 import tkinter
 import nltk
 import math
@@ -12,7 +14,7 @@ from tkinter import ttk
 import tkinter
 from tkinter import ttk
 from query_processing import query_processing, replace_terms_with_docs
-from ranking import rank_documents_vsm, rank_documents_bm25
+from ranking import calculate_cosine_similarity, calculate_tfidf_docs, calculate_tfidf_query, rank_documents_vsm, rank_documents_bm25
 from text_preprocessing import preprocess_text
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -61,6 +63,7 @@ class SearchEngine:
     # ------ Βήμα 4.β. Υλοποίηση αλγορίθμων ανάκτησης ------
     def search_papers(self, search_query, retrieval_algorithm):
         print(f'============ Ερώτημα αναζήτησης: {search_query} ============\n')
+        
         if retrieval_algorithm == "Boolean Retrieval":
             results_boolean = self.search_papers_boolean_retrieval(search_query)
             for doc_id in results_boolean:
@@ -68,14 +71,25 @@ class SearchEngine:
                     print(f"'{key}': '{value}'")
                 print("\n")
             print("\n")
+        
         elif retrieval_algorithm == "Vector Space Model":
             results_vsm = self.search_papers_vector_space_model(search_query)
-            for paper, similarity in results_vsm:
-                print(f"Similarity: {similarity:.4f}")
-                for key, value in self.dataset[paper].items():
-                    print(f"'{key}': '{value}'")
+            i = 1
+            for doc, score in results_vsm:
+                print('--------------------------------------------------')
+                print(f"#{i} Cosine Similarity: {score:.2f}")
+                print('--------------------------------------------------')
+                print(f"Document ID: {doc['doc_id']}")
+                print(f"Title: {doc['title']}")
+                print(f"Authors: {doc['authors']}")
+                print(f"Subjects: {doc['subjects']}")
+                print(f"Abstract: {doc['abstract']}")
+                print(f"Comments: {doc['comments']}")
+                print(f"Date: {doc['date']}")
+                print(f"PDF_URL: {doc['pdf_url']}")
                 print("\n")
-            
+                i += 1
+                time.sleep(1)             
 
         elif retrieval_algorithm == "Okapi BM25":
             results_bm25 = self.search_papers_okapi_bm25(search_query)
@@ -91,6 +105,7 @@ class SearchEngine:
     # ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
     # Σειράς προτεραιότητας πράξεων: [1] -> [2] -> [3] -> [4] -> [5]
     def search_papers_boolean_retrieval(self, query):
+        
         res = []
         terms = replace_terms_with_docs(query, self.inverted_index)
         while len(terms) > 1:
@@ -132,33 +147,18 @@ class SearchEngine:
     # ------ Βήμα 4.β.2 Vector Space Model (VSM) ------
     # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
     def search_papers_vector_space_model(self, query):                     
-        # ------ Tokenize & preprocess ------
-        tokenized_query = nltk.word_tokenize(preprocess_text('query', query))                      
-        docs = [doc['doc_id'] for doc in self.dataset]                                              
-        preprocessed_abstracts = [doc['abstract'] for doc in self.preprocessed_dataset]        
-        tokenized_abstracts = [nltk.word_tokenize(doc) for doc in preprocessed_abstracts]    
+        
+        tfidf_docs, idf_docs = calculate_tfidf_docs(self.dataset)
+        tfidf_query = calculate_tfidf_query(query, idf_docs)
+        cosine_similarities = [calculate_cosine_similarity(tfidf_query, doc) for doc in tfidf_docs]
 
-        # ------ Υπολογισμός TF-IDF ------
-        # ------ Επανασύνθεση των abstracts και του query μετά την προεπεξεργασία τους ------
-        preprocessed_abstracts = [' '.join(paper) for paper in tokenized_abstracts]          
-        preprocessed_query = ' '.join(tokenized_query)                                      
+        return rank_documents_vsm(self.dataset, cosine_similarities) 
 
-        # ------ Κατασκευή διανύσματος TF-IDF για τα abstracts ------
-        tfidf_vectorizer = TfidfVectorizer()                                                
-        tfidf_matrix = tfidf_vectorizer.fit_transform(preprocessed_abstracts)               
-
-        # ------ Κατασκευή διανύσματος TF-IDF για το query ------
-        query_vector = tfidf_vectorizer.transform([preprocessed_query])                
-
-        # ------ Υπολογισμός ομοιότητας από την γωνία που σχηματίζουν τα διανύσματα των abstract με αυτό του query ------
-        cosine_similarities = cosine_similarity(query_vector, tfidf_matrix)                 
-
-        # ------ Κατάταξη αποτελεσμάτων με βάση την ομοιότητα ------
-        return rank_documents_vsm(docs, cosine_similarities[0])
 
     # ------ Βήμα 4.β.3 Probabilistic retrieval models (Okabi BM25) ------
     # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
     def search_papers_okapi_bm25(self, query):
+        
         okapi_bm25_scores = []
         for doc in self.preprocessed_dataset:
            doc['score'] = self.calculate_okapi_bm25_score(query, doc['abstract'])
@@ -167,24 +167,21 @@ class SearchEngine:
         return rank_documents_bm25(okapi_bm25_scores) 
     
     def calculate_okapi_bm25_score(self, query, doc, k = 1.2, b = 0.75):
+       
         score = 0
         # ------ Υπολογισμός μεγέθους εργασιών ------
         doc_length = len(doc)
-    
         # ------ Υπολογισμός μέσου όρου μεγέθους συλλογής εργασιών ------
         total_docs = len(self.inverted_index.keys())
         total_doc_length = sum([len(doc) for doc in self.inverted_index.values()])
         average_doc_length = total_doc_length / total_docs
-    
         # ------ Υπολογισμός TF-IDF κάθε όρου του ερωτήματος ------
         for term in query:
             if term in self.inverted_index:
                 doc_frequency = len(self.inverted_index[term])
                 inverse_doc_frequency = math.log((total_docs - doc_frequency + 0.5) / (doc_frequency + 0.5))
-            
                 # ------ Υπολογισμός TF που εμφανίζεται ο όρος του ερωτήματος στην συλλογή ------
                 term_frequency = doc.count(term)
-            
                 # ------ Υπολογισμός BM25 συντελεστή για κάθε όρο του ερωτ΄΄ηματος ------
                 score += inverse_doc_frequency * ((term_frequency * (k + 1)) / (term_frequency + k * (1 - b + b * (doc_length / average_doc_length))))
     
