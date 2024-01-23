@@ -25,7 +25,8 @@ class SearchEngine:
             self.dataset = json.load(file)               
         with open('dataset/preprocessed_dataset.json', 'r') as file:
             self.preprocessed_dataset = json.load(file)
-        self.inverted_index = inverted_index      
+        self.inverted_index = inverted_index
+        self.boolean_results = []      
 
     # ------ Βήμα 4.α Ανάπτυξη διεπαφής χρήστη για αναζήτηση εργασιών ------
     def init_gui(self):
@@ -54,6 +55,23 @@ class SearchEngine:
         # ----- Κουμπί αναζήτησης -----
         search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query)
         search_button.pack()                                                       
+
+        # ----- Πεδίο επιλογής φιλτρου -----
+        options = ["Authors", "Date"]           
+        combobox2 = ttk.Combobox(window, values=options, state="readonly", width=30) 
+        combobox2.set("Επιλογή Φίλτρου")                                
+        combobox2.pack()
+
+        # ----- Επιλογή φίλτρου -----
+        def get_filter():                                                        
+            filter = combobox2.get()          
+            print("Filtered by: ", filter)
+            self.filtering(filter, combobox.get())
+
+        # ----- Κουμπί επιλογής -----
+        filter_button = tkinter.Button(window, text="Αναζήτηση", command=get_filter)
+        filter_button.pack()
+
 
         # ----- Εκτέλεση του παραθύρου -----
         window.mainloop()
@@ -91,7 +109,7 @@ class SearchEngine:
     # ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
     # Σειράς προτεραιότητας πράξεων: [1] -> [2] -> [3] -> [4] -> [5]
     def search_papers_boolean_retrieval(self, query):
-        res = []
+        boolean_results = []
         terms = replace_terms_with_docs(query, self.inverted_index)
         while len(terms) > 1:
             if '(' and ')' in terms:                                            # [1] Εντοπίζονται οι πράξεις μέσα στις παρενθέσεις από αριστερά προς τα δεξιά
@@ -102,13 +120,13 @@ class SearchEngine:
                     if 'not' in subterms:                                       # [2] Εκτελούνται οι πράξεις με τον τελεστή not από αριστερά προς τα δεξιά 
                         not_index = subterms.index('not')
                         not_query = subterms[not_index:not_index+2]
-                        res = query_processing(not_query, len(self.dataset))
-                        subterms[not_index] = res 
+                        boolean_results = query_processing(not_query, len(self.dataset))
+                        subterms[not_index] = boolean_results 
                         subterms.pop(not_index + 1)
                     else:
                         and_or_query = subterms[0:3]                            # [3] Εκτελούνται οι πράξεις με τους τελεστές and ή or από αριστερά προς τα δεξιά
-                        res = query_processing(and_or_query, len(self.dataset))
-                        subterms[0] = res 
+                        boolean_results = query_processing(and_or_query, len(self.dataset))
+                        subterms[0] = boolean_results 
                         subterms.pop(1)
                         subterms.pop(1) 
                 terms[start] = [num for sublist in subterms for num in sublist]
@@ -117,17 +135,17 @@ class SearchEngine:
                 if 'not' in terms:                                              # [4] Δεν υπάρχουν παρενθέσεις άρα, εκτελούνται οι πράξεις με τον τελεστή not από αριστερά προς τα δεξιά
                     not_index = terms.index('not')
                     not_query = terms[not_index:not_index + 2]
-                    res = query_processing(not_query, len(self.dataset))
-                    terms[not_index] = res 
+                    boolean_results = query_processing(not_query, len(self.dataset))
+                    terms[not_index] =  boolean_results 
                     terms.pop(not_index + 1)
                 else:                                                           # [5] Εκτελούνται οι πράξεις με τους τελεστές and και or από αριστερά προς τα δεξιά
                     and_or_query = terms[0:3]
-                    res = query_processing(and_or_query, len(self.dataset))
-                    terms[0] = res 
+                    boolean_results = query_processing(and_or_query, len(self.dataset))
+                    terms[0] = boolean_results 
                     terms.pop(1)
                     terms.pop(1)        
 
-        return res
+        return  boolean_results
     
     # ------ Βήμα 4.β.2 Vector Space Model (VSM) ------
     # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
@@ -190,7 +208,92 @@ class SearchEngine:
     
         return score
     
-                 
+
+    def filtering(self, filtering_choice, retrieval_algorithm):
+
+        results = [] 
+
+        if retrieval_algorithm == "Boolean Retrieval":
+            
+          if filtering_choice == "Authors":
+              
+
+                self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'])
+
+                for preprocessed_paper in self.preprocessed_dataset:
+                    for paper in self.boolean_results:
+                        if paper == preprocessed_paper['doc_id']:                               
+                            results.append(paper)
+
+                for result in results:
+                    for paper in self.dataset:
+                        if paper['doc_id'] == result:
+                            print(paper['doc_id'])
+                            print(paper['title'])
+                            print(paper['authors'])
+                            print(paper['subjects'])
+                            print(paper['comments'])
+                            print(paper['abstract'])
+                            print(paper['date'])
+                            print(paper['pdf_url'])
+                            print("\n")
+        
+          else:
+              
+                self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['date'])
+
+                for preprocessed_paper in self.preprocessed_dataset:
+                    for paper in self.boolean_results:
+                        if paper == preprocessed_paper['doc_id']:                               
+                            results.append(paper)
+                
+                for result in results:
+                    for paper in self.dataset:
+                        if paper['doc_id'] == result:
+                            print(paper['doc_id'])
+                            print(paper['title'])
+                            print(paper['authors'])
+                            print(paper['subjects'])
+                            print(paper['comments'])
+                            print(paper['abstract'])
+                            print(paper['date'])
+                            print(paper['pdf_url'])
+                            print("\n")
+
+                
+
+        else:
+
+            if filtering_choice == "Authors":
+                    self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['authors'])
+                    for preprocessed_paper in self.preprocessed_dataset:
+                        for paper in self.dataset:
+                            if paper['doc_id'] == preprocessed_paper['doc_id']:
+                                print(paper['doc_id'])
+                                print(paper['title'])
+                                print(paper['authors'])
+                                print(paper['subjects'])
+                                print(paper['comments'])
+                                print(paper['abstract'])
+                                print(paper['date'])
+                                print(paper['pdf_url'])
+                                print("\n")
+
+
+            if filtering_choice == "Date":
+                    self.preprocessed_dataset = sorted(self.preprocessed_dataset, key=lambda k: k['date'])
+                    for preprocessed_paper in self.preprocessed_dataset:
+                        for paper in self.dataset:
+                            if paper['doc_id'] == preprocessed_paper['doc_id']:
+                                print(paper['doc_id'])
+                                print(paper['title'])
+                                print(paper['authors'])
+                                print(paper['subjects'])
+                                print(paper['comments'])
+                                print(paper['abstract'])
+                                print(paper['date'])
+                                print(paper['pdf_url'])
+                                print("\n")             
         
 
 
