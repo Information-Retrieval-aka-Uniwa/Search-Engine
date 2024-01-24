@@ -3,22 +3,13 @@
     Βήμα 4. Μηχανή αναζήτησης (Search engine)
     
 """""""""""""""""""""""""""""""""""""""""""""
-from collections import Counter
-import datetime
 import json
-import time
 import tkinter
-import nltk
-import math
-from tkinter import ttk
 
-import tkinter
 from tkinter import ttk
 from query_processing import query_processing, replace_terms_with_docs
 from ranking import calculate_cosine_similarity, calculate_okapi_bm25_score, calculate_tfidf_docs, calculate_tfidf_query, rank_documents_vsm, rank_documents_bm25
-from text_preprocessing import preprocess_text
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+
 
 
 class SearchEngine:
@@ -144,7 +135,6 @@ class SearchEngine:
                     results_bm25_file.write("\n")
                     i += 1
     
-
 
     # ------ Βήμα 4.β.1 Boolean retrieval ------
     # ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
