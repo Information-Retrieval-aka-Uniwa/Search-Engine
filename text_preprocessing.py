@@ -33,10 +33,14 @@ def preprocess_text(key, dataset):
     normal_tokens = [token.lower() for token in special_tokens]
 
     # ------ Stopwords removal ------
-    stop_words = stopwords.words('english')
-    stop_tokens = [word for word in normal_tokens if word.lower() not in stop_words]
+    if key != 'boolean query':
+        stop_words = stopwords.words('english')
+        stop_tokens = [word for word in normal_tokens if word.lower() not in stop_words]
+    else:
+        stop_tokens = normal_tokens
+
     # ------ Μόνο για τα πεδία abstract και του ερωτήματος χρήστη ------
-    if key == 'abstract':
+    if key == 'abstract' or key == 'query' or key == 'boolean query':
         # ------ Stemming ------
         porter_stemmer = PorterStemmer()
         stemmed_tokens = [porter_stemmer.stem(token) for token in stop_tokens]

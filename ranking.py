@@ -7,13 +7,15 @@ import math
 import nltk
 from collections import Counter
 
+from text_preprocessing import preprocess_text
+
 # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
 # ------ TF-IDF για τους όρους των εργασιών ------
 def calculate_tfidf_docs(docs):
     
     # ------ Tokenize και προεπεξεργασία των όρων των εργασιών ------
     abstracts = [doc['abstract'] for doc in docs] 
-    tokenized_docs = [nltk.word_tokenize(doc.lower()) for doc in abstracts] 
+    tokenized_docs = [doc.split() for doc in abstracts] 
     # ------ Υπολογισμός TF ------
     tf = [Counter(doc) for doc in tokenized_docs]                                       # Η συχνότητα εμφάνισης κάθε όρου στο κείμενο
     # ------ Υπολογισμός DF ------
@@ -29,7 +31,7 @@ def calculate_tfidf_docs(docs):
 def calculate_tfidf_query(query, idf_docs):
    
     # ------ Tokenize και προεπεξεργασία των όρων του ερωτήματος χρήστη ------
-    tokenized_query = nltk.word_tokenize(query.lower()) 
+    tokenized_query = preprocess_text('abstract', query).split()
     # ------ Υπολογισμός TF-IDF ------
     tfidf_query = {term: tokenized_query.count(term) * idf_docs.get(term, 0) for term in tokenized_query} # Η συχνότητα εμφάνισης κάθε όρου του ερωτήματος χρήστη σε κάθε κείμενο
 
@@ -52,6 +54,13 @@ def rank_documents_vsm(docs, cosine_similarities):
     results.sort(key=lambda x: x[1], reverse=True)
     
     return results
+
+def calculate_okapi_bm25_score(query, doc, k = 1.2, b = 0.75):
+       
+    score = 0
+
+    
+    return score
 
 def rank_documents_bm25(okapi_bm25_scores):
     

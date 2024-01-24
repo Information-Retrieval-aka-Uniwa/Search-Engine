@@ -3,7 +3,7 @@
     Βήμα 4. Επεξεργασία ερωτήματος (Query Processing)
     
 """""""""""""""""""""""""""""""""""""""""""""
-from nltk.tokenize import word_tokenize
+from text_preprocessing import preprocess_text
 
 # ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
 def query_processing(terms, num_of_docs):
@@ -27,7 +27,7 @@ def query_processing(terms, num_of_docs):
 
 # ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
 def replace_terms_with_docs(query, inverted_index):
-    terms = word_tokenize(query.lower())
+    terms = preprocess_text('boolean query', query).split()
     for term in terms:
         if term != 'and' and term != 'or' and term != 'not' and term != '(' and term != ')': 
             if term in inverted_index:
