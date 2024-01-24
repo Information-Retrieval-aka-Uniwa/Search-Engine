@@ -4,6 +4,7 @@
     
 """""""""""""""""""""""""""""""""""""""""""""
 from collections import Counter
+import datetime
 import json
 import time
 import tkinter
@@ -48,9 +49,11 @@ class SearchEngine:
 
         # ----- Ερώτημα αναζήτησης (query) -----
         def get_query():                                     
-            search_query = search_entry.get()                   
-            retrieval_algorithm = combobox.get()          
-            print(f"----------- Αλγόριθμος ανάκτησης: {retrieval_algorithm} -----------")  
+            search_query = search_entry.get()                    
+            retrieval_algorithm = combobox.get()
+            print(f"============ Ερώτημα αναζήτησης: {search_query} ============")          
+            print(f"----------- Αλγόριθμος ανάκτησης: {retrieval_algorithm} -----------")
+            print(f"Τα αποτελέσματα αναζήτησης αποθηκεύτηκαν στο αρχείο results\\{retrieval_algorithm} Results.txt\n") 
             self.search_papers(search_query, retrieval_algorithm)  
 
         # ----- Κουμπί αναζήτησης -----
@@ -62,63 +65,84 @@ class SearchEngine:
 
     # ------ Βήμα 4.β. Υλοποίηση αλγορίθμων ανάκτησης ------
     def search_papers(self, search_query, retrieval_algorithm):
-        print(f'============ Ερώτημα αναζήτησης: {search_query} ============\n')
         
         if retrieval_algorithm == "Boolean Retrieval":
-            i = 1
             results_boolean = self.search_papers_boolean_retrieval(search_query)
-            for doc_id in results_boolean:
-                print('--------------------------------------------------')
-                print(f"#{i}")
-                print('--------------------------------------------------')
-                for key, value in self.dataset[doc_id].items():
-                    if key == 'doc_id':
-                        print(f"Document ID: {value}")
-                    elif key == 'title':
-                        print(f"Title: {value}")
-                    elif key == 'authors':
-                        print(f"Authors: {value}")
-                    elif key == 'subjects':
-                        print(f"Subjects: {value}")
-                    elif key == 'abstract':
-                        print(f"Abstract: {value}")
-                    elif key == 'comments':
-                        print(f"Comments: {value}")
-                    elif key == 'date':
-                        print(f"Date: {value}")
-                    elif key == 'pdf_url':
-                        print(f"PDF_URL: {value}")
-                print("\n")
-                i += 1
-                time.sleep(1)
-            print("\n")
+            with open('results/Boolean Retrieval Results.txt', 'w', encoding='utf-8') as results_boolean_file:
+                results_boolean_file.write(f"============ Ερώτημα αναζήτησης: {search_query} ============\n")
+                i = 1
+                for doc_id in results_boolean:
+                    results_boolean_file.write('--------------------------------------------------\n')
+                    results_boolean_file.write(f"#{i}\n")
+                    results_boolean_file.write('--------------------------------------------------\n')
+                    for key, value in self.dataset[doc_id].items():
+                        if key == 'doc_id':
+                            results_boolean_file.write(f"Document ID: {value}\n")
+                        elif key == 'title':
+                            results_boolean_file.write(f"Title: {value}\n")
+                        elif key == 'authors':
+                            results_boolean_file.write(f"Authors: {value}\n")
+                        elif key == 'subjects':
+                            results_boolean_file.write(f"Subjects: {value}\n")
+                        elif key == 'abstract':
+                            results_boolean_file.write(f"Abstract: {value}\n")
+                        elif key == 'comments':
+                            results_boolean_file.write(f"Comments: {value}\n")
+                        elif key == 'date':
+                            results_boolean_file.write(f"Date: {value}\n")
+                        elif key == 'pdf_url':
+                            results_boolean_file.write(f"PDF_URL: {value}\n")
+                    results_boolean_file.write("\n")
+                    i += 1
         
         elif retrieval_algorithm == "Vector Space Model":
-            i = 1
             results_vsm = self.search_papers_vector_space_model(search_query)
-            for doc, score in results_vsm:
-                print('--------------------------------------------------')
-                print(f"#{i} Cosine Similarity: {score:.2f}")
-                print('--------------------------------------------------')
-                print(f"Document ID: {doc['doc_id']}")
-                print(f"Title: {doc['title']}")
-                print(f"Authors: {doc['authors']}")
-                print(f"Subjects: {doc['subjects']}")
-                print(f"Abstract: {doc['abstract']}")
-                print(f"Comments: {doc['comments']}")
-                print(f"Date: {doc['date']}")
-                print(f"PDF_URL: {doc['pdf_url']}")
-                print("\n")
-                i += 1
-                time.sleep(1)             
+            with open('results/Vector Space Model Results.txt', 'w', encoding='utf-8') as results_vsm_file:
+                results_vsm_file.write(f"============ Ερώτημα αναζήτησης: {search_query} ============\n")
+                i = 1
+                for doc, score in results_vsm:
+                    results_vsm_file.write('--------------------------------------------------\n')
+                    results_vsm_file.write(f"#{i} Cosine Similarity: {score:.2f}\n")
+                    results_vsm_file.write('--------------------------------------------------\n')
+                    results_vsm_file.write(f"Document ID: {doc['doc_id']}\n")
+                    results_vsm_file.write(f"Title: {doc['title']}\n")
+                    results_vsm_file.write(f"Authors: {doc['authors']}\n")
+                    results_vsm_file.write(f"Subjects: {doc['subjects']}\n")
+                    results_vsm_file.write(f"Abstract: {doc['abstract']}\n")
+                    results_vsm_file.write(f"Comments: {doc['comments']}\n")
+                    results_vsm_file.write(f"Date: {doc['date']}\n")
+                    results_vsm_file.write(f"PDF_URL: {doc['pdf_url']}\n")
+                    results_vsm_file.write("\n")
+                    i += 1            
 
         elif retrieval_algorithm == "Okapi BM25":
             results_bm25 = self.search_papers_okapi_bm25(search_query)
-            for paper, score in results_bm25:
-                print(f"Score: {score:.4f}")
-                for key, value in self.dataset[paper].items():
-                    print(f"'{key}': '{value}'")
-                print("\n")
+            with open('results/Okapi BM25 Results.txt', 'w', encoding='utf-8') as results_bm25_file:
+                results_bm25_file.write(f"============ Ερώτημα αναζήτησης: {search_query} ============\n")
+                i = 1
+                for doc_id, score in results_bm25:
+                    results_bm25_file.write('--------------------------------------------------\n')
+                    results_bm25_file.write(f"#{i} BM25 Score: {score:.2f}\n")
+                    results_bm25_file.write('--------------------------------------------------\n')
+                    for key, value in self.dataset[doc_id].items():
+                        if key == 'doc_id':
+                            results_bm25_file.write(f"Document ID: {value}\n")
+                        elif key == 'title':
+                            results_bm25_file.write(f"Title: {value}\n")
+                        elif key == 'authors':
+                            results_bm25_file.write(f"Authors: {value}\n")
+                        elif key == 'subjects':
+                            results_bm25_file.write(f"Subjects: {value}\n")
+                        elif key == 'abstract':
+                            results_bm25_file.write(f"Abstract: {value}\n")
+                        elif key == 'comments':
+                            results_bm25_file.write(f"Comments: {value}\n")
+                        elif key == 'date':
+                            results_bm25_file.write(f"Date: {value}\n")
+                        elif key == 'pdf_url':
+                            results_bm25_file.write(f"PDF_URL: {value}\n")
+                    results_bm25_file.write("\n")
+                    i += 1
     
 
 
@@ -182,7 +206,7 @@ class SearchEngine:
         
         okapi_bm25_scores = []
         for doc in self.dataset:
-           doc['score'] = calculate_okapi_bm25_score(query, doc['abstract'])
+           doc['score'] = calculate_okapi_bm25_score(query, self.inverted_index, doc['abstract'])
            okapi_bm25_scores.append(doc) 
 
         return rank_documents_bm25(okapi_bm25_scores) 

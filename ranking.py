@@ -4,7 +4,6 @@
     
 """""""""""""""""""""""""""""""""""""""""""""
 import math
-import nltk
 from collections import Counter
 
 from text_preprocessing import preprocess_text
@@ -55,10 +54,24 @@ def rank_documents_vsm(docs, cosine_similarities):
     
     return results
 
-def calculate_okapi_bm25_score(query, doc, k = 1.2, b = 0.75):
-       
+def calculate_okapi_bm25_score(query, inverted_index, doc, k = 1.2, b = 0.75):
+    preprocessed_query = preprocess_text('query', query)
     score = 0
-
+    # ------ Υπολογισμός μεγέθους εργασιών ------
+    doc_length = len(doc)
+    # ------ Υπολογισμός μέσου όρου μεγέθους συλλογής εργασιών ------
+    total_docs = len(inverted_index.keys())
+    total_doc_length = sum([len(doc) for doc in inverted_index.values()])
+    average_doc_length = total_doc_length / total_docs
+    # ------ Υπολογισμός TF-IDF κάθε όρου του ερωτήματος ------
+    for term in preprocessed_query:
+        if term in inverted_index:
+            doc_frequency = len(inverted_index[term])
+            inverse_doc_frequency = math.log((total_docs - doc_frequency + 0.5) / (doc_frequency + 0.5))
+            # ------ Υπολογισμός TF που εμφανίζεται ο όρος του ερωτήματος στην συλλογή ------
+            term_frequency = doc.count(term)
+            # ------ Υπολογισμός BM25 συντελεστή για κάθε όρο του ερωτ΄΄ηματος ------
+            score += inverse_doc_frequency * ((term_frequency * (k + 1)) / (term_frequency + k * (1 - b + b * (doc_length / average_doc_length))))
     
     return score
 
