@@ -14,7 +14,7 @@ def calculate_tfidf_docs(docs):
     
     # ------ Tokenize και προεπεξεργασία των όρων των εργασιών ------
     abstracts = [doc['abstract'] for doc in docs] 
-    tokenized_docs = [doc.split() for doc in abstracts] 
+    tokenized_docs = [preprocess_text('abstract', doc).split() for doc in abstracts] 
     # ------ Υπολογισμός TF ------
     tf = [Counter(doc) for doc in tokenized_docs]                                       # Η συχνότητα εμφάνισης κάθε όρου στο κείμενο
     # ------ Υπολογισμός DF ------
@@ -30,7 +30,7 @@ def calculate_tfidf_docs(docs):
 def calculate_tfidf_query(query, idf_docs):
    
     # ------ Tokenize και προεπεξεργασία των όρων του ερωτήματος χρήστη ------
-    tokenized_query = preprocess_text('abstract', query).split()
+    tokenized_query = preprocess_text('query', query).split()
     # ------ Υπολογισμός TF-IDF ------
     tfidf_query = {term: tokenized_query.count(term) * idf_docs.get(term, 0) for term in tokenized_query} # Η συχνότητα εμφάνισης κάθε όρου του ερωτήματος χρήστη σε κάθε κείμενο
 
@@ -42,7 +42,10 @@ def calculate_cosine_similarity(tfidf_query, doc):
     dot_product = sum(tfidf_query.get(term, 0) * doc.get(term, 0) for term in tfidf_query) # Το εσωτερικό γινόμενο των διανυσμάτων του ερωτήματος χρήστη και του κειμένου
     norm_query = math.sqrt(sum(val**2 for val in tfidf_query.values()))                    # Η Ευκλείδεια απόσταση του διανύσματος του ερωτήματος χρήστη
     norm_doc = math.sqrt(sum(val**2 for val in doc.values()))                              # Η Ευκλείδεια απόσταση του διανύσματος του κειμένου
-    cosine_similarity = dot_product / (norm_query * norm_doc)                              # Η ομοιότητα μεταξύ του ερωτήματος χρήστη και του κειμένου
+    if norm_query != 0 and norm_doc != 0:
+        cosine_similarity = dot_product / (norm_query * norm_doc)                          # Η ομοιότητα μεταξύ του ερωτήματος χρήστη και του κειμένου
+    else:
+        cosine_similarity = 0
 
     return cosine_similarity
 
