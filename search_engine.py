@@ -76,9 +76,6 @@ class SearchEngine:
                 else:
                     break
 
-
-            
-        
         elif retrieval_algorithm == "Vector Space Model":
             results_vsm = self.search_papers_vector_space_model(search_query)
             count_results = 0
@@ -99,7 +96,6 @@ class SearchEngine:
                 else:
                     break
        
-
         elif retrieval_algorithm == "Okapi BM25":
             results_bm25 = self.search_papers_okapi_bm25(search_query)
             count_results = 0
