@@ -10,14 +10,8 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 
-def preprocess_list_of_texts(key, dataset):
-    preprocessed_data = []
-    for doc in dataset:
-        preprocessed_data.append(preprocess_text(key, doc))
-    return preprocessed_data
-
+# ------ Βήμα 2.β. Επιλογή τεχνικών προεπεξεργασίας κειμένου ------
 def preprocess_text(key, dataset):
-    # ------ Βήμα 2.β. Επιλογή τεχνικών προεπεξεργασίας κειμένου ------
     # ------ Tokenization ------
     tokens = word_tokenize(dataset)
 
@@ -39,13 +33,11 @@ def preprocess_text(key, dataset):
     else:
         stop_tokens = normal_tokens
 
-    # ------ Μόνο για τα πεδία abstract και του ερωτήματος χρήστη ------
-    if key == 'abstract' or key == 'query' or key == 'boolean query':
-        # ------ Stemming ------
-        porter_stemmer = PorterStemmer()
-        stemmed_tokens = [porter_stemmer.stem(token) for token in stop_tokens]
-        return ' '.join(stemmed_tokens)
-    else:
-        return ' '.join(stop_tokens)
+    # ------ Stemming ------
+    porter_stemmer = PorterStemmer()
+    stemmed_tokens = [porter_stemmer.stem(token) for token in stop_tokens]
+    
+    return ' '.join(stemmed_tokens)
+
 
     

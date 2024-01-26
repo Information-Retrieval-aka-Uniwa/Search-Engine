@@ -2,7 +2,7 @@ import json
 import random
 
 from web_crawler import web_crawling
-from text_preprocessing import preprocess_list_of_texts, preprocess_text
+from text_preprocessing import preprocess_text
 from inverted_index import create_inverted_index
 from search_engine import SearchEngine
 
@@ -21,7 +21,7 @@ try:
     # ------ Βήμα 1.β. Υλοποίηση web crawler ------
     documents = web_crawling(random_subjects)
     # ------ Βήμα 1.γ. Αποθήκευση δεδομένων σε δομημένη μορφή  ------
-    with open('dataset/dataset.json', 'w') as f:
+    with open('dataset.json', 'w') as f:
         json.dump(documents, f, indent=4)
  
 
@@ -31,27 +31,13 @@ try:
    
     """""""""""""""""""""""""""""""""""""""""""""
     # ------ Προεπεξεργασία του dataset ------
-    with open('dataset/dataset.json', 'r') as file:
+    with open('dataset.json', 'r') as file:
         dataset = json.load(file)
     # ------ Βήμα 2.α. Προεπεξεργασία του αποθετηρίου (dataset) ------
     # ------ Βήμα 2.β. Επιλογή τεχνικών προεπεξεργασίας κειμένου ------
-    preprocessed_docs = []   
     for doc in dataset:
-        preprocessed_data = {
-            'doc_id'    : doc.get('doc_id'),
-            'title'     : preprocess_text('title', doc.get('title')),
-            'authors'   : preprocess_list_of_texts('authors', doc.get('authors')),
-            'subjects'  : preprocess_list_of_texts('subjects', doc.get('subjects')),
-            'abstract'  : preprocess_text('abstract', doc.get('abstract')),
-            'comments'  : preprocess_text('comments', doc.get('comments')),
-            'date'      : preprocess_text('date', doc.get('date')),
-            'pdf_url'   : doc.get('pdf_url')
-        }
-        preprocessed_docs.append(preprocessed_data)
-    # ------ Βήμα 2.γ. Αποθήκευση των προεπεξεργασμένων δεδομένων σε δομημένη μορφή  ------
-    with open('dataset/preprocessed_dataset.json', 'w') as f:
-        json.dump(preprocessed_docs, f, indent=4)
-
+        doc['abstract'] = preprocess_text('abstract', doc.get('abstract'))
+    
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
@@ -59,15 +45,9 @@ try:
     
     """""""""""""""""""""""""""""""""""""""""""""
     # ------ Βήμα 3.α. Δημιουργία της ανεστραμμένης δομής δεδομένων ευρετηρίου ------
-    with open('dataset/preprocessed_dataset.json', 'r') as file:
-        preprocessed_data = json.load(file)
     # ------ Βήμα 3.β. Αποθήκευση της ανεστραμμένης δομής δεδομένων ευρετηρίου ------
-    inverted_index = create_inverted_index(preprocessed_data)
-    with open('dataset/inverted_index.txt', 'w') as file2:
-        for key, value in inverted_index.items():
-            file2.write(f"{key} --> {value}\n")
-    
-
+    inverted_index = create_inverted_index(dataset)
+   
     """"""""""""""""""""""""""""""""""""""""""""" 
     
         Βήμα 4. Μηχανή αναζήτησης (Search engine)

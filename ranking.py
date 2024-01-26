@@ -14,7 +14,7 @@ def calculate_tfidf_docs(docs):
     
     # ------ Tokenize και προεπεξεργασία των όρων των εργασιών ------
     abstracts = [doc['abstract'] for doc in docs] 
-    tokenized_docs = [doc.split() for doc in abstracts] 
+    tokenized_docs = [preprocess_text('abstract', doc).split() for doc in abstracts] 
     # ------ Υπολογισμός TF ------
     tf = [Counter(doc) for doc in tokenized_docs]                                       # Η συχνότητα εμφάνισης κάθε όρου στο κείμενο
     # ------ Υπολογισμός DF ------
@@ -30,7 +30,7 @@ def calculate_tfidf_docs(docs):
 def calculate_tfidf_query(query, idf_docs):
    
     # ------ Tokenize και προεπεξεργασία των όρων του ερωτήματος χρήστη ------
-    tokenized_query = preprocess_text('abstract', query).split()
+    tokenized_query = preprocess_text('query', query).split()
     # ------ Υπολογισμός TF-IDF ------
     tfidf_query = {term: tokenized_query.count(term) * idf_docs.get(term, 0) for term in tokenized_query} # Η συχνότητα εμφάνισης κάθε όρου του ερωτήματος χρήστη σε κάθε κείμενο
 
