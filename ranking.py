@@ -42,7 +42,10 @@ def calculate_cosine_similarity(tfidf_query, doc):
     dot_product = sum(tfidf_query.get(term, 0) * doc.get(term, 0) for term in tfidf_query) # Το εσωτερικό γινόμενο των διανυσμάτων του ερωτήματος χρήστη και του κειμένου
     norm_query = math.sqrt(sum(val**2 for val in tfidf_query.values()))                    # Η Ευκλείδεια απόσταση του διανύσματος του ερωτήματος χρήστη
     norm_doc = math.sqrt(sum(val**2 for val in doc.values()))                              # Η Ευκλείδεια απόσταση του διανύσματος του κειμένου
-    cosine_similarity = dot_product / (norm_query * norm_doc)                              # Η ομοιότητα μεταξύ του ερωτήματος χρήστη και του κειμένου
+    if norm_query != 0 and norm_doc != 0:
+        cosine_similarity = dot_product / (norm_query * norm_doc)                          # Η ομοιότητα μεταξύ του ερωτήματος χρήστη και του κειμένου
+    else:
+        cosine_similarity = 0
 
     return cosine_similarity
 

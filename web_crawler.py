@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 def web_crawling(random_subjects):
     dataset = []
-    doc_id = 1
+    doc_id = 0
     for sub in random_subjects:
         # ------ Βήμα 1.α. Επιλογή ιστοτόπου-στόχου ------
         url = 'https://arxiv.org/search/?query=' + sub + '&searchtype=all&source=header&size=100' # π.χ. Ανάκτηση δεδομένων 100 paper από το arXiv για το μάθημα Physics 	
