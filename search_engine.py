@@ -17,7 +17,15 @@ class SearchEngine:
     def __init__(self, inverted_index):
         with open('dataset.json', 'r') as file:
             self.dataset = json.load(file)               
-        self.inverted_index = inverted_index      
+        self.inverted_index = inverted_index 
+
+        self.results_boolean = []
+        self.results_vsm = []
+        self.results_bm25 = []
+
+        self.retrieval_algorithm = ""
+
+             
 
     # ------ Βήμα 4.α Ανάπτυξη διεπαφής χρήστη για αναζήτηση εργασιών ------
     def init_gui(self):
@@ -39,15 +47,38 @@ class SearchEngine:
         # ----- Ερώτημα αναζήτησης (query) -----
         def get_query():                                     
             search_query = search_entry.get()                    
-            retrieval_algorithm = combobox.get()
+            self.retrieval_algorithm = combobox.get()
             print("\n")
             print(f"============ Ερώτημα αναζήτησης   : {search_query} ============")          
-            print(f"============ Αλγόριθμος ανάκτησης : {retrieval_algorithm} ============")
-            self.search_papers(search_query, retrieval_algorithm)  
+            print(f"============ Αλγόριθμος ανάκτησης : {self.retrieval_algorithm} ============")
+            self.search_papers(search_query, self.retrieval_algorithm)  
 
         # ----- Κουμπί αναζήτησης -----
         search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query)
-        search_button.pack()                                                       
+        search_button.pack()
+
+
+        # ----- Πεδίο εισαγωγής κειμένου -----
+        search_entry2 = tkinter.Entry(window, width=50) 
+        search_entry2.pack(pady=10)  
+
+        # ----- Πεδίο επιλογής φιλτρου -----
+        options = ["Συγγραφείς", "Ημερομηνία"]           
+        combobox2 = ttk.Combobox(window, values=options, state="readonly", width=30) 
+        combobox2.set("Επιλογή Φίλτρου")                                
+        combobox2.pack()
+
+
+        # ----- Επιλογή φίλτρου -----
+        def get_filter():
+            filtering_query = search_entry2.get()
+            filter = combobox2.get()
+            print("Φιλτράρισμα αποτελεσμάτων κατά: "+ filter)
+            self.filtering(filter, filtering_query)
+                                                             
+        # ----- Κουμπί επιλογής -----
+        filter_button = tkinter.Button(window, text="Αναζήτηση", command=get_filter)
+        filter_button.pack()                                                       
 
         # ----- Εκτέλεση του παραθύρου -----
         window.mainloop()
@@ -55,10 +86,10 @@ class SearchEngine:
     # ------ Βήμα 4.β. Υλοποίηση αλγορίθμων ανάκτησης ------
     def search_papers(self, search_query, retrieval_algorithm):
         
-        if retrieval_algorithm == "Boolean Retrieval":
-            results_boolean = self.search_papers_boolean_retrieval(search_query)
+        if self.retrieval_algorithm == "Boolean Retrieval":
+            self.results_boolean = self.search_papers_boolean_retrieval(search_query)
             count_results = 0
-            for doc_id in results_boolean:
+            for doc_id in self.results_boolean:
                 if count_results < 20:
                     doc = self.dataset[doc_id]
                     print('--------------------------------------------------')
@@ -76,10 +107,10 @@ class SearchEngine:
                 else:
                     break
 
-        elif retrieval_algorithm == "Vector Space Model":
-            results_vsm = self.search_papers_vector_space_model(search_query)
+        elif self.retrieval_algorithm == "Vector Space Model":
+            self.results_vsm = self.search_papers_vector_space_model(search_query)
             count_results = 0
-            for doc, score in results_vsm:
+            for doc, score in self.results_vsm:
                 if count_results < 20:
                     print('--------------------------------------------------')
                     print(f"#{count_results + 1} Cosine Similarity: {score:.2f}")
@@ -96,10 +127,10 @@ class SearchEngine:
                 else:
                     break
        
-        elif retrieval_algorithm == "Okapi BM25":
-            results_bm25 = self.search_papers_okapi_bm25(search_query)
+        elif self.retrieval_algorithm == "Okapi BM25":
+            self.results_bm25 = self.search_papers_okapi_bm25(search_query)
             count_results = 0
-            for doc_id, score in results_bm25:
+            for doc_id, score in self.results_bm25:
                 if count_results < 20:
                     doc = self.dataset[doc_id]
                     print('--------------------------------------------------')
@@ -184,6 +215,145 @@ class SearchEngine:
         return rank_documents_bm25(okapi_bm25_scores) 
 
 
+    # ------ Βήμα 4.γ. Φιλτράρισμα αποτελεσμάτων αναζήτησης με διάφορα κριτήρια ------
+    def filtering(self, filter, search_query):
+        
+        if filter == "Συγγραφείς":
+          
+          if self.retrieval_algorithm == "Boolean Retrieval":
+            count_results = 0
+            for doc_id in self.results_boolean:
+                if count_results < 20:
+                    doc = self.dataset[doc_id]
+                    if search_query in doc['authors']:
+                        print('--------------------------------------------------')
+                        print(f"#{count_results + 1}")
+                        print('--------------------------------------------------')
+                        print(f"Document ID : {doc['doc_id']}")
+                        print(f"Title       : {doc['title']}")
+                        print(f"Authors     : {', '.join(doc['authors'])}")
+                        print(f"Subjects    : {', '.join(doc['subjects'])}")
+                        print(f"Abstract    : {doc['abstract']}")
+                        print(f"Comments    : {doc['comments']}")
+                        print(f"Date        : {doc['date']}")
+                        print(f"PDF_URL     : {doc['pdf_url']}")
+                        count_results += 1
+                else:
+                    break
+          
+          elif self.retrieval_algorithm == "Vector Space Model":
+            count_results = 0
+            for doc, score in self.results_vsm:
+                if count_results < 20:
+                    if search_query in doc['authors']:
+                        print('--------------------------------------------------')
+                        print(f"#{count_results + 1} ")
+                        print('--------------------------------------------------')
+                        print(f"Document ID : {doc['doc_id']}")
+                        print(f"Title       : {doc['title']}")
+                        print(f"Authors     : {', '.join(doc['authors'])}")
+                        print(f"Subjects    : {', '.join(doc['subjects'])}")
+                        print(f"Abstract    : {doc['abstract']}")
+                        print(f"Comments    : {doc['comments']}")
+                        print(f"Date        : {doc['date']}")
+                        print(f"PDF_URL     : {doc['pdf_url']}")
+                        count_results += 1
+                else:
+                    break
+          
+          elif self.retrieval_algorithm == "Okapi BM25":
+            count_results = 0
+            for doc_id in self.results_bm25:
+                if count_results < 20:
+                    doc = self.dataset[doc_id]
+                    if search_query in doc['authors']:
+                        print('--------------------------------------------------')
+                        print(f"#{count_results + 1} ")
+                        print('--------------------------------------------------')
+                        print(f"Document ID : {doc['doc_id']}")
+                        print(f"Title       : {doc['title']}")
+                        print(f"Authors     : {', '.join(doc['authors'])}")
+                        print(f"Subjects    : {', '.join(doc['subjects'])}")
+                        print(f"Abstract    : {doc['abstract']}")
+                        print(f"Comments    : {doc['comments']}")
+                        print(f"Date        : {doc['date']}")
+                        print(f"PDF_URL     : {doc['pdf_url']}")
+                        count_results += 1
+                else:
+                    break
+
+        elif filter == "Ημερομηνία":
+
+            if self.retrieval_algorithm == "Boolean Retrieval":
+                count_results = 0
+                for doc_id in self.results_boolean:
+                    if count_results < 20:
+                        doc = self.dataset[doc_id]
+                        if search_query in doc['date']:
+                            print('--------------------------------------------------')
+                            print(f"#{count_results + 1}")
+                            print('--------------------------------------------------')
+                            print(f"Document ID : {doc['doc_id']}")
+                            print(f"Title       : {doc['title']}")
+                            print(f"Authors     : {', '.join(doc['authors'])}")
+                            print(f"Subjects    : {', '.join(doc['subjects'])}")
+                            print(f"Abstract    : {doc['abstract']}")
+                            print(f"Comments    : {doc['comments']}")
+                            print(f"Date        : {doc['date']}")
+                            print(f"PDF_URL     : {doc['pdf_url']}")
+                            count_results += 1
+                    else:
+                        break
+            
+            elif self.retrieval_algorithm == "Vector Space Model":
+                count_results = 0
+                for doc, score in self.results_vsm:
+                    if count_results < 20:
+                        if search_query in doc['date']:
+                            print('--------------------------------------------------')
+                            print(f"#{count_results + 1} ")
+                            print('--------------------------------------------------')
+                            print(f"Document ID : {doc['doc_id']}")
+                            print(f"Title       : {doc['title']}")
+                            print(f"Authors     : {', '.join(doc['authors'])}")
+                            print(f"Subjects    : {', '.join(doc['subjects'])}")
+                            print(f"Abstract    : {doc['abstract']}")
+                            print(f"Comments    : {doc['comments']}")
+                            print(f"Date        : {doc['date']}")
+                            print(f"PDF_URL     : {doc['pdf_url']}")
+                            count_results += 1
+                    else:
+                        break
+            
+            elif self.retrieval_algorithm == "Okapi BM25":
+                count_results = 0
+                for doc_id in self.results_bm25:
+                    if count_results < 20:
+                        doc = self.dataset[doc_id]
+                        if search_query in doc['date']:
+                            print('--------------------------------------------------')
+                            print(f"#{count_results + 1} ")
+                            print('--------------------------------------------------')
+                            print(f"Document ID : {doc['doc_id']}")
+                            print(f"Title       : {doc['title']}")
+                            print(f"Authors     : {', '.join(doc['authors'])}")
+                            print(f"Subjects    : {', '.join(doc['subjects'])}")
+                            print(f"Abstract    : {doc['abstract']}")
+                            print(f"Comments    : {doc['comments']}")
+                            print(f"Date        : {doc['date']}")
+                            print(f"PDF_URL     : {doc['pdf_url']}")
+                            count_results += 1
+                    else:
+                        break    
+
+
+           
+                       
+                         
+        
+            
+     
+        
     
                  
         
