@@ -35,16 +35,16 @@ def preprocess_text(key, dataset):
         stop_tokens = normal_tokens
 
     # ------ Stemming ------
-    #porter_stemmer = PorterStemmer()
-    #stemmed_tokens = [porter_stemmer.stem(token) for token in stop_tokens]
+    porter_stemmer = PorterStemmer()
+    stemmed_tokens = [porter_stemmer.stem(token) for token in stop_tokens]
 
-    #return ' '.join(stemmed_tokens)
+    return ' '.join(stemmed_tokens)
     
     # ------ Lemmatization ------
-    lemmatizer = WordNetLemmatizer()
-    lemmatized_tokens = [lemmatizer.lemmatize(token) for token in stop_tokens]
+    #lemmatizer = WordNetLemmatizer()
+    #lemmatized_tokens = [lemmatizer.lemmatize(token) for token in stop_tokens]
 
-    return ' '.join(lemmatized_tokens)    
+    #return ' '.join(lemmatized_tokens)    
     
 
 
