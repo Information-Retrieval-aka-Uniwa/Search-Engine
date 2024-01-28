@@ -51,7 +51,7 @@ class SearchEngine:
             print("\n")
             print(f"============ Ερώτημα αναζήτησης   : {search_query} ============")          
             print(f"============ Αλγόριθμος ανάκτησης : {self.retrieval_algorithm} ============")
-            self.search_papers(search_query, self.retrieval_algorithm)  
+            self.search_papers(search_query)  
 
         # ----- Κουμπί αναζήτησης -----
         search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query)
@@ -73,7 +73,7 @@ class SearchEngine:
         def get_filter():
             filtering_query = search_entry2.get()
             filter = combobox2.get()
-            print("Φιλτράρισμα αποτελεσμάτων κατά: "+ filter)
+            print("\nΦιλτράρισμα αποτελεσμάτων κατά: " + filter)
             self.filtering(filter, filtering_query)
                                                              
         # ----- Κουμπί επιλογής -----
@@ -84,7 +84,7 @@ class SearchEngine:
         window.mainloop()
 
     # ------ Βήμα 4.β. Υλοποίηση αλγορίθμων ανάκτησης ------
-    def search_papers(self, search_query, retrieval_algorithm):
+    def search_papers(self, search_query):
         
         if self.retrieval_algorithm == "Boolean Retrieval":
             self.results_boolean = self.search_papers_boolean_retrieval(search_query)
@@ -113,7 +113,7 @@ class SearchEngine:
             for doc, score in self.results_vsm:
                 if count_results < 20:
                     print('--------------------------------------------------')
-                    print(f"#{count_results + 1} Cosine Similarity: {score:.2f}")
+                    print(f"#{count_results + 1} Cosine Similarity: {score:.4f}")
                     print('--------------------------------------------------')
                     print(f"Document ID : {doc['doc_id']}")
                     print(f"Title       : {doc['title']}")
@@ -134,7 +134,7 @@ class SearchEngine:
                 if count_results < 20:
                     doc = self.dataset[doc_id]
                     print('--------------------------------------------------')
-                    print(f"#{count_results + 1} BM25 Score: {score:.2f}")
+                    print(f"#{count_results + 1} BM25 Score: {score:.4f}")
                     print('--------------------------------------------------')
                     print(f"Document ID : {doc['doc_id']}")
                     print(f"Title       : {doc['title']}")
@@ -247,7 +247,7 @@ class SearchEngine:
                 if count_results < 20:
                     if search_query in doc['authors']:
                         print('--------------------------------------------------')
-                        print(f"#{count_results + 1} ")
+                        print(f"#{count_results + 1} Cosine Similarity: {score:.4f}")
                         print('--------------------------------------------------')
                         print(f"Document ID : {doc['doc_id']}")
                         print(f"Title       : {doc['title']}")
@@ -263,12 +263,12 @@ class SearchEngine:
           
           elif self.retrieval_algorithm == "Okapi BM25":
             count_results = 0
-            for doc_id in self.results_bm25:
+            for doc_id, score in self.results_bm25:
                 if count_results < 20:
                     doc = self.dataset[doc_id]
                     if search_query in doc['authors']:
                         print('--------------------------------------------------')
-                        print(f"#{count_results + 1} ")
+                        print(f"#{count_results + 1} BM25 Score: {score:.4f}")
                         print('--------------------------------------------------')
                         print(f"Document ID : {doc['doc_id']}")
                         print(f"Title       : {doc['title']}")
@@ -311,7 +311,7 @@ class SearchEngine:
                     if count_results < 20:
                         if search_query in doc['date']:
                             print('--------------------------------------------------')
-                            print(f"#{count_results + 1} ")
+                            print(f"#{count_results + 1} Cosine Similarity: {score:.4f}")
                             print('--------------------------------------------------')
                             print(f"Document ID : {doc['doc_id']}")
                             print(f"Title       : {doc['title']}")
@@ -327,12 +327,12 @@ class SearchEngine:
             
             elif self.retrieval_algorithm == "Okapi BM25":
                 count_results = 0
-                for doc_id in self.results_bm25:
+                for doc_id, score in self.results_bm25:
                     if count_results < 20:
                         doc = self.dataset[doc_id]
                         if search_query in doc['date']:
                             print('--------------------------------------------------')
-                            print(f"#{count_results + 1} ")
+                            print(f"#{count_results + 1} BM25 Score: {score:.4f}")
                             print('--------------------------------------------------')
                             print(f"Document ID : {doc['doc_id']}")
                             print(f"Title       : {doc['title']}")

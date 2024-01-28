@@ -9,6 +9,7 @@ import re
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
+from nltk.stem import WordNetLemmatizer
 
 # ------ Βήμα 2.β. Επιλογή τεχνικών προεπεξεργασίας κειμένου ------
 def preprocess_text(key, dataset):
@@ -34,10 +35,17 @@ def preprocess_text(key, dataset):
         stop_tokens = normal_tokens
 
     # ------ Stemming ------
-    porter_stemmer = PorterStemmer()
-    stemmed_tokens = [porter_stemmer.stem(token) for token in stop_tokens]
+    #porter_stemmer = PorterStemmer()
+    #stemmed_tokens = [porter_stemmer.stem(token) for token in stop_tokens]
+
+    #return ' '.join(stemmed_tokens)
     
-    return ' '.join(stemmed_tokens)
+    # ------ Lemmatization ------
+    lemmatizer = WordNetLemmatizer()
+    lemmatized_tokens = [lemmatizer.lemmatize(token) for token in stop_tokens]
+
+    return ' '.join(lemmatized_tokens)    
+    
 
 
     

@@ -38,12 +38,13 @@ def web_crawling(random_subjects):
             else:
                 comments = has_comments.text.strip().removeprefix("Comments:").replace("\n", "")
             # ------ Ημερομηνία δημοσίευσης ------
-            date = elements.find('p', class_='is-size-7').text.strip().removeprefix("Submitted ").split(";")[0]
+            date = elements.find('p', class_='is-size-7').text.strip().removeprefix("Submitted ").split(";")[0].replace(", ", " ")
             # ------ URL λήψης του pdf της εργασίας ------
             for pdf_link in elements.find_all('a'):                     
                 pdf_href = pdf_link.get('href')                       
                 if pdf_href and pdf_href.startswith('https://arxiv.org/pdf/'):         
-                    pdf_url = pdf_href 
+                    pdf_url = pdf_href
+            # ------ Αποθήκευση δεδομένων σε δομημένη μορφή λεξικού  ------ 
             data = {
                 'doc_id'   : doc_id,
                 'title'    : title,

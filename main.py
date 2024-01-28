@@ -14,16 +14,16 @@ try:
  
     """""""""""""""""""""""""""""""""""""""""""""
     # ------ Δημιουργία του dataset ------
-    subjects = ['Physics', 'Mathematics', 'Computer Science', 'Quantitative Biology', 'Quantitative Finance', 'Statistics', 'Electrical Engineering and Systems Science', 'Economics']
+    subjects = ['Physics', 'Mathematics', 'Computer', 'Biology', 'Finance', 'Statistics', 'Electronics', 'Economics']
     num_subjects = random.randint(2, len(subjects))
     random_subjects = random.sample(subjects, num_subjects)
     # ------ Βήμα 1.α. Επιλογή ιστοτόπου-στόχου -----
     # ------ Βήμα 1.β. Υλοποίηση web crawler ------
     documents = web_crawling(random_subjects)
     # ------ Βήμα 1.γ. Αποθήκευση δεδομένων σε δομημένη μορφή  ------
-    with open('dataset.json', 'w') as f:
-        json.dump(documents, f, indent=4)
- 
+    with open('dataset.json', 'w') as dataset:
+        json.dump(documents, dataset, indent=4)
+    
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
@@ -48,6 +48,7 @@ try:
     # ------ Βήμα 3.β. Αποθήκευση της ανεστραμμένης δομής δεδομένων ευρετηρίου ------
     inverted_index = create_inverted_index(dataset)
    
+
     """"""""""""""""""""""""""""""""""""""""""""" 
     
         Βήμα 4. Μηχανή αναζήτησης (Search engine)
@@ -64,6 +65,7 @@ try:
     se = SearchEngine(inverted_index)
     se.init_gui()
 
+
 except Exception as ex: 
-    print("_____________________Εξαίρεση_____________________")
+    print("=================== Εξαίρεση ===================")
     print(str(ex))
