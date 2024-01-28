@@ -13,6 +13,7 @@ try:
         Βήμα 1. Σταχυολογητής (Web Crawler)
  
     """""""""""""""""""""""""""""""""""""""""""""
+    """
     # ------ Δημιουργία του dataset ------
     subjects = ['Physics', 'Mathematics', 'Computer', 'Biology', 'Finance', 'Statistics', 'Electronics', 'Economics']
     num_subjects = random.randint(2, len(subjects))
@@ -23,22 +24,21 @@ try:
     # ------ Βήμα 1.γ. Αποθήκευση δεδομένων σε δομημένη μορφή  ------
     with open('dataset.json', 'w') as dataset:
         json.dump(documents, dataset, indent=4)
-    
+    """
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
         Βήμα 2. Προεπεξεργασία κειμένου (Text processing)
    
     """""""""""""""""""""""""""""""""""""""""""""
-    # ------ Προεπεξεργασία του dataset ------
+    # ------ Προεπεξεργασία του κειμενικού περιεχομένου του dataset ------
     with open('dataset.json', 'r') as file:
         dataset = json.load(file)
-    # ------ Βήμα 2.α. Προεπεξεργασία του αποθετηρίου (dataset) ------
-    # ------ Βήμα 2.β. Επιλογή τεχνικών προεπεξεργασίας κειμένου ------
+
     for doc in dataset:
         doc['abstract'] = preprocess_text('abstract', doc.get('abstract'))
     
-
+      
     """"""""""""""""""""""""""""""""""""""""""""" 
     
         Βήμα 3. Ευρετήριο (Indexing)
@@ -47,7 +47,8 @@ try:
     # ------ Βήμα 3.α. Δημιουργία της ανεστραμμένης δομής δεδομένων ευρετηρίου ------
     # ------ Βήμα 3.β. Αποθήκευση της ανεστραμμένης δομής δεδομένων ευρετηρίου ------
     inverted_index = create_inverted_index(dataset)
-   
+    for key, value in inverted_index.items():
+        print(f"{key} --> {value}")
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
@@ -63,7 +64,7 @@ try:
     # ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
     # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
     se = SearchEngine(inverted_index)
-    se.init_gui()
+   # se.init_gui()
 
 
 except Exception as ex: 
