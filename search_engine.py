@@ -215,7 +215,7 @@ class SearchEngine:
         return rank_documents_bm25(okapi_bm25_scores) 
 
 
-    # ------ Βήμα 4.γ. Φιλτράρισμα αποτελεσμάτων αναζήτησης με διάφορα κριτήρια ------
+    # ------ Βήμα 4.γ. Φιλτράρισμα αποτελεσμάτων αναζήτησης με κριτήρια συγγραφέα ή ημερομηνία ------
     def filtering(self, filter, search_query):
         
         if filter == "Συγγραφείς":
