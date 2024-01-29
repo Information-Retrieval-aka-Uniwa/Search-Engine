@@ -15,14 +15,12 @@ from ranking import calculate_cosine_similarity, calculate_okapi_bm25_score, cal
 class SearchEngine:
 
     def __init__(self, inverted_index):
-        with open('dataset.json', 'r') as file:
-            self.dataset = json.load(file)               
+        with open("dataset.json", "r") as dataset:
+            self.dataset = json.load(dataset)               
         self.inverted_index = inverted_index 
-
         self.results_boolean = []
         self.results_vsm = []
         self.results_bm25 = []
-
         self.retrieval_algorithm = ""
 
              
@@ -34,12 +32,12 @@ class SearchEngine:
         window.title("Αναζήτηση ακαδημαϊκών εργασιών")
         window.geometry("400x200")                   
 
-        # ----- Πεδίο εισαγωγής κειμένου -----
+        # ----- Πεδίο εισαγωγής ερωτήματος χρήστη -----
         search_entry = tkinter.Entry(window, width=50) 
         search_entry.pack(pady=10)                 
 
         # ----- Πεδίο επιλογής αλγορίθμου ανάκτησης -----
-        options = ["Boolean Retrieval", "Vector Space Model", "Okapi BM25"]           
+        options = ["Boolean Retrieval", "Vector Space Model", "Probabilistic Retrieval Model"]           
         combobox = ttk.Combobox(window, values=options, state="readonly", width=30) 
         combobox.set("Επιλογή Αλγορίθμου Ανάκτησης")                                
         combobox.pack()                                                            
@@ -53,12 +51,12 @@ class SearchEngine:
             print(f"============ Αλγόριθμος ανάκτησης : {self.retrieval_algorithm} ============")
             self.search_papers(search_query)  
 
-        # ----- Κουμπί αναζήτησης -----
+        # ----- Κουμπί αναζήτησης αποτελεσμάτων αλγόριθμου ανάκτησης -----
         search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query)
         search_button.pack()
 
 
-        # ----- Πεδίο εισαγωγής κειμένου -----
+        # ----- Πεδίο εισαγωγής κριτηρίου φίλτρου -----
         search_entry2 = tkinter.Entry(window, width=50) 
         search_entry2.pack(pady=10)  
 
@@ -76,7 +74,7 @@ class SearchEngine:
             print("\nΦιλτράρισμα αποτελεσμάτων κατά: " + filter)
             self.filtering(filter, filtering_query)
                                                              
-        # ----- Κουμπί επιλογής -----
+        # ----- Κουμπί αναζήτησης αποτελεσμάτων φίλτρου -----
         filter_button = tkinter.Button(window, text="Αναζήτηση", command=get_filter)
         filter_button.pack()                                                       
 
@@ -127,7 +125,7 @@ class SearchEngine:
                 else:
                     break
        
-        elif self.retrieval_algorithm == "Okapi BM25":
+        elif self.retrieval_algorithm == "Probabilistic Retrieval Model":
             self.results_bm25 = self.search_papers_okapi_bm25(search_query)
             count_results = 0
             for doc_id, score in self.results_bm25:
@@ -149,8 +147,8 @@ class SearchEngine:
                     break
     
 
-    # ------ Βήμα 4.β.1 Boolean retrieval ------
-    # ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
+    # ------ Boolean retrieval ------
+    # ------ Επεξεργασία ερωτήματος (Query Processing) ------
     # Σειράς προτεραιότητας πράξεων: [1] -> [2] -> [3] -> [4] -> [5]
     def search_papers_boolean_retrieval(self, query):
         
@@ -192,8 +190,8 @@ class SearchEngine:
 
         return res
     
-    # ------ Βήμα 4.β.2 Vector Space Model (VSM) ------
-    # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
+    # ------ Vector Space Model (VSM) ------
+    # ------ Κατάταξη αποτελεσμάτων (Ranking) ------
     def search_papers_vector_space_model(self, query):                     
         
         tfidf_docs, idf_docs = calculate_tfidf_docs(self.dataset)
@@ -203,8 +201,8 @@ class SearchEngine:
         return rank_documents_vsm(self.dataset, cosine_similarities) 
 
 
-    # ------ Βήμα 4.β.3 Probabilistic retrieval models (Okabi BM25) ------
-    # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
+    # ------ Probabilistic retrieval models (Okabi BM25) ------
+    # ------ Κατάταξη αποτελεσμάτων (Ranking) ------
     def search_papers_okapi_bm25(self, query):
         
         okapi_bm25_scores = []
@@ -261,7 +259,7 @@ class SearchEngine:
                 else:
                     break
           
-          elif self.retrieval_algorithm == "Okapi BM25":
+          elif self.retrieval_algorithm == "Probabilistic Retrieval Model":
             count_results = 0
             for doc_id, score in self.results_bm25:
                 if count_results < 20:
@@ -325,7 +323,7 @@ class SearchEngine:
                     else:
                         break
             
-            elif self.retrieval_algorithm == "Okapi BM25":
+            elif self.retrieval_algorithm == "Probabilistic Retrieval Model":
                 count_results = 0
                 for doc_id, score in self.results_bm25:
                     if count_results < 20:

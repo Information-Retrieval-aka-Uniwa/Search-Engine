@@ -5,7 +5,7 @@
 """""""""""""""""""""""""""""""""""""""""""""
 from text_preprocessing import preprocess_text
 
-# ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
+# ------ Επεξεργασία ερωτήματος (Query Processing) ------
 def query_processing(terms, num_of_docs):
     for i, term in enumerate(terms):
         if term == "and":
@@ -25,7 +25,7 @@ def query_processing(terms, num_of_docs):
 
     return boolean_retrieval_results
 
-# ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
+# ------ Επεξεργασία ερωτήματος (Query Processing) ------
 def replace_terms_with_docs(query, inverted_index):
     terms = preprocess_text('boolean query', query).split()
     for term in terms:

@@ -8,7 +8,7 @@ from collections import Counter
 
 from text_preprocessing import preprocess_text
 
-# ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
+# ------ Κατάταξη αποτελεσμάτων (Ranking) ------
 # ------ TF-IDF για τους όρους των εργασιών ------
 def calculate_tfidf_docs(docs):
     
@@ -69,11 +69,13 @@ def calculate_okapi_bm25_score(query, inverted_index, doc, k = 1.2, b = 0.75):
     # ------ Υπολογισμός TF-IDF κάθε όρου του ερωτήματος ------
     for term in preprocessed_query:
         if term in inverted_index:
+            # ------ Υπολογισμός DF ------ 
             doc_frequency = len(inverted_index[term])
+            # ------ Υπολογισμός IDF ------
             inverse_doc_frequency = math.log((total_docs - doc_frequency + 0.5) / (doc_frequency + 0.5))
-            # ------ Υπολογισμός TF που εμφανίζεται ο όρος του ερωτήματος στην συλλογή ------
+            # ------ Υπολογισμός TF ------
             term_frequency = doc.count(term)
-            # ------ Υπολογισμός BM25 συντελεστή για κάθε όρο του ερωτ΄΄ηματος ------
+            # ------ Υπολογισμός BM25 συντελεστή για κάθε όρο του ερωτήματος ------
             score += inverse_doc_frequency * ((term_frequency * (k + 1)) / (term_frequency + k * (1 - b + b * (doc_length / average_doc_length))))
     
     return score

@@ -13,7 +13,7 @@ try:
         Βήμα 1. Σταχυολογητής (Web Crawler)
  
     """""""""""""""""""""""""""""""""""""""""""""
-    """
+    
     # ------ Δημιουργία του dataset ------
     subjects = ['Physics', 'Mathematics', 'Computer', 'Biology', 'Finance', 'Statistics', 'Electronics', 'Economics']
     num_subjects = random.randint(2, len(subjects))
@@ -24,7 +24,7 @@ try:
     # ------ Βήμα 1.γ. Αποθήκευση δεδομένων σε δομημένη μορφή  ------
     with open('dataset.json', 'w') as dataset:
         json.dump(documents, dataset, indent=4)
-    """
+    
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
@@ -47,8 +47,6 @@ try:
     # ------ Βήμα 3.α. Δημιουργία της ανεστραμμένης δομής δεδομένων ευρετηρίου ------
     # ------ Βήμα 3.β. Αποθήκευση της ανεστραμμένης δομής δεδομένων ευρετηρίου ------
     inverted_index = create_inverted_index(dataset)
-    for key, value in inverted_index.items():
-        print(f"{key} --> {value}")
 
     """"""""""""""""""""""""""""""""""""""""""""" 
     
@@ -57,14 +55,11 @@ try:
     """""""""""""""""""""""""""""""""""""""""""""
     # ------ Βήμα 4.α Ανάπτυξη διεπαφής χρήστη για αναζήτηση εργασιών ------
     # ------ Βήμα 4.β. Υλοποίηση αλγορίθμων ανάκτησης ------
-    # ------ Βήμα 4.β.1 Boolean retrieval ------
-    # ------ Βήμα 4.β.2 Vector Space Model (VSM) ------
-    # ------ Βήμα 4.β.3 Probabilistic retrieval models (Okabi BM25) ------
     # ------ Βήμα 4.γ. Φιλτράρισμα αποτελεσμάτων αναζήτησης με διάφορα κριτήρια ------
-    # ------ Βήμα 4.δ. Επεξεργασία ερωτήματος (Query Processing) ------
-    # ------ Βήμα 4.ε. Κατάταξη αποτελεσμάτων (Ranking) ------
+    # ------ Επεξεργασία ερωτήματος (Query Processing) ------
+    # ------ Κατάταξη αποτελεσμάτων (Ranking) ------
     se = SearchEngine(inverted_index)
-   # se.init_gui()
+    se.init_gui()
 
 
 except Exception as ex: 
