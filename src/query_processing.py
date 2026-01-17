@@ -1,11 +1,11 @@
 """"""""""""""""""""""""""""""""""""""""""""" 
     
-    Βήμα 4. Επεξεργασία ερωτήματος (Query Processing)
+    Βήμα 4. Query Processing
     
 """""""""""""""""""""""""""""""""""""""""""""
 from text_preprocessing import preprocess_text
 
-# ------ Επεξεργασία ερωτήματος (Query Processing) ------
+# ------ Query Processing ------
 def query_processing(terms, num_of_docs):
     for i, term in enumerate(terms):
         if term == "and":
@@ -25,7 +25,7 @@ def query_processing(terms, num_of_docs):
 
     return boolean_retrieval_results
 
-# ------ Επεξεργασία ερωτήματος (Query Processing) ------
+# ------ Query Processing ------
 def replace_terms_with_docs(query, inverted_index):
     terms = preprocess_text('boolean query', query).split()
     for term in terms:
@@ -35,7 +35,7 @@ def replace_terms_with_docs(query, inverted_index):
                     docs_term = inverted_index[term]
                     terms[terms.index(term)] = docs_term
             else:
-                raise Exception("Ο όρος δεν βρέθηκε στο ευρετήριο")
+                raise Exception("Term not found in the inverted index.")
 
     return terms
 

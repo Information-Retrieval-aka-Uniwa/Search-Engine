@@ -1,10 +1,10 @@
 """"""""""""""""""""""""""""""""""""""""""""" 
     
-    Βήμα 3. Ευρετήριο (Indexing)
+    Step 3. Inverted Index
     
 """""""""""""""""""""""""""""""""""""""""""""
 
-# ------ Βήμα 3.α. Δημιουργία της ανεστραμμένης δομής δεδομένων ευρετηρίου ------
+# ------ Step 3.a. Creation of the inverted index data structure ------
 def create_inverted_index(preprocessed_dataset):
     inverted_index = {}
     for doc in preprocessed_dataset:

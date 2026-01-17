@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""" 
     
-    Βήμα 4. Μηχανή αναζήτησης (Search engine)
+    Step 4. Search Engine
     
 """""""""""""""""""""""""""""""""""""""""""""
 import json
@@ -25,63 +25,63 @@ class SearchEngine:
 
              
 
-    # ------ Βήμα 4.α Ανάπτυξη διεπαφής χρήστη για αναζήτηση εργασιών ------
+    # ------ Step 4.α Development of user interface for searching papers ------
     def init_gui(self):
-        # ----- Παράθυρο διεπαφής χρήστη -----
+        # ----- User interface window -----
         window = tkinter.Tk()                      
-        window.title("Αναζήτηση ακαδημαϊκών εργασιών")
+        window.title("Search of academic papers")
         window.geometry("400x200")                   
 
-        # ----- Πεδίο εισαγωγής ερωτήματος χρήστη -----
+        # ----- Entry field for user query -----
         search_entry = tkinter.Entry(window, width=50) 
         search_entry.pack(pady=10)                 
 
-        # ----- Πεδίο επιλογής αλγορίθμου ανάκτησης -----
+        # ----- Entry field for selecting retrieval algorithm -----
         options = ["Boolean Retrieval", "Vector Space Model", "Probabilistic Retrieval Model"]           
         combobox = ttk.Combobox(window, values=options, state="readonly", width=30) 
-        combobox.set("Επιλογή Αλγορίθμου Ανάκτησης")                                
+        combobox.set("Select Retrieval Algorithm")                                
         combobox.pack()                                                            
 
-        # ----- Ερώτημα αναζήτησης (query) -----
+        # ----- User query -----
         def get_query():                                     
             search_query = search_entry.get()                    
             self.retrieval_algorithm = combobox.get()
             print("\n")
-            print(f"============ Ερώτημα αναζήτησης   : {search_query} ============")          
-            print(f"============ Αλγόριθμος ανάκτησης : {self.retrieval_algorithm} ============")
+            print(f"============ User Query   : {search_query} ============")          
+            print(f"============ Retrieval Algorithm : {self.retrieval_algorithm} ============")
             self.search_papers(search_query)  
 
-        # ----- Κουμπί αναζήτησης αποτελεσμάτων αλγόριθμου ανάκτησης -----
-        search_button = tkinter.Button(window, text="Αναζήτηση", command=get_query)
+        # ----- Search button for results of the retrieval algorithm -----
+        search_button = tkinter.Button(window, text="Search", command=get_query)
         search_button.pack()
 
 
-        # ----- Πεδίο εισαγωγής κριτηρίου φίλτρου -----
+        # ----- Entry field for filtering criteria -----
         search_entry2 = tkinter.Entry(window, width=50) 
         search_entry2.pack(pady=10)  
 
-        # ----- Πεδίο επιλογής φιλτρου -----
-        options = ["Συγγραφείς", "Ημερομηνία"]           
+        # ----- Entry field for selecting filter -----
+        options = ["Authors", "Date"]           
         combobox2 = ttk.Combobox(window, values=options, state="readonly", width=30) 
-        combobox2.set("Επιλογή Φίλτρου")                                
+        combobox2.set("Select Filter")                                
         combobox2.pack()
 
 
-        # ----- Επιλογή φίλτρου -----
+        # ----- Select Filter -----
         def get_filter():
             filtering_query = search_entry2.get()
             filter = combobox2.get()
-            print("\nΦιλτράρισμα αποτελεσμάτων κατά: " + filter)
+            print("\nFiltering results by: " + filter)
             self.filtering(filter, filtering_query)
                                                              
-        # ----- Κουμπί αναζήτησης αποτελεσμάτων φίλτρου -----
-        filter_button = tkinter.Button(window, text="Αναζήτηση", command=get_filter)
+        # ----- Search button for results of the filtering -----
+        filter_button = tkinter.Button(window, text="Search", command=get_filter)
         filter_button.pack()                                                       
 
-        # ----- Εκτέλεση του παραθύρου -----
+        # ----- Execution of the window -----
         window.mainloop()
 
-    # ------ Βήμα 4.β. Υλοποίηση αλγορίθμων ανάκτησης ------
+    # ------ Step 4.β. Implementation of retrieval algorithms ------
     def search_papers(self, search_query):
         
         if self.retrieval_algorithm == "Boolean Retrieval":
@@ -148,26 +148,26 @@ class SearchEngine:
     
 
     # ------ Boolean retrieval ------
-    # ------ Επεξεργασία ερωτήματος (Query Processing) ------
-    # Σειράς προτεραιότητας πράξεων: [1] -> [2] -> [3] -> [4] -> [5]
+    # ------ Query Processing ------
+    # Priority order of operations: [1] -> [2] -> [3] -> [4] -> [5]
     def search_papers_boolean_retrieval(self, query):
         
         res = []
         terms = replace_terms_with_docs(query, self.inverted_index)
         while len(terms) > 1:
-            if '(' and ')' in terms:                                            # [1] Εντοπίζονται οι πράξεις μέσα στις παρενθέσεις από αριστερά προς τα δεξιά
+            if '(' and ')' in terms:                                            # [1] Locate the operations within parentheses from left to right
                 start = terms.index('(')
                 end = terms.index(')')
                 subterms = terms[start + 1:end]
                 while (len(subterms) > 1):
-                    if 'not' in subterms:                                       # [2] Εκτελούνται οι πράξεις με τον τελεστή not από αριστερά προς τα δεξιά 
+                    if 'not' in subterms:                                       # [2] Operations with the not operator are performed from left to right. 
                         not_index = subterms.index('not')
                         not_query = subterms[not_index:not_index+2]
                         res = query_processing(not_query, len(self.dataset))
                         subterms[not_index] = res 
                         subterms.pop(not_index + 1)
                     else:
-                        and_or_query = subterms[0:3]                            # [3] Εκτελούνται οι πράξεις με τους τελεστές and ή or από αριστερά προς τα δεξιά
+                        and_or_query = subterms[0:3]                            # [3] Operations with the operators and or are performed from left to right.
                         res = query_processing(and_or_query, len(self.dataset))
                         subterms[0] = res 
                         subterms.pop(1)
@@ -175,13 +175,13 @@ class SearchEngine:
                 terms[start] = [num for sublist in subterms for num in sublist]
                 del terms[start + 1:end + 1]
             else:
-                if 'not' in terms:                                              # [4] Δεν υπάρχουν παρενθέσεις άρα, εκτελούνται οι πράξεις με τον τελεστή not από αριστερά προς τα δεξιά
+                if 'not' in terms:                                              # [4] There are no parentheses, so operations with the not operator are performed from left to right.
                     not_index = terms.index('not')
                     not_query = terms[not_index:not_index + 2]
                     res = query_processing(not_query, len(self.dataset))
                     terms[not_index] = res 
                     terms.pop(not_index + 1)
-                else:                                                           # [5] Εκτελούνται οι πράξεις με τους τελεστές and και or από αριστερά προς τα δεξιά
+                else:                                                           # [5] Operations with the operators and or are performed from left to right
                     and_or_query = terms[0:3]
                     res = query_processing(and_or_query, len(self.dataset))
                     terms[0] = res 
@@ -191,7 +191,7 @@ class SearchEngine:
         return res
     
     # ------ Vector Space Model (VSM) ------
-    # ------ Κατάταξη αποτελεσμάτων (Ranking) ------
+    # ------ Ranking of results ------
     def search_papers_vector_space_model(self, query):                     
         
         tfidf_docs, idf_docs = calculate_tfidf_docs(self.dataset)
@@ -202,7 +202,7 @@ class SearchEngine:
 
 
     # ------ Probabilistic retrieval models (Okabi BM25) ------
-    # ------ Κατάταξη αποτελεσμάτων (Ranking) ------
+    # ------ Ranking of results ------
     def search_papers_okapi_bm25(self, query):
         
         okapi_bm25_scores = []
@@ -213,10 +213,10 @@ class SearchEngine:
         return rank_documents_bm25(okapi_bm25_scores) 
 
 
-    # ------ Βήμα 4.γ. Φιλτράρισμα αποτελεσμάτων αναζήτησης με διάφορα κριτήρια ------
+    # ------ Step 4.γ. Filtering search results with various criteria ------
     def filtering(self, filter, search_query):
         
-        if filter == "Συγγραφείς":
+        if filter == "Authors":
           
           if self.retrieval_algorithm == "Boolean Retrieval":
             count_results = 0
@@ -280,7 +280,7 @@ class SearchEngine:
                 else:
                     break
 
-        elif filter == "Ημερομηνία":
+        elif filter == "Date":
 
             if self.retrieval_algorithm == "Boolean Retrieval":
                 count_results = 0
