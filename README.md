@@ -15,7 +15,7 @@
 </p>
 
 <h1 align="center" style="letter-spacing: 1px;">
-  Building a 3D Graphics Scene Using WebGL
+  Building a Search Engine for Academic Papers
 </h1>
 
 <p align="center">
@@ -55,305 +55,155 @@
 
 # Project Overview
 
-This project demonstrates the incremental development of a **3D graphics environment using WebGL**. It was developed as a semester project for the **Computer Graphics** course at the **University of West Attica (UNIWA)**.  
-The implementation progresses through multiple stages, starting from basic geometric primitives and evolving into an interactive, animated, and textured 3D scene.
+This project, developed for the **Information Retrieval** course at the University of West Attica (UNIWA), implements a local search engine that crawls, processes, and indexes academic papers from the **arXiv** repository.
 
 ---
 
 ## Table of Contents
 
-| Section | Folder / File | Description |
-|------:|---------------|-------------|
-| 1 | `assign/` | Project assignment material |
-| 1.1 | `assign/project_2023-2024.pdf` | Assignment description in English |
-| 1.2 | `assign/εργασία_2023-2024.pdf` | Assignment description in Greek |
-| 2 | `docs/` | Project documentation |
-| 2.1 | `docs/3D-Graphics-Scene-using-WebGL.pdf` | Documentation in English |
-| 2.2 | `docs/3D-Σκηνή-με-WebGL.pdf` | Documentation in Greek |
-| 3 | `src/` | WebGL source code and assets |
-| 3.1 | `src/textures/` | Texture images used in the 3D scenes |
-| 3.1.1 | `Chair_Texture.jpg` | Chair texture |
-| 3.1.2 | `Floor_Texture.jpg` | Floor texture |
-| 3.1.3 | `Skybox_Texture.jpg` | Skybox texture |
-| 3.1.4 | `Table_Texture.jpg` | Table texture |
-| 3.2 | `src/WebGL-Libraries/` | External WebGL helper libraries |
-| 3.2.1 | `gl-matrix-min.js` | Matrix and vector mathematics library |
-| 3.2.2 | `webgl-debug.js` | WebGL debugging utilities |
-| 3.3 | `src/1st_scene.html` | First WebGL 3D scene |
-| 3.4 | `src/2nd_scene.html` | Second WebGL 3D scene |
-| 3.5 | `src/3rd_scene.html` | Third WebGL 3D scene |
-| 3.6 | `src/4th_scene.html` | Fourth WebGL 3D scene |
-| 4 | `README.md` | Repository overview and usage instructions |
+| Section | Path / File | Description |
+|--------:|-------------|-------------|
+| 1 | `assign/` | Assignment specifications and project instructions |
+| 1.1 | `assign/IR LabProject 2023-2024new.pdf` | Official laboratory project description |
+| 1.2 | `assign/ΑΠ ΕργασίαΕργαστηρίου 2023-2024νέο.pdf` | Greek version of the assignment |
+| 2 | `docs/` | Project documentation and reports |
+| 2.1 | `docs/Academic-Paper-Search-Engine.pdf` | Technical documentation of the search engine |
+| 2.2 | `docs/Μηχανή-Αναζήτησης-Ακαδημαϊκών-Εργασιών.pdf` | Greek documentation |
+| 3 | `src/` | Source code directory |
+| 3.1 | `src/main.py` | Application entry point |
+| 3.2 | `src/search_engine.py` | Core search engine controller |
+| 3.3 | `src/inverted_index.py` | Inverted index construction and lookup |
+| 3.4 | `src/query_processing.py` | Query parsing and preprocessing |
+| 3.5 | `src/ranking.py` | Document ranking algorithms |
+| 3.6 | `src/text_preprocessing.py` | Text cleaning, normalization, and tokenization |
+| 3.7 | `src/web_crawler.py` | Web crawling and data acquisition |
+| 4 | `README.md` | Project overview and usage instructions |
 
 ---
 
-## Technical Features
+## Features
 
-### Scene 1: Foundations
+### 1. Web Crawler
+- Scrapes metadata from **arXiv** based on 2–8 random user queries (e.g., "Physics", "Statistics", "Computer").  
+- **Implementation:** Python using **BeautifulSoup**.  
+- **Data Collected:** Titles, authors, related courses/sub-courses, summaries, comments, publication dates, and PDF links.  
+- **Storage:** Each task is assigned a unique `doc_id` and stored in a dictionary.
 
-- **Cube Formation:**  
-  Implementation of a 3D cube using vertex buffers and color buffers.
+### 2. Text Processing
+- Prepares retrieved data for indexing by implementing a text-processing pipeline (cleaning, tokenization, normalization).
 
-- **Camera Control:**  
-  Integration of `lookAt()` and `perspective()` functions to define the camera position and viewing frustum.
+### 3. Indexing
+- **Inverted Index:** Efficient data structure for searching.  
+- **Storage:** Index stored in a structured format accessible by the search engine.
 
-- **User Interface:**  
-  Text input fields allow manual entry of viewing angles and orthogonal distances, accompanied by a **Redraw** button that updates the rendered scene in real time.
-
----
-
-### Scene 2: Geometric Transformations
-
-- **Object Modeling:**  
-  Transformation of the initial cube into more complex composite objects, including:
-  - Table  
-  - Stool  
-  - Chair  
-
-- **Matrix Operations:**  
-  Extensive use of transformation matrices such as:
-  - `fromTranslation()`  
-  - `fromScaling()`  
-  - `multiply()`  
-
-  These operations enable precise assembly of multi-part objects from simple geometric components.
+### 4. Search Engine
+- **User Interface:** Allows users to submit queries and retrieve results.  
+- **Recovery Algorithms:** Retrieves relevant documents based on query terms.  
+- **Filtering & Ranking:** Supports filtering by metadata (e.g., date, authors) and ranks results by relevance.
 
 ---
 
-### Scene 3: Animation and Realism
+## Project Structure
 
-- **Dynamic Motion:**  
-  Start and pause controls allow users to activate or stop camera rotation. Rotation is implemented using trigonometric functions (`Math.cos()` and `Math.sin()`).
-
-- **Texture Mapping:**  
-  Basic vertex colors are replaced with realistic textures (512×512 JPEG format), significantly improving visual realism.
+- `main.py`: Entry point for running the local search engine and selecting random queries.  
+- `web_crawler.py`: Contains the web scraping logic using BeautifulSoup.  
 
 ---
 
-### Scene 4: Environment and Interaction
+## System Evaluation
 
-- **World Building:**  
-  A **Skybox** is implemented as the background environment, along with a 2D floor that displays the developers’ names.
-
-- **Mouse Interaction:**  
-  - Mouse movement controls the animation speed.  
-  - Mouse wheel input allows the user to tip the chair forward.
-
-- **Easter Egg:**  
-  A hidden feature spawns a second chair after the main chair has been tipped over **three times**, adding an element of interactivity and discovery.
+- Evaluated using datasets of **200–800 tasks**.  
+- Various evaluation scenarios and metrics implemented in Python to assess search performance, precision, and recall.
 
 ---
 
-## Challenges and Solutions
+# Installation & Setup Guide  
 
-- **Buffer Alignment:**  
-  Considerable testing was required to ensure that individual object components (e.g., table legs, chair back) aligned correctly without visible gaps.
-
-- **Texture Loading Issues:**  
-  Problems where objects rendered as black were resolved by:
-  - Ensuring texture images had **power-of-two dimensions**  
-  - Correctly configuring texture buffers and parameters in WebGL
-
-- **Interaction Physics:**  
-  Mouse wheel logic was refined to restrict chair rotation between **0° and 90°**, preventing the model from clipping through the floor.
-
----
-
-## Conclusion
-
-This project showcases a step-by-step approach to building a fully interactive 3D WebGL scene. Through progressive development, it combines geometric modeling, transformations, animation, texture mapping, and user interaction, providing a solid practical foundation in modern computer graphics programming.
-
----
-
-# Installation and Run Guide
-
-This project is a **pure WebGL (HTML + JavaScript)** application and does **not require compilation** or external build tools.  
-It runs directly in a modern web browser with **WebGL support**.
+This guide explains how to **install, configure, and run** the Academic Paper Search Engine project.  
+The project is written in **Python** and implements a local search engine that crawls, indexes, and searches academic papers from **arXiv**.
 
 ---
 
 ## Prerequisites
 
-Before running the project, ensure the following requirements are met.
-
-### Software Requirements
-- **Modern Web Browser** with WebGL enabled:
-  - Google Chrome 
-  - Mozilla Firefox (recommended)
-  - Microsoft Edge
-- **Local HTTP Server (required for texture loading)**
-
-> **Important**  
-> Due to browser security restrictions, WebGL **cannot load textures correctly** when HTML files are opened directly (`file://`).  
-> A **local web server is mandatory**.
+### 1. Operating System
+- Windows, Linux, or macOS
+- Python 3.11 recommended
 
 ---
 
-## Repository Setup
+### 2. Software
 
-### Clone the Repository
+#### Python
+- Install **Python 3.11** or later from [python.org](https://www.python.org/downloads/)
+- Make sure `python` and `pip` are in your system PATH
+
+#### Python Packages
+Install required Python libraries:
+```bash
+pip install beautifulsoup4 requests lxml tqdm
+```
+Optional (for advanced ranking or evaluation):
 
 ```bash
-git clone https://github.com/Computer-Graphics-aka-Uniwa/Table-Chair.git
+pip install numpy pandas matplotlib
 ```
 
-Alternatively, download the repository as a ZIP archive and extract it locally.
+---
 
-### Running the Project
-Option 1: Using VS Code Live Server (Recommended)
-1. Open the project folder in Visual Studio Code
-2. Install the Live Server extension
-3. Navigate to:
+## Running the Search Engine
+### 1. Clone the Repository
 ```bash
-src/*_scene.html
+git clone https://github.com/Information-Retrieval-aka-Uniwa/Search-Engine.git
+cd Search-Engine/src
 ```
-4. Right-click the file and select "Open with Live Server"
-5. The scene you chose will open automatically in your default browser
 
-### Using Node.js HTTP Server
-
-If Node.js is installed:
+### 2. Run the Application
+Run the main program:
 ```bash
-npm install -g http-server
-cd Table-Chair/src
-http-server
+python main.py
 ```
-Open the displayed local URL and load the scene you desire.
+- This will launch the search engine in console mode.
+- A set of random queries (2–8) will be processed automatically, or you can enter custom queries interactively.
 
-## Controls and Interaction
+### 3. Web Crawler (Optional)
+- The web crawler scrapes metadata from arXiv for indexing.
+- Make sure your internet connection is active.
+- The crawler stores data in a local dictionary (doc_id → document metadata).
 
-### Scene 1
+Run crawler separately (optional):
 
-Camera Controls
-
-- **View Angle**  
-  Adjusts the camera’s field of view (degrees)
-
-- **Orthogonal Distance**  
-  Controls the distance of the camera from the scene center
-
-- **Camera Position (Radio Buttons)**  
-  Select predefined camera viewpoints around the object
-
-- **Redraw**  
-  Re-renders the scene with the selected parameters
-
-Interaction Notes
-
-- Scene 1 is static and does not support animation
-- No mouse interaction is required
-- Camera changes apply immediately after redraw
-
-### Scene 2
-
-Camera Controls
-
-- **View Angle**  
-  Adjusts the camera’s field of view (degrees)
-
-- **Orthogonal Distance**  
-  Controls the distance of the camera from the scene center
-
-- **Camera Position (Radio Buttons)**  
-  Select predefined camera viewpoints
-
-- **Redraw**  
-  Re-renders the scene with the selected parameters
-
-Interaction Notes
-
-- Scene 2 remains static
-- The table and chair are positioned using fixed transformations
-- No real-time interaction or animation is present
-
-### Scene 3
-
-Camera Controls
-
-- **View Angle**  
-  Adjusts the camera’s field of view (degrees)
-
-- **Orthogonal Distance**  
-  Controls the distance of the camera from the scene center
-
-- **Camera Position (Radio Buttons)**  
-  Select predefined camera viewpoints
-
-- **Redraw**  
-  Re-renders the scene with the selected parameters
-
-Interaction Notes
-
-- Scene 3 introduces textured objects but remains static
-- No mouse-based interaction is required
-- Texture changes are loaded automatically on scene initialization
-
-
-### Scene 4
-
-Camera Controls
-
-- **Mouse Drag**
-  Horizontal movement → Rotate camera around the scene
-  Vertical movement → Move camera height (Z-axis)
-
-- **Mouse Wheel**
-  Tilt the chair forward and backward (0°–90°)
-
-- **UI Controls**
-  View Angle: Adjusts the camera’s field of view (degrees)
-  Orthogonal Distance: Controls camera distance from the scene center
-  Camera Position (Radio Buttons): Select predefined camera viewpoints
-  Redraw: Re-renders the scene with the selected parameters
-  Start / Stop: Enables or disables automatic camera rotation
-
-## Textures
-
-### Texture and Asset Notes
-All textures are located in:
 ```bash
-src/textures/
+python web_crawler.py
 ```
-Texture characteristics:
-- JPEG format
-- Power-of-two dimensions (e.g., 512×512)
 
-These constraints ensure:
-- Correct mipmap generation
-- Prevention of black-texture rendering issues in WebGL
+> Do not run repeatedly to avoid overwhelming the arXiv server.
 
-## Issues and Evaluation
+### 4. Indexing
+- The system automatically builds an inverted index from the crawled or preloaded dataset.
+- Index is stored in memory and can be `saved/loaded` using Python’s pickle module (customize in `search_engine.py` if needed).
 
-### Scene appears black or textures do not load
-- Ensure the project is served via HTTP, not opened directly as a file.
+### 5. Searching
+- Queries are processed via the `main.py` interface.
+- Supports:
+    - Exact keyword matching
+    - Metadata filtering (authors, dates)
+    - Ranked retrieval based on term frequency
 
-### Mouse interaction not responding
-- Click inside the canvas first to activate mouse focus.
-
-### WebGL not supported error
-
-- Verify WebGL is enabled in your browser:
-
-  - Chrome: `chrome://gpu`
-  - Firefox: `about:support`
-
-### Tested Successfully On
-
-- Mozilla Firefox
-
-### Notes for Academic Evaluation
-
-- No external frameworks were used
-- All transformations, animations, textures, and interactions are implemented using:
-  - `Raw WebGL API`
-  - `glMatrix library`
-
-The project fully complies with the Computer Graphics course requirements at UNIWA
+Example query:
+```bash
+Enter your query: quantum computing
+```
+Results are displayed with:
+- Document title
+- Authors
+- Publication date
+- Summary snippet
 
 ---
 
 ## Open the Documentation
 1. Navigate to the `docs/` directory
 2. Open the report corresponding to your preferred language:
-    - English: `3D-Graphics-Scene-using-WebGL.pdf`
-    - Greek: `3D-Σκηνή-με-WebGL.pdf`
+    - English: `Academic-Paper-Search-Engine.pdf`
+    - Greek: `Μηχανή-Αναζήτησης-Ακαδημαϊκών-Εργασιών.pdf`
