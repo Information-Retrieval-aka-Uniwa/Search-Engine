@@ -77,7 +77,15 @@
 
 ## Building a Search Engine for Academic Papers
 
-This project, developed for the **Information Retrieval** course at the University of West Attica (UNIWA), implements a local search engine that crawls, processes, and indexes academic papers from the **arXiv** repository.
+This project was developed for the Information Retrieval course at the University of West Attica.
+
+It implements a complete Information Retrieval (IR) system that:
+
+- Crawls academic papers from arXiv
+- Preprocesses textual data
+- Builds an inverted index
+- Supports multiple retrieval models
+- Provides ranked search results through a graphical user interface (GUI)
 
 ---
 
@@ -104,44 +112,225 @@ This project, developed for the **Information Retrieval** course at the Universi
 
 ---
 
-## 1. Web Crawler
+## 1. Project Objective
 
-- Scrapes metadata from **arXiv** based on 2–8 random user queries (e.g., "Physics", "Statistics", "Computer").
-- **Implementation:** Python using **BeautifulSoup**.
-- **Data Collected:** Titles, authors, related courses/sub-courses, summaries, comments, publication dates, and PDF links.
-- **Storage:** Each task is assigned a unique `doc_id` and stored in a dictionary.
+The objective of this project is to design and implement a functional academic search engine demonstrating:
 
----
-
-## 2. Text Processing
-
-- Prepares retrieved data for indexing by implementing a text-processing pipeline (cleaning, tokenization, normalization).
-
----
-
-## 3. Indexing
-
-- **Inverted Index:** Efficient data structure for searching.
-- **Storage:** Index stored in a structured format accessible by the search engine.
+- Web Crawling
+- Text Preprocessing
+- Inverted Index Construction
+- Boolean Retrieval
+- Vector Space Model (TF-IDF + Cosine Similarity)
+- Probabilistic Retrieval Model (Okapi BM25)
+- Query Processing with operator precedence
+- Metadata filtering (Author, Date)
 
 ---
 
-## 4. Search Engine
+## 2. System Architecture
 
-- **User Interface:** Allows users to submit queries and retrieve results.
-- **Recovery Algorithms:** Retrieves relevant documents based on query terms.
-- **Filtering & Ranking:** Supports filtering by metadata (e.g., date, authors) and ranks results by relevance.
+```bash
+Web Crawler
+↓
+dataset.json
+↓
+Text Preprocessing
+↓
+Inverted Index
+↓
+Query Processing
+↓
+Retrieval Model
+↓
+Ranking
+↓
+Filtering
+↓
+Top-20 Results (GUI Output)
+```
 
 ---
 
-## 5. Project Structure
+## 3. Project Structure
 
-- `main.py`: Entry point for running the local search engine and selecting random queries.
-- `web_crawler.py`: Contains the web scraping logic using BeautifulSoup.
+```bash
+.
+├── assign/
+│ ├── IR LabProject 2023-2024new.pdf
+│ └── ΑΠ ΕργασίαΕργαστηρίου 2023-2024νέο.pdf
+│
+├── docs/
+│ ├── Academic-Paper-Search-Engine.pdf
+│ └── Μηχανή-Αναζήτησης-Ακαδημαϊκών-Εργασιών.pdf
+│
+├── src/
+│ ├── main.py
+│ ├── web_crawler.py
+│ ├── text_preprocessing.py
+│ ├── inverted_index.py
+│ ├── query_processing.py
+│ ├── ranking.py
+│ ├── search_engine.py
+│
+├── dataset.json (generated at runtime)
+├── README.md
+└── INSTALL.md
+```
 
 ---
 
-## 6. System Evaluation
+## 4. System Modules
 
-- Evaluated using datasets of **200–800 tasks**.
-- Various evaluation scenarios and metrics implemented in Python to assess search performance, precision, and recall.
+### 4.1 Web Crawler (`web_crawler.py`)
+
+- Retrieves up to 100 papers per subject.
+- Randomly selects between 2–8 subject categories:
+  - Physics
+  - Mathematics
+  - Computer
+  - Biology
+  - Finance
+  - Statistics
+  - Electronics
+  - Economics
+
+### 4.2 Extracted Metadata
+
+- Title
+- Authors
+- Subjects
+- Abstract
+- Comments
+- Submission Date
+- PDF URL
+- Unique `doc_id`
+
+Data is stored in `dataset.json`.
+
+---
+
+## 5. Text Preprocessing (`text_preprocessing.py`)
+
+Pipeline:
+
+- Tokenization (NLTK)
+- Punctuation removal
+- Special character cleaning
+- Lowercasing
+- Stopword removal (English)
+- Porter Stemming
+
+Applied to:
+
+- Document abstracts
+- User queries
+
+---
+
+## 6. Inverted Index (`inverted_index.py`)
+
+Creates:
+
+term → [doc_id1, doc_id2, ...]
+
+- Alphabetically sorted terms
+- Sorted posting lists
+- Stored in memory
+
+---
+
+## 7. Query Processing (`query_processing.py`)
+
+Supports:
+
+- AND
+- OR
+- NOT
+- Parentheses
+- Operator precedence
+
+Boolean evaluation is implemented using set operations.
+
+---
+
+## 8. Retrieval Models
+
+Implemented in:
+
+- `search_engine.py`
+- `ranking.py`
+
+### 8.1 Boolean Retrieval
+
+- Logical matching
+- Parentheses support
+- Set-based operations
+
+### 8.2 Vector Space Model (VSM)
+
+- TF-IDF weighting
+- Cosine Similarity
+- Ranked results
+
+### 8.3 Probabilistic Retrieval Model
+
+- Okapi BM25
+- Parameters:
+  - k = 1.2
+  - b = 0.75
+
+---
+
+## 9. Graphical User Interface
+
+Built using:
+
+- tkinter
+- ttk
+
+Features:
+
+- Query input
+- Retrieval model selection
+- Top-20 ranked results
+- Filtering by:
+  - Author
+  - Date
+
+---
+
+## 10. Technologies Used
+
+- Python 3.11
+- requests
+- beautifulsoup4
+- nltk
+- tkinter
+- math
+- collections
+- json
+- re
+- string
+
+---
+
+## 11. System Evaluation
+
+The system was evaluated using datasets of 200–800 documents.
+
+Evaluation metrics included:
+
+- Precision
+- Recall
+- Comparative ranking analysis between:
+  - Boolean Retrieval
+  - Vector Space Model
+  - BM25
+
+---
+
+## 12. Notes
+
+- Internet connection is required for crawling.
+- Each execution generates a new dataset (random subject selection).
+- Boolean operators must be lowercase: `and`, `or`, `not`.

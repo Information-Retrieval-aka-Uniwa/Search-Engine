@@ -77,36 +77,34 @@
 
 ## Building a Search Engine for Academic Papers
 
-This guide explains how to **install, configure, and run** the Academic Paper Search Engine project.  
-The project is written in **Python** and implements a local search engine that crawls, indexes, and searches academic papers from **arXiv**.
+This guide explains how to install, configure, and execute the Academic Paper Search Engine.
 
 ---
 
-## 1. Prerequisites
+## 1. System Requirements
 
 ### 1.1 Operating System
 
-- Windows, Linux, or macOS
+- Windows
+- Linux
+- macOS
+
+### 1.2 Python Version
+
+- Python 3.10+
 - Python 3.11 recommended
 
 ---
 
-## 2. Software
+## 2. Required Python Libraries
 
-### 2.1 Python
-
-- Install **Python 3.11** or later from [python.org](https://www.python.org/downloads/)
-- Make sure `python` and `pip` are in your system PATH
-
-### 2.2 Python Packages
-
-Install required Python libraries:
+Install dependencies:
 
 ```bash
-pip install beautifulsoup4 requests lxml tqdm
+pip install requests beautifulsoup4 nltk lxml
 ```
 
-Optional (for advanced ranking or evaluation):
+Optional (for evaluation and analysis):
 
 ```bash
 pip install numpy pandas matplotlib
@@ -114,71 +112,105 @@ pip install numpy pandas matplotlib
 
 ---
 
-## 3. Running the Search Engine
+## 3. NLTK Setup
 
-### 3.1 Clone the Repository
+Run Python once and download required corpora:
+
+```bash
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+```
+
+Without this step, the program will raise a LookupError.
+
+---
+
+## 4. Clone the Repository
 
 ```bash
 git clone https://github.com/Information-Retrieval-aka-Uniwa/Search-Engine.git
-cd Search-Engine/src
+cd Search-Engine
+cd src
 ```
 
-### 3.2 Run the Application
+---
 
-Run the main program:
+## 5. Run the Application
 
 ```bash
 python main.py
 ```
 
-- This will launch the search engine in console mode.
-- A set of random queries (2–8) will be processed automatically, or you can enter custom queries interactively.
+Execution Flow:
 
-### 3. Web Crawler (Optional)
-
-- The web crawler scrapes metadata from arXiv for indexing.
-- Make sure your internet connection is active.
-- The crawler stores data in a local dictionary (doc_id → document metadata).
-
-Run crawler separately (optional):
-
-```bash
-python web_crawler.py
-```
-
-> Do not run repeatedly to avoid overwhelming the arXiv server.
-
-### 3.3 Indexing
-
-- The system automatically builds an inverted index from the crawled or preloaded dataset.
-- Index is stored in memory and can be `saved/loaded` using Python’s pickle module (customize in `search_engine.py` if needed).
-
-### 3.4 Searching
-
-- Queries are processed via the `main.py` interface.
-- Supports:
-  - Exact keyword matching
-  - Metadata filtering (authors, dates)
-  - Ranked retrieval based on term frequency
-
-Example query:
-
-```bash
-Enter your query: quantum computing
-```
-
-Results are displayed with:
-
-- Document title
-- Authors
-- Publication date
-- Summary snippet
+1. Random subjects are selected.
+2. arXiv is crawled.
+3. `dataset.json` is created.
+4. Abstracts are preprocessed.
+5. Inverted index is built.
+6. GUI window launches.
 
 ---
 
-## 4. Open the Documentation
+## 6. Using the Search Engine
 
-1. Navigate to the `docs/` directory
-2. Open the report corresponding to your preferred language:
-   - English: `Academic-Paper-Search-Engine.pdf`
-   - Greek: `Μηχανή-Αναζήτησης-Ακαδημαϊκών-Εργασιών.pdf`
+Step 1: Enter a query.
+
+Step 2: Select retrieval model:
+
+- Boolean Retrieval
+- Vector Space Model
+- Probabilistic Retrieval Model
+
+Step 3: Click Search.
+
+---
+
+## 7. Example Queries
+
+Boolean:
+
+```bash
+(neural and network) or physics
+```
+
+Vector Space Model:
+
+```bash
+deep learning transformer models
+```
+
+BM25:
+
+```bash
+quantum computing algorithms 8. Filtering
+```
+
+After search, you may filter by:
+
+- Authors
+- Date
+
+Enter filter value and press Search again.
+
+---
+
+## 9. Troubleshooting
+
+### Term not found in inverted index
+
+Occurs in Boolean mode if a term does not exist in dataset.
+
+### NLTK LookupError
+
+Ensure:
+
+```bash
+nltk.download('punkt')
+nltk.download('stopwords')
+```
+
+### No Results
+
+Dataset is randomly generated each run. Try different terms.
